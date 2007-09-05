@@ -1,0 +1,33 @@
+<PropertyList>
+
+
+
+
+
+<path>Panel.ac</path>
+
+
+
+
+    <panel>
+        <name>panel-2D</name>
+        <path>Aircraft/PBY-Catalina/Panels/pby5-3d-panel.xml</path>
+        <bottom-left>
+            <x-m>0</x-m>
+            <y-m>-0.900</y-m>
+            <z-m>-0.215</z-m>
+        </bottom-left>
+        <bottom-right>
+            <x-m>0</x-m>
+            <y-m> 0.1</y-m>
+            <z-m>-0.215</z-m>
+        </bottom-right>
+        <top-left>
+            <x-m>0</x-m>
+            <y-m>-0.900</y-m>
+            <z-m> 0.33</z-m>
+        </top-left>
+    </panel>
+
+
+ </PropertyList>

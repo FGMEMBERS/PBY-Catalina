@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL
+-->
+<!--  VOUGHT   F4U-7   Corsair                      Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<PropertyList>
+
+	<path>catalina-moteur.ac</path>
+	<texture-path>Textures</texture-path>
+
+
+
+</PropertyList>

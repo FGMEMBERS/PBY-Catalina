@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+
+************************************************************************
+-->
+
+<PropertyList include="Catalina-SetBase.xml">
+
+    <controls>
+        <gear>
+            <brake-parking type="double">0.0</brake-parking>
+            <gear-down>false</gear-down>
+        </gear>
+        <flight>
+            <speedbrake>1</speedbrake>
+        </flight>
+    </controls>
+
+</PropertyList>
+
+
+
+

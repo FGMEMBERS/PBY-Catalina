@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL
+-->
+   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
+<PropertyList include="Catalina_base.xml">
+
+    <path>pby6N.ac</path>
+
+    <texture-path>Textures/texture-protcivil</texture-path>
+
+
+    <offsets>
+        <pitch-deg>-0.6</pitch-deg>
+        <z-m>0.05</z-m>
+    </offsets>
+
+
+
+
+    <!--<model>
+            <name>Sillage</name>
+            <path>Aircraft/PBY-Catalina/Models/Effects/Sillage-model.xml</path>
+            <offsets>
+                    <x-m>0</x-m>
+                    <y-m>0</y-m>
+                    <z-m>0</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>-->
+
+    <!--<animation>
+        <type>select</type>
+    <object-name>Sillage</object-name>
+    <condition>
+        <and>
+        <equals>
+            <property>/controls/gear/gear-down</property>
+            <value>0</value>
+        </equals>
+        <less-than>
+            <property>/position/altitude-agl-ft</property>
+            <value>7.6</value>
+        </less-than>
+        <greater-than>
+        <property>/velocities/uBody-fps</property>
+        <value>20.0</value>
+        </greater-than>
+        <less-than>
+            <property>/orientation/pitch-deg/</property>
+            <value>4</value>
+        </less-than>
+        <greater-than>
+            <property>/orientation/pitch-deg/</property>
+            <value>-4.5</value>
+        </greater-than>
+        </and>
+    </condition>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Sillage</object-name>
+        <property>orientation/pitch-deg</property>
+        <factor>-1.0</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>-1.66</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>-->
+
+
+
+
+
+
+</PropertyList>

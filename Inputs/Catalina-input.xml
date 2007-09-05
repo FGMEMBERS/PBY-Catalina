@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  gh.robin@laposte.net
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+    <keyboard>
+        <key n="1">
+        <name>Ctrl-A</name>
+        <desc>Toggle autopilot altitude lock.</desc>
+                <binding>
+                        <command>property-toggle</command>
+                        <property>/autopilot/switch-altitude</property>
+                </binding>
+        </key>
+        <!--<key n="8">
+        <name>Ctrl-H</name>
+        <desc>Toggle autopilot heading lock.</desc>
+                <binding>
+                        <command>property-toggle</command>
+                        <property>/autopilot/switch-heading</property>
+                </binding>
+        </key>-->
+        <key n="100">
+            <name>d</name>
+            <desc>Toggle Canopy</desc>
+                <binding>
+                        <command>property-toggle</command>
+                        <property>/fdm/jsbsim/fcs/canopy-cmd-norm</property>
+                </binding>
+        </key>
+
+
+
+        <key n="102">
+          <name>f</name>
+          <desc>Flotteurs action</desc>
+            <binding>
+              <command>property-toggle</command>
+              <property>/controls/gear/float-down</property>
+            </binding>
+         </key>
+
+        <key n="108">
+          <name>l</name>
+          <desc>water bombing</desc>
+            <binding>
+                <command>nasal</command>
+		<script>water.Bomb_water()</script>
+            </binding>
+             <binding>
+                 <command>property-assign</command>
+                 <property>/sim/model/bomb-signal</property>
+                 <value>1</value>
+            </binding>
+         </key>
+
+         <key n="76">
+          <name>L</name>
+          <desc>water loading</desc>
+            <binding>
+              <command>property-assign</command>
+              <property>/sim/model/waterloading</property>
+              <value>1</value>
+            </binding>
+            <binding>
+                 <command>property-assign</command>
+                 <property>/sim/model/bomb-signal</property>
+                 <value>0</value>
+            </binding>
+         </key>
+
+        </keyboard>
+
+
+</PropertyList>

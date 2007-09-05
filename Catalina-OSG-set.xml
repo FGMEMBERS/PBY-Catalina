@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<!--
+
+
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL
+-->
+   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
+<PropertyList>
+
+    <sim>
+
+        <description>Catalina PBY-6</description>
+        <author>Gerard ROBIN</author>
+        <status>alpha, "GPL Copyright"</status>
+        <version>0.1</version>
+
+        <flight-model>jsb</flight-model>
+        <aero>PBY-6</aero>
+
+        <virtual-cockpit archive="y">true</virtual-cockpit>
+        <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+        <presets>
+            <mooring include="System/Boeing314-route.xml"/>
+        </presets>
+        <startup>
+            <splash-texture>Aircraft/PBY-Catalina/Splash.rgb</splash-texture>
+        </startup>
+
+        <sound>
+            <path>Aircraft/PBY-Catalina/Sounds/sound.xml</path>
+        </sound>
+
+        <model>
+            <path>Aircraft/PBY-Catalina/Models/Catalina_demo.xml</path>
+        </model>
+
+        <help include="Help/Catalina-help.xml"/>
+
+        <submodels>
+            <serviceable type="bool">true</serviceable>
+            <path>Aircraft/PBY-Catalina/Models/submodels-osg.xml</path>
+        </submodels>
+
+
+        <view n="0">
+            <internal archive="y">true</internal>
+            <config>
+                <!-- x/y/z == right/up/back -->
+                <x-offset-m archive="y">-0.48</x-offset-m>
+                <y-offset-m archive="y">0.51</y-offset-m>
+                <z-offset-m archive="y">-3.78</z-offset-m>
+                <pitch-offset-deg archive="y">-18.0</pitch-offset-deg>
+                <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+            </config>
+        </view>
+
+        <current-view>
+            <field-of-view type="double">65.0</field-of-view>
+        </current-view>
+
+        <chase-distance-m>-40</chase-distance-m>
+
+        <!--<view n="100">
+            <name>Cockpit View</name>
+            <type>lookfrom</type>
+            <internal archive="y">true</internal>
+            <config>
+                <from-model type="bool">true</from-model>
+                <from-model-idx type="int">0</from-model-idx>
+                <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+                <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+                <default-pitch-deg type="double">0</default-pitch-deg>
+                <default-heading-deg type="double">0</default-heading-deg>
+                <front-direction-deg type="double">0</front-direction-deg>
+                <front-left-direction-deg type="double">45</front-left-direction-deg>
+                <left-direction-deg type="double">90</left-direction-deg>
+                <back-left-direction-deg type="double">135</back-left-direction-deg>
+                <back-direction-deg type="double">180</back-direction-deg>
+                <back-right-direction-deg type="double">225</back-right-direction-deg>
+                <right-direction-deg type="double">270</right-direction-deg>
+                <front-right-direction-deg type="double">315</front-right-direction-deg>
+                <x-offset-m archive="y">0.0</x-offset-m>
+                <y-offset-m archive="y">1.00</y-offset-m>
+                <z-offset-m archive="y">0.036</z-offset-m>
+                <pitch-offset-deg>0</pitch-offset-deg>
+                <default-field-of-view-deg>55</default-field-of-view-deg>
+            </config>
+        </view>
+
+        <view n="101">
+            <name>Cockpit View</name>
+            <type>lookfrom</type>
+            <internal archive="y">true</internal>
+            <config>
+                <from-model type="bool">true</from-model>
+                <from-model-idx type="int">0</from-model-idx>
+                <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+                <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+                <default-pitch-deg type="double">0</default-pitch-deg>
+                <default-heading-deg type="double">270</default-heading-deg>
+                <front-direction-deg type="double">0</front-direction-deg>
+                <front-left-direction-deg type="double">45</front-left-direction-deg>
+                <left-direction-deg type="double">90</left-direction-deg>
+                <back-left-direction-deg type="double">135</back-left-direction-deg>
+                <back-direction-deg type="double">180</back-direction-deg>
+                <back-right-direction-deg type="double">225</back-right-direction-deg>
+                <right-direction-deg type="double">270</right-direction-deg>
+                <front-right-direction-deg type="double">315</front-right-direction-deg>
+                <x-offset-m archive="y">0.60</x-offset-m>
+                <y-offset-m archive="y">0.50</y-offset-m>
+                <z-offset-m archive="y">5.30</z-offset-m>
+                <pitch-offset-deg>0</pitch-offset-deg>
+                <default-field-of-view-deg>55</default-field-of-view-deg>
+            </config>
+        </view>-->
+
+        <systems>
+            <autopilot>
+            <path>Aircraft/PBY-Catalina/System/autopilot.xml</path>
+            </autopilot>
+        </systems>
+
+        <hud>
+            <enable3d>false</enable3d>
+        </hud>
+
+    </sim>
+
+    <ai>
+        <submodels>
+            <trigger type="bool">false</trigger>
+        </submodels>
+    </ai>
+
+    <controls>
+        <switches>
+            <landing-light>true</landing-light>
+            <master-avionics>false</master-avionics>
+        </switches>
+        <lighting>
+            <instruments-norm type="double">0</instruments-norm>
+        </lighting>
+        <engines>
+            <engine n="0">
+                    <magnetos>0</magnetos>
+                    <master-bat>false</master-bat>
+            </engine>
+            <engine n="1">
+                    <magnetos>0</magnetos>
+                    <master-bat>false</master-bat>
+            </engine>
+        </engines>
+        <electric>
+            <master-switch>false</master-switch>
+            <battery-switch>false</battery-switch>
+            <external-power>false</external-power>
+        </electric>
+        <gear>
+            <brake-parking type="double">1</brake-parking>
+        </gear>
+    </controls>
+
+
+
+
+    <autopilot>
+    <config>
+        <min-climb-speed-kt type="float">81.0</min-climb-speed-kt>
+        <best-climb-speed-kt type="float">107.0</best-climb-speed-kt>
+        <target-climb-rate-fpm type="float">1000.0</target-climb-rate-fpm>
+        <target-descent-rate-fpm type="float">1000.0</target-descent-rate-fpm>
+        <elevator-adj-factor type="float">3000.0</elevator-adj-factor>
+        <integral-contribution type="float">0.004</integral-contribution>
+        <zero-pitch-throttle type="float">0.45</zero-pitch-throttle>
+        <zero-pitch-trim-full-throttle type="float">0.11</zero-pitch-trim-full-throttle>
+    </config>
+    </autopilot>
+
+    <consumables>
+        <fuel>
+        <tank n="0">
+            <level-gal_us>1000</level-gal_us>
+        </tank>
+        <tank n="1">
+            <level-gal_us>1000</level-gal_us>
+        </tank>
+        <tank n="2">
+            <level-gal_us>500</level-gal_us>
+        </tank>
+        </fuel>
+    </consumables>
+
+    <input include="Inputs/Catalina-input.xml"/>
+
+    <nasal>
+        <electrical>
+            <file>Aircraft/PBY-Catalina/System/electrical.nas</file>
+        </electrical>
+        <mooring>
+            <file>Aircraft/PBY-Catalina/System/mooring.nas</file>
+        </mooring>
+        <water>
+            <file>Aircraft/PBY-Catalina/System/tank_water.nas</file>
+        </water>
+    </nasal>
+
+</PropertyList>
+
+
+
+

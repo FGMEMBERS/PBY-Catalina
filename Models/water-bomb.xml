@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL
+-->
+   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
+<PropertyList>
+    <path>water-fall.ac</path>
+    <texture-path>Textures</texture-path>
+    <offsets>
+        <pitch-deg>10</pitch-deg>
+    </offsets>
+
+
+    <!--<animation>
+        <type>translate</type>
+        <object-name>water-bomb</object-name>
+        <property>sim/time/elapsed-sec</property>
+        <offset>0</offset>
+        <factor>2</factor>
+        <max-m>100</max-m>
+        <axis>
+            <z>-1</z>
+            <x>0.3</x>
+        </axis>
+    </animation>-->
+
+
+    <animation>
+        <type>scale</type>
+        <object-name>water-bomb</object-name>
+        <property>sim/time/elapsed-sec</property>
+        <offset>0</offset>
+        <x-max>10</x-max>
+        <y-max>10</y-max>
+        <z-max>10</z-max>
+        <x-factor>1.2</x-factor>
+        <y-factor>1.2</y-factor>
+        <z-factor>1.2</z-factor>
+    </animation>
+
+
+</PropertyList>

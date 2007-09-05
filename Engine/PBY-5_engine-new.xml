@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+
+<piston_engine name="Pratt  Whitney R-1830-92">
+    <minmp unit="INHG">          6.0 </minmp>
+    <maxmp unit="INHG">         30.0 </maxmp>
+    <displacement unit="IN3">1830</displacement>
+    <maxhp>1200.0</maxhp>
+    <cycles>2.0</cycles>
+    <idlerpm>900.0 </idlerpm>
+    <maxthrottle>    1.0 </maxthrottle>
+    <minthrottle>    0.2 </minthrottle>
+    <numboostspeeds>1</numboostspeeds>
+    <ratedboost1>6.7</ratedboost1>
+    <ratedpower1>1200</ratedpower1>
+    <ratedrpm1>2600</ratedrpm1>
+    <ratedaltitude1>7000</ratedaltitude1>
+</piston_engine>
