@@ -51,8 +51,8 @@
             <config>
                 <!-- x/y/z == right/up/back -->
                 <x-offset-m archive="y">-0.48</x-offset-m>
-                <y-offset-m archive="y">0.51</y-offset-m>
-                <z-offset-m archive="y">-3.78</z-offset-m>
+                <y-offset-m archive="y">0.53627</y-offset-m>
+                <z-offset-m archive="y">-3.69727</z-offset-m>
                 <pitch-offset-deg archive="y">-18.0</pitch-offset-deg>
                 <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
             </config>
@@ -64,7 +64,7 @@
 
         <chase-distance-m>-40</chase-distance-m>
 
-        <!--<view n="100">
+        <view n="100">
             <name>Cockpit View</name>
             <type>lookfrom</type>
             <internal archive="y">true</internal>
@@ -116,7 +116,7 @@
                 <pitch-offset-deg>0</pitch-offset-deg>
                 <default-field-of-view-deg>55</default-field-of-view-deg>
             </config>
-        </view>-->
+        </view>
 
         <systems>
             <autopilot>
@@ -182,14 +182,17 @@
 
     <consumables>
         <fuel>
-        <tank n="0">
-            <level-gal_us>1000</level-gal_us>
-        </tank>
         <tank n="1">
-            <level-gal_us>1000</level-gal_us>
+            <level-gal_us>400</level-gal_us>
         </tank>
         <tank n="2">
-            <level-gal_us>500</level-gal_us>
+            <level-gal_us>400</level-gal_us>
+        </tank>
+        <tank n="4">
+            <level-gal_us>350</level-gal_us>
+        </tank>
+        <tank n="5">
+            <level-gal_us>350</level-gal_us>
         </tank>
         </fuel>
     </consumables>
@@ -206,6 +209,9 @@
         <water>
             <file>Aircraft/PBY-Catalina/System/tank_water.nas</file>
         </water>
+        <terrain>
+            <file>Aircraft/PBY-Catalina/System/terrain.nas</file>
+        </terrain>
     </nasal>
 
 </PropertyList>

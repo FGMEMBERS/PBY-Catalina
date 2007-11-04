@@ -1,6 +1,6 @@
 #Mise à jour de la capacité des réservoirs d'eau
 
-setprop("/fdm/jsbsim/fcs/water-tank-capacity",0);
+#setprop("/fdm/jsbsim/fcs/water-tank-capacity",0);
 setprop("/consumables/fuel/tank[3]level-gal_us",0);
 
 

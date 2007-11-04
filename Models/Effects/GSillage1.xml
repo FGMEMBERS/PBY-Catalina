@@ -6,40 +6,22 @@
     Property of Gerard Robin
     Copyright License:  GPL
 -->
-<path>Sillage1.ac</path>
 
+
+<model>
+    <name>GSillage</name>
+    <path>Aircraft/PBY-Catalina/Models/Effects/SillageBase.xml</path>
     <offsets>
             <x-m></x-m>
             <y-m>0</y-m>
             <z-m>-0</z-m>
             <pitch-deg>0</pitch-deg>
-            <heading-deg>-20</heading-deg>
+            <heading-deg>-10</heading-deg>
             <roll-deg>0</roll-deg>
     </offsets>
 
+</model>
 
-
-
-
-    <animation>
-        <type>spin</type>
-        <object-name>flux</object-name>
-        <property>sim/time/elapsed-sec</property>
-        <factor>5</factor>
-        <axis>
-            <x>1</x>
-       </axis>
-    </animation>
-    <!--<animation>
-        <type>select</type>
-        <object-name>flux</object-name>
-        <condition>
-                <greater-than>
-                    <property>/velocities/uBody-fps</property>
-                    <value>12.0</value>
-                </greater-than>
-        </condition>
-    </animation>-->
 
 
 </PropertyList>

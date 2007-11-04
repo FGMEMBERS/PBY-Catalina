@@ -24,34 +24,28 @@
 
 
 
-    <!--<panel>
-        <path>Aircraft/PBY-Catalina/Panels/pby5-3d-panel.xml</path>
-        <bottom-left>
-            <x-m>-4.35499</x-m>
-            <y-m>-0.900</y-m>
-            <z-m>-0.204532</z-m>
-        </bottom-left>
-        <bottom-right>
-            <x-m>-4.35499</x-m>
-            <y-m> 0.1</y-m>
-            <z-m>-0.204532</z-m>
-        </bottom-right>
-        <top-left>
-            <x-m>-4.35499</x-m>
-            <y-m>-0.900</y-m>
-            <z-m> 0.379167</z-m>
-        </top-left>
-    </panel>-->
 
-    <model>
+
+    <!--<model>
         <name>Panel-2_3D</name>
         <path>Aircraft/PBY-Catalina/Panels/Panel-2_3D.xml</path>
         <offsets>
                 <x-m>-4.34654</x-m>
                 <y-m>0</y-m>
-                <z-m>0.0831795</z-m>
+                <z-m>0.15</z-m>
                 <pitch-deg>0</pitch-deg>
         </offsets>
+    </model>-->
+
+    <model>
+            <name>Panel3D</name>
+            <path>Aircraft/PBY-Catalina/Panels/PBY-Panel3D.xml</path>
+            <offsets>
+                    <x-m>-4.36035</x-m>
+                    <y-m>0</y-m>
+                    <z-m>0.12</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
     </model>
 
 
@@ -180,7 +174,58 @@
 
 
 
+    <animation>
+            <type>rotate</type>
+            <object-name>Console-Manche</object-name>
+             <object-name>GVolant</object-name>
+             <object-name>DVolant</object-name>
+            <property>fdm/jsbsim/fcs/elevator-cmd-norm</property>
+            <factor>-10</factor>
+            <center>
+                    <x-m>-4.21646</x-m>
+                    <y-m>0</y-m>
+                    <z-m>-0.413707</z-m>
+            </center>
+            <axis>
+                    <x>0.0</x>
+                    <y>1.0</y>
+                    <z>0.0</z>
+            </axis>
+    </animation>
 
+    <animation>
+            <type>rotate</type>
+            <object-name>GVolant</object-name>
+            <property>fdm/jsbsim/fcs/aileron-cmd-norm</property>
+            <factor>-10</factor>
+            <center>
+                    <x-m>0</x-m>
+                    <y-m>-0.484574</y-m>
+                    <z-m>0.134292</z-m>
+            </center>
+            <axis>
+                    <x>1.0</x>
+                    <y>0.0</y>
+                    <z>0.0</z>
+            </axis>
+    </animation>
+
+    <animation>
+            <type>rotate</type>
+            <object-name>DVolant</object-name>
+            <property>fdm/jsbsim/fcs/aileron-cmd-norm</property>
+            <factor>-10</factor>
+            <center>
+                    <x-m>0</x-m>
+                    <y-m>0.484574</y-m>
+                    <z-m>0.134292</z-m>
+            </center>
+            <axis>
+                    <x>1.0</x>
+                    <y>0.0</y>
+                    <z>0.0</z>
+            </axis>
+    </animation>
 
 
 
@@ -190,7 +235,7 @@
         <type>rotate</type>
         <object-name>AVTrain-GPorte</object-name>
         <object-name>AVTrain-GPorteDoublage</object-name>
-        <property>gear/gear[0]/position-norm</property>
+        <property>surface-positions/gear-pos-norm</property>
         <interpolation>
         <entry>
             <ind>0</ind>
@@ -221,7 +266,7 @@
         <type>rotate</type>
         <object-name>AVTrain-GPorte</object-name>
         <object-name>AVTrain-GPorteDoublage</object-name>
-        <property>gear/gear[0]/position-norm</property>
+        <property>surface-positions/gear-pos-norm</property>
         <interpolation>
         <entry>
             <ind>0</ind>
@@ -252,7 +297,7 @@
   <type>rotate</type>
   <object-name>AVTrain-DPorte</object-name>
 <object-name>AVTrain-DPorteDoublage</object-name>
-  <property>gear/gear[0]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
 
   <interpolation>
    <entry>
@@ -285,7 +330,7 @@
   <type>rotate</type>
   <object-name>AVTrain-DPorte</object-name>
 <object-name>AVTrain-DPorteDoublage</object-name>
-  <property>gear/gear[0]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
 
   <interpolation>
    <entry>
@@ -321,7 +366,7 @@
   <type>rotate</type>
   <object-name>AVTrain</object-name>
 
-  <property>gear/gear[0]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
 
   <interpolation>
    <entry>
@@ -397,7 +442,7 @@
   <object-name>GTrain-BrasBase</object-name>
   <object-name>GTrain-VerinB</object-name>
   <object-name>GTrain-VerinH</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -426,7 +471,7 @@
   <object-name>GTrain-BrasBase</object-name>
   <object-name>GTrain-VerinB</object-name>
   <object-name>GTrain-VerinH</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -454,7 +499,7 @@
   <object-name>GTrain-BielleB</object-name>
   <object-name>GTrain-BielleH</object-name>
 
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -482,7 +527,7 @@
  <animation>
   <type>rotate</type>
   <object-name>GTrain-BielleH</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -508,7 +553,7 @@
  <animation>
   <type>rotate</type>
   <object-name>GTrain-BielleB</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -536,7 +581,7 @@
   <object-name>GTrain-BrasBase</object-name>
   <object-name>GTrain-VerinB</object-name>
   <object-name>GTrain-VerinH</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -566,7 +611,7 @@
     <animation>
         <type>rotate</type>
         <object-name>GTrain-VerinH</object-name>
-        <property>gear/gear[2]/position-norm</property>
+        <property>surface-positions/gear-pos-norm</property>
         <interpolation>
         <entry>
             <ind>0</ind>
@@ -624,7 +669,7 @@
   <object-name>DTrain-BrasBase</object-name>
   <object-name>DTrain-VerinB</object-name>
   <object-name>DTrain-VerinH</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -653,7 +698,7 @@
   <object-name>DTrain-BrasBase</object-name>
   <object-name>DTrain-VerinB</object-name>
   <object-name>DTrain-VerinH</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -681,7 +726,7 @@
   <object-name>DTrain-BielleB</object-name>
   <object-name>DTrain-BielleH</object-name>
 
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -709,7 +754,7 @@
  <animation>
   <type>rotate</type>
   <object-name>DTrain-BielleH</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -735,7 +780,7 @@
  <animation>
   <type>rotate</type>
   <object-name>DTrain-BielleB</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -763,7 +808,7 @@
   <object-name>DTrain-BrasBase</object-name>
   <object-name>DTrain-VerinB</object-name>
   <object-name>DTrain-VerinH</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -793,7 +838,7 @@
  <animation>
   <type>rotate</type>
   <object-name>DTrain-VerinH</object-name>
-  <property>gear/gear[2]/position-norm</property>
+  <property>surface-positions/gear-pos-norm</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -906,7 +951,7 @@
  <animation>
   <type>rotate</type>
   <object-name>VGouv</object-name>
-  <property>/surface-positions/rudder-pos-norm</property>
+  <property>surface-positions/rudder-pos-norm</property>
   <factor>20.0</factor>
 
   <center>
@@ -1029,7 +1074,7 @@
         <object-name>GFlot-BielleH</object-name>
         <object-name>GFlot-BielleB</object-name>
         <!--<object-name>GFlot-Verin</object-name>-->
-        <property>/surface-positions/floats-pos-norm</property>
+        <property>surface-positions/floats-pos-norm</property>
         <factor>85</factor>
          <axis>
                     <x1-m>-0.59723</x1-m>
@@ -1046,7 +1091,7 @@
         <object-name>GFlot-BielleB</object-name>
         <object-name>GFlot-BielleH</object-name>
        <!-- <object-name>GFlot-Verin</object-name>-->
-        <property>/surface-positions/floats-pos-norm</property>
+        <property>surface-positions/floats-pos-norm</property>
         <interpolation>
             <entry>
             <ind>0.0</ind>
@@ -1075,7 +1120,7 @@
  <animation>
         <type>rotate</type>
         <object-name>GFlot-BielleH</object-name>
-        <property>/surface-positions/floats-pos-norm</property>
+        <property>surface-positions/floats-pos-norm</property>
         <interpolation>
             <entry>
             <ind>0.0</ind>
@@ -1133,7 +1178,7 @@
         <object-name>DFlot-BielleH</object-name>
         <object-name>DFlot-BielleB</object-name>
         <!--<object-name>DFlot-Verin</object-name>-->
-        <property>/surface-positions/floats-pos-norm</property>
+        <property>surface-positions/floats-pos-norm</property>
         <factor>-85</factor>
         <axis>
                     <x1-m>-0.59723</x1-m>
@@ -1152,7 +1197,7 @@
             <object-name>DFlot-BielleB</object-name>
             <object-name>DFlot-BielleH</object-name>
         <!-- <object-name>GFlot-Verin</object-name>-->
-            <property>/surface-positions/floats-pos-norm</property>
+            <property>surface-positions/floats-pos-norm</property>
             <interpolation>
                 <entry>
                 <ind>0.0</ind>
@@ -1181,7 +1226,7 @@
     <animation>
             <type>rotate</type>
             <object-name>DFlot-BielleH</object-name>
-            <property>/surface-positions/floats-pos-norm</property>
+            <property>surface-positions/floats-pos-norm</property>
             <interpolation>
                 <entry>
                 <ind>0.0</ind>

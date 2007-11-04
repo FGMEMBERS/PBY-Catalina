@@ -1,21 +1,23 @@
+//Gerard Robin  03-02-2007 FlightGear Copyright License:  GPL
+
 Group {
-UniqueID Group_0
+UniqueID Group_50
   DataVariance DYNAMIC
   name "catalina1.osg"
   nodeMask 0xffffffff
   cullingActive TRUE
   num_children 4
   osgParticle::ModularEmitter {
-    UniqueID ModularEmitter_1
+    UniqueID ModularEmitter_51
     DataVariance DYNAMIC
     name "ModularEmitter0"
     nodeMask 0xffffffff
     cullingActive TRUE
     osgParticle::ParticleSystem {
-      UniqueID ParticleSystem_2
+      UniqueID ParticleSystem_52
       DataVariance DYNAMIC
       StateSet {
-        UniqueID StateSet_3
+        UniqueID StateSet_53
         DataVariance STATIC
         rendering_hint TRANSPARENT_BIN
         renderBinMode USE
@@ -43,7 +45,7 @@ UniqueID Group_0
         textureUnit 0 {
           GL_TEXTURE_2D ON
           Texture2D {
-            UniqueID Texture2D_4
+            UniqueID Texture2D_54
             DataVariance STATIC
             file "particle.rgb"
             wrap_s CLAMP
@@ -60,7 +62,7 @@ UniqueID Group_0
             resizeNonPowerOfTwo TRUE
           }
           TexEnv {
-            UniqueID TexEnv_5
+            UniqueID TexEnv_55
             DataVariance STATIC
             mode MODULATE
           }
@@ -91,19 +93,19 @@ UniqueID Group_0
         textureTile 1 1 1
         sizeInterpolator {
           osgParticle::LinearInterpolator {
-            UniqueID LinearInterpolator_6
+            UniqueID LinearInterpolator_56
             DataVariance DYNAMIC
           }
         }
         alphaInterpolator {
           osgParticle::LinearInterpolator {
-            UniqueID LinearInterpolator_7
+            UniqueID LinearInterpolator_57
             DataVariance DYNAMIC
           }
         }
         colorInterpolator {
           osgParticle::LinearInterpolator {
-            UniqueID LinearInterpolator_8
+            UniqueID LinearInterpolator_58
             DataVariance DYNAMIC
           }
         }
@@ -118,17 +120,17 @@ UniqueID Group_0
     resetTime 0
     useDefaultTemplate TRUE
     osgParticle::RandomRateCounter {
-      UniqueID RandomRateCounter_9
+      UniqueID RandomRateCounter_59
       DataVariance DYNAMIC
       rateRange 16 30
     }
     osgParticle::PointPlacer {
-      UniqueID PointPlacer_10
+      UniqueID PointPlacer_60
       DataVariance DYNAMIC
       center 0 0 0
     }
     osgParticle::RadialShooter {
-      UniqueID RadialShooter_11
+      UniqueID RadialShooter_61
       DataVariance DYNAMIC
       thetaRange -0.1 0.1
       phiRange 0 2
@@ -141,7 +143,7 @@ UniqueID Group_0
     name "ModularProgram1"
     nodeMask 0xffffffff
     cullingActive FALSE
-    Use ParticleSystem_2
+    Use ParticleSystem_52
     enabled TRUE
     referenceFrame RELATIVE
     endless TRUE
@@ -160,7 +162,7 @@ UniqueID Group_0
     name "ParticleSystemUpdater2"
     nodeMask 0xffffffff
     cullingActive FALSE
-    Use ParticleSystem_2
+    Use ParticleSystem_52
   }
   Geode {
     DataVariance DYNAMIC
@@ -168,7 +170,7 @@ UniqueID Group_0
     nodeMask 0xffffffff
     cullingActive FALSE
     num_drawables 1
-    Use ParticleSystem_2
+    Use ParticleSystem_52
   }
 
   }
