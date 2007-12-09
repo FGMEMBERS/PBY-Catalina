@@ -604,7 +604,7 @@ Airfoil NACA0021
             <switch name="Gear Switch">
                 <default value="/controls/gear/gear-down"/>
                 <test  logic="AND" value="0">
-                    /sim/model/terrain  == 0
+                    /environment/terrain  == 0
                     position/h-agl-ft lt 40
                     position/h-sl-ft  lt position/h-agl-ft
                 </test>
@@ -642,7 +642,7 @@ Airfoil NACA0021
             <switch name="Drag Terrain Factor Switch">
                 <default value="0"/>
                 <test  logic="AND" value="1">
-                    /sim/model/terrain  == 1
+                    /environment/terrain  == 1
                     /position/altitude-agl-ft lt 7
                     gear/gear-pos-norm == 0
                 </test>
@@ -650,7 +650,7 @@ Airfoil NACA0021
             <switch name="Drag Gear In Water Switch">
                 <default value="0"/>
                 <test  logic="AND" value="1">
-                    /sim/model/terrain  == 0
+                    /environment/terrain  == 0
                     /position/altitude-agl-ft lt 8
                     /surface-positions/gear-pos-norm == 1
                 </test>
