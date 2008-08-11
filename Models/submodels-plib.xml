@@ -49,11 +49,11 @@
         <submodel>
             <name>water-bomb</name>
             <model>Aircraft/PBY-Catalina/Models/water-bomb.xml</model>
-            <trigger>/sim/model/water-bomb</trigger>
+            <trigger>/fdm/jsbsim/fcs/water-trigger</trigger>
             <speed>0</speed>
             <repeat>true</repeat>
             <delay>0.3</delay>
-            <count>20</count>
+            <count>0</count>
             <x-offset>0</x-offset>
             <y-offset>0</y-offset>
             <z-offset>-4</z-offset>
@@ -78,12 +78,13 @@
             <count>-1</count>
             <x-offset>0</x-offset>
             <y-offset>-1</y-offset>
-            <z-offset>-3.8</z-offset>
+            <z-offset>-3.3</z-offset>
             <buoyancy>32</buoyancy>
             <life>9.0</life>
             <cd>0.1</cd>
             <wind>false</wind>
             <eda>100</eda>
+	    <weight>50</weight>
         </submodel>
 
         <submodel>
@@ -96,12 +97,13 @@
             <count>-1</count>
             <x-offset>0</x-offset>
             <y-offset>1</y-offset>
-            <z-offset>-3.8</z-offset>
+            <z-offset>-3.3</z-offset>
             <buoyancy>32</buoyancy>
             <life>8.0</life>
             <cd>0.1</cd>
             <wind>false</wind>
             <eda>100</eda>
+	    <weight>50</weight>
         </submodel>
 
   </PropertyList>

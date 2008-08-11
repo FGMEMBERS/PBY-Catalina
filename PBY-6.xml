@@ -5,9 +5,9 @@
  xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 
     <fileheader>
-        <author> Author Name </author>
-        <filecreationdate> Creation Date </filecreationdate>
-        <version> Version </version>
+        <author> Aeromatic and Gerard Robin </author>
+        <filecreationdate> 10-08-2008 </filecreationdate>
+        <version> 0.3 </version>
         <description> Models a PBY-5 and 6 </description>
         <documentation>
             Technical data on the Consolidated PBY-5A
@@ -249,7 +249,7 @@ Airfoil NACA0021
             <damping_coeff unit="LBS/FT/SEC"> 500 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
-            <retractable>0</retractable>
+            <retractable>1</retractable>
         </contact>
         <contact type="BOGEY" name="G-FLOT"><!--8-->
             <location unit="IN">
@@ -264,7 +264,7 @@ Airfoil NACA0021
             <damping_coeff unit="LBS/FT/SEC"> 500 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE</brake_group>
-            <retractable>0</retractable>
+            <retractable>1</retractable>
         </contact>
         <contact type="BOGEY" name="WATER-INTAKE"><!--9-->
             <location unit="IN">
@@ -314,8 +314,8 @@ Airfoil NACA0021
         <contact type="STRUCTURE" name="D-AILE">
             <location unit="IN">
                 <x> 0 </x>
-                <y> 600 </y>
-                <z> 0.6 </z>
+                <y>627</y>
+                <z> 87.6</z>
             </location>
             <static_friction> 0 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
@@ -325,8 +325,8 @@ Airfoil NACA0021
         <contact type="STRUCTURE" name="G-AILE">
             <location unit="IN">
                 <x> 0 </x>
-                <y> -600 </y>
-                <z> 0.6 </z>
+                <y> -627</y>
+                <z> 87.6 </z>
             </location>
             <static_friction> 0 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
@@ -465,17 +465,23 @@ Airfoil NACA0021
     </propulsion>
 
     <flight_control name="FCS: PBY-6">
-        <property>/instrumentation/lights/blinker-kinemat-in</property>
+        <!--<property>/instrumentation/lights/blinker-kinemat-in</property>
         <property>/instrumentation/lights/blinker-kinemat-out</property>
-        <property>/instrumentation/lights/beacon-on</property>
-        <property>/controls/gear/float-down</property>
-        <property>/engines/engine[0]/thruster/rpm</property>
-        <property>/engines/engine[1]/thruster/rpm</property>
-        <property>/surface-positions/floats-pos-norm</property>
+        <property>/instrumentation/lights/beacon-on</property>-->
+        <!--<property>/controls/gear/float-down</property>-->
+        <!--<property>/engines/engine[0]/thruster/rpm</property>
+        <property>/engines/engine[1]/thruster/rpm</property>-->
+        <!--<property>/surface-positions/floats-pos-norm</property>
         <property>gear/gear-cp-pos-norm</property>
         <property>gear/gear-cp-cmd-norm</property>
         <property>/surface-positions/gear-pos-norm</property>
-        <property>fcs/lighting-instruments-norm</property>
+        <property>fcs/lighting-instruments-norm</property>-->
+	<!--<property>gear/unit[7]/pos-norm</property>
+	<property>gear/unit[8]/pos-norm</property>
+	<property>gear/unit[0]/pos-norm</property>
+	<property>gear/unit[1]/pos-norm</property>
+	<property>gear/unit[2]/pos-norm</property>-->
+	<!--<property>/controls/gear/float-down</property>-->
 
 
         <channel name="Pitch">
@@ -622,7 +628,37 @@ Airfoil NACA0021
                         <time>2</time>
                     </setting>
                 </traverse>
-                <output>gear/gear-pos-norm</output>
+                <output>gear/unit[0]/pos-norm</output>
+            </kinematic>
+
+	    <kinematic name="Gear Control1">
+                <input>gear/gear-cp-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>2</time>
+                    </setting>
+                </traverse>
+                <output>gear/unit[1]/pos-norm</output>
+            </kinematic>
+
+	    <kinematic name="Gear Control2">
+                <input>gear/gear-cp-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>2</time>
+                    </setting>
+                </traverse>
+                <output>gear/unit[2]/pos-norm</output>
             </kinematic>
 
             <kinematic name="Gear Surface Position">
@@ -639,12 +675,19 @@ Airfoil NACA0021
                 </traverse>
                 <output>/surface-positions/gear-pos-norm</output>
             </kinematic>
+
+	     <pure_gain name="Gear Pos Norm">
+		<input>/surface-positions/gear-pos-norm</input>
+		<gain>1</gain>
+
+	     </pure_gain>
+
             <switch name="Drag Terrain Factor Switch">
                 <default value="0"/>
                 <test  logic="AND" value="1">
                     /environment/terrain  == 1
                     /position/altitude-agl-ft lt 7
-                    gear/gear-pos-norm == 0
+                    fcs/gear-pos-norm == 0
                 </test>
             </switch>
             <switch name="Drag Gear In Water Switch">
@@ -661,7 +704,7 @@ Airfoil NACA0021
                 <default value="0"/>
                 <test  logic="AND" value="1">
                     /position/altitude-agl-ft lt 11
-                    gear/gear-pos-norm == 1
+                    fcs/gear-pos-norm == 1
                 </test>
             </switch>
 
@@ -677,10 +720,19 @@ Airfoil NACA0021
                 <output>fcs/center-brake-cmd-norm</output>
             </pure_gain>
 
-            <pure_gain name="Floats Controls">
+            <!--<pure_gain name="Floats Controls">
                 <input>/controls/gear/float-down</input>
                 <gain>1</gain>
-            </pure_gain>
+            </pure_gain>-->
+
+	    <aerosurface_scale name="Floats Controls">
+              <input>/controls/gear/float-down</input>
+              <range>
+                <min>0</min>
+                <max>1</max>
+              </range>
+            </aerosurface_scale>
+
 
             <kinematic name="Floats Pos Norm">
                 <input>fcs/floats-controls</input>
@@ -694,13 +746,42 @@ Airfoil NACA0021
                         <time>5</time>
                     </setting>
                 </traverse>
+		<output>gear/unit[7]/pos-norm</output>
             </kinematic>
 
-            <pure_gain name="Floats Position">
+
+
+	     <kinematic name="Floats Pos Norm1">
+                <input>fcs/floats-controls</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>5</time>
+                    </setting>
+                </traverse>
+		<output>gear/unit[8]/pos-norm</output>
+            </kinematic>
+
+	    <aerosurface_scale name="Floats Position">
+              <input>fcs/floats-pos-norm</input>
+              <range>
+                <min>0</min>
+                <max>1</max>
+              </range>
+              <output>/surface-positions/floats-pos-norm</output>
+            </aerosurface_scale>
+
+
+
+           <!-- <pure_gain name="Floats Position">
                 <input>fcs/floats-pos-norm</input>
                 <gain>1</gain>
                 <output>/surface-positions/floats-pos-norm</output>
-            </pure_gain>
+            </pure_gain>-->
         </channel>
 
         <channel name="On Sea">
@@ -716,14 +797,14 @@ Airfoil NACA0021
                 </test>
                 <output>/controls/gear/float-down</output>
             </switch>
-            <!--<switch name="On Sea Init">
+            <switch name="On Sea Init">
                 <default value="/sim/model/onsea"/>
                 <test  logic="AND" value="0">
                     position/h-agl-ft gt 20
-                    gear/gear-pos-norm == 0
+                    fcs/gear-pos-norm == 0
                 </test>
                 <output>/sim/model/onsea</output>
-            </switch>-->
+            </switch>
         </channel>
 
         <!--<channel name="Throttle">
@@ -777,7 +858,7 @@ Airfoil NACA0021
                 <default value="0"/>
                 <test  logic="AND" value="/controls/flight/rudder">
                     /gear/gear[0]/wow == 1
-                    gear/gear-pos-norm == 1
+                    fcs/gear-pos-norm == 1
                     velocities/vc-kts lt 20
                     position/h-agl-ft lt 11
                     /controls/engines/engine[0]/throttle lt 0.40
@@ -786,7 +867,7 @@ Airfoil NACA0021
                 <default value="0"/>
                 <test  logic="AND" value="/controls/flight/rudder">
                     /gear/gear[3]/wow   == 1
-                    gear/gear-pos-norm == 0
+                    fcs/gear-pos-norm == 0
                     fcs/floats-pos-norm == 1
                     position/h-agl-ft lt 7
                     /controls/engines/engine[0]/throttle lt 0.40
@@ -1014,7 +1095,7 @@ Airfoil NACA0021
         <switch name="landing light">
             <default value="0"/>
             <test logic="AND" value="1">
-                gear/gear-pos-norm  == 1
+                fcs/gear-pos-norm  == 1
                 /systems/electrical/outputs/landing-light  gt 27
                 /controls/lighting/landing-lights  == 1
             </test>
@@ -1022,31 +1103,42 @@ Airfoil NACA0021
         </channel>
 
 
-        <property>fcs/water-load-cmd</property>
-        <property>fcs/water-load-pos</property>
+
+
         <property>fcs/water-loaded-pos</property>
-        <property>/sim/model/water-bomb</property>
+
 
         <channel name="Water Bomb">
+
+	<!--les conditions requisent pour effectuer l'acte de remplissage-->
+	<!--loading the water under conditions-->
+
             <switch name="Water Tank Reload">
                 <default value="0"/>
                 <test logic="AND" value="1">
                     /sim/model/waterloading  == 1
                     position/h-agl-ft lt 8
                      /gear/gear[9]/wow   == 1
-                    gear/gear-pos-norm == 0
+                    gear/gear-cmd-norm == 0
                     fcs/floats-pos-norm == 1
                     velocities/vc-kts gt 55
                 </test>
             </switch>
+
+	    <!--Pour gérer les interruptions , et reprendre en cours de remplissage jusqu'au maxi-->
+	    <!--Process the loading of the water tank, part by part if required-->
 
             <switch name="Waterloading Cmd Norm">
                 <default value="fcs/water-loaded-pos"/>
                 <test logic="OR" value="1">
                     fcs/water-tank-reload == 1
                 </test>
-                <output>fcs/water-load-cmd</output>
+		<test logic="OR" value="0">
+                 /consumables/fuel/tank[3]level-gal_us == 0
+                </test>
             </switch>
+
+
 
             <kinematic name="Water Reload Position">
                 <input>fcs/waterloading-cmd-norm</input>
@@ -1063,22 +1155,26 @@ Airfoil NACA0021
                 <output>fcs/water-loaded-pos</output>
             </kinematic>
 
+
+
             <pure_gain name="Water Tank Capacity">
                 <input>fcs/water-reload-position</input>
-                <gain>1083.1054</gain>
+                <gain>1369.5382</gain>
             </pure_gain>
 
-            <switch name="Water bombing Cmd Norm">
+	    <!--Une Boucle Nasal "Tank_water" effectue en même temps la mise à jour du compteur /consumables/fuel/tank[3]level-gal_us afin d'inclure la surcharge réelle dans le fdm-->
+	    <!--/consumables/fuel/tank[3]level-gal_us is updated in // with Nasal loop-->
+
+
+	     <switch name="Water bombing Cmd Norm">
                 <default value="0"/>
                 <test logic="AND" value="1">
                     /sim/model/bomb-signal == 1
-                    /consumables/fuel/tank[3]level-gal_us gt 500
                 </test>
-                <output>/sim/model/water-bomb</output>
             </switch>
 
             <kinematic name="Water Bombing Timing">
-                <input>/sim/model/bomb-signal</input>
+                <input>fcs/water-bombing-cmd-norm</input>
                 <traverse>
                     <setting>
                         <position>0</position>
@@ -1086,12 +1182,37 @@ Airfoil NACA0021
                     </setting>
                     <setting>
                         <position>1</position>
-                        <time>8</time>
+                        <time>4</time>
                     </setting>
                 </traverse>
             </kinematic>
 
+	    <switch name="Water Switch">
+                <default value="fcs/water-switch"/>
+                <test logic="AND" value="1">
+                    /sim/model/bomb-signal == 1
+		    fcs/water-switch == 0
+                </test>
+		<test logic="AND" value="0">
+		    fcs/water-loaded-pos == 0
+		    fcs/water-switch == 1
+                </test>
+            </switch>
+
+	    <switch name="Water Trigger">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    fcs/water-bombing-timing == 1
+                </test>
+            </switch>
+
+	    <pure_gain name="Water Count">
+                <input>fcs/water-loaded-pos</input>
+                <gain>20</gain>
+            </pure_gain>
+
         </channel>
+
          <channel name="Wake Trigger">
               <switch name="Left Wake Control">
                 <default value="0"/>
@@ -1278,7 +1399,7 @@ Airfoil NACA0021
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>gear/gear-pos-norm</property>
+                    <property>fcs/gear-pos-norm</property>
                     <value>0.0150</value>
                 </product>
             </function>

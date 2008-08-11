@@ -55,6 +55,11 @@
                  <property>/sim/model/bomb-signal</property>
                  <value>1</value>
             </binding>
+	    <binding>
+              <command>property-assign</command>
+              <property>/sim/model/waterloading</property>
+              <value>0</value>
+            </binding>
          </key>
 
          <key n="76">

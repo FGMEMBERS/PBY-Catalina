@@ -33,7 +33,10 @@
 
         <model>
             <path>Aircraft/PBY-Catalina/Models/Catalina_pby6.xml</path>
+	    <waterloading>0</waterloading>
+	    <bomb-signal>0</bomb-signal>
         </model>
+
 
         <help include="Help/Catalina-help.xml"/>
 
@@ -158,6 +161,9 @@
             <battery-switch>false</battery-switch>
             <external-power>false</external-power>
         </electric>
+	<mooring>
+	<automatic type="bool">true</automatic>
+	</mooring>
     </controls>
 
 
@@ -191,6 +197,17 @@
         </fuel>
     </consumables>
 
+    	<systems>
+		<mooring>
+		<boat-id></boat-id>
+		<dialog></dialog>
+		<moorage-id></moorage-id>
+		<route include="System/Boeing314-route.xml"/>
+		<state></state>
+		</mooring>
+ 	</systems>
+
+
     <input include="Inputs/Catalina-input.xml"/>
 
     <nasal>
@@ -199,6 +216,8 @@
         </electrical>
         <mooring>
             <file>Aircraft/PBY-Catalina/System/mooring.nas</file>
+	    <file>Aircraft/PBY-Catalina/System/PBY.nas</file>
+	    <file>Aircraft/PBY-Catalina/System/constants.nas</file>
         </mooring>
         <water>
             <file>Aircraft/PBY-Catalina/System/tank_water.nas</file>

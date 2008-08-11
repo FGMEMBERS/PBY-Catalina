@@ -3,16 +3,22 @@
 
 <piston_engine name="Pratt  Whitney R-1830-92">
     <minmp unit="INHG">          6.0 </minmp>
-    <maxmp unit="INHG">         30.0 </maxmp>
+    <maxmp unit="INHG">         25 </maxmp>
     <displacement unit="IN3">1830</displacement>
+    <bsfc>0.323</bsfc>
     <maxhp>1200.0</maxhp>
     <cycles>2.0</cycles>
     <idlerpm>700.0 </idlerpm>
     <maxthrottle>    1.0 </maxthrottle>
     <minthrottle>    0.2 </minthrottle>
-    <numboostspeeds>1</numboostspeeds>
-    <ratedboost1>6.7</ratedboost1>
-    <ratedpower1>1200</ratedpower1>
-    <ratedrpm1>2600</ratedrpm1>
-    <ratedaltitude1>7000</ratedaltitude1>
+   <!-- <numboostspeeds>   2 </numboostspeeds>
+  <boostoverride>    0 </boostoverride>
+  <ratedboost1> 4 </ratedboost1>
+  <ratedpower1> 550 </ratedpower1>
+  <ratedrpm1> 2550 </ratedrpm1>
+  <ratedaltitude1> 6000 </ratedaltitude1>
+  <ratedboost2> 9 </ratedboost2>
+  <ratedpower2> 230 </ratedpower2>
+  <ratedrpm2> 2000 </ratedrpm2>
+  <ratedaltitude2> 24000 </ratedaltitude2>-->
 </piston_engine>

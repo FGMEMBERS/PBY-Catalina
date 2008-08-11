@@ -1,22 +1,6 @@
-#from Boeing314 with specific addon
+#Taken and extracted from Boeing314A Model ( the nice and accurate  FG Clipper) thanks to his unknown Author 
 
-# =========
-# CONSTANTS
-# =========
 
-Constant = {};
-
-Constant.new = func {
-   obj = { parents : [Constant],
-
-           HOURTOSECOND : 3600.0,
-           MINUTETOSECOND : 60.0,
-         };
-
-   return obj;
-};
-
- setprop("/sim/model/onsea",0);
 # =================
 # AUTOMATIC MOORING
 # =================
@@ -24,8 +8,22 @@ Constant.new = func {
 Mooring = {};
 
 Mooring.new = func {
-   obj = { parents : [Mooring],
-           AIRPORTSEC : 3.0
+   var obj = { parents : [Mooring],
+
+           mooring : nil,
+           presets : nil,
+           seaplanes : nil,
+
+           MOORINGSEC : 5.0,
+           AIRPORTSEC : 3.0,
+           HARBOURSEC : 2.0,
+
+           BOATDEG : 0.0001,
+
+           FLIGHTFT : 20,
+           BOATFT : 10,                                            # crew in a boat
+           
+           boataltitude : constant.FALSE
          };
 
    obj.init();
@@ -34,151 +32,221 @@ Mooring.new = func {
 };
 
 Mooring.init = func {
+   me.mooring = props.globals.getNode("/systems/mooring");
+   me.presets = props.globals.getNode("/sim/presets");
+   me.seaplanes = props.globals.getNode("/systems/mooring/route").getChildren("seaplane");
+
    me.presetseaplane();
 }
 
-# cannot make a settimer on a class member
-presetairportcron = func {
-   mooringsystem.presetairport();
+Mooring.schedule = func {
+   me.towerchange();
+   me.mooragechange();
+}
+
+Mooring.dialogexport = func {
+   var harbour = "";
+   var dialog = me.mooring.getChild("dialog").getValue();
+   
+   # KSFO  Treasure Island ==> KSFO
+   var idcomment = split( " ", dialog );
+   var moorage = idcomment[0];
+
+   for(var i=0; i<size(me.seaplanes); i=i+1) {
+       harbour = me.seaplanes[ i ].getChild("airport-id").getValue();
+
+       if( harbour == moorage ) {
+           me.setmoorage( i, moorage );
+
+           setprop("/sim/tower/airport-id",moorage);
+           break;
+       }
+   }
+}
+
+Mooring.setmoorage = func( index, moorage ) {
+    var latitudedeg = me.seaplanes[ index ].getChild("latitude-deg").getValue();
+    var longitudedeg = me.seaplanes[ index ].getChild("longitude-deg").getValue();
+    var headingdeg = me.seaplanes[ index ].getChild("heading-deg").getValue();
+
+    me.presets.getChild("latitude-deg").setValue(latitudedeg);
+    me.presets.getChild("longitude-deg").setValue(longitudedeg);
+
+    me.setboatposition( latitudedeg, longitudedeg, moorage );
+
+    me.presets.getChild("heading-deg").setValue(headingdeg);
+
+    # forces the computation of ground
+    me.presets.getChild("altitude-ft").setValue(-9999);
+
+    me.presets.getChild("airspeed-kt").setValue(0);
+
+    me.setadf( index, moorage );
+}
+
+Mooring.setadf = func( index, beacon ) {
+   var frequency = 0.0;
+   var adf = me.seaplanes[ index ].getNode("adf");
+
+   if( adf != nil ) {
+       frequency = adf.getChild("selected-khz");
+       if( frequency != nil ) {
+           frequencykz = frequency.getValue();
+           setprop("/instrumentation/adf/frequencies/selected-khz",frequencykz);
+       }
+       frequency = adf.getChild("standby-khz");
+       if( frequency != nil ) {
+           frequencykz = frequency.getValue();
+           setprop("/instrumentation/adf/frequencies/standby-khz",frequencykz);
+       }
+   }
+}
+
+Mooring.setboatposition = func( latitudedeg, longitudedeg, airport ) {
+   # offset to be outside the hull
+   var latitudedeg = latitudedeg + me.BOATDEG;
+   var longitudedeg = longitudedeg + me.BOATDEG;
+
+   setprop( "/systems/seat/position/boat-view/latitude-deg", latitudedeg );
+   setprop( "/systems/seat/position/boat-view/longitude-deg", longitudedeg );
+
+   me.mooring.getChild("boat-id").setValue(airport);
+
+   me.boataltitude = constant.TRUE;
+}
+
+Mooring.setboatheight = func( altitudeft ) {
+   setprop( "/systems/seat/position/boat-view/altitude-ft", altitudeft );
+
+   me.boataltitude = constant.FALSE;
+}
+
+Mooring.setboatdefault = func {
+   var airport = me.presets.getChild("airport-id").getValue();
+   var latitudedeg = getprop("/position/latitude-deg");
+   var longitudedeg = getprop("/position/longitude-deg");
+
+   me.setboatposition( latitudedeg, longitudedeg, airport );
+
+   me.setboatsea();
+}
+
+Mooring.setboatsea = func {
+   var altitudeft = getprop("/position/altitude-ft");
+   var aglft = getprop("/position/altitude-agl-ft");
+
+   # sea level
+   var altitudeft = altitudeft - aglft - constantaero.AGLFT;
+
+   # boat level
+   altitudeft = altitudeft + me.BOATFT;
+
+   me.setboatheight( altitudeft );
+}
+
+# computes boat altitude, once seaplane on the water
+Mooring.mooragechange = func {
+   if( me.boataltitude ) {
+       me.setboatsea();
+   }
+}
+
+# tower changed by dialog (destination or airport location)
+Mooring.towerchange = func {
+   var latitudedeg = 0.0;
+   var longitudedeg = 0.0;
+   var altitudeft = 0.0;
+   var harbour = "";
+   var tower = getprop("/sim/tower/airport-id");
+
+   if( tower != me.mooring.getChild("boat-id").getValue() ) {
+
+       for(var i=0; i<size(me.seaplanes); i=i+1) {
+           harbour = me.seaplanes[ i ].getChild("airport-id").getValue();
+           if( harbour == tower ) {
+
+               # boat corresponding to the tower
+               latitudedeg = me.seaplanes[ i ].getChild("latitude-deg").getValue();
+               longitudedeg = me.seaplanes[ i ].getChild("longitude-deg").getValue();
+
+               me.setboatposition( latitudedeg, longitudedeg, tower );
+
+               # rough guess of boat altitude from tower !
+               altitudeft = getprop("/sim/tower/altitude-ft" );
+               me.setboatheight( altitudeft );
+               break;
+           }
+       }
+   }
 }
 
 # change of airport
 Mooring.presetairport = func {
-   airport = getprop("/sim/presets/airport-id");
-   runway = getprop("/sim/presets/runway");
+   var airport = me.presets.getChild("airport-id").getValue();
 
-   if( getprop("/sim/presets/mooring/airport-id") != airport or
-       getprop("/sim/presets/mooring/runway") != runway ) {
-       altitude = getprop("/sim/presets/altitude-ft");
-
-       if( altitude <= 0 ) {
-           settimer(presetseaplanecron,1.0);
-       }
-       
-       # in flight
-       else {
-           settimer(presetairportcron,me.AIRPORTSEC);
-       }
+   if( airport != nil and airport != "" ) {
+       settimer(func{ me.presetseaplane(); },me.HARBOURSEC);
    }
 
    # unchanged
    else {
-       settimer(presetairportcron,me.AIRPORTSEC);
+       settimer(func{ me.presetairport(); },me.AIRPORTSEC);
    }
-}
-
-# cannot make a settimer on a class member
-presetseaplanecron = func {
-   mooringsystem.presetseaplane();
 }
 
 # automatic seaplane preset
 Mooring.presetseaplane = func {
-   moorage = getprop("/sim/presets/moorage");
-   if( moorage == nil or moorage ) {
-       # wait for end of trim
-       if( getprop("/sim/sceneryloaded") ) {
-           settimer(presetharbourcron,1.0);
-       }
-
-       # wait for end initialization
-       else {
-           settimer(presetseaplanecron,1.0);
-       }
+   # wait for end of trim
+   if( getprop("/sim/sceneryloaded") ) {
+       settimer(func{ me.presetharbour(); },me.HARBOURSEC);
    }
 
-   # no automatic mooring
+   # wait for end of initialization
    else {
-       settimer(presetairportcron,me.AIRPORTSEC);
+       settimer(func{ me.presetseaplane(); },me.HARBOURSEC);
    }
-}
-
-# cannot make a settimer on a class member
-presetharbourcron = func {
-   mooringsystem.presetharbour();
 }
 
 # goes to the harbour, once one has the tower
 Mooring.presetharbour = func {
-   found = "false";
-   airport = getprop("/sim/presets/airport-id");
-   if( airport != nil and airport != "" ) {
-       seaplanes = props.globals.getNode("/sim/presets/mooring").getChildren("seaplane");
-       for(i=0; i<size(seaplanes); i=i+1) {
-            harbour = seaplanes[ i ].getChild("airport-id").getValue();
-            if( harbour == airport ) {
-                latitudedeg = seaplanes[ i ].getChild("latitude-deg").getValue();
-                setprop("/position/latitude-deg",latitudedeg);
-                longitudedeg = seaplanes[ i ].getChild("longitude-deg").getValue();
-                setprop("/position/longitude-deg",longitudedeg);
-                headingdeg = seaplanes[ i ].getChild("heading-deg").getValue();
-                setprop("/orientation/heading-deg",headingdeg);
-                adf = seaplanes[ i ].getNode("adf");
-                if( adf != nil ) {
-                    frequency = adf.getChild("selected-khz");
-                    if( frequency != nil ) {
-                        frequencykz = frequency.getValue();
-                        setprop("/instrumentation/adf/frequencies/selected-khz",frequencykz);
-                    }
-                    frequency = adf.getChild("standby-khz");
-                    if( frequency != nil ) {
-                        frequencykz = frequency.getValue();
-                        setprop("/instrumentation/adf/frequencies/standby-khz",frequencykz);
-                    }
-                }
+   var aglft = 0.0;
+   var airport = "";
+   var harbour = "";
+   var found = constant.FALSE;
 
-                runway = getprop("/sim/presets/runway");
-                setprop("/sim/presets/mooring/airport-id",airport);
-                setprop("/sim/presets/mooring/runway",runway);
+   if( getprop("/controls/mooring/automatic") ) {
+       aglft = getprop("/position/altitude-agl-ft");
 
-                found = "true";
-                setprop("/sim/model/onsea",1);
+       # on sea
+       if( aglft < me.FLIGHTFT ) {
+           airport = me.presets.getChild("airport-id").getValue();
+           if( airport != nil and airport != "" ) {
+               for(var i=0; i<size(me.seaplanes); i=i+1) {
+                   harbour = me.seaplanes[ i ].getChild("airport-id").getValue();
 
-                # doesn't work in the same event, needs some delay
-                settimer(presetwatercron,1.5);
-                break;
-            }
+                   if( harbour == airport ) {
+                       me.setmoorage( i, airport );
+
+                       fgcommand("presets-commit", props.Node.new());
+
+                       # presets cuts the engines
+                       var eng = props.globals.getNode("/controls/engines");
+                       if (eng != nil) {
+                           foreach (var c; eng.getChildren("engine")) {
+                                    c.getNode("magnetos", 1).setIntValue(3);
+                           }
+                       }
+
+                       found = constant.TRUE;
+                       break;
+                   }
+               }
+           }
        }
    }
 
-   # moorage not found
-   if( found == "false" ) {
-       settimer(presetairportcron,me.AIRPORTSEC);
+   # in flight
+   if( !found ) {
+       me.setboatdefault();
    }
 }
-
-# cannot make a settimer on a class member
-presetwatercron = func {
-   mooringsystem.presetwater();
-}
-
-# computes the water level
-Mooring.presetwater = func {
-   altitudeft = getprop("/position/altitude-ft");
-   aglft = getprop("/position/altitude-agl-ft");
-   altitudeft = altitudeft - aglft;
-   setprop("/position/altitude-ft",altitudeft);
-
-   # scan airport change
-   settimer(presetairportcron,me.AIRPORTSEC);
-}
-
-
-# ==============
-# Initialization
-# ==============
-
-
-
-init = func {
-   # schedule the 1st call
-   
-}
-
-# objects must be here, otherwise local to init()
-constant = Constant.new();
-mooringsystem = Mooring.new();
-
-
-
-init();
