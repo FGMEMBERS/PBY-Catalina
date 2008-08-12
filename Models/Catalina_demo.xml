@@ -51,10 +51,28 @@
      <!-- DEBUT====================Animation OSGViewer=====================-->
 
 
+	<!--<model>
+		<name>Particle</name>
+		<path>Aircraft/PBY-Catalina/Models/Effects/particle.xml</path>
+    	</model>-->
 
-
-
-
+	<!--Is not functional, ONLY a trick to get all osg animation working , by now i don't understand the mistake-->
+	<model>
+		<name>GDFlux1</name>
+		<path>Aircraft/PBY-Catalina/Models/Effects/GDflux1.xml</path>
+	</model>
+	<animation>
+		<type>select</type>
+		<object-name>GDFlux1</object-name>
+		<condition>
+		<and>
+			<equals>
+			<property>surface-positions/floats-pos-norm</property>
+			<value>10</value>
+			</equals>
+		</and>
+		</condition>
+	</animation>
 
 
     <animation>
@@ -112,6 +130,7 @@
     </animation>
 
 
+
     <animation>
         <type>select</type>
         <object-name>DFlux1</object-name>
@@ -128,6 +147,9 @@
             </and>
         </condition>
     </animation>
+
+
+
 
 
     <animation>
@@ -384,32 +406,36 @@
     </animation>
 
 
-
+<!--Sillage Flotteur Gauche-->
     <model>
             <name>GFlux1</name>
             <path>Aircraft/PBY-Catalina/Models/Effects/Gflux1.xml</path>
     </model>
 
+
+<!--Sillage Flotteur Droite-->
     <model>
             <name>DFlux1</name>
             <path>Aircraft/PBY-Catalina/Models/Effects/Dflux1.xml</path>
     </model>
 
+
+
+<!--Spray arrière-->
     <model>
             <name>Effet</name>
             <path>Aircraft/PBY-Catalina/Models/Effects/jetdo.xml</path>
     </model>
-
+<!--Sillage coque coté Gauche-->
     <model>
             <name>GFlux</name>
             <path>Aircraft/PBY-Catalina/Models/Effects/Gflux.xml</path>
     </model>
-
+<!--Sillage coque coté Droit-->
     <model>
             <name>DFlux</name>
             <path>Aircraft/PBY-Catalina/Models/Effects/Dflux.xml</path>
     </model>
-
 
 
      <!-- FIN FIN FIN=================Animation OSGViewer=====================-->
