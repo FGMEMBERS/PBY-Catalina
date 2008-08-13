@@ -14,12 +14,17 @@
 
  <path>fluxGD.osg</path>
 
+  <!--only test  with <particlesystem>  xml file   coding -->
+	<!--<model>
+		<name>Particle</name>
+		<path>Aircraft/PBY-Catalina/Models/Effects/particle.xml</path>
+	</model>-->
 
     <offsets>
             <x-m>1.75098</x-m>
             <y-m>-15.5773</y-m>
             <z-m>2.10195</z-m>
-            <pitch-deg>91</pitch-deg>
+            <pitch-deg>87</pitch-deg>
             <heading-deg>0</heading-deg>
             <roll-deg>0</roll-deg>
     </offsets>

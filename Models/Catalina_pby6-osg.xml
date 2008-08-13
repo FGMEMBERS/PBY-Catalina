@@ -7,238 +7,93 @@
 -->
    <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
 
-<PropertyList>
+<PropertyList include="Catalina_base.xml">
 
 
 
+	<path>pby6N.ac</path>
+
+	<texture-path>Textures/texture-protcivil</texture-path>
 
 
-     <!-- DEBUT====================Animation OSGViewer=====================-->
-
-
-
-
-
-
-
-
-    <animation>
-        <type>select</type>
-        <object-name>Effet</object-name>
-        <object-name>GFlux</object-name>
-        <object-name>DFlux</object-name>
-        <condition>
-            <and>
-        <equals>
-            <property>/controls/gear/gear-down</property>
-            <value>0</value>
-        </equals>
-        <less-than>
-            <property>/position/altitude-agl-ft</property>
-            <value>7.8</value>
-        </less-than>
-        <greater-than>
-            <property>/orientation/pitch-deg/</property>
-            <value>-4.5</value>
-        </greater-than>
-        </and>
-        </condition>
-    </animation>
+	<offsets>
+		<pitch-deg>-0.6</pitch-deg>
+		<z-m>0.05</z-m>
+	</offsets>
 
 
 
-    <animation>
-        <type>select</type>
-        <object-name>GFlux1</object-name>
-        <condition>
-
-                    <property>gear/gear[8]/wow</property>
-                    <equals>
-                    <property>surface-positions/floats-pos-norm</property>
-                    <value>1.0</value>
-                    </equals>
-                <and>
-                <greater-than>
-                    <property>velocities/uBody-fps</property>
-                    <value>8.0</value>
-                </greater-than>
-            </and>
-        </condition>
-    </animation>
+	<model>
+		<name>Panel3D</name>
+		<path>Aircraft/PBY-Catalina/Panels/PBY-Panel3D.xml</path>
+		<offsets>
+			<x-m>-4.36035</x-m>
+			<y-m>0</y-m>
+			<z-m>0.12</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
 
-    <animation>
-        <type>select</type>
-        <object-name>DFlux1</object-name>
-        <condition>
-            <and>
-                 <property>gear/gear[7]/wow</property>
-                <equals>
-                    <property>surface-positions/floats-pos-norm</property>
-                    <value>1.0</value>
-                    </equals>
-                <greater-than>
-                    <property>velocities/uBody-fps</property>
-                    <value>8.0</value>
-                </greater-than>
-            </and>
-        </condition>
-    </animation>
+	<model>
+		<name>Pilote-et-Co</name>
+		<path>Aircraft/PBY-Catalina/Models/Catalina_Pilote.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
+	<model>
+		<name>DMoteur</name>
+		<path>Aircraft/PBY-Catalina/Models/Engines/Catalina_DMoteur.xml</path>
+		<offsets>
+			<x-m>-2.58343</x-m>
+			<y-m>2.0818</y-m>
+			<z-m>2.04891</z-m>
+			<pitch-deg>3</pitch-deg>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
 
-    <animation>
-        <type>translate</type>
-        <object-name>Effet</object-name>
-        <property>velocities/groundspeed-kt</property>
-        <interpolation>
-        <entry>
-            <ind>0</ind>
-            <dep>0</dep>
-        </entry>
-        <entry>
-            <ind>10</ind>
-            <dep>0</dep>
-        </entry>
-        <entry>
-            <ind>15</ind>
-            <dep>5</dep>
-        </entry>
-        <entry>
-            <ind>20</ind>
-            <dep>7.5</dep>
-        </entry>
-        <entry>
-            <ind>60</ind>
-            <dep>10</dep>
-        </entry>
-        </interpolation>
-        <axis>
-                <x>-1.0</x>
-                <y>0.0</y>
-                <z>0.30</z>
-        </axis>
-    </animation>
+	<model>
+		<name>GMoteur</name>
+		<path>Aircraft/PBY-Catalina/Models/Engines/Catalina_GMoteur.xml</path>
+		<offsets>
+			<x-m>-2.58343</x-m>
+			<y-m>-2.0818</y-m><!---2.07944-->
+			<z-m>2.04891</z-m>
+			<pitch-deg>3</pitch-deg>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
 
-    <animation>
-        <type>translate</type>
-        <object-name>Effet</object-name>
-        <property>velocities/groundspeed-kt</property>
-        <interpolation>
-        <entry>
-            <ind>0</ind>
-            <dep>-20</dep>
-        </entry>
-        <entry>
-            <ind>10</ind>
-            <dep>-20</dep>
-        </entry>
-        <entry>
-            <ind>15</ind>
-            <dep>0</dep>
-        </entry>
-        </interpolation>
-        <axis>
-                <x>0</x>
-                <y>0.0</y>
-                <z>1</z>
-        </axis>
-    </animation>
+	<!-- pitch de 3deg yaw 1.5deg ext  must be checked -->
 
+	<model>
+		<name>DHelice</name>
+		<path>Aircraft/PBY-Catalina/Models/Engines/Catalina_DHelice_mod.xml</path>
+		<offsets>
+			<x-m>-3.21038</x-m>
+			<y-m>2.07945</y-m><!---2.07944-->
+			<z-m>2.09119</z-m>
+			<pitch-deg>3</pitch-deg>
+		</offsets>
+	</model>
 
-
-
-    <animation>
-        <type>rotate</type>
-        <object-name>Effet</object-name>
-        <property>velocities/groundspeed-kt</property>
-        <interpolation>
-        <entry>
-            <ind>0</ind>
-            <dep>-60</dep>
-        </entry>
-        <entry>
-            <ind>10</ind>
-            <dep>-40</dep>
-        </entry>
-        <entry>
-            <ind>15</ind>
-            <dep>-20</dep>
-        </entry>
-        <entry>
-            <ind>20</ind>
-            <dep>0</dep>
-        </entry>
-        <entry>
-            <ind>60</ind>
-            <dep>0</dep>
-        </entry>
-        </interpolation>
-        <axis>
-                <x>0</x>
-                <y>-1.0</y>
-                <z>0</z>
-        </axis>
-    </animation>
-
-
-    <animation>
-        <type>scale</type>
-        <object-name>Effet</object-name>
-        <property>velocities/groundspeed-kt</property>
-        <interpolation>
-        <entry>
-            <ind>0</ind>
-            <dep>0.01</dep>
-        </entry>
-        <entry>
-            <ind>10</ind>
-            <dep>0.01</dep>
-        </entry>
-        <entry>
-            <ind>15</ind>
-            <dep>0.2</dep>
-        </entry>
-        <entry>
-            <ind>20</ind>
-            <dep>0.3</dep>
-        </entry>
-        <entry>
-            <ind>60</ind>
-            <dep>0.4</dep>
-        </entry>
-        </interpolation>
-    </animation>
-
-
-    <animation>
-        <type>rotate</type>
-        <object-name>GFlux</object-name>
-        <object-name>DFlux</object-name>
-        <property>velocities/groundspeed-kt</property>
-        <interpolation>
-        <entry>
-            <ind>0</ind>
-            <dep>-90</dep>
-        </entry>
-        <entry>
-            <ind>10</ind>
-            <dep>-3</dep>
-        </entry>
-        <entry>
-            <ind>25</ind>
-            <dep>-1</dep>
-        </entry>
-        <entry>
-            <ind>40</ind>
-            <dep>0</dep>
-        </entry>
-        </interpolation>
-        <axis>
-                <x>0</x>
-                <y>-1.0</y>
-                <z>0</z>
-        </axis>
-    </animation>
+	<model>
+		<name>GHelice</name>
+		<path>Aircraft/PBY-Catalina/Models/Engines/Catalina_GHelice_mod.xml</path>
+		<offsets>
+			<x-m>-3.21038</x-m>
+			<y-m>-2.07945</y-m>
+			<z-m>2.09119</z-m>
+			<pitch-deg>3</pitch-deg>
+			<roll-deg></roll-deg>
+		</offsets>
+	</model>
 
 
 
@@ -246,129 +101,11 @@
 
 
 
-    <animation>
-        <type>rotate</type>
-        <object-name>GFlux</object-name>
-        <object-name>DFlux</object-name>
-        <property>orientation/pitch-deg</property>
-        <factor>-1.0</factor>
-        <center>
-            <x-m>0</x-m>
-            <y-m>0</y-m>
-            <z-m>-1.66</z-m>
-        </center>
-        <axis>
-            <x>0</x>
-            <y>1</y>
-            <z>0</z>
-        </axis>
-    </animation>
 
-
-
-    <animation>
-        <type>rotate</type>
-        <object-name>GFlux1</object-name>
-        <property>/surface-positions/floats-pos-norm</property>
-        <factor>85</factor>
-         <center>
-            <x-m>1.01501</x-m>
-            <y-m>-13.1853</y-m>
-            <z-m>2.07705</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-
-
-
-    <animation>
-        <type>rotate</type>
-        <object-name>DFlux1</object-name>
-        <property>/surface-positions/floats-pos-norm</property>
-        <factor>85</factor>
-         <center>
-            <x-m>1.01501</x-m>
-            <y-m>13.1853</y-m>
-            <z-m>2.07705</z-m>
-        </center>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-
-
-    <animation>
-        <type>rotate</type>
-        <object-name>GFlux1</object-name>
-        <property>orientation/pitch-deg</property>
-        <factor>-1.0</factor>
-        <center>
-            <x-m>0</x-m>
-            <y-m>0</y-m>
-            <z-m>-1.66</z-m>
-        </center>
-        <axis>
-            <x>0</x>
-            <y>1</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-     <animation>
-        <type>rotate</type>
-        <object-name>DFlux1</object-name>
-        <property>orientation/pitch-deg</property>
-        <factor>-1.0</factor>
-        <center>
-            <x-m>0</x-m>
-            <y-m>0</y-m>
-            <z-m>-1.66</z-m>
-        </center>
-        <axis>
-            <x>0</x>
-            <y>1</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-
-
-    <model>
-            <name>GFlux1</name>
-            <path>Aircraft/PBY-Catalina/Models/Effects/Gflux1.xml</path>
-    </model>
-
-    <model>
-            <name>DFlux1</name>
-            <path>Aircraft/PBY-Catalina/Models/Effects/Dflux1.xml</path>
-    </model>
-
-    <model>
-            <name>Effet</name>
-            <path>Aircraft/PBY-Catalina/Models/Effects/jetdo.xml</path>
-    </model>
-
-    <model>
-            <name>GFlux</name>
-            <path>Aircraft/PBY-Catalina/Models/Effects/Gflux.xml</path>
-    </model>
-
-    <model>
-            <name>DFlux</name>
-            <path>Aircraft/PBY-Catalina/Models/Effects/Dflux.xml</path>
-    </model>
-
-
-
-     <!-- FIN FIN FIN=================Animation OSGViewer=====================-->
+    	<model>
+		<name>Effets</name>
+		<path>Aircraft/PBY-Catalina/Models/Effects/Effets.xml</path>
+    	</model>
 
 
 </PropertyList>

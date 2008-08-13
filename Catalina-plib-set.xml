@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+
+************************************************************************
+-->
+
+<PropertyList include="Catalina-SetBase.xml">
+
+	<sim>
+		<model>
+			<path>Aircraft/PBY-Catalina/Models/Catalina_pby6.xml</path>
+			<waterloading>0</waterloading>
+			<bomb-signal>0</bomb-signal>
+		</model>
+
+		<submodels>
+			<serviceable type="bool">true</serviceable>
+			<path>Aircraft/PBY-Catalina/Models/submodels-plib.xml</path>
+		</submodels>
+	</sim>
+
+
+
+</PropertyList>
+
+
+
+

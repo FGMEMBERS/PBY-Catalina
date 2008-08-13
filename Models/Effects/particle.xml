@@ -30,7 +30,7 @@ Note:-->
   </offset>-->
   <name>fluxGD</name>
   <attach>world</attach>
-  <!--<texture>string</texture> = the texture path relative to the XML file location-->
+  <texture>particle1.rgb</texture><!-- = the texture path relative to the XML file location-->
 
   <!--particleAlignment BILLBOARD
           alignVectorX 1 0 0
@@ -103,10 +103,7 @@ Note:-->
 		<value>80</value>
 		<spread>0</spread>
 	</particles-per-sec>
-
-
-	<!-- <condition> =a tipical condition that if not true stops particles from being emitted (PPS=0)
-	....
+	<!-- <condition> =a tipical condition that if not true stops particles from being emitted (PPS=0)	....
 	</condition>-->
   </counter>
   <!--colorRange 0.440696 0.504509 0.53962 0.8 0.0784009 0.535637 0.540536 1
@@ -144,7 +141,7 @@ Note:-->
 			<value>1</value>
 		</alpha>
       	</color>
-      	<size><value>0.2</value></size>
+      	<size><value>0.1</value></size>
     </end>
    <!-- lifeTime 4-->
     <life-sec>
@@ -157,9 +154,9 @@ Note:-->
   </particle>
 
   <program>
-    <fluid>air</fluid>
-    <gravity>disabled</gravity>
-    <wind>disabled</wind>
+    <fluid>water</fluid>
+    <gravity>true</gravity>
+    <wind>false</wind>
   </program>
 
 

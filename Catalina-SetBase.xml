@@ -7,7 +7,8 @@
 
 <PropertyList>
 
-    <sim>
+
+     <sim>
 
         <description>Catalina PBY</description>
         <author>Gerard ROBIN</author>
@@ -31,20 +32,8 @@
             <path>Aircraft/PBY-Catalina/Sounds/sound.xml</path>
         </sound>
 
-        <model>
-            <path>Aircraft/PBY-Catalina/Models/Catalina_pby6.xml</path>
-	    <waterloading>0</waterloading>
-	    <bomb-signal>0</bomb-signal>
-        </model>
-
 
         <help include="Help/Catalina-help.xml"/>
-
-        <submodels>
-            <serviceable type="bool">true</serviceable>
-            <path>Aircraft/PBY-Catalina/Models/submodels-plib.xml</path>
-        </submodels>
-
 
         <view n="0">
             <internal archive="y">true</internal>
@@ -64,7 +53,7 @@
 
         <chase-distance-m>-40</chase-distance-m>
 
-        <!--<view n="100">
+        <view n="100">
             <name>Cockpit View</name>
             <type>lookfrom</type>
             <internal archive="y">true</internal>
@@ -116,7 +105,7 @@
                 <pitch-offset-deg>0</pitch-offset-deg>
                 <default-field-of-view-deg>55</default-field-of-view-deg>
             </config>
-        </view>-->
+        </view>
 
         <systems>
             <autopilot>
@@ -164,6 +153,11 @@
 	<mooring>
 	<automatic type="bool">true</automatic>
 	</mooring>
+	<gear>
+            <brake-parking type="double">1.0</brake-parking>
+            <gear-down>true</gear-down>
+            <float-down>false</float-down>
+        </gear>
     </controls>
 
 

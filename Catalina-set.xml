@@ -1,21 +1,31 @@
 <?xml version="1.0"?>
 <!--
-************************************************************************
 
-************************************************************************
+
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL
 -->
+   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
 
 <PropertyList include="Catalina-SetBase.xml">
 
-    <controls>
-        <gear>
-            <brake-parking type="double">1.0</brake-parking>
-            <gear-down>true</gear-down>
-            <float-down>false</float-down>
-        </gear>
-    </controls>
 
-    <!--<fdm><jsbsim><gear><gear-pos-norm>0</gear-pos-norm></gear></jsbsim></fdm>-->
+    <sim>
+        <model>
+            <path>Aircraft/PBY-Catalina/Models/Catalina_pby6-osg.xml</path>
+	    <waterloading>0</waterloading>
+	    <bomb-signal>0</bomb-signal>
+        </model>
+
+
+
+        <submodels>
+            <serviceable type="bool">true</serviceable>
+            <path>Aircraft/PBY-Catalina/Models/submodels-osg.xml</path>
+        </submodels>
+    </sim>
+
 
 </PropertyList>
 

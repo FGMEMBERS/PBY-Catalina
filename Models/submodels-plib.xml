@@ -78,9 +78,9 @@
             <count>-1</count>
             <x-offset>0</x-offset>
             <y-offset>-1</y-offset>
-            <z-offset>-3.3</z-offset>
+            <z-offset>-3.5</z-offset>
             <buoyancy>32</buoyancy>
-            <life>9.0</life>
+            <life>8.0</life>
             <cd>0.1</cd>
             <wind>false</wind>
             <eda>100</eda>
@@ -97,7 +97,7 @@
             <count>-1</count>
             <x-offset>0</x-offset>
             <y-offset>1</y-offset>
-            <z-offset>-3.3</z-offset>
+            <z-offset>-3.5</z-offset>
             <buoyancy>32</buoyancy>
             <life>8.0</life>
             <cd>0.1</cd>

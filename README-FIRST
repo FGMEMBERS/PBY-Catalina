@@ -4,10 +4,10 @@ That Package contains the Consolidated Catalina PBY6 model which was converted t
 Firefighting aircraft
 With FlightGear Simulator you can  use it with 
 
---aircraft=Catalina 
+--aircraft=Catalina-plib
 which works with FG cvs version t  with Plib animations only
 
---aircraft=Catalina-OSG 
+--aircraft=Catalina
 which works only with FG cvs built with Openscengraph. with both plib and osg animations
 
 

@@ -12,7 +12,7 @@
             <x-m></x-m>
             <y-m>0</y-m>
             <z-m>-0</z-m>
-            <pitch-deg>0</pitch-deg>
+            <pitch-deg>0.1</pitch-deg>
             <heading-deg>-0</heading-deg>
             <roll-deg>0</roll-deg>
     </offsets>
