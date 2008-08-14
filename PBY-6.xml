@@ -465,23 +465,8 @@ Airfoil NACA0021
     </propulsion>
 
     <flight_control name="FCS: PBY-6">
-        <!--<property>/instrumentation/lights/blinker-kinemat-in</property>
-        <property>/instrumentation/lights/blinker-kinemat-out</property>
-        <property>/instrumentation/lights/beacon-on</property>-->
-        <!--<property>/controls/gear/float-down</property>-->
-        <!--<property>/engines/engine[0]/thruster/rpm</property>
-        <property>/engines/engine[1]/thruster/rpm</property>-->
-        <!--<property>/surface-positions/floats-pos-norm</property>
-        <property>gear/gear-cp-pos-norm</property>
-        <property>gear/gear-cp-cmd-norm</property>
-        <property>/surface-positions/gear-pos-norm</property>
-        <property>fcs/lighting-instruments-norm</property>-->
-	<!--<property>gear/unit[7]/pos-norm</property>
-	<property>gear/unit[8]/pos-norm</property>
-	<property>gear/unit[0]/pos-norm</property>
-	<property>gear/unit[1]/pos-norm</property>
-	<property>gear/unit[2]/pos-norm</property>-->
-	<!--<property>/controls/gear/float-down</property>-->
+
+	<property>fcs/lighting-instruments-norm</property>
 
 
         <channel name="Pitch">
@@ -1097,7 +1082,7 @@ Airfoil NACA0021
             <test logic="AND" value="1">
                 fcs/gear-pos-norm  == 1
                 /systems/electrical/outputs/landing-light  gt 27
-                /controls/lighting/landing-lights  == 1
+
             </test>
         </switch>
         </channel>
