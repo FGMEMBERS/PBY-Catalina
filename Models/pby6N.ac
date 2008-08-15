@@ -56328,7 +56328,7 @@ refs 5
 2 0.101924 0.287451
 kids 0
 OBJECT poly
-name "cylinder"
+name "GDTrain-Verin"
 loc 0.175635 -0.684636 -1.07288e-06
 crease 45.000000
 numvert 68
@@ -94740,7 +94740,7 @@ refs 4
 83 0 0
 kids 0
 OBJECT poly
-name "cylinder"
+name "GDTrain-VerinBase"
 loc 0.231635 -0.893991 2.5034e-06
 crease 45.000000
 numvert 68

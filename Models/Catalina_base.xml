@@ -720,8 +720,20 @@
 
 
 
+<!--====================TRAIN GAUCHE/DROITE==========================-->
 
 
+	<animation>
+		<type>select</type>
+		<object-name>GDTrain-Verin</object-name>
+		<object-name>GDTrain-VerinBase</object-name>
+		<condition>
+			<equals>
+				<property>surface-positions/gear-pos-norm</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
 
  <!--
 
