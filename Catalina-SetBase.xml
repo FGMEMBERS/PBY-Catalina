@@ -22,7 +22,7 @@
         <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
 
         <presets>
-            <mooring include="System/Boeing314-route.xml"/>
+            <mooring include="Systems/Boeing314-route.xml"/>
         </presets>
         <startup>
             <splash-texture>Aircraft/PBY-Catalina/Splash.rgb</splash-texture>
@@ -109,7 +109,7 @@
 
         <systems>
             <autopilot>
-            <path>Aircraft/PBY-Catalina/System/autopilot.xml</path>
+            <path>Aircraft/PBY-Catalina/Systems/autopilot.xml</path>
             </autopilot>
         </systems>
 
@@ -196,7 +196,7 @@
 		<boat-id></boat-id>
 		<dialog></dialog>
 		<moorage-id></moorage-id>
-		<route include="System/Boeing314-route.xml"/>
+		<route include="Systems/Boeing314-route.xml"/>
 		<state></state>
 		</mooring>
  	</systems>
@@ -206,18 +206,18 @@
 
     <nasal>
         <electrical>
-            <file>Aircraft/PBY-Catalina/System/electrical.nas</file>
+            <file>Aircraft/PBY-Catalina/Systems/electrical.nas</file>
         </electrical>
         <mooring>
-            <file>Aircraft/PBY-Catalina/System/mooring.nas</file>
-	    <file>Aircraft/PBY-Catalina/System/PBY.nas</file>
-	    <file>Aircraft/PBY-Catalina/System/constants.nas</file>
+            <file>Aircraft/PBY-Catalina/Systems/mooring.nas</file>
+	    <file>Aircraft/PBY-Catalina/Systems/PBY.nas</file>
+	    <file>Aircraft/PBY-Catalina/Systems/constants.nas</file>
         </mooring>
         <water>
-            <file>Aircraft/PBY-Catalina/System/tank_water.nas</file>
+            <file>Aircraft/PBY-Catalina/Systems/tank_water.nas</file>
         </water>
         <terrain>
-            <file>Aircraft/PBY-Catalina/System/terrain.nas</file>
+            <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
         </terrain>
     </nasal>
 

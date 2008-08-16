@@ -727,6 +727,7 @@
 		<type>select</type>
 		<object-name>GDTrain-Verin</object-name>
 		<object-name>GDTrain-VerinBase</object-name>
+		<object-name>GDTrain-VerinBaseAxe</object-name>
 		<condition>
 			<equals>
 				<property>surface-positions/gear-pos-norm</property>
