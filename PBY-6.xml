@@ -760,9 +760,27 @@ Airfoil NACA0021
               <output>/surface-positions/floats-pos-norm</output>
             </aerosurface_scale>
 
+            <switch name="systems/float-left">
+                <default value="0"/>
+                <test  logic="AND" value="1">
+                    /environment/terrain  == 0
+                    gear/unit[8]/WOW == 1
+                     /surface-positions/floats-pos-norm == 1
+                </test>
+            </switch>
+
+            <switch name="systems/float-right">
+                <default value="0"/>
+                <test  logic="AND" value="1">
+                    /environment/terrain  == 0
+                    gear/unit[7]/WOW == 1
+                     /surface-positions/floats-pos-norm == 1
+                </test>
+            </switch>
 
 
-           <!-- <pure_gain name="Floats Position">
+
+            <!--<pure_gain name="Floats Position">
                 <input>fcs/floats-pos-norm</input>
                 <gain>1</gain>
                 <output>/surface-positions/floats-pos-norm</output>
@@ -1337,6 +1355,24 @@ Airfoil NACA0021
                       </table>
                 </product>
             </function>
+            <function name="aero/coefficient/CDFloatLeft">
+                <description>Drag_at_float</description>
+                    <product>
+                        <property>aero/qbar-psf</property>
+                        <property>metrics/Sw-sqft</property>
+                        <property>systems/float-left</property>
+                        <value>0.0150</value>
+                    </product>
+            </function>
+            <function name="aero/coefficient/CDFloatRight">
+                <description>Drag_at_float</description>
+                    <product>
+                        <property>aero/qbar-psf</property>
+                        <property>metrics/Sw-sqft</property>
+                        <property>systems/float-right</property>
+                        <value>0.0150</value>
+                    </product>
+            </function>
             <function name="aero/coefficient/CD0">
                 <description>Drag_at_zero_lift</description>
                 <product>
@@ -1672,6 +1708,24 @@ Airfoil NACA0021
                     <property>fcs/left-aileron-pos-rad</property>
                     <value>0.0000</value>
                 </product>
+            </function>
+            <function name="aero/coefficient/CnFloatLeft">
+                <description>Yaw_at_float_left</description>
+                    <product>
+                        <property>aero/qbar-psf</property>
+                        <property>metrics/Sw-sqft</property>
+                        <property>systems/float-left</property>
+                        <value>-1.00</value>
+                    </product>
+            </function>
+            <function name="aero/coefficient/CnFloatRight">
+                <description>Yaw_at_float_right</description>
+                    <product>
+                        <property>aero/qbar-psf</property>
+                        <property>metrics/Sw-sqft</property>
+                        <property>systems/float-right</property>
+                        <value>1.00</value>
+                    </product>
             </function>
         </axis>
     </aerodynamics>
