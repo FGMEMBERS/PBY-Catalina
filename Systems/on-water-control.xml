@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+
+<system name="On Water Control">
+
+    <channel name="On Sea">
+            <switch name="On Sea Floats Cmd">
+                <default value="/controls/gear/float-down"/>
+                <test  logic="AND" value="1">
+                    /environment/terrain == 0
+                    position/h-agl-ft lt 40
+                </test>
+                <default value="/controls/gear/float-down"/>
+                <test  logic="AND" value="/controls/gear/float-down">
+                    /environment/terrain == 1
+                </test>
+                <output>/controls/gear/float-down</output>
+            </switch>
+            <switch name="On Sea Init">
+                <default value="/sim/model/onsea"/>
+                <test  logic="AND" value="0">
+                    position/h-agl-ft gt 20
+                    fcs/gear-pos-norm == 0
+                </test>
+                <output>/sim/model/onsea</output>
+            </switch>
+        </channel>
+
+
+
+
+</system>
