@@ -468,11 +468,10 @@ Airfoil NACA0021
     <system file="propulsion"/>
     <system file="electrical"/>
     <system file="water-bomb"/>
+    <system file="floats"/>
+    <system file="on-water-control"/>
 
     <flight_control name="FCS: PBY-6">
-
-
-
 
         <channel name="Pitch">
 
