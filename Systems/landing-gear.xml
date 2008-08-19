@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+
+
+<system name="Landing Gear">
+    <channel name="Gear">
+
+            <switch name="Gear Switch">
+                <default value="/controls/gear/gear-down"/>
+                <test  logic="AND" value="0">
+                    /environment/terrain  == 0
+                    position/h-agl-ft lt 40
+                    position/h-sl-ft  lt position/h-agl-ft
+                </test>
+                <output>gear/gear-cp-cmd-norm</output>
+            </switch>
+            <kinematic name="Gear Control">
+                <input>gear/gear-cp-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>2</time>
+                    </setting>
+                </traverse>
+                <output>gear/unit[0]/pos-norm</output>
+            </kinematic>
+
+	    <kinematic name="Gear Control1">
+                <input>gear/gear-cp-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>2</time>
+                    </setting>
+                </traverse>
+                <output>gear/unit[1]/pos-norm</output>
+            </kinematic>
+
+	    <kinematic name="Gear Control2">
+                <input>gear/gear-cp-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>2</time>
+                    </setting>
+                </traverse>
+                <output>gear/unit[2]/pos-norm</output>
+            </kinematic>
+
+            <kinematic name="Gear Surface Position">
+                <input>/controls/gear/gear-down</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>5</time>
+                    </setting>
+                </traverse>
+                <output>/surface-positions/gear-pos-norm</output>
+            </kinematic>
+
+	     <pure_gain name="Gear Pos Norm">
+		<input>/surface-positions/gear-pos-norm</input>
+		<gain>1</gain>
+
+	     </pure_gain>
+
+            <switch name="Drag Terrain Factor Switch">
+                <default value="0"/>
+                <test  logic="AND" value="1">
+                    /environment/terrain  == 1
+                    /position/altitude-agl-ft lt 7
+                    fcs/gear-pos-norm == 0
+                </test>
+            </switch>
+            <switch name="Drag Gear In Water Switch">
+                <default value="0"/>
+                <test  logic="AND" value="1">
+                    /environment/terrain  == 0
+                    /position/altitude-agl-ft lt 8
+                    /surface-positions/gear-pos-norm == 1
+                </test>
+            </switch>
+
+    <!--<documentation>Only for 3D model animation</documentation>-->
+            <switch  name="Wheel Rotation Factor" >
+                <default value="0"/>
+                <test  logic="AND" value="1">
+                    /position/altitude-agl-ft lt 11
+                    fcs/gear-pos-norm == 1
+                </test>
+            </switch>
+
+    <!--<documentation>Only for 3D model animation</documentation>-->
+            <pure_gain name="Wheel Rotation">
+                <input>velocities/u-fps</input>
+                <gain>fcs/wheel-rotation-factor</gain>
+            </pure_gain>
+
+            <pure_gain name="Center Anchor Control">
+                <input>/controls/gear/brake-parking</input>
+                <gain>1</gain>
+                <output>fcs/center-brake-cmd-norm</output>
+            </pure_gain>
+
+            <!--<pure_gain name="Floats Controls">
+                <input>/controls/gear/float-down</input>
+                <gain>1</gain>
+            </pure_gain>-->
+
+	    <aerosurface_scale name="Floats Controls">
+              <input>/controls/gear/float-down</input>
+              <range>
+                <min>0</min>
+                <max>1</max>
+              </range>
+            </aerosurface_scale>
+
+
+            <kinematic name="Floats Pos Norm">
+                <input>fcs/floats-controls</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>5</time>
+                    </setting>
+                </traverse>
+		<output>gear/unit[7]/pos-norm</output>
+            </kinematic>
+
+
+
+	     <kinematic name="Floats Pos Norm1">
+                <input>fcs/floats-controls</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>5</time>
+                    </setting>
+                </traverse>
+		<output>gear/unit[8]/pos-norm</output>
+            </kinematic>
+
+	    <aerosurface_scale name="Floats Position">
+              <input>fcs/floats-pos-norm</input>
+              <range>
+                <min>0</min>
+                <max>1</max>
+              </range>
+              <output>/surface-positions/floats-pos-norm</output>
+            </aerosurface_scale>
+
+            <switch name="systems/float-left">
+                <default value="0"/>
+                <test  logic="AND" value="1">
+                    /environment/terrain  == 0
+                    gear/unit[8]/WOW == 1
+                     /surface-positions/floats-pos-norm == 1
+                </test>
+            </switch>
+
+            <switch name="systems/float-right">
+                <default value="0"/>
+                <test  logic="AND" value="1">
+                    /environment/terrain  == 0
+                    gear/unit[7]/WOW == 1
+                     /surface-positions/floats-pos-norm == 1
+                </test>
+            </switch>
+
+
+
+            <!--<pure_gain name="Floats Position">
+                <input>fcs/floats-pos-norm</input>
+                <gain>1</gain>
+                <output>/surface-positions/floats-pos-norm</output>
+            </pure_gain>-->
+        </channel>
+
+        <channel name="On Sea">
+            <switch name="On Sea Floats Cmd">
+                <default value="/controls/gear/float-down"/>
+                <test  logic="AND" value="1">
+                    /environment/terrain == 0
+                    position/h-agl-ft lt 40
+                </test>
+                <default value="/controls/gear/float-down"/>
+                <test  logic="AND" value="/controls/gear/float-down">
+                    /environment/terrain == 1
+                </test>
+                <output>/controls/gear/float-down</output>
+            </switch>
+            <switch name="On Sea Init">
+                <default value="/sim/model/onsea"/>
+                <test  logic="AND" value="0">
+                    position/h-agl-ft gt 20
+                    fcs/gear-pos-norm == 0
+                </test>
+                <output>/sim/model/onsea</output>
+            </switch>
+        </channel>
+
+
+
+</system>

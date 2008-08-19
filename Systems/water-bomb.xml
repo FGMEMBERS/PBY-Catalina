@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+
+
+<system name="">
+
+    <property>fcs/water-loaded-pos</property>
+
+
+        <channel name="Water Bomb">
+
+	<!--les conditions requisent pour effectuer l'acte de remplissage-->
+	<!--loading the water under conditions-->
+
+            <switch name="Water Tank Reload">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    /sim/model/waterloading  == 1
+                    position/h-agl-ft lt 8
+                     /gear/gear[9]/wow   == 1
+                    gear/gear-cmd-norm == 0
+                    fcs/floats-pos-norm == 1
+                    velocities/vc-kts gt 55
+                </test>
+            </switch>
+
+	    <!--Pour gérer les interruptions , et reprendre en cours de remplissage jusqu'au maxi-->
+	    <!--Process the loading of the water tank, part by part if required-->
+
+            <switch name="Waterloading Cmd Norm">
+                <default value="fcs/water-loaded-pos"/>
+                <test logic="OR" value="1">
+                    fcs/water-tank-reload == 1
+                </test>
+		<test logic="OR" value="0">
+                 /consumables/fuel/tank[3]level-gal_us == 0
+                </test>
+            </switch>
+
+
+
+            <kinematic name="Water Reload Position">
+                <input>fcs/waterloading-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>100</time>
+                    </setting>
+                </traverse>
+                <output>fcs/water-loaded-pos</output>
+            </kinematic>
+
+
+
+            <pure_gain name="Water Tank Capacity">
+                <input>fcs/water-reload-position</input>
+                <gain>1369.5382</gain>
+            </pure_gain>
+
+	    <!--Une Boucle Nasal "Tank_water" effectue en même temps la mise à jour du compteur /consumables/fuel/tank[3]level-gal_us afin d'inclure la surcharge réelle dans le fdm-->
+	    <!--/consumables/fuel/tank[3]level-gal_us is updated in // with Nasal loop-->
+
+
+	     <switch name="Water bombing Cmd Norm">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    /sim/model/bomb-signal == 1
+                </test>
+            </switch>
+
+            <kinematic name="Water Bombing Timing">
+                <input>fcs/water-bombing-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>4</time>
+                    </setting>
+                </traverse>
+            </kinematic>
+
+	    <switch name="Water Switch">
+                <default value="fcs/water-switch"/>
+                <test logic="AND" value="1">
+                    /sim/model/bomb-signal == 1
+		    fcs/water-switch == 0
+                </test>
+		<test logic="AND" value="0">
+		    fcs/water-loaded-pos == 0
+		    fcs/water-switch == 1
+                </test>
+            </switch>
+
+	    <switch name="Water Trigger">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    fcs/water-bombing-timing == 1
+                </test>
+            </switch>
+
+	    <pure_gain name="Water Count">
+                <input>fcs/water-loaded-pos</input>
+                <gain>20</gain>
+            </pure_gain>
+
+        </channel>
+
+         <channel name="Wake Trigger">
+              <switch name="Left Wake Control">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                  /gear/gear[11]/wow   == 1
+                  velocities/vc-kts gt 10
+                </test>
+            </switch>
+             <switch name="Right Wake Control">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                  /gear/gear[10]/wow   == 1
+                  velocities/vc-kts gt 10
+                </test>
+            </switch>
+        </channel>
+
+
+
+
+
+</system>
