@@ -212,7 +212,32 @@
         <type>scale</type>
         <object-name>Effet</object-name>
         <property>velocities/groundspeed-kt</property>
-        <interpolation><!--Sillage Flotteur Gauche-->
+        <interpolation>
+            <entry>
+            <ind>0</ind>
+            <dep>0.01</dep>
+        </entry>
+        <entry>
+            <ind>10</ind>
+            <dep>0.01</dep>
+        </entry>
+        <entry>
+            <ind>15</ind>
+            <dep>0.2</dep>
+        </entry>
+        <entry>
+            <ind>20</ind>
+            <dep>0.3</dep>
+        </entry>
+        <entry>
+            <ind>60</ind>
+            <dep>0.4</dep>
+        </entry>
+        </interpolation>
+    </animation>
+
+
+<!--Sillage Flotteur Gauche-->
     <model>
             <name>GFlux1</name>
             <path>Aircraft/PBY-Catalina/Models/Effects/Gflux1.xml</path>
@@ -242,28 +267,7 @@
             <name>DFlux</name>
             <path>Aircraft/PBY-Catalina/Models/Effects/Dflux.xml</path>
     </model>
-        <entry>
-            <ind>0</ind>
-            <dep>0.01</dep>
-        </entry>
-        <entry>
-            <ind>10</ind>
-            <dep>0.01</dep>
-        </entry>
-        <entry>
-            <ind>15</ind>
-            <dep>0.2</dep>
-        </entry>
-        <entry>
-            <ind>20</ind>
-            <dep>0.3</dep>
-        </entry>
-        <entry>
-            <ind>60</ind>
-            <dep>0.4</dep>
-        </entry>
-        </interpolation>
-    </animation>
+
 
 
     <animation>
