@@ -125,7 +125,7 @@
                 <float n="4" alias="/engines/engine[1]/thruster/rpm"/>
                 <float n="5" alias="/fdm/jsbsim/fcs/propeller0-rotation"/>
                 <float n="6" alias="/fdm/jsbsim/fcs/propeller1-rotation"/>
-                <float n="7" alias="surface-positions/floats-pos-norm"/>
+                <float n="7" alias="/surface-positions/floats-pos-norm"/>
                 <string n="0"></string>
         </generic>
     </multiplay>

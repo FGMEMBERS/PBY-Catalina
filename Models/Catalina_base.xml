@@ -64,14 +64,14 @@
     </animation>
 
 
-
+    <!--<property>surface-positions/gear-pos-norm</property>-->
 
 
     <animation>
         <type>rotate</type>
         <object-name>AVTrain-GPorte</object-name>
         <object-name>AVTrain-GPorteDoublage</object-name>
-        <property>surface-positions/gear-pos-norm</property>
+        <property>sim/multiplay/generic/float[0]</property>
         <interpolation>
         <entry>
             <ind>0</ind>
@@ -102,7 +102,7 @@
         <type>rotate</type>
         <object-name>AVTrain-GPorte</object-name>
         <object-name>AVTrain-GPorteDoublage</object-name>
-        <property>surface-positions/gear-pos-norm</property>
+        <property>sim/multiplay/generic/float[0]</property>
         <interpolation>
         <entry>
             <ind>0</ind>
@@ -133,7 +133,7 @@
   <type>rotate</type>
   <object-name>AVTrain-DPorte</object-name>
 <object-name>AVTrain-DPorteDoublage</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
 
   <interpolation>
    <entry>
@@ -166,7 +166,7 @@
   <type>rotate</type>
   <object-name>AVTrain-DPorte</object-name>
 <object-name>AVTrain-DPorteDoublage</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
 
   <interpolation>
    <entry>
@@ -202,7 +202,7 @@
   <type>rotate</type>
   <object-name>AVTrain</object-name>
 
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
 
   <interpolation>
    <entry>
@@ -278,7 +278,7 @@
   <object-name>GTrain-BrasBase</object-name>
   <object-name>GTrain-VerinB</object-name>
   <object-name>GTrain-VerinH</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -307,7 +307,7 @@
   <object-name>GTrain-BrasBase</object-name>
   <object-name>GTrain-VerinB</object-name>
   <object-name>GTrain-VerinH</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -335,7 +335,7 @@
   <object-name>GTrain-BielleB</object-name>
   <object-name>GTrain-BielleH</object-name>
 
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -363,7 +363,7 @@
  <animation>
   <type>rotate</type>
   <object-name>GTrain-BielleH</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -389,7 +389,7 @@
  <animation>
   <type>rotate</type>
   <object-name>GTrain-BielleB</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -417,7 +417,7 @@
   <object-name>GTrain-BrasBase</object-name>
   <object-name>GTrain-VerinB</object-name>
   <object-name>GTrain-VerinH</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -447,7 +447,7 @@
     <animation>
         <type>rotate</type>
         <object-name>GTrain-VerinH</object-name>
-        <property>surface-positions/gear-pos-norm</property>
+        <property>sim/multiplay/generic/float[0]</property>
         <interpolation>
         <entry>
             <ind>0</ind>
@@ -505,7 +505,7 @@
   <object-name>DTrain-BrasBase</object-name>
   <object-name>DTrain-VerinB</object-name>
   <object-name>DTrain-VerinH</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -534,7 +534,7 @@
   <object-name>DTrain-BrasBase</object-name>
   <object-name>DTrain-VerinB</object-name>
   <object-name>DTrain-VerinH</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -562,7 +562,7 @@
   <object-name>DTrain-BielleB</object-name>
   <object-name>DTrain-BielleH</object-name>
 
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -590,7 +590,7 @@
  <animation>
   <type>rotate</type>
   <object-name>DTrain-BielleH</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -616,7 +616,7 @@
  <animation>
   <type>rotate</type>
   <object-name>DTrain-BielleB</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -644,7 +644,7 @@
   <object-name>DTrain-BrasBase</object-name>
   <object-name>DTrain-VerinB</object-name>
   <object-name>DTrain-VerinH</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -674,7 +674,7 @@
  <animation>
   <type>rotate</type>
   <object-name>DTrain-VerinH</object-name>
-  <property>surface-positions/gear-pos-norm</property>
+  <property>sim/multiplay/generic/float[0]</property>
   <interpolation>
    <entry>
     <ind>0</ind>
@@ -730,7 +730,7 @@
 		<object-name>GDTrain-VerinBaseAxe</object-name>
 		<condition>
 			<equals>
-				<property>surface-positions/gear-pos-norm</property>
+				<property>sim/multiplay/generic/float[0]</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -913,7 +913,8 @@
  </animation>
 
  <!-- Les Flotteurs   GAUCHE-->
-
+ <!--<property>surface-positions/floats-pos-norm</property>-->
+       
 
  <animation>
         <type>rotate</type>
@@ -923,7 +924,8 @@
         <object-name>GFlot-BielleH</object-name>
         <object-name>GFlot-BielleB</object-name>
         <!--<object-name>GFlot-Verin</object-name>-->
-        <property>surface-positions/floats-pos-norm</property>
+        <!--<property>surface-positions/floats-pos-norm</property>-->
+        <property>sim/multiplay/generic/float[7]</property>
         <factor>85</factor>
          <axis>
                     <x1-m>-0.59723</x1-m>
@@ -940,7 +942,7 @@
         <object-name>GFlot-BielleB</object-name>
         <object-name>GFlot-BielleH</object-name>
        <!-- <object-name>GFlot-Verin</object-name>-->
-        <property>surface-positions/floats-pos-norm</property>
+        <property>sim/multiplay/generic/float[7]</property>
         <interpolation>
             <entry>
             <ind>0.0</ind>
@@ -969,7 +971,7 @@
  <animation>
         <type>rotate</type>
         <object-name>GFlot-BielleH</object-name>
-        <property>surface-positions/floats-pos-norm</property>
+        <property>sim/multiplay/generic/float[7]</property>
         <interpolation>
             <entry>
             <ind>0.0</ind>
@@ -1027,7 +1029,7 @@
         <object-name>DFlot-BielleH</object-name>
         <object-name>DFlot-BielleB</object-name>
         <!--<object-name>DFlot-Verin</object-name>-->
-        <property>surface-positions/floats-pos-norm</property>
+        <property>sim/multiplay/generic/float[7]</property>
         <factor>-85</factor>
         <axis>
                     <x1-m>-0.59723</x1-m>
@@ -1046,7 +1048,7 @@
             <object-name>DFlot-BielleB</object-name>
             <object-name>DFlot-BielleH</object-name>
         <!-- <object-name>GFlot-Verin</object-name>-->
-            <property>surface-positions/floats-pos-norm</property>
+            <property>sim/multiplay/generic/float[7]</property>
             <interpolation>
                 <entry>
                 <ind>0.0</ind>
@@ -1075,7 +1077,7 @@
     <animation>
             <type>rotate</type>
             <object-name>DFlot-BielleH</object-name>
-            <property>surface-positions/floats-pos-norm</property>
+            <property>sim/multiplay/generic/float[7]</property>
             <interpolation>
                 <entry>
                 <ind>0.0</ind>
