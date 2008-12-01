@@ -470,6 +470,7 @@ Airfoil NACA0021
     <system file="water-bomb"/>
     <system file="floats"/>
     <system file="on-water-control"/>
+    <system file="mixture-control"/>
 
     <flight_control name="FCS: PBY-6">
 
