@@ -25,7 +25,6 @@ Group {
             binNumber 0
             binName RenderBin
             GL_LIGHTING OFF
-            GL_COLOR_MATERIAL ON
             GL_BLEND ON
             textureUnit 0 {
               GL_TEXTURE_2D ON

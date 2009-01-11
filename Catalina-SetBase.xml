@@ -225,9 +225,9 @@
 	    <file>Aircraft/PBY-Catalina/Systems/PBY.nas</file>
 	    <file>Aircraft/PBY-Catalina/Systems/constants.nas</file>
         </mooring>
-        <water>
+        <!--<water>
             <file>Aircraft/PBY-Catalina/Systems/tank_water.nas</file>
-        </water>
+        </water>-->
         <terrain>
             <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
         </terrain>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+
+<system name="Hull_Force">
+    
+   
+    
+    <channel name="hull_in_water">
+        
+       <!-- aero/qbar-psf-->
+       <fcs_function name="aero/function/kCLHull">
+       <function>
+           <product>
+               <table>
+                   <independentVar lookup="row">velocities/ve-kts</independentVar>
+                   <independentVar lookup="column">position/h-agl-ft</independentVar>
+                   <tableData>
+                                            6.100    6.3000    7.0000    
+                       0.0000       1.0000    1.0000    1.0000     
+                       35.8000    1.100       1.0000   1.0000     
+                       45.3000    1.2000     1.1000   1.0000  
+                       48.6000    1.2000      1.1000  1.0000   
+                       51.9000    1.200        1.1000   1.0000    
+                       53.000      1.200        1.100    1.0000    
+                       63.0000    1.100        1.050    1.0000     
+                       100.0000   1.0000     1.000    1.0000     
+                   </tableData>
+               </table>
+           </product>
+        </function>
+        </fcs_function>
+        
+        <switch name="systems/hull/k">
+            <default value="0"/>
+            <test  logic="OR" value="700">
+                gear/unit[11]/WOW  == 1
+                gear/unit[10]/WOW  == 1
+            </test>
+        </switch>
+       
+       <pure_gain name="systems/hull/pressure">
+           <input>aero/qbar-psf</input>
+           <gain>systems/hull/k</gain>
+        </pure_gain>
+        
+        <pure_gain name="systems/hull_l/magnitudez">
+            <input>aero/function/kCLHull</input>
+            <gain>systems/hull/pressure</gain>
+            <output>external_reactions/hull_l/magnitude</output>
+        </pure_gain>
+        
+        <pure_gain name="systems/hull_r/magnitudez">
+            <input>aero/function/kCLHull</input>
+            <gain>systems/hull/pressure</gain>
+            <output>external_reactions/hull_r/magnitude</output>
+        </pure_gain>
+        
+        <pure_gain name="systems/hull_arl/magnitudez">
+            <input>aero/function/kCLHull</input>
+            <gain>systems/hull/pressure</gain>
+            <output>external_reactions/hull_l/magnitude</output>
+        </pure_gain>
+        
+        <pure_gain name="systems/hull_arr/magnitudez">
+            <input>aero/function/kCLHull</input>
+            <gain>systems/hull/pressure</gain>
+            <output>external_reactions/hull_r/magnitude</output>
+        </pure_gain>
+        
+    </channel>
+
+</system>

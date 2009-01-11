@@ -1,24 +1,27 @@
 <?xml version="1.0"?>
-
+<!--Powerplant  2 × Pratt  Whitney R-1830-92 Twin Wasp turbosupercharged radials, rated at 1200 hp (894.59 kW) each-->
+<!--TAKE-OFFto 1000 ft rpm 2.700 boost ins. Hg abs 48
+CLIMBING                        2450                                  40.5
+MAX RICH CONT             2250                                32.5
+MAX WEAK CONT           2250                               30
+COMBAT 5 MIN               2700                                 45-->
 
 <piston_engine name="Pratt  Whitney R-1830-92">
     <minmp unit="INHG">          6.0 </minmp>
     <maxmp unit="INHG">         25 </maxmp>
     <displacement unit="IN3">1830</displacement>
-    <bsfc>0.323</bsfc>
+    <!--<bsfc>0.31</bsfc>-->
     <maxhp>1200.0</maxhp>
     <cycles>2.0</cycles>
     <idlerpm>700.0 </idlerpm>
     <maxthrottle>    1.0 </maxthrottle>
     <minthrottle>    0.2 </minthrottle>
-   <!-- <numboostspeeds>   2 </numboostspeeds>
-  <boostoverride>    0 </boostoverride>
-  <ratedboost1> 4 </ratedboost1>
-  <ratedpower1> 550 </ratedpower1>
-  <ratedrpm1> 2550 </ratedrpm1>
-  <ratedaltitude1> 6000 </ratedaltitude1>
-  <ratedboost2> 9 </ratedboost2>
-  <ratedpower2> 230 </ratedpower2>
-  <ratedrpm2> 2000 </ratedrpm2>
-  <ratedaltitude2> 24000 </ratedaltitude2>-->
+    <numboostspeeds>   1</numboostspeeds>
+    <takeoffboost>10</takeoffboost>
+    <!--<boostoverride>  8 </boostoverride>
+    <ratedboost1>6</ratedboost1>          
+    <ratedpower1>1000</ratedpower1> 
+    <ratedrpm1>2450</ratedrpm1>
+    <ratedaltitude1>10000</ratedaltitude1>-->
+  
 </piston_engine>
