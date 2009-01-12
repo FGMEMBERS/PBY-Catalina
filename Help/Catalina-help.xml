@@ -53,13 +53,13 @@
             when
                 =>on the water, you want the floats DOWN  (key"f")
                 =>prepare the filling (command key  "L")
-                => a speed minimum of 55 kts
+                => a speed minimum of 45 kts
             The filling duration time is 100 sec.
-            Control your speed which must be more than 55 kts  (if less it does not fill)
-            More is better, you may slide over the water touching it at 90 kts
+            Control your speed which must be more than 45 kts  (if less it does not fill)
+            More is better, you may slide over the water touching it at 80 kts
             When loading,  the aircraft is getting more and more heavy.
             When loaded  the weight of the aircraft is heavier of 4000 kg , remember it when taking off
-            After take off don't forget, you want the floats UP (key"f")
+            After take off, don't forget, you want the floats UP (key"f")
 
             Now you may simulate a water bombing
                 => At a low agl, (let's say 200 ft) and over the target which is supposed to be bombed,
