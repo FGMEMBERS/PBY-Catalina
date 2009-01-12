@@ -6,22 +6,31 @@ MAX RICH CONT             2250                                32.5
 MAX WEAK CONT           2250                               30
 COMBAT 5 MIN               2700                                 45-->
 
+<!--# Power output:
+
+* 1,200 hp (895 kW) at 2,700 rpm for takeoff
+* 700 hp (522 kW) at 2,325 rpm cruise power at 13,120 ft (4,000 m)
+
+# Specific power: 0.66 hp/in³ (29.83 kW/l)
+# Compression ratio: 6.7:1-->
+
+<!--FIXME the engine rpm must  be 2700-->
+
 <piston_engine name="Pratt  Whitney R-1830-92">
     <minmp unit="INHG">          6.0 </minmp>
-    <maxmp unit="INHG">         25 </maxmp>
+    <maxmp unit="INHG">         40.2 </maxmp>
     <displacement unit="IN3">1830</displacement>
-    <!--<bsfc>0.31</bsfc>-->
+    <bsfc>0.426</bsfc>
     <maxhp>1200.0</maxhp>
     <cycles>2.0</cycles>
     <idlerpm>700.0 </idlerpm>
     <maxthrottle>    1.0 </maxthrottle>
     <minthrottle>    0.2 </minthrottle>
     <numboostspeeds>   1</numboostspeeds>
-    <takeoffboost>10</takeoffboost>
-    <!--<boostoverride>  8 </boostoverride>
-    <ratedboost1>6</ratedboost1>          
+    <takeoffboost>9</takeoffboost>
+   <!-- <boostoverride>  8 </boostoverride>-->
+    <ratedboost1>4</ratedboost1>          
     <ratedpower1>1000</ratedpower1> 
     <ratedrpm1>2450</ratedrpm1>
-    <ratedaltitude1>10000</ratedaltitude1>-->
-  
+    <ratedaltitude1>10000</ratedaltitude1>
 </piston_engine>
