@@ -402,8 +402,8 @@ Airfoil NACA0021
                 <yaw> 0 </yaw>
             </orient>
             <feed>0</feed>
+            <feed>3</feed>
             <feed>4</feed>
-            <feed>5</feed>
 	    <thruster file="PBY-5_prop-new">
                 <location unit="IN">
                     <x> -118 </x>
@@ -446,18 +446,7 @@ Airfoil NACA0021
             <capacity unit="LBS"> 3000 </capacity>
             <contents unit="LBS"> 1000 </contents>
         </tank>
-
-        <tank type="FUEL">    <!-- NOT FUEL but WATER Tank 4100 liters -->
-            <location unit="IN">
-                <x> -47 </x>
-                <y> 0 </y>
-                <z> -59 </z>
-            </location>
-            <capacity unit="LBS"> 9038.9527</capacity>
-            <contents unit="LBS">0</contents>
-        </tank>
-
-        <tank type="FUEL">    <!-- Tank number 4 -->
+        <tank type="FUEL">    <!-- Tank number 3 -->
             <location unit="IN">
                 <x> 0 </x>
                 <y> 0 </y>
@@ -467,7 +456,7 @@ Airfoil NACA0021
             <contents unit="LBS"> 1000 </contents>
         </tank>
 
-         <tank type="FUEL">    <!-- Tank number 5 -->
+         <tank type="FUEL">    <!-- Tank number 4 -->
             <location unit="IN">
                 <x> 0 </x>
                 <y> 0 </y>
