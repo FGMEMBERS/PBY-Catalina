@@ -11,7 +11,7 @@
      <sim>
 
         <description>Catalina PBY</description>
-        <author>Gerard ROBIN</author>
+        <author>Gerard Robin , Ron Jensen (engine and propeller)</author>
         <status>alpha, "GPL Copyright"</status>
         <version>0.1</version>
 
@@ -130,6 +130,7 @@
         </generic>
     </multiplay>
 
+    <menubar include="Inputs/Catalina-menu.xml"/>
 
     </sim>
 
@@ -171,6 +172,16 @@
             <float-down>false</float-down>
         </gear>
     </controls>
+    <engines>
+            <engine n="0">
+                <mp-inhg>0</mp-inhg>
+                <rpm>0</rpm>
+            </engine>
+            <engine n="1">
+                <mp-inhg>0</mp-inhg>
+                <rpm>0</rpm>
+            </engine>
+    </engines>
 
 
     <autopilot>
@@ -225,9 +236,6 @@
 	    <file>Aircraft/PBY-Catalina/Systems/PBY.nas</file>
 	    <file>Aircraft/PBY-Catalina/Systems/constants.nas</file>
         </mooring>
-        <!--<water>
-            <file>Aircraft/PBY-Catalina/Systems/tank_water.nas</file>
-        </water>-->
         <terrain>
             <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
         </terrain>

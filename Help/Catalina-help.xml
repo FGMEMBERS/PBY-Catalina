@@ -8,7 +8,7 @@
 
         <title>Catalina PBY6  Water bomber</title>
         <key>
-            <name>Space  or "s" (if your keyboard.xml has been updated from CVS) </name>
+            <name>s </name>
             <desc>Starter</desc>
         </key>
         <key>
@@ -26,6 +26,22 @@
         <key>
             <name>B</name>
             <desc>toggle ON/OFF Brake Parking on ground or ON/OFF Cables/Anchor on water</desc>
+        </key>
+        <key>
+            <name>o</name>
+            <desc>act auto control of the engine power for takeoff</desc>
+        </key>
+        <key>
+            <name>O</name>
+            <desc>act auto control of the engine power for climb</desc>
+        </key>
+        <key>
+            <name>m</name>
+            <desc>act auto control of the engine power for cruise</desc>
+        </key>
+        <key>
+            <name>M</name>
+            <desc>unact auto control of the engine power, only manual control</desc>
         </key>
         <text>
                 =========================================

@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Gerard Robin  14-01-2009
+    Copyright License:  GPL
+-->
+<PropertyList>
+    <default>
+        <menu n="10">
+            <label>Catalina</label>
+            <enabled type="bool">true</enabled>
+            <item>
+                <label>Auto Control TakeOff Power</label>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/takeoff</property>
+                    <value>1</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/cruise</property>
+                    <value>0</value>
+             </binding>
+            </item>
+            <item>
+                <label>Auto Control Climb Power</label>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
+                    <value>1</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/takeoff</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/cruise</property>
+                    <value>0</value>
+             </binding>
+            </item> <item>
+                <label>Auto Control Cruise Power</label>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/takeoff</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/cruise</property>
+                    <value>1</value>
+             </binding>
+            </item>
+            <item>
+                <label>Manual Throttle and  Manual Pitch Contol</label>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/takeoff</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/boost-cmd/cruise</property>
+                    <value>0</value>
+             </binding>
+            </item>
+            <item>
+                <label>Reload Water</label>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/sim/model/waterloading</property>
+                    <value>1</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/sim/model/bomb-signal</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/sim/model/waterbombing</property>
+                    <value>0</value>
+            </binding>
+            </item>
+            <item>
+                <label>Display Water Filling Quantity</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>
+                            var water = gui.Dialog.new("/sim/gui/dialogs/Catalina/menu/dialog", 
+                            "Aircraft/PBY-Catalina/Inputs/water_loading.xml");
+                            water.open();
+                        </script>
+                    </binding>
+            </item>
+        </menu>
+    </default>
+</PropertyList>

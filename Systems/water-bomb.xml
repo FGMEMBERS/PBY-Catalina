@@ -64,7 +64,7 @@
             
             
             
-            <!--On libère l'eau pendant une courte periode-->
+            <!--On libère l'eau -->
 
 	     <switch name="Water bombing Cmd Norm">
                 <default value="0"/>
@@ -115,7 +115,18 @@
                 </test>
                 <output>inertia/pointmass-weight-lbs[0]</output>
             </switch>
-        
+            
+            <pure_gain name="Water Qty Liters">
+                <input>inertia/pointmass-weight-lbs[0]</input>
+                <gain>0.45359237</gain>
+            </pure_gain>
+            
+            <switch name="systems/water-tank-filled">
+                <default value="9999"/>
+                <test logic="AND" value="0">
+                    fcs/water-qty-liters  gt  4530
+                </test>
+            </switch>
 
 	    <switch name="Water Switch">
                 <default value="fcs/water-switch"/>

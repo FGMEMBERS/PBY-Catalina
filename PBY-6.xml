@@ -5,9 +5,9 @@
  xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 
     <fileheader>
-        <author> Aeromatic and Gerard Robin </author>
+        <author> Aeromatic, Gerard Robin, Ron Jensen (engine and propeller) </author>
         <filecreationdate> 10-08-2008 </filecreationdate>
-        <version> 0.3 </version>
+        <version> 0.4 </version>
         <description> Models a PBY-5 and 6 </description>
         <documentation>
             Technical data on the Consolidated PBY-5A
@@ -108,7 +108,7 @@ Airfoil NACA0021
             <z> 11 </z>
         </location>
         <pointmass name="Watertank">
-            <weight unit="LBS">0</weight>
+            <weight unit="LBS">000</weight>
             <location unit="IN">
                 <x> -47 </x>
                 <y> 0 </y>
@@ -469,13 +469,14 @@ Airfoil NACA0021
     </propulsion>
 
     <system file="landing-gear"/>
-    <system file="propulsion"/>
+    <!--<system file="propulsion"/>-->
     <system file="electrical"/>
     <system file="water-bomb"/>
     <system file="floats"/>
     <system file="on-water-control"/>
     <system file="hull"/>
     <system file="mixture-control"/>
+    <system file="propulsion"/>
 
     <flight_control name="FCS: PBY-6">
 
@@ -622,8 +623,8 @@ Airfoil NACA0021
                 <table>
                     <independentVar lookup="row">velocities/ve-kts</independentVar>
                     <independentVar lookup="column">position/h-agl-ft</independentVar>
-                    <independentVar lookup="table">aero/alpha-rad</independentVar>
-                    <tableData  breakPoint="0">
+                    <!--<independentVar lookup="table">aero/alpha-rad</independentVar>-->
+                    <tableData>
                                          6.1   6.35   
                         00.0000    0.0000    0.0000    
                         04.7000    0.0678    0.0339    
@@ -648,7 +649,7 @@ Airfoil NACA0021
                         65.6000    0.4915    0.2458    
                         71.7000    0.1949    0.0975    
                     </tableData>
-                    <tableData  breakPoint="0.0698."><!-- 4 deg-->
+                   <!-- <tableData  breakPoint="0.0698.">
                                             6.1   6.35   
                         00.0000    0.0000    0.0000    
                         04.7000    0.00678    0.00339    
@@ -672,7 +673,7 @@ Airfoil NACA0021
                         60.9000    0.06186    0.03093    
                         65.6000    0.04915    0.02458    
                         71.7000    0.01949    0.00975    
-                    </tableData>
+                    </tableData>-->
                 </table>
             </product>
         </function>
@@ -1314,6 +1315,20 @@ Airfoil NACA0021
                 <z>-1</z>
             </direction>
         </force>
+        
+        <force name="mooring" frame="BODY">
+            <location unit="IN">
+                <x>234 </x>
+                <y>0 </y>
+                <z> -49.962205 </z>
+            </location>
+            <direction>
+                <x>-1</x>
+                <y>0</y>
+                <z>0</z>
+            </direction>
+        </force>
+        
         
       <!--  
         function_string = "function";

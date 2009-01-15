@@ -36,7 +36,7 @@
             <type>spin</type>
             <object-name>GHelice</object-name>
            <property>sim/multiplay/generic/float[3]</property>
-            <factor>-0.2</factor>
+            <factor>-0.5</factor>
             <center>
                     <x-m>0</x-m>
                     <y-m>0.0</y-m>
