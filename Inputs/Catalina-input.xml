@@ -46,15 +46,16 @@
         <key n="108">
           <name>l</name>
           <desc>water bombing</desc>
-            <binding>
-                <command>nasal</command>
-		<script>water.Bomb_water()</script>
-            </binding>
              <binding>
                  <command>property-assign</command>
                  <property>/sim/model/bomb-signal</property>
                  <value>1</value>
             </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/waterbombing</property>
+                <value>1</value>
+                </binding>
 	    <binding>
               <command>property-assign</command>
               <property>/sim/model/waterloading</property>
@@ -70,6 +71,11 @@
               <property>/sim/model/waterloading</property>
               <value>1</value>
             </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/waterbombing</property>
+                <value>1</value>
+                </binding>
             <binding>
                  <command>property-assign</command>
                  <property>/sim/model/bomb-signal</property>

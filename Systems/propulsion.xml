@@ -54,29 +54,8 @@
                 <output>fcs/throttle-pos-norm[1]</output>
             </summer>
         </channel>
-
-        <channel name="Throttle">
-            <!--<switch name="Throttle0 Starter">
-                <default value="/controls/engines/engine[0]/throttle"/>
-                <test  logic="AND" value="0.20">
-                    /engines/engine[0]/starter == 1
-                </test>
-                <output>/controls/engines/engine[0]/throttle</output>
-            </switch>
-            <switch name="Throttle1 Starter">
-                <default value="/controls/engines/engine[1]/throttle"/>
-                <test  logic="AND" value="0.20">
-                    /engines/engine[1]/starter == 1
-                </test>
-                <output>/controls/engines/engine[1]/throttle</output>
-            </switch>-->
-        </channel>
-
-
-
-        <channel name="Propeller">
-
         
+        <channel name="Propeller">
         <!--ONLY for animation-->
 
         <scheduled_gain name="Propeller0 Rotation">
@@ -102,7 +81,8 @@
         </scheduled_gain>
     </channel>
     
-    <channel name="Boost">
+    
+    <channel name="Auto Boost Control">
         
         <summer name="engine rpm">
            <input>/engines/engine/rpm</input>
@@ -149,7 +129,6 @@
             <input>systems/engine/mp-inhg</input>
             <input>-systems/engine/target-mp-inhg</input>
         </summer>
-        
         
         <scheduled_gain name="systems/engine/pitch-corr">
             <input>propulsion/engine/set-running</input>
@@ -204,8 +183,6 @@
             </clipto>
             <output>systems/engine/throttle-corr-pid</output>
         </pid>
-
-        
         
         <summer name="systems/engine/pitch0">
             <input>/controls/engines/engine[0]/propeller-pitch</input>

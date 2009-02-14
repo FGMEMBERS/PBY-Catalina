@@ -5,8 +5,10 @@
 
     <!--<property>fcs/water-loaded-pos</property>-->
    <!-- <property value="10000">systems/water_tank</property>-->
-
-
+        
+   
+            
+            
         <channel name="Water Bomb">
 
 	<!--les conditions requisent pour effectuer l'acte de remplissage-->
@@ -139,6 +141,8 @@
 		    fcs/water-switch == 1
                 </test>
             </switch>
+            
+           <!-- Pour l' animation du lachage d'eau-->
 
 	    <switch name="Water Trigger">
                 <default value="0"/>
@@ -168,7 +172,7 @@
 
         </channel>
         
-       
+       <!--Pour l' animation des sillages sur l'eau-->
 
          <channel name="Wake Trigger">
               <switch name="Left Wake Trigger">

@@ -469,7 +469,6 @@ Airfoil NACA0021
     </propulsion>
 
     <system file="landing-gear"/>
-    <!--<system file="propulsion"/>-->
     <system file="electrical"/>
     <system file="water-bomb"/>
     <system file="floats"/>
