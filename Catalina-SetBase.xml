@@ -240,6 +240,13 @@
             <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
         </terrain>
     </nasal>
+    
+    <environment>
+        <wildfire>
+            <fire-on-crash type="bool" >false</fire-on-crash>
+        </wildfire>
+     </environment>
+    
 
 </PropertyList>
 
