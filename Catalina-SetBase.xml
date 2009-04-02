@@ -241,13 +241,6 @@
         </terrain>
     </nasal>
     
-    <environment>
-        <wildfire>
-            <fire-on-crash type="bool" >false</fire-on-crash>
-        </wildfire>
-     </environment>
-    
-
 </PropertyList>
 
 
