@@ -239,6 +239,19 @@
         <terrain>
             <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
         </terrain>
+        <wildfire_ctrl>
+            <script>
+              var resolve_impact = func (n) {
+                var node = props.globals.getNode(n.getValue());
+                var pos  = geo.Coord.new().set_latlon(node.getNode("impact/latitude-deg").getValue(),
+                                                      node.getNode("impact/longitude-deg").getValue(),
+                                                      node.getNode("impact/elevation-m").getValue());
+                wildfire.resolve_water_drop(pos, 10, 0);
+              }
+              
+              setlistener("/sim/ai/impact/water", resolve_impact); 
+            </script>
+        </wildfire_ctrl>
     </nasal>
     
 </PropertyList>
