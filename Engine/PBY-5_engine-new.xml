@@ -31,7 +31,7 @@ COMBAT 5 MIN        rpm 2700     boost ins. Hg abs  45    boost 7.40
     <idlerpm> 700.0 </idlerpm>
     <maxrpm> 2700   </maxrpm> 
     <maxthrottle>    1.0 </maxthrottle>
-    <minthrottle>    0.2 </minthrottle>
+    <minthrottle>    0.1 </minthrottle>
     <numboostspeeds>   1</numboostspeeds>
     <takeoffboost>8.88</takeoffboost>
     <ratedboost1>7.4</ratedboost1>          
