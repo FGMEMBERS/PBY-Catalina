@@ -772,8 +772,8 @@ Airfoil NACA0021
                       <table>
                           <independentVar>inertia/weight-lbs</independentVar>
                           <tableData>
-                              42841.0000    0.2800
                               21252.0000    0.2100
+                              42841.0000    0.2800
                           </tableData>
                       </table>
                 </product>
