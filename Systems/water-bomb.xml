@@ -5,6 +5,7 @@
 
     <!--<property>fcs/water-loaded-pos</property>-->
    <!-- <property value="10000">systems/water_tank</property>-->
+       <property>/sim/model/waterbombing</property>
         
    
             

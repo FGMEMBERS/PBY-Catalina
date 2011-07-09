@@ -5,6 +5,10 @@
     
     <property>systems/engine/mp-inhg</property>
     <property>systems/engine/rpm</property>
+    <property>systems/boost-cmd/climb</property>
+    <property>systems/boost-cmd/cruise</property>
+    <property>systems/boost-cmd/takeoff</property>
+    
 
         <channel name="Differential Throttle Cmd">
             <switch name="fcs/differential-throttle-pos-norm">
