@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
 OBJECT world
 kids 2
 OBJECT group
@@ -9,7 +9,7 @@ kids 1
 OBJECT poly
 name "Inter"
 loc 0.00183196 1.29509e-06 -1.52044e-05
-texture "blanc-rouge.rgb"
+texture "blanc-rouge.png"
 texoff -0.02 0
 crease 45.000000
 numvert 38
@@ -344,7 +344,7 @@ kids 0
 OBJECT poly
 name "Cadran"
 loc 0.00080368 0 0
-texture "ignition-f4u7.rgb"
+texture "ignition-f4u7.png"
 crease 45.000000
 numvert 19
 -0.000839435 0 0

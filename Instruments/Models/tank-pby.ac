@@ -1,12 +1,12 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
 OBJECT world
 kids 6
 OBJECT poly
 name "Cadran"
 loc 0 -1.95331e-09 0
-texture "tank-pby_lo.rgb"
+texture "tank-pby_lo.png"
 crease 45.000000
 numvert 25
 0 0 0.0421361
@@ -225,7 +225,7 @@ kids 1
 OBJECT poly
 name "GAiguille1"
 loc -0.000214818 -0.00389066 0.0324434
-texture "blanc-rouge.rgb"
+texture "blanc-rouge.png"
 crease 45.000000
 numvert 7
 0 -0.0107248 -0.0121905
@@ -303,7 +303,7 @@ kids 1
 OBJECT poly
 name "DAiguille1"
 loc -0.000214818 -0.00389439 -0.0202903
-texture "blanc-rouge.rgb"
+texture "blanc-rouge.png"
 crease 45.000000
 numvert 8
 0 -0.0107248 0.0121905
@@ -339,7 +339,7 @@ kids 0
 OBJECT poly
 name "disk"
 loc 0.00133271 0 -0.0328038
-texture "tank-pby_lo.rgb"
+texture "tank-pby_lo.png"
 crease 45.000000
 numvert 40
 0 -1.95331e-09 0.0749399

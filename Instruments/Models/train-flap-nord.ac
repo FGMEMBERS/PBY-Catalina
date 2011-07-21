@@ -1,9 +1,9 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0.122 0.102 0.157  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat5" rgb 0 0.863 0.008  amb 0.502 0.502 0.502  emis 0 0.639 0  spec 0.502 0.502 0.502  shi 72  trans 0
-MATERIAL "ac3dmat5" rgb 0.886 0.82 0.008  amb 0.502 0.502 0.502  emis 0.682 0.627 0  spec 0.647 0.541 0  shi 72  trans 0
-MATERIAL "ac3dmat3" rgb 1 0.353 0  amb 0.2 0.318 0.31  emis 1 0.302 0  spec 0.329 0.31 0.337  shi 118  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0.122 0.102 0.157  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat5" rgb 0 0.863 0.008  amb 0 0.863 0.008  emis 0 0.639 0  spec 0.502 0.502 0.502  shi 72  trans 0
+MATERIAL "ac3dmat5" rgb 0.886 0.82 0.008  amb 0.886 0.82 0.008  emis 0.682 0.627 0  spec 0.647 0.541 0  shi 72  trans 0
+MATERIAL "ac3dmat3" rgb 1 0.353 0  amb 1 0.353 0  emis 1 0.302 0  spec 0.329 0.31 0.337  shi 118  trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -13,7 +13,7 @@ kids 8
 OBJECT poly
 name "Masque"
 loc 0.00133681 -0.00519827 -0.000473103
-texture "blanc-rouge.rgb"
+texture "blanc-rouge.png"
 crease 45.000000
 numvert 12
 -0.000470704 0.00461846 -0.0171313
@@ -54,7 +54,7 @@ kids 0
 OBJECT poly
 name "LampeTrain"
 loc -0.00431625 -0.00517157 -0.00040995
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 96
 0.0039835 0.00172684 0.00410371
@@ -986,7 +986,7 @@ kids 0
 OBJECT poly
 name "Temoin-Train"
 loc -0.00431154 -0.00517203 -0.000409669
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 96
 0.00428555 0.00187074 0.00445261
@@ -1918,7 +1918,7 @@ kids 0
 OBJECT poly
 name "TemoinMTrain"
 loc -0.00431154 -0.00517203 -0.000409669
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 96
 0.00135898 2.83495e-06 0.00482729
@@ -2880,7 +2880,7 @@ kids 0
 OBJECT poly
 name "CadranF"
 loc -0.000216299 0.0279031 0.0107145
-texture "F4U7-Train_Flap2.rgb"
+texture "F4U7-Train_Flap2.png"
 crease 45.000000
 numvert 7
 -0.000470669 -0.0107636 -0.0334325
@@ -2925,7 +2925,7 @@ kids 0
 OBJECT poly
 name "Cadran"
 loc 0.00124373 -0.00168865 -0.000473102
-texture "F4U7-Train_Flap1.rgb"
+texture "F4U7-Train_Flap1.png"
 crease 45.000000
 numvert 17
 -0.0029924 0 -1.23905e-09

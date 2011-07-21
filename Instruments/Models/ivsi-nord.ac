@@ -1,12 +1,12 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 0.914 0.812  amb 0.69 0.604 0.51  emis 0.682 0.553 0.569  spec 0.706 0.541 0.541  shi 125  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 0.914 0.812  amb 1 0.914 0.812  emis 0.682 0.553 0.569  spec 0.706 0.541 0.541  shi 125  trans 0
 OBJECT world
 kids 2
 OBJECT poly
 name "Cadran"
 loc 0.00855166 8.9061e-10 -9.34171e-10
-texture "vsi-6.rgb"
+texture "vsi-6.png"
 crease 45.000000
 numvert 17
 -0.00894266 -0.00729968 0.036698

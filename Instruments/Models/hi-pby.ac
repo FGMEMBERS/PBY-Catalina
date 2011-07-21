@@ -1,19 +1,19 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.898 0.949 1  amb 0.612 0.604 1  emis 0 0 0  spec 0.62 0.647 0.733  shi 125  trans 0
-MATERIAL "ac3dmat1" rgb 1 0.992 1  amb 0.69 0.604 0.51  emis 0 0 0  spec 0.706 0.541 0.541  shi 125  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat3" rgb 1 0 0  amb 1 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.898 0.949 1  amb 0.898 0.949 1  emis 0 0 0  spec 0.62 0.647 0.733  shi 125  trans 0
+MATERIAL "ac3dmat1" rgb 1 0.992 1  amb 1 0.992 1  emis 0 0 0  spec 0.706 0.541 0.541  shi 125  trans 0
 OBJECT world
 kids 4
 OBJECT group
 name "HI"
 loc 0.00918204 -1.93997e-05 -1.26143e-10
-texture "hi3d-cadran.rgb"
+texture "hi3d-cadran.png"
 kids 1
 OBJECT poly
 name "Cadran"
 loc -0.00960107 1.93943e-05 -8.00221e-10
-texture "hi3d-cadran.rgb"
+texture "hi3d-cadran.png"
 crease 45.000000
 numvert 48
 0 -0.0101182 0.0377614
@@ -312,7 +312,7 @@ kids 0
 OBJECT poly
 name "Fond"
 loc -0.0104993 1.93943e-05 -8.26243e-10
-texture "hi3d-fond.rgb"
+texture "hi3d-fond.png"
 crease 45.000000
 numvert 49
 0 -0.0108508 -0.0094285
@@ -585,7 +585,7 @@ kids 0
 OBJECT poly
 name "Bug"
 loc 0 0.0368414 0
-texture "blanc-rouge.rgb"
+texture "blanc-rouge.png"
 crease 45.000000
 numvert 9
 0 0.00106352 0

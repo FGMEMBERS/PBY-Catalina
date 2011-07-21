@@ -6,6 +6,7 @@
     Usable with FlightGear
     Property of Gerard Robin
     Copyright License:  GPL
+
 -->
    <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
 
@@ -13,7 +14,7 @@
 
 
 
- <path>fluxC.osg</path>
+ <path>fluxCG.osgx</path>
 
 
 
@@ -22,10 +23,10 @@
 
     <offsets>
             <x-m>2</x-m>
-            <y-m>-1.2</y-m>
+            <y-m>-1.0</y-m>
             <z-m>-1</z-m>
             <pitch-deg>91</pitch-deg>
-            <heading-deg>-5</heading-deg>
+            <heading-deg>-0.5</heading-deg>
             <roll-deg>0</roll-deg>
     </offsets>
 

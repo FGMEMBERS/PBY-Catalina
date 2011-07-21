@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 65  trans 0
 OBJECT world
 kids 2
@@ -10,7 +10,7 @@ kids 3
 OBJECT poly
 name "cylinder"
 loc -0.00203739 0.00182748 0.00188823
-texture "asi2-nord.rgb"
+texture "asi2-nord.png"
 crease 45.000000
 numvert 33
 0.00330251 0.00193826 0.00467938
@@ -263,7 +263,7 @@ kids 1
 OBJECT poly
 name "Aiguille"
 loc 0.00637498 0.0214283 0.0251578
-texture "asi2-nord.rgb"
+texture "asi2-nord.png"
 crease 45.000000
 numvert 7
 -0.0096395 0.0181552 -0.0185404
@@ -308,7 +308,7 @@ kids 0
 OBJECT poly
 name "Cadran"
 loc -0.000274975 0.00182748 0.00188823
-texture "asi2-nord.rgb"
+texture "asi2-nord.png"
 crease 45.000000
 numvert 24
 0 -0.00963468 0.0359571
@@ -367,7 +367,7 @@ kids 0
 OBJECT poly
 name "rect"
 loc 0.000540701 -0.0234218 -0.0303323
-texture "blanc-rouge.rgb"
+texture "blanc-rouge.png"
 crease 45.000000
 numvert 3
 0 -0.00139848 0.00288293

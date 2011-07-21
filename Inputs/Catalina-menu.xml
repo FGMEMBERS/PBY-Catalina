@@ -63,7 +63,7 @@
              </binding>
             </item>
             <item>
-                <label>Manual Throttle and Pitch Contol</label>
+                <label>Manual Throttle and  Manual Pitch Contol</label>
                 <binding>
                     <command>property-assign</command>
                     <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
@@ -81,11 +81,37 @@
              </binding>
             </item>
             <item>
-                <label>Display Water Quantity</label>
+                <label>Reload Water</label>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/sim/model/waterloading</property>
+                    <value>1</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/sim/model/bomb-signal</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/sim/model/waterbombing</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        var water = gui.Dialog.new("/sim/gui/dialogs/Catalina/menu/dialog",
+                        "Aircraft/PBY-Catalina/Inputs/water_loading.xml");
+                        water.open();
+                    </script>
+                </binding>
+            </item>
+            <item>
+                <label>Display Water Filling Quantity</label>
                     <binding>
                         <command>nasal</command>
                         <script>
-                            var water = gui.Dialog.new("/sim/gui/dialogs/Catalina/menu/dialog", 
+                            var water = gui.Dialog.new("/sim/gui/dialogs/Catalina/menu/dialog",
                             "Aircraft/PBY-Catalina/Inputs/water_loading.xml");
                             water.open();
                         </script>

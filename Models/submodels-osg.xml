@@ -59,15 +59,50 @@
             <z-offset>-4</z-offset>
             <yaw-offset>0.0</yaw-offset>
             <pitch-offset>0.0</pitch-offset>
-            <cd>1.2</cd>
-            <eda>100</eda>
-            <weight>5000</weight>
+            <eda>200</eda>
+            <weight>8000</weight>
             <wind>true</wind>
-            <cd>0.4</cd>
-            <buoyancy>20</buoyancy>
+            <cd>0.1</cd>
+            <buoyancy>32</buoyancy>
             <life>600</life>
-            <impact>true</impact>
-            <impact-reports>sim/ai/impact/water</impact-reports>
         </submodel>
+
+        <!--<submodel>
+            <name>GSillage</name>
+            <model>Aircraft/PBY-Catalina/Models/Effects/GSillage1.xml</model>
+            <trigger>/fdm/jsbsim/fcs/left-wake-control</trigger>
+            <speed>0</speed>
+            <repeat>true</repeat>
+            <delay>1</delay>
+            <count>-1</count>
+            <x-offset>0</x-offset>
+            <y-offset>-1</y-offset>
+            <z-offset>-3.3</z-offset>
+            <buoyancy>32</buoyancy>
+            <life>9.0</life>
+            <cd>0.1</cd>
+            <wind>false</wind>
+            <eda>100</eda>
+	    <weight>50</weight>
+        </submodel>
+
+        <submodel>
+            <name>DSillage</name>
+            <model>Aircraft/PBY-Catalina/Models/Effects/DSillage1.xml</model>
+            <trigger>/fdm/jsbsim/fcs/right-wake-control</trigger>
+            <speed>0</speed>
+            <repeat>true</repeat>
+            <delay>1</delay>
+            <count>-1</count>
+            <x-offset>0</x-offset>
+            <y-offset>1</y-offset>
+            <z-offset>-3.3</z-offset>
+            <buoyancy>32</buoyancy>
+            <life>8.0</life>
+            <cd>0.1</cd>
+            <wind>false</wind>
+            <eda>100</eda>
+	    <weight>50</weight>
+        </submodel>-->
 
   </PropertyList>

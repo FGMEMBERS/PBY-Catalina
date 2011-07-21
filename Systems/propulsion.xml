@@ -2,19 +2,14 @@
 
 
 <system name="Propulsion">
-    
     <property>systems/engine/mp-inhg</property>
     <property>systems/engine/rpm</property>
-    <property>systems/boost-cmd/climb</property>
-    <property>systems/boost-cmd/cruise</property>
-    <property>systems/boost-cmd/takeoff</property>
-    
 
         <channel name="Differential Throttle Cmd">
             <switch name="fcs/differential-throttle-pos-norm">
                 <default value="0"/>
                 <test  logic="AND" value="/controls/flight/rudder">
-                    /gear/gear[0]/wow == 1
+                    gear/unit[0]/WOW == 1
                     fcs/gear-pos-norm == 1
                     velocities/vc-kts lt 20
                     position/h-agl-ft lt 11
@@ -23,9 +18,8 @@
                 </test>
                 <default value="0"/>
                 <test  logic="AND" value="/controls/flight/rudder">
-                    /gear/gear[3]/wow   == 1
+                    gear/unit[3]/WOW   == 1
                     fcs/gear-pos-norm == 0
-                    fcs/floats-pos-norm == 1
                     position/h-agl-ft lt 7
                     /controls/engines/engine[0]/throttle lt 0.40
                     /controls/engines/engine[1]/throttle lt 0.40
@@ -58,8 +52,29 @@
                 <output>fcs/throttle-pos-norm[1]</output>
             </summer>
         </channel>
-        
+
+        <channel name="Throttle">
+            <!--<switch name="Throttle0 Starter">
+                <default value="/controls/engines/engine[0]/throttle"/>
+                <test  logic="AND" value="0.20">
+                    /engines/engine[0]/starter == 1
+                </test>
+                <output>/controls/engines/engine[0]/throttle</output>
+            </switch>
+            <switch name="Throttle1 Starter">
+                <default value="/controls/engines/engine[1]/throttle"/>
+                <test  logic="AND" value="0.20">
+                    /engines/engine[1]/starter == 1
+                </test>
+                <output>/controls/engines/engine[1]/throttle</output>
+            </switch>-->
+        </channel>
+
+
+
         <channel name="Propeller">
+
+
         <!--ONLY for animation-->
 
         <scheduled_gain name="Propeller0 Rotation">
@@ -84,15 +99,17 @@
             </table>
         </scheduled_gain>
     </channel>
-    
-    
-    <channel name="Auto Boost Control">
-        
+
+    <property>systems/boost-cmd/climb</property>
+    <property>systems/boost-cmd/cruise</property>
+    <property>systems/boost-cmd/takeoff</property>
+    <channel name="Boost">
+
         <summer name="engine rpm">
            <input>/engines/engine/rpm</input>
             <output>systems/engine/rpm</output>
        </summer>
-        
+
         <switch name="systems/engine/target-rpm">
             <default value="systems/engine/rpm"/>
             <test value="2450">
@@ -105,12 +122,12 @@
                 systems/boost-cmd/takeoff == 1
             </test>
         </switch>
-        
+
         <summer name="engine mp inhg">
             <input>/engines/engine[0]/mp-inhg</input>
             <output>systems/engine/mp-inhg</output>
         </summer>
-        
+
         <switch name="systems/engine/target-mp-inhg">
             <default value="systems/engine/mp-inhg"/>
             <test value="48">
@@ -123,31 +140,32 @@
                 systems/boost-cmd/cruise == 1
             </test>
         </switch>
-        
+
         <summer name="systems/engine/diff-rpm">
             <input>systems/engine/rpm</input>
             <input>-systems/engine/target-rpm</input>
         </summer>
-        
+
         <summer name="systems/engine/diff-inhg">
             <input>systems/engine/mp-inhg</input>
             <input>-systems/engine/target-mp-inhg</input>
         </summer>
-        
+
+
         <scheduled_gain name="systems/engine/pitch-corr">
             <input>propulsion/engine/set-running</input>
             <table>
                 <independentVar>systems/engine/diff-rpm</independentVar>
                 <tableData>
-                    -2000   0.8
-                    -70         0.05
+                    -2000   0.2
+                    -100         0.005
                     0.00	0.00
-                    70          -0.05
-                   2000      -0.8
+                    100          -0.005
+                   2000      -0.2
                 </tableData>
             </table>
         </scheduled_gain>
-        
+
         <pid name="pitch corr pid">
             <trigger>propulsion/engine/set-running</trigger>
             <input>systems/engine/pitch-corr</input>
@@ -160,7 +178,8 @@
             </clipto>
             <output>systems/engine/pitch-corr-pid</output>
         </pid>
-        
+
+
         <scheduled_gain name="systems/engine/throttle-corr">
             <input>propulsion/engine/set-running</input>
             <table>
@@ -174,7 +193,7 @@
                 </tableData>
             </table>
         </scheduled_gain>
-        
+
         <pid name="inhg corr pid">
             <trigger>propulsion/engine/set-running</trigger>
             <input>systems/engine/throttle-corr</input>
@@ -187,7 +206,9 @@
             </clipto>
             <output>systems/engine/throttle-corr-pid</output>
         </pid>
-        
+
+
+
         <summer name="systems/engine/pitch0">
             <input>/controls/engines/engine[0]/propeller-pitch</input>
             <input>systems/engine/pitch-corr-pid</input>
@@ -197,7 +218,7 @@
             </clipto>
             <output>/controls/engines/engine[0]/propeller-pitch</output>
         </summer>
-        
+
         <summer name="systems/engine/pitch1">
             <input>/controls/engines/engine[1]/propeller-pitch</input>
             <input>systems/engine/pitch-corr-pid</input>
@@ -207,7 +228,7 @@
             </clipto>
             <output>/controls/engines/engine[1]/propeller-pitch</output>
         </summer>
-        
+
         <summer name="systems/engine/throttle0">
             <input>/controls/engines/engine[0]/throttle</input>
             <input>systems/engine/throttle-corr-pid</input>
@@ -217,7 +238,7 @@
             </clipto>
             <output>/controls/engines/engine[0]/throttle</output>
         </summer>
-        
+
         <summer name="systems/engine/throttle1">
             <input>/controls/engines/engine[1]/throttle</input>
             <input>systems/engine/throttle-corr-pid</input>
@@ -227,7 +248,7 @@
             </clipto>
             <output>/controls/engines/engine[1]/throttle</output>
         </summer>
-        
+
     </channel>
 
 

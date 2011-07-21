@@ -1,14 +1,27 @@
 <?xml version="1.0"?>
 
 
-<system name="">
+<system name="Float-Control">
 
-    <channel>
+    <channel  name="Floats">
 
-        <!--<pure_gain name="Floats Controls">
-                <input>/controls/gear/float-down</input>
-                <gain>1</gain>
-            </pure_gain>-->
+
+            <switch name="systems/floats-controll">
+                <default value="/controls/gear/float-down"/>
+                <test  value="0">
+                    velocities/vc-kts gt 130
+                </test>
+                <test  logic="AND" value="1">
+                    simulation/sim-time-sec gt 2
+                    /environment/terrain-solid == 0
+                    position/h-agl-ft lt 40
+                </test>
+                <test  value="/controls/gear/float-down">
+                    /environment/terrain-solid == 1
+                </test>
+                <output>/controls/gear/float-down</output>
+            </switch>
+
 
 	    <aerosurface_scale name="Floats Controls">
               <input>/controls/gear/float-down</input>
@@ -19,7 +32,7 @@
             </aerosurface_scale>
 
 
-            <kinematic name="Floats Pos Norm">
+            <kinematic name="Float0 Pos Norm">
                 <input>fcs/floats-controls</input>
                 <traverse>
                     <setting>
@@ -36,7 +49,7 @@
 
 
 
-	     <kinematic name="Floats Pos Norm1">
+	     <kinematic name="Float1 Pos Norm">
                 <input>fcs/floats-controls</input>
                 <traverse>
                     <setting>
@@ -52,7 +65,7 @@
             </kinematic>
 
 	    <aerosurface_scale name="Floats Position">
-              <input>fcs/floats-pos-norm</input>
+              <input>fcs/float1-pos-norm</input>
               <range>
                 <min>0</min>
                 <max>1</max>
@@ -63,8 +76,6 @@
             <switch name="systems/float-left">
                 <default value="0"/>
                 <test  logic="AND" value="1">
-                    /environment/terrain  == 0
-                    gear/unit[8]/WOW == 1
                      /surface-positions/floats-pos-norm == 1
                 </test>
             </switch>
@@ -72,25 +83,129 @@
             <switch name="systems/float-right">
                 <default value="0"/>
                 <test  logic="AND" value="1">
-                    /environment/terrain  == 0
-                    gear/unit[7]/WOW == 1
                      /surface-positions/floats-pos-norm == 1
                 </test>
             </switch>
 
+            <!--pour une course de 85 deg  position de 0 a 1-->
+            <fcs_function name="Flotteur position trigger">
+                <function>
+                    <difference>
+                        <value>1</value>
+                        <cos>
+                            <product>
+                                <property>fcs/float0-pos-norm</property>
+                                <value>1.4835298642</value>
+                            </product>
+                        </cos>
+                    </difference>
+                </function>
+                </fcs_function>
 
 
-            <!--<pure_gain name="Floats Position">
-                <input>fcs/floats-pos-norm</input>
-                <gain>1</gain>
-                <output>/surface-positions/floats-pos-norm</output>
-            </pure_gain>-->
         </channel>
 
+        <channel name="Left Float Wake Trigger">
+            <switch name="Left Float Wake Trigger">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    simulation/sim-time-sec gt 2
+                    gear/unit[8]/WOW == 1
+                    velocities/vc-kts gt 10
+                    /environment/terrain-solid  == 0
+                </test>
+            </switch>
+
+
+            <kinematic name="Left Float Wake Control">
+                <input>fcs/left-float-wake-trigger</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>0.1</time>
+                    </setting>
+                </traverse>
+            </kinematic>
+
+
+            <switch name="Right Float Wake Trigger">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    simulation/sim-time-sec gt 2
+                    gear/unit[7]/WOW == 1
+                    velocities/vc-kts gt 10
+                    /environment/terrain-solid  == 0
+                </test>
+            </switch>
+
+            <kinematic name="Right Float Wake Control">
+                <input>fcs/right-float-wake-trigger</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>0.1</time>
+                    </setting>
+                </traverse>
+            </kinematic>
+
+    </channel>
+
+    <channel name="float_magnitude_drag">
+
+        <fcs_function name="systems/coefficients/CDfloat">
+            <function>
+                    <product>
+                        <quotient>
+                            <pow>
+                                <property>velocities/u-fps</property>
+                                <value>2</value>
+                            </pow>
+                            <value>2</value>
+                        </quotient>
+                        <quotient>
+                            <value>0.072</value>
+                            <pow>
+                                <property>hydro/function/ReW</property>
+                                <value>0.2</value>
+                            </pow>
+                    </quotient>
+                    </product>
+            </function>
+        </fcs_function>
+
+        <fcs_function name="systems/float_left-drag">
+            <function>
+                <product>
+                    <property>fcs/left-float-wake-trigger</property>
+                    <property>gear/unit[8]/compression-ft</property>
+                    <value>350</value>
+                </product>
+            </function>
+            <output>external_reactions/l_float-drag/magnitude</output>
+        </fcs_function>
+
+        <fcs_function name="systems/float_right-drag">
+            <function>
+                <product>
+                    <property>fcs/right-float-wake-trigger</property>
+                    <property>gear/unit[7]/compression-ft</property>
+                    <value>350</value>
+                </product>
+            </function>
+            <output>external_reactions/r_float-drag/magnitude</output>
+        </fcs_function>
 
 
 
-
+</channel>
 
 
 </system>

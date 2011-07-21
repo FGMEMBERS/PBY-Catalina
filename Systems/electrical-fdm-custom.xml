@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!--
+    usable with flightgear or JSBSim stand-alone
+    COPYRIGHT gerard robin  23-03-2010
+
+
+
+    Replace FlightGear_generic-electric.xml file
+-->
+
+<system name="electrical-custom">
+
+    <property value="0">electrical/supplier/emergency-on</property>
+
+<channel name="electrical-custom">
+
+
+        <switch name="external power">
+            <default value="0"/>
+            <test  logic="AND" value="1">
+                /controls/electric/master-switch == 1
+                /environment/wildfire/fire-on-crash  == 0
+                position/h-agl-ft lt 8
+            </test>
+            <output>/controls/electric/external-power</output>
+        </switch>
+
+        <switch name="Master Switch">
+            <default value="0"/>
+            <test  logic="AND" value="1">
+                /controls/engines/engine[0]/magnetos gt 0
+                /controls/engines/engine[1]/magnetos gt 0
+            </test>
+            <output>/controls/electric/master-switch</output>
+        </switch>
+
+        <summer name="electric master switch">
+            <input>/controls/electric/master-switch</input>
+            <clipto>
+                <min>0.0000</min>
+                <max>1.0000</max>
+            </clipto>
+        </summer>
+       <!-- =====================================-->
+
+
+       <!--switches-->
+       <switch name="electrical/engine-G/battery-on">
+           <default value="0"/>
+           <test  logic="AND" value="1">
+               /controls/electric/master-switch == 1
+           </test>
+           <output>/controls/engines/engine[0]/master-bat</output>
+           <output>/controls/engines/engine[1]/master-bat</output>
+        </switch>
+
+        <switch name="electrical/engine[0]/alternator-on">
+            <default value="0"/>
+            <test  logic="AND" value="1">
+               propulsion/engine/set-running == 1
+            </test>
+            <output>/controls/engines/engine[0]/master-alt</output>
+        </switch>
+
+        <switch name="electrical/engine[1]/alternator-on">
+            <default value="0"/>
+            <test  logic="AND" value="1">
+                propulsion/engine/set-running == 1
+            </test>
+            <output>/controls/engines/engine[1]/master-alt</output>
+        </switch>
+
+        <switch name="electrical/supplier/external-on">
+            <default value="0"/>
+            <test  logic="AND" value="1">
+                /controls/electric/master-switch == 1
+                /controls/electric/external-power  == 1
+                electrical/engine[0]/alternator-on == 0
+                electrical/engine[1]/alternator-on == 0
+                electrical/supplier/emergency-on == 0
+            </test>
+        </switch>
+
+
+
+    </channel>
+
+</system>

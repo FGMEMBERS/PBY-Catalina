@@ -1,19 +1,34 @@
 <?xml version="1.0"?>
 
 
-<system name="">
+<system name="Water">
 
-    <!--<property>fcs/water-loaded-pos</property>-->
+    <property>fcs/water-loaded-pos</property>
    <!-- <property value="10000">systems/water_tank</property>-->
-       <property>/sim/model/waterbombing</property>
-        
-   
-            
-            
+   <property value="0">fcs/water-door-cmd-norm</property>
+   <property>fcs/water-switch</property>
+   <property>/sim/model/waterbombing</property>
+
         <channel name="Water Bomb">
+
+            <kinematic name="Water Door Pos Norm">
+                <input>fcs/water-door-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>1</time>
+                    </setting>
+                </traverse>
+                <output>/surface-positions/water-door-position</output>
+            </kinematic>
 
 	<!--les conditions requisent pour effectuer l'acte de remplissage-->
 	<!--loading the water under conditions-->
+
 
             <switch name="Water Tank Reload">
                 <default value="0"/>
@@ -21,9 +36,8 @@
                     /sim/model/waterloading  == 1
                     fcs/water-switch == 0
                     position/h-agl-ft lt 8
-                     /gear/gear[9]/wow   == 1
+                     gear/unit[9]/WOW   == 1
                     gear/gear-cmd-norm == 0
-                    fcs/floats-pos-norm == 1
                     velocities/vc-kts gt 45
                 </test>
             </switch>
@@ -64,9 +78,9 @@
                 <input>fcs/water-reload-position</input>
                 <gain>10000</gain>
             </pure_gain>
-            
-            
-            
+
+
+
             <!--On libère l'eau -->
 
 	     <switch name="Water bombing Cmd Norm">
@@ -90,21 +104,21 @@
                     </setting>
                 </traverse>
             </kinematic>
-            
-            
-            
+
+
+
             <pure_gain name="Water Tank Unload">
                 <input>fcs/water-tank-capacity</input>
                 <gain>fcs/water-bombing-timing</gain>
             </pure_gain>
-            
+
             <summer name="Water Tank Unload Capacity">
                 <input>fcs/water-tank-capacity</input>
                 <input>-fcs/water-tank-unload</input>
             </summer>
 
            <!-- On met à jour le "pointmass" remplissage ou vidage-->
-            
+
             <switch name="Water Tank Load">
                 <default value="0"/>
                 <test logic="AND" value="fcs/water-tank-capacity">
@@ -118,20 +132,20 @@
                 </test>
                 <output>inertia/pointmass-weight-lbs[0]</output>
             </switch>
-            
+
             <pure_gain name="Water Qty Liters">
                 <input>inertia/pointmass-weight-lbs[0]</input>
                 <gain>0.45359237</gain>
             </pure_gain>
-            
+
             <switch name="systems/water-tank-filled">
-                <default value="9999"/>
-                <test logic="AND" value="0">
+                <default value="0000"/>
+                <test logic="AND" value="4530">
                     fcs/water-qty-liters  gt  4530
                 </test>
             </switch>
 
-	    <switch name="Water Switch">
+	    <switch name="Water SW">
                 <default value="fcs/water-switch"/>
                 <test logic="AND" value="1">
                     fcs/water-bombing-cmd-norm  == 1
@@ -141,8 +155,9 @@
 		    fcs/water-reload-position == 0
 		    fcs/water-switch == 1
                 </test>
+                <output>fcs/water-switch</output>
             </switch>
-            
+
            <!-- Pour l' animation du lachage d'eau-->
 
 	    <switch name="Water Trigger">
@@ -156,7 +171,7 @@
                 <input>fcs/water-reload-position</input>
                 <gain>20</gain>
             </pure_gain>
-            
+
             <switch name="Water Bombing Count ">
                 <default value="0"/>
                 <test logic="AND" value="fcs/water-count">
@@ -172,59 +187,6 @@
             </switch>
 
         </channel>
-        
-       <!--Pour l' animation des sillages sur l'eau-->
-
-         <channel name="Wake Trigger">
-              <switch name="Left Wake Trigger">
-                <default value="0"/>
-                <test logic="AND" value="1">
-                  /gear/gear[11]/wow   == 1
-                  velocities/vc-kts gt 10
-                </test>
-            </switch>
-            
-            <kinematic name="Left Wake Control">
-                <input>fcs/left-wake-trigger</input>
-                <traverse>
-                    <setting>
-                        <position>0</position>
-                        <time>0</time>
-                    </setting>
-                    <setting>
-                        <position>1</position>
-                        <time>3</time>
-                    </setting>
-                </traverse>
-            </kinematic>
-            
-            
-             <switch name="Right Wake Trigger">
-                <default value="0"/>
-                <test logic="AND" value="1">
-                  /gear/gear[10]/wow   == 1
-                  velocities/vc-kts gt 10
-                </test>
-            </switch>
-            
-            <kinematic name="Right Wake Control">
-                <input>fcs/right-wake-trigger</input>
-                <traverse>
-                    <setting>
-                        <position>0</position>
-                        <time>0</time>
-                    </setting>
-                    <setting>
-                        <position>1</position>
-                        <time>3</time>
-                    </setting>
-                </traverse>
-            </kinematic>
-            
-        </channel>
-
-
-
 
 
 </system>

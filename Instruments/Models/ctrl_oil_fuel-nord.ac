@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0.306 0.306 0.306  spec 0.502 0.502 0.502  shi 64  trans 0
 OBJECT world
 kids 1
@@ -145,7 +145,7 @@ kids 0
 OBJECT poly
 name "Cadran-Fond"
 loc -0.000257316 -0.000622082 0.00300589
-texture "F4U7-Moteur-huile-temp.rgb"
+texture "F4U7-Moteur-huile-temp.png"
 crease 45.000000
 numvert 17
 -0.000669785 -8.1486e-06 -1.36108e-05
@@ -266,7 +266,7 @@ kids 0
 OBJECT poly
 name "Cadran3"
 loc -0.000303776 -0.00164637 -0.0158369
-texture "F4U7-Moteur-fuel-press.rgb"
+texture "F4U7-Moteur-fuel-press.png"
 crease 45.000000
 numvert 13
 0.000551756 0.00735411 0.0223868
@@ -353,7 +353,7 @@ kids 0
 OBJECT poly
 name "Cadran2"
 loc -0.000894958 -0.00164637 0.00154106
-texture "F4U7-Moteur-oil-press.rgb"
+texture "F4U7-Moteur-oil-press.png"
 crease 45.000000
 numvert 15
 0.000844942 -0.0109744 0.0326155
@@ -454,7 +454,7 @@ kids 0
 OBJECT poly
 name "Cadran1"
 loc 0.00016052 0.00590036 0.00299225
-texture "F4U7-Moteur-huile-temp.rgb"
+texture "F4U7-Moteur-huile-temp.png"
 crease 45.000000
 numvert 9
 -0.000539387 0 0

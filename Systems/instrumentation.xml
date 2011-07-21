@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+ <!--according to that  panel Catalina PBY-->
+
+<PropertyList>
+
+
+    <airspeed-indicator>
+        <name>airspeed-indicator</name>
+        <number>0</number>
+        <total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+        <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    </airspeed-indicator>
+
+    <altimeter>
+        <name>altimeter</name>
+        <number>0</number>
+        <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    </altimeter>
+
+    <attitude-indicator>
+        <name>attitude-indicator</name>
+        <number>0</number>
+        <suction>/systems/vacuum/suction-inhg</suction>
+    </attitude-indicator>
+
+    <clock>
+        <name>clock</name>
+        <number>0</number>
+    </clock>
+
+    <heading-indicator>
+        <name>heading-indicator</name>
+        <number>0</number>
+        <suction>/systems/vacuum/suction-inhg</suction>
+    </heading-indicator>
+
+    <heading-indicator-dg>
+        <name>heading-indicator-dg</name>
+        <number>0</number>
+    </heading-indicator-dg>
+
+    <magnetic-compass>
+        <name>magnetic-compass</name>
+        <number>0</number>
+    </magnetic-compass>
+
+    <nav-radio>
+        <name>nav</name>
+        <number>0</number>
+    </nav-radio>
+
+    <slip-skid-ball>
+        <name>slip-skid-ball</name>
+        <number>0</number>
+    </slip-skid-ball>
+
+    <turn-indicator>
+        <name>turn-indicator</name>
+        <number>0</number>
+    </turn-indicator>
+
+    <vertical-speed-indicator>
+        <name>vertical-speed-indicator</name>
+        <number>0</number>
+        <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    </vertical-speed-indicator>
+
+
+
+    <KR-87>
+        <name>kr-87</name>
+        <number>0</number>
+    </KR-87>
+
+
+
+    <master-reference-gyro>
+        <name>master-reference-gyro</name>
+        <number>0</number>
+    </master-reference-gyro>
+
+</PropertyList>

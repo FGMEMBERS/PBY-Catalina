@@ -14,7 +14,7 @@
 
 
 
- <path>jetdo.osg</path>
+ <path>jetdo.osgx</path>
 
 
 
@@ -26,7 +26,7 @@
             <x-m>50</x-m>
             <y-m>0</y-m>
             <z-m>-10</z-m>
-            <pitch-deg>-85</pitch-deg>
+            <pitch-deg>-88</pitch-deg>
             <heading-deg>180</heading-deg>
             <roll-deg>0</roll-deg>
     </offsets>

@@ -1,14 +1,14 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 116  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.584 0.612 0.663  emis 0 0 0  spec 0.208 0.188 0.18  shi 67  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.208 0.188 0.18  shi 67  trans 0
 OBJECT world
 kids 2
 OBJECT poly
 name "Boule"
 loc -0.00112648 0 1.6267e-09
-texture "AISpherev2.rgb"
+texture "AISpherev2.png"
 crease 45.000000
 numvert 608
 0.0298118 0.000533548 -0.0170072
@@ -4967,7 +4967,7 @@ kids 0
 OBJECT poly
 name "Couronne"
 loc 0.0324978 -0.00517398 1.22002e-05
-texture "attitude5.rgb"
+texture "attitude5.png"
 crease 45.000000
 numvert 96
 0.00401484 0.0097996 0.0365725
@@ -5615,6 +5615,7 @@ kids 0
 OBJECT poly
 name "Fleche-Fond"
 loc 0.0279768 -0.00517398 1.22023e-05
+texture "attitude5.png"
 crease 45.000000
 numvert 6
 -0.00536693 0.0259619 -1.01766e-10
@@ -5627,13 +5628,13 @@ numsurf 2
 SURF 0x20
 mat 0
 refs 3
-2 0.172607 0.230953
-1 0.172607 0.230953
-0 0.172607 0.230953
+2 0.199951 0.250484
+1 0.199951 0.250484
+0 0.199951 0.250484
 SURF 0x20
 mat 0
 refs 3
-3 0.172607 0.230953
-4 0.172607 0.230953
-5 0.172607 0.230953
+3 0.199951 0.250484
+4 0.199951 0.250484
+5 0.199951 0.250484
 kids 0

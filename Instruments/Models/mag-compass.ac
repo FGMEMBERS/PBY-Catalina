@@ -1,8 +1,8 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.898 0.914 1  amb 0.612 0.604 1  emis 0.553 0.541 0.639  spec 0.62 0.647 0.733  shi 125  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.898 0.914 1  amb 0.898 0.914 1  emis 0.553 0.541 0.639  spec 0.62 0.647 0.733  shi 125  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 64  trans 0
 OBJECT world
 kids 1
@@ -808,7 +808,7 @@ kids 0
 OBJECT poly
 name "Cadran"
 loc -0.000186816 0.00263998 5.2154e-08
-texture "mag-compass.rgb"
+texture "mag-compass.png"
 crease 45.000000
 numvert 48
 -0.0188299 -0.0118177 -0.00810898
@@ -1088,7 +1088,7 @@ kids 0
 OBJECT poly
 name "Mag-Compass"
 loc -0.000186816 0.00263998 5.2154e-08
-texture "mag-compass.rgb"
+texture "mag-compass.png"
 crease 45.000000
 numvert 14
 0.0241531 0.0154138 -0.0263452

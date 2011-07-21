@@ -5,9 +5,12 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin
-    Copyright License:  GPL
+    Copyright License:  GPL_V2
 -->
 <!--                   Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
+<!--COM instruments are linked to Aircraft/instruments-3d folder
+you want that folder updated-->
 
 <path>pby-panel.ac</path>
 
@@ -18,9 +21,12 @@
 
     <!--L1=================================-->
     <!--DUMMY-->
+
+
+
     <model>
-            <name>Bezel</name>
-            <path>Aircraft/PBY-Catalina/Instruments/Dummy-Nord.xml</path>
+            <name>ADF</name>
+            <path>Aircraft/Instruments-3d/kr87-adf/ki227-00.xml</path>
             <offsets>
                     <x-m>0.0</x-m>
                     <y-m>-0.463595</y-m>
@@ -28,6 +34,38 @@
                     <pitch-deg>0</pitch-deg>
             </offsets>
     </model>
+    <animation>
+        <type>pick</type>
+        <object-name>KI227.knob</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/kr-87/inputs/rotation-deg</property>
+                <step>1</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>KI227.knob</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/kr-87/inputs/rotation-deg</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
     <model>
             <name>Bezel</name>
             <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
@@ -38,10 +76,10 @@
                     <pitch-deg>0</pitch-deg>
             </offsets>
     </model>
-    <!--ILS-->
+    <!--was_ILS-->
     <model>
-            <name>ILS</name>
-            <path>Aircraft/PBY-Catalina/Instruments/ILS-PBY.xml</path>
+            <name>HI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/HI-PBY.xml</path>
             <offsets>
                     <x-m>0.00446975</x-m>
                     <y-m>-0.361547</y-m>
@@ -196,10 +234,10 @@
 
     <!--HI-->
     <model>
-            <name>HI</name>
-            <path>Aircraft/PBY-Catalina/Instruments/HI-PBY.xml</path>
+            <name>was_HI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Dummy-Nord.xml</path>
             <offsets>
-                    <x-m>0.00446975</x-m>
+                    <x-m>0.00</x-m>
                     <y-m>-0.463595</y-m>
                     <z-m>-0.00184315</z-m>
                     <roll-deg></roll-deg>
@@ -373,10 +411,10 @@
                     <pitch-deg>0</pitch-deg>
             </offsets>
     </model>
-<!--ILS-->
+
     <model>
-            <name>ILS</name>
-            <path>Aircraft/PBY-Catalina/Instruments/ILS-PBY.xml</path>
+            <name></name>
+            <path>Aircraft/PBY-Catalina/Instruments/Dummy-Nord.xml</path>
             <offsets>
                     <x-m>0.00446975</x-m>
                     <y-m>0.361727</y-m>
@@ -501,6 +539,40 @@
                     <z-m>-0.00184315</z-m>
                     <pitch-deg>0</pitch-deg>
             </offsets>
+    </model>
+
+   <!-- COM-->
+    <model>
+        <name>kx165-1</name>
+        <path>Aircraft/Instruments-3d/kx165/kx165-1.xml</path>
+        <offsets>
+            <x-m>0.0</x-m>
+            <y-m>-0.104084</y-m>
+            <z-m>0.187786</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>kx165-2</name>
+        <path>Aircraft/Instruments-3d/kx165/kx165-2.xml</path>
+        <offsets>
+            <x-m>0.0</x-m>
+            <y-m>-0.104084</y-m>
+            <z-m>0.114042</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ADF-462</name>
+        <path>Aircraft/Instruments-3d/kr87-adf/kr87.xml</path>
+        <offsets>
+            <x-m>0.005</x-m>
+            <y-m>-0.104084</y-m>
+            <z-m>0.0452739</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
     </model>
 
  </PropertyList>

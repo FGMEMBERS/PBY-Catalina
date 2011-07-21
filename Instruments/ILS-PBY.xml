@@ -5,7 +5,7 @@
 <!--
     Usable with FlightGear
     property Gerard Robin
-    Copyright License:  GPL
+    Copyright License:  GPL_V2
 -->
 <PropertyList>
 
@@ -55,6 +55,8 @@
 
 	<animation include="Instrument-Light2.xml">
 		<object-name>Cadran</object-name>
+                <object-name>Cadran-ext</object-name>
+                <object-name>Cadran-in</object-name>
 	</animation>
 
 	<!--<animation>
@@ -124,13 +126,13 @@
 
 
 	<animation>
-		<type>translate</type>
+		<type>rotate</type>
 		<object-name>IndicHoriz</object-name>
 		<property>instrumentation/nav[0]/gs-needle-deflection</property>
 		<interpolation>
 			<entry>
 				<ind>-10</ind>
-				<dep>-0.02</dep>
+				<dep>15</dep>
 			</entry>
 			<entry>
 				<ind>0</ind>
@@ -138,24 +140,29 @@
 			</entry>
 			<entry>
 				<ind>10</ind>
-				<dep>0.02</dep>
+				<dep>-15</dep>
 			</entry>
 		</interpolation>
+                <center>
+                    <x-m>-0.0754426</x-m>
+                    <y-m>-0</y-m>
+                    <z-m>-0</z-m>
+		</center>
 		<axis>
 			<x>0</x>
-			<y>0</y>
-			<z>1</z>
+			<y>1</y>
+			<z>0</z>
 		</axis>
  	</animation>
 
 	<animation>
-		<type>translate</type>
+		<type>rotate</type>
 		<object-name>IndicVert-nav</object-name>
 		<property>instrumentation/nav[0]/heading-needle-deflection</property>
 		<interpolation>
 			<entry>
 				<ind>-10</ind>
-				<dep>-0.02</dep>
+				<dep>-15</dep>
 			</entry>
 			<entry>
 				<ind>0</ind>
@@ -163,13 +170,18 @@
 			</entry>
 			<entry>
 				<ind>10</ind>
-				<dep>0.02</dep>
+				<dep>15</dep>
 			</entry>
 		</interpolation>
+                <center>
+                    <x-m>-0.0754426</x-m>
+                    <y-m>-0</y-m>
+                    <z-m>-0</z-m>
+		</center>
 		<axis>
 			<x>0</x>
-			<y>1</y>
-			<z>0</z>
+			<y>0</y>
+			<z>1</z>
 		</axis>
 	</animation>
 

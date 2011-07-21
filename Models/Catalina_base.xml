@@ -3,11 +3,50 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin
-    Copyright License:  GPL
+    Copyright License:  GPL_V2
 -->
    <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
 
 <PropertyList>
+
+
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>Aircraft/PBY-Catalina/Models/Textures/shader.png</texture>
+        <object-name>Vitrage</object-name>
+    </animation>
+
+    <effect>
+        <inherits-from>Aircraft/PBY-Catalina/Models/Effects/bumpspec-ailes</inherits-from>
+        <object-name>DAile</object-name>
+        <object-name>GAile</object-name>
+        <object-name>DAileron</object-name>
+        <object-name>GAileron</object-name>
+    </effect>
+
+   <effect>
+        <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflect</inherits-from>
+        <!--<object-name>DAile</object-name>
+        <object-name>GAile</object-name>-->
+        <!--<object-name>DAileron</object-name>
+        <object-name>GAileron</object-name>-->
+        <object-name>DFlot</object-name>
+        <object-name>GFlot</object-name>
+        <object-name>AVFuselage</object-name>
+        <object-name>CTFuselage</object-name>
+        <object-name>ARFuselage</object-name>
+        <object-name>FVGouv</object-name>
+        <object-name>VGouv</object-name>
+        <object-name>FHGouuv</object-name>
+        <object-name>HGouv</object-name>
+        <object-name>Verriere-Struct</object-name>
+        <object-name>Poutre</object-name>
+        <object-name>AR-Verriere-Struct</object-name>
+
+    </effect>
+
 
 
     <animation>
@@ -15,8 +54,10 @@
             <object-name>Console-Manche</object-name>
              <object-name>GVolant</object-name>
              <object-name>DVolant</object-name>
+             <object-name>Ignition</object-name>
+             <object-name>Block-Contacteur</object-name>
             <property>fdm/jsbsim/fcs/elevator-cmd-norm</property>
-            <factor>-10</factor>
+            <factor>-8</factor>
             <center>
                     <x-m>-4.21646</x-m>
                     <y-m>0</y-m>
@@ -62,6 +103,340 @@
                     <z>0.0</z>
             </axis>
     </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Pilote-GPalon</object-name>
+        <property>fdm/jsbsim/fcs/rudder-cmd-norm</property>
+        <factor>10</factor>
+        <center>
+            <x-m>-4.49888</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.61766</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Pilote-DPalon</object-name>
+        <property>fdm/jsbsim/fcs/rudder-cmd-norm</property>
+        <factor>-10</factor>
+        <center>
+            <x-m>-4.49888</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.61766</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>CoPilote-GPalon</object-name>
+        <property>fdm/jsbsim/fcs/rudder-cmd-norm</property>
+        <factor>10</factor>
+        <center>
+            <x-m>-4.49888</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.61766</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>CoPilote-DPalon</object-name>
+        <property>fdm/jsbsim/fcs/rudder-cmd-norm</property>
+        <factor>-10</factor>
+        <center>
+            <x-m>-4.49888</x-m>
+            <y-m>0</y-m>
+            <z-m>-0.61766</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Throttle0</object-name>
+        <property>fdm/jsbsim/fcs/throttle-cmd-norm</property>
+        <factor>20</factor>
+        <center>
+            <x-m>-3.92674</x-m>
+            <y-m>0</y-m>
+            <z-m>0.607367</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Throttle1</object-name>
+        <property>fdm/jsbsim/fcs/throttle-cmd-norm[1]</property>
+        <factor>20</factor>
+        <center>
+            <x-m>-3.92674</x-m>
+            <y-m>0</y-m>
+            <z-m>0.607367</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Throttle0</object-name>
+        <action>
+            <button>0</button>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine/throttle</property>
+                <step>0.05</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine/throttle</property>
+                <step>-0.05</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+        </animation>
+        <animation>
+            <type>pick</type>
+            <object-name>Throttle1</object-name>
+            <action>
+                <button>0</button>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[1]/throttle</property>
+                    <step>0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                </binding>
+            </action>
+            <action>
+                <button>1</button>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[1]/throttle</property>
+                    <step>-0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>Cde-Train</object-name>
+            <property>controls/gear/gear-down</property>
+            <interpolation>
+                <entry>
+                    <ind>0</ind>
+                    <dep>-45</dep>
+                </entry>
+                <entry>
+                    <ind>1.0</ind>
+                    <dep>45</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>-0.169626</y-m>
+                <z-m>-0.173111</z-m>
+            </center>
+            <axis>
+                <x>1.0</x>
+                <y>0.0</y>
+                <z>0.0</z>
+            </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Cde-Train</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/gear/gear-down</property>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Cde-Verrou-Flotteur</object-name>
+        <property>controls/gear/float-down</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-30</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-4.17343</x-m>
+            <y-m>0</y-m>
+            <z-m>0.1593</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Cde-Verrou-Flotteur</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/gear/float-down</property>
+            </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Helice0-Pas</object-name>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
+        <factor>20</factor>
+        <center>
+            <x-m>-3.92674</x-m>
+            <y-m>0</y-m>
+            <z-m>0.607367</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>Helice1-Pas</object-name>
+        <property>controls/engines/engine[1]/propeller-pitch</property>
+        <factor>20</factor>
+        <center>
+            <x-m>-3.92674</x-m>
+            <y-m>0</y-m>
+            <z-m>0.607367</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Helice0-Pas</object-name>
+        <action>
+            <button>0</button>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[0]/propeller-pitch</property>
+                <step>0.05</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable type="bool">true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[0]/propeller-pitch</property>
+                <step>-0.05</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+        </animation>
+        <animation>
+            <type>pick</type>
+            <object-name>Helice1-Pas</object-name>
+            <action>
+                <button>0</button>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[1]/propeller-pitch</property>
+                    <step>0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                </binding>
+            </action>
+            <action>
+                <button>1</button>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[1]/propeller-pitch</property>
+                    <step>-0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                </binding>
+            </action>
+        </animation>
+
+
+    <!--<animation>
+        <type>select</type>
+        <object-name>DFVert</object-name>
+        <object-name>GFRouge</object-name>
+        <object-name>ARFRouge</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/instr-ignition-switch</property>
+                <value>27</value>
+            </greater-than>
+        </condition>
+        </animation>-->
+
 
 
     <!--<property>surface-positions/gear-pos-norm</property>-->
@@ -421,11 +796,11 @@
   <interpolation>
    <entry>
     <ind>0</ind>
-    <dep>135</dep>
+    <dep>210</dep>
    </entry>
    <entry>
     <ind>0.5</ind>
-    <dep>90</dep>
+    <dep>110</dep>
    </entry>
    <entry>
     <ind>1.0</ind>
@@ -444,6 +819,38 @@
   </axis>
  </animation>
 
+ <animation>
+     <type>rotate</type>
+
+     <object-name>GTrain-VerinB</object-name>
+     <object-name>GTrain-VerinH</object-name>
+     <property>sim/multiplay/generic/float[0]</property>
+     <interpolation>
+         <entry>
+             <ind>0</ind>
+             <dep>-75</dep>
+         </entry>
+         <entry>
+             <ind>0.5</ind>
+             <dep>-10</dep>
+         </entry>
+         <entry>
+             <ind>1.0</ind>
+             <dep>0</dep>
+         </entry>
+     </interpolation>
+     <center>
+         <x-m>0</x-m>
+         <y-m>-1.84495</y-m>
+         <z-m>-0.858396</z-m>
+     </center>
+     <axis>
+         <x>-1</x>
+         <y>0.0</y>
+         <z>0.0</z>
+     </axis>
+ </animation>
+
     <animation>
         <type>rotate</type>
         <object-name>GTrain-VerinH</object-name>
@@ -455,7 +862,7 @@
         </entry>
         <entry>
             <ind>0.5</ind>
-            <dep>-123</dep>
+            <dep>-140</dep>
         </entry>
         <entry>
             <ind>1.0</ind>
@@ -648,11 +1055,11 @@
   <interpolation>
    <entry>
     <ind>0</ind>
-    <dep>135</dep>
+    <dep>210</dep>
    </entry>
    <entry>
     <ind>0.5</ind>
-    <dep>90</dep>
+    <dep>110</dep>
    </entry>
    <entry>
     <ind>1.0</ind>
@@ -672,6 +1079,38 @@
  </animation>
 
  <animation>
+     <type>rotate</type>
+     <object-name>DTrain-VerinB</object-name>
+     <object-name>DTrain-VerinH</object-name>
+     <property>sim/multiplay/generic/float[0]</property>
+     <interpolation>
+         <entry>
+             <ind>0</ind>
+             <dep>-75</dep>
+         </entry>
+         <entry>
+             <ind>0.5</ind>
+             <dep>-10</dep>
+         </entry>
+         <entry>
+             <ind>1.0</ind>
+             <dep>0</dep>
+         </entry>
+     </interpolation>
+     <center>
+         <x-m>0</x-m>
+         <y-m>1.84495</y-m>
+         <z-m>-0.858396</z-m>
+     </center>
+     <axis>
+         <x>1</x>
+         <y>0.0</y>
+         <z>0.0</z>
+     </axis>
+ </animation>
+
+
+ <animation>
   <type>rotate</type>
   <object-name>DTrain-VerinH</object-name>
   <property>sim/multiplay/generic/float[0]</property>
@@ -682,7 +1121,7 @@
    </entry>
    <entry>
     <ind>0.5</ind>
-    <dep>-123</dep>
+    <dep>-140</dep>
    </entry>
    <entry>
     <ind>1.0</ind>
@@ -914,89 +1353,82 @@
 
  <!-- Les Flotteurs   GAUCHE-->
  <!--<property>surface-positions/floats-pos-norm</property>-->
-       
+
 
  <animation>
-        <type>rotate</type>
-        <object-name>GFlot</object-name>
-        <object-name>GFlotJambe</object-name>
-        <object-name>GFlotJambe-Doublure</object-name>
-        <object-name>GFlot-BielleH</object-name>
-        <object-name>GFlot-BielleB</object-name>
-        <!--<object-name>GFlot-Verin</object-name>-->
-        <!--<property>surface-positions/floats-pos-norm</property>-->
-        <property>sim/multiplay/generic/float[7]</property>
-        <factor>85</factor>
-         <axis>
-                    <x1-m>-0.59723</x1-m>
-                    <y1-m>-13.1967</y1-m>
-                    <z1-m>2.066</z1-m>
-                    <x2-m>1.25534</x2-m>
-                    <y2-m>-13.1965</y2-m>
-                    <z2-m>1.94157</z2-m>
-            </axis>
+     <type>rotate</type>
+     <object-name>GFlot</object-name>
+     <object-name>GFlotJambe</object-name>
+     <property>sim/multiplay/generic/float[7]</property>
+     <factor>85</factor>
+     <axis>
+         <x1-m>-0.594414</x1-m>
+         <y1-m>-13.1946</y1-m>
+         <z1-m>2.0945</z1-m>
+         <x2-m>1.25705</x2-m>
+         <y2-m>-13.1941</y2-m>
+         <z2-m>1.96549</z2-m>
+     </axis>
  </animation>
 
  <animation>
-        <type>rotate</type>
-        <object-name>GFlot-BielleB</object-name>
-        <object-name>GFlot-BielleH</object-name>
-       <!-- <object-name>GFlot-Verin</object-name>-->
-        <property>sim/multiplay/generic/float[7]</property>
-        <interpolation>
-            <entry>
-            <ind>0.0</ind>
-            <dep>0</dep>
-            </entry>
-            <entry>
-            <ind>0.5</ind>
-            <dep>-17</dep>
-            </entry>
-            <entry>
-            <ind>1.0</ind>
-            <dep>-40.0</dep>
-            </entry>
-        </interpolation>
-        <axis>
-                    <x1-m>1.04069</x1-m>
-                    <y1-m>-15.3059</y1-m>
-                    <z1-m>2.09565</z1-m>
-                    <x2-m>-0.33663</x2-m>
-                    <y2-m>-15.3033</y2-m>
-                    <z2-m>2.17254</z2-m>
-            </axis>
+     <type>rotate</type>
+     <object-name>GFlot-BielleB</object-name>
+     <object-name>GFlot-BielleH</object-name>
+
+     <property>sim/multiplay/generic/float[7]</property>
+     <interpolation>
+         <entry>
+             <ind>0.0</ind>
+             <dep>0</dep>
+         </entry>
+         <entry>
+             <ind>0.5</ind>
+             <dep>-20</dep>
+         </entry>
+         <entry>
+             <ind>1.0</ind>
+             <dep>-48.0</dep>
+         </entry>
+     </interpolation>
+     <axis>
+         <x1-m>-0.594414</x1-m>
+         <y1-m>-15.2639</y1-m>
+         <z1-m>2.22024</z1-m>
+         <x2-m>1.25705</x2-m>
+         <y2-m>-15.2634</y2-m>
+         <z2-m>2.09122</z2-m>
+     </axis>
  </animation>
 
 
  <animation>
-        <type>rotate</type>
-        <object-name>GFlot-BielleH</object-name>
-        <property>sim/multiplay/generic/float[7]</property>
-        <interpolation>
-            <entry>
-            <ind>0.0</ind>
-            <dep>0.0</dep>
-            </entry>
-            <entry>
-            <ind>0.5</ind>
-            <dep>76.50</dep>
-            </entry>
-            <entry>
-            <ind>1.0</ind>
-            <dep>180</dep>
-            </entry>
-  </interpolation>
-        <axis>
-            <x1-m>1.04069</x1-m>
-                    <x1-m>0.406868</x1-m>
-                    <y1-m>-14.0563</y1-m>
-                    <z1-m>2.05566</z1-m>
-                    <x2-m>0.224459</x2-m>
-                    <y2-m>-14.0563</y2-m>
-                    <z2-m>2.06834</z2-m>
-            </axis>
+     <type>rotate</type>
+     <object-name>GFlot-BielleH</object-name>
+     <property>sim/multiplay/generic/float[7]</property>
+     <interpolation>
+         <entry>
+             <ind>0.0</ind>
+             <dep>0.0</dep>
+         </entry>
+         <entry>
+             <ind>0.50</ind>
+             <dep>70</dep>
+         </entry>
+         <entry>
+             <ind>1.0</ind>
+             <dep>180</dep>
+         </entry>
+     </interpolation>
+     <axis>
+         <x1-m>-0.594414</x1-m>
+         <y1-m>-13.8926</y1-m>
+         <z1-m>2.13517</z1-m>
+         <x2-m>1.25705</x2-m>
+         <y2-m>-13.8921</y2-m>
+         <z2-m>2.00616</z2-m>
+     </axis>
  </animation>
-
 
 
 
@@ -1021,56 +1453,52 @@
 
  <!-- Les Flotteurs   DROIT-->
 
- <animation>
-        <type>rotate</type>
-        <object-name>DFlot</object-name>
-        <object-name>DFlotJambe</object-name>
-         <object-name>DFlotJambe-Doublure</object-name>
-        <object-name>DFlot-BielleH</object-name>
-        <object-name>DFlot-BielleB</object-name>
-        <!--<object-name>DFlot-Verin</object-name>-->
-        <property>sim/multiplay/generic/float[7]</property>
-        <factor>-85</factor>
-        <axis>
-                    <x1-m>-0.59723</x1-m>
-                    <y1-m>13.1967</y1-m>
-                    <z1-m>2.066</z1-m>
-                    <x2-m>1.25534</x2-m>
-                    <y2-m>13.1965</y2-m>
-                    <z2-m>1.94157</z2-m>
+    <animation>
+            <type>rotate</type>
+            <object-name>DFlot</object-name>
+            <object-name>DFlotJambe</object-name>
+            <property>sim/multiplay/generic/float[7]</property>
+            <factor>-85</factor>
+            <axis>
+                <x1-m>-0.594414</x1-m>
+                <y1-m>13.1946</y1-m>
+                <z1-m>2.0945</z1-m>
+                <x2-m>1.25705</x2-m>
+                <y2-m>13.1941</y2-m>
+                <z2-m>1.96549</z2-m>
             </axis>
- </animation>
+    </animation>
+
 
 
 
     <animation>
-            <type>rotate</type>
-            <object-name>DFlot-BielleB</object-name>
-            <object-name>DFlot-BielleH</object-name>
-        <!-- <object-name>GFlot-Verin</object-name>-->
-            <property>sim/multiplay/generic/float[7]</property>
-            <interpolation>
-                <entry>
+        <type>rotate</type>
+        <object-name>DFlot-BielleB</object-name>
+        <object-name>DFlot-BielleH</object-name>
+        <property>sim/multiplay/generic/float[7]</property>
+        <interpolation>
+            <entry>
                 <ind>0.0</ind>
                 <dep>0</dep>
-                </entry>
-                <entry>
+            </entry>
+            <entry>
                 <ind>0.5</ind>
-                <dep>17</dep>
-                </entry>
-                <entry>
+                <dep>20</dep>
+         </entry>
+            <entry>
                 <ind>1.0</ind>
-                <dep>40.0</dep>
-                </entry>
-            </interpolation>
-            <axis>
-                        <x1-m>1.04069</x1-m>
-                        <y1-m>15.3059</y1-m>
-                        <z1-m>2.09565</z1-m>
-                        <x2-m>-0.33663</x2-m>
-                        <y2-m>15.3033</y2-m>
-                        <z2-m>2.17254</z2-m>
-                </axis>
+                <dep>48.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-0.594414</x1-m>
+            <y1-m>15.2639</y1-m>
+            <z1-m>2.22024</z1-m>
+            <x2-m>1.25705</x2-m>
+            <y2-m>15.2634</y2-m>
+            <z2-m>2.09122</z2-m>
+        </axis>
     </animation>
 
 
@@ -1084,27 +1512,123 @@
                 <dep>0.0</dep>
                 </entry>
                 <entry>
-                <ind>0.5</ind>
-                <dep>-76.50</dep>
+                    <ind>0.50</ind>
+                    <dep>-70</dep>
                 </entry>
                 <entry>
                 <ind>1.0</ind>
                 <dep>-180</dep>
                 </entry>
-    </interpolation>
+            </interpolation>
             <axis>
-                <x1-m>1.04069</x1-m>
-                        <x1-m>0.406868</x1-m>
-                        <y1-m>14.0563</y1-m>
-                        <z1-m>2.05566</z1-m>
-                        <x2-m>0.224459</x2-m>
-                        <y2-m>14.0563</y2-m>
-                        <z2-m>2.06834</z2-m>
-                </axis>
+                <x1-m>-0.594414</x1-m>
+                <y1-m>13.8926</y1-m>
+                <z1-m>2.13517</z1-m>
+                <x2-m>1.25705</x2-m>
+                <y2-m>13.8921</y2-m>
+                <z2-m>2.00616</z2-m>
+            </axis>
     </animation>
 
+    <!--===================Porte bombe d'eau ====================================================-->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>GEau-Porte</object-name>
+        <object-name>GEau-Porte-Dbl</object-name>
+        <property>surface-positions/water-door-position</property>
+        <factor>-70</factor>
+        <axis>
+            <x1-m>-0.171404</x1-m>
+            <y1-m>-1.09705</y1-m>
+            <z1-m>-1.31787</z1-m>
+            <x2-m>0.621264</x2-m>
+            <y2-m>-1.09705</y2-m>
+            <z2-m>-1.34172</z2-m>
+        </axis>
+
+ </animation>
+
+ <animation>
+     <type>rotate</type>
+     <object-name>DEau-Porte</object-name>
+     <object-name>DEau-Porte-Dbl</object-name>
+     <property>surface-positions/water-door-position</property>
+     <factor>70</factor>
+     <axis>
+         <x1-m>-0.171404</x1-m>
+         <y1-m>1.09705</y1-m>
+         <z1-m>-1.31787</z1-m>
+         <x2-m>0.621264</x2-m>
+         <y2-m>1.09705</y2-m>
+         <z2-m>-1.34172</z2-m>
+     </axis>
+
+ </animation>
 
 
+
+
+ <animation>
+     <type>rotate</type>
+     <object-name>GBlister-Verriere</object-name>
+     <object-name>GBlister-Struct</object-name>
+     <object-name>GBlister-Struct-Dbl</object-name>
+     <property>surface-positions/blister-gauche-pos-norm</property>
+     <factor>-90</factor>
+     <center>
+         <x-m>0</x-m>
+         <y-m>-0.853958</y-m>
+         <z-m>0.248788</z-m>
+     </center>
+     <axis>
+         <x>1.0</x>
+         <y>0.0</y>
+         <z>0.0</z>
+     </axis>
+ </animation>
+
+ <animation>
+     <type>rotate</type>
+     <object-name>DBlister-Verriere</object-name>
+     <object-name>DBlister-Struct</object-name>
+     <object-name>DBlister-Struct-Dbl</object-name>
+     <property>surface-positions/blister-droite-pos-norm</property>
+     <factor>90</factor>
+     <center>
+         <x-m>0</x-m>
+         <y-m>0.853958</y-m>
+         <z-m>0.248788</z-m>
+     </center>
+     <axis>
+         <x>1.0</x>
+         <y>0.0</y>
+         <z>0.0</z>
+     </axis>
+ </animation>
+
+ <animation>
+     <type>shader</type>
+     <shader>chrome</shader>
+     <texture>Aircraft/PBY-Catalina/Models/Textures/shader.png</texture>
+     <object-name>Blister-verriere-Fix</object-name>
+ </animation>
+
+
+ <animation>
+     <type>shader</type>
+     <shader>chrome</shader>
+     <texture>Aircraft/PBY-Catalina/Models/Textures/shader.png</texture>
+     <object-name>GBlister-Verriere</object-name>
+ </animation>
+
+
+ <animation>
+     <type>shader</type>
+     <shader>chrome</shader>
+     <texture>Aircraft/PBY-Catalina/Models/Textures/shader.png</texture>
+     <object-name>DBlister-Verriere</object-name>
+  </animation>
 
 
 

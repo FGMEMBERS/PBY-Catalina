@@ -1,8 +1,8 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.898 0.914 1  amb 0.612 0.604 1  emis 0.553 0.541 0.639  spec 0.62 0.647 0.733  shi 125  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.51 0.51 0.51  emis 0 0 0  spec 0.541 0.541 0.541  shi 15  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.898 0.914 1  amb 0.898 0.914 1  emis 0.553 0.541 0.639  spec 0.62 0.647 0.733  shi 125  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.541 0.541 0.541  shi 15  trans 0
 OBJECT world
 kids 2
 OBJECT group
@@ -88,7 +88,7 @@ kids 0
 OBJECT poly
 name "PA-cc"
 loc 0.000244541 0.00107386 -0.0233473
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.00224967 -0.0148517 0.00611732
@@ -107,7 +107,7 @@ kids 0
 OBJECT poly
 name "PA-dc"
 loc 0.000244541 0.00107386 -0.0192852
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.00224967 -0.00862783 0.00201629
@@ -144,7 +144,7 @@ kids 0
 OBJECT poly
 name "PA-un"
 loc 0.000244541 0.00107386 -0.0192852
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.00224967 -0.0148517 0.00803347
@@ -163,7 +163,7 @@ kids 0
 OBJECT poly
 name "PA-di"
 loc 0.000244541 0.00107386 -0.0192852
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.00224967 -0.00862783 0.0167417
@@ -182,7 +182,7 @@ kids 0
 OBJECT poly
 name "Ft-minus"
 loc 0.00039717 0.00104301 0.0172386
-texture "minus.rgb"
+texture "minus.png"
 crease 45.000000
 numvert 4
 0.00225041 0.00392108 0.00130544
@@ -206,7 +206,7 @@ kids 0
 OBJECT poly
 name "Ft-dm"
 loc 0.000538389 0.00104301 0.0172386
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.002244 -0.00407215 0.00130544
@@ -230,7 +230,7 @@ kids 0
 OBJECT poly
 name "Ft-m"
 loc 0.000538389 0.00104301 0.0169464
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.002244 0.00392108 -0.00479285
@@ -254,7 +254,7 @@ kids 0
 OBJECT poly
 name "Cadran"
 loc -0.00293721 0.000928794 -0.000614787
-texture "alt3d-cadran.rgb"
+texture "alt3d-cadran.png"
 crease 45.000000
 numvert 51
 -0.000573775 -0.00751613 0.00484802
@@ -631,7 +631,7 @@ kids 0
 OBJECT poly
 name "Tambour"
 loc -0.00297221 4.39865e-08 0.0295356
-texture "digit-r.rgb"
+texture "digit-r.png"
 crease 45.000000
 numvert 42
 0.012117 0.00318716 -0.0196683

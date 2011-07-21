@@ -1,67 +1,154 @@
 <?xml version="1.0"?>
 
+
+
 <PropertyList>
-  <name>Water Bombing</name>
+  <name>Water Level</name>
+  <x>10</x>
+  <y>30</y>
   <layout>vbox</layout>
 
   <text>
-    <label>Water Bombing</label>
+        <label>======Load Water======</label>
   </text>
 
   <hrule/>
 
   <group>
-    <layout>hbox</layout>
+        <layout>vbox</layout>
+        <halign>center</halign>
+        <button>
+            <legend>Close</legend>
+            <default>true</default>
+            <key>Esc</key>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+
+    <hrule/>
+
+    <group>
+            <layout>hbox</layout>
+            <halign>center</halign>
+            <text>
+                <x>10</x>
+                 <y>40</y>
+                <label>QTY LEVEL:</label>
+            </text>
+    </group>
+    <group>
+        <layout>hbox</layout>
+        <input>
+            <live>true</live>
+            <property>/fdm/jsbsim/fcs/water-qty-liters</property>
+            <x>10</x>
+            <y>70</y>
+            <color>
+                <red>1.0</red>
+                <green>0.80</green>
+                <blue>0.80</blue>
+            </color>
+        </input>
+    </group>
+    <group>
+        <layout>hbox</layout>
+        <halign>center</halign>
+        <text>
+            <x>10</x>
+            <y>100</y>
+            <label>MAX 4530 LITERS</label>
+        </text>
+    </group>
+    <group>
+        <layout>hbox</layout>
+        <halign>center</halign>
+        <input>
+            <live>true</live>
+            <property>/fdm/jsbsim/systems/water-tank-filled</property>
+            <color>
+                <red>0.0</red>
+                <green>1.0</green>
+                <blue>0.0</blue>
+            </color>
+        </input>
+    </group>
+    <group>
+        <layout>hbox</layout>
+        <halign>center</halign>
+        <text>
+            <x>10</x>
+            <y>150</y>
+            <label>FILLING DONE UNDER CONDITIONS</label>
+        </text>
+    </group>
+    <group>
+        <layout>hbox</layout>
+        <halign>center</halign>
+        <text>
+            <x>10</x>
+            <y>170</y>
+            <label>MIN SPEED 45 KTS</label>
+        </text>
+    </group>
+    <group>
+        <layout>hbox</layout>
+        <halign>center</halign>
+        <text>
+            <x>10</x>
+            <y>190</y>
+            <label>MAX AGL 8 FT</label>
+        </text>
+    </group>
+
+    <hrule/>
+
     <text>
-      <halign>right</halign>
-      <label>Water Quantity (max 4530 liters):</label>
+        <label>======Bomb Water======</label>
     </text>
-    <input>
-      <live>true</live>
-      <property>/fdm/jsbsim/fcs/water-qty-liters</property>
-    </input>
-  </group>
 
-  <group>
-    <layout>hbox</layout>
-    <halign>center</halign>
-    <button>
-      <legend>Load</legend>
-      <binding>
-        <command>nasal</command>
-        <script>
-          setprop("/sim/model/waterloading", 1);
-          setprop("/sim/model/bomb-signal", 0);
-          setprop("/sim/model/waterbombing", 0);
-        </script>
-      </binding>
-    </button>
-    <button>
-      <legend>Drop</legend>
-      <binding>
-        <command>nasal</command>
-        <script>
-          setprop("/sim/model/waterloading", 0);
-          setprop("/sim/model/bomb-signal", 1);
-          setprop("/sim/model/waterbombing", 1);
-        </script>
-      </binding>
-    </button>
-  </group>
 
-  <hrule/>
+    <group>
+        <layout>vbox</layout>
+        <halign>center</halign>
+        <text>
+            <x>10</x>
+            <y>230</y>
+            <label>WHEN ON TARGET, BOMB WATER</label>
+        </text>
+        <button>
+            <legend>Launch</legend>
+            <default>true</default>
+            <key>l</key>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/bomb-signal</property>
+                <value>1</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/waterbombing</property>
+                <value>1</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/waterloading</property>
+                <value>0</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-door-cmd-norm</property>
+                <value>1</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-intake-cmd-norm</property>
+                <value>0</value>
+            </binding>
+        </button>
+    </group>
 
-  <group>
-    <layout>vbox</layout>
-    <halign>center</halign>
-    <button>
-      <legend>Close</legend>
-      <default>true</default>
-      <key>Esc</key>
-      <binding>
-        <command>dialog-close</command>
-      </binding>
-    </button>
-  </group>
+
 
 </PropertyList>

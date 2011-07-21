@@ -1,10 +1,10 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.51 0.51 0.51  emis 0 0 0  spec 0.541 0.541 0.541  shi 128  trans 0
-MATERIAL "ac3dmat14" rgb 0.886 0.886 0.82  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat4" rgb 0.698 0.671 0.467  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 93  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.541 0.541 0.541  shi 128  trans 0
+MATERIAL "ac3dmat14" rgb 0.886 0.886 0.82  amb 0.886 0.886 0.82  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat4" rgb 0.698 0.671 0.467  amb 0.698 0.671 0.467  emis 0 0 0  spec 0 0 0  shi 93  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 128  trans 0.784
 OBJECT world
 kids 3
@@ -15,7 +15,7 @@ kids 6
 OBJECT poly
 name "Cache"
 loc -0.000104254 -0.00654549 6.15816e-05
-texture "turn3d-niveau.rgb"
+texture "turn3d-niveau.png"
 crease 45.000000
 numvert 42
 0.00262283 -0.0172741 0.0263994
@@ -348,7 +348,7 @@ kids 0
 OBJECT poly
 name "Slip-I"
 loc 0.00332299 -0.00747174 6.15816e-05
-texture "turn3d-niveau.rgb"
+texture "turn3d-niveau.png"
 crease 45.000000
 numvert 8
 -0.000804411 -0.00828369 0.00519234
@@ -776,7 +776,7 @@ kids 0
 OBJECT poly
 name "object"
 loc 0.00286567 -0.0135487 1.66455e-13
-texture "turn3d-niveau.rgb"
+texture "turn3d-niveau.png"
 crease 45.000000
 numvert 49
 6.61239e-08 0.00531984 0.0276267

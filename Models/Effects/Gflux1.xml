@@ -12,13 +12,8 @@
 
 
 
- <path>fluxGD.osg</path>
+ <path>fluxGD.osgx</path>
 
-  <!--only test  with <particlesystem>  xml file   coding -->
-	<!--<model>
-		<name>Particle</name>
-		<path>Aircraft/PBY-Catalina/Models/Effects/particle.xml</path>
-	</model>-->
 
     <offsets>
             <x-m>1.75098</x-m>

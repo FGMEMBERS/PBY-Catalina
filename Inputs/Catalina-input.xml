@@ -23,15 +23,24 @@
                         <property>/autopilot/switch-heading</property>
                 </binding>
         </key>-->
+
         <key n="100">
             <name>d</name>
-            <desc>Toggle Canopy</desc>
-                <binding>
-                        <command>property-toggle</command>
-                        <property>/fdm/jsbsim/fcs/canopy-cmd-norm</property>
-                </binding>
+            <desc>Toggle Blister</desc>
+            <binding>
+                <command>property-toggle</command>
+                <property>fdm/jsbsim/fcs/blister-cmd-norm</property>
+            </binding>
         </key>
 
+        <key n="68">
+            <name>D</name>
+            <desc>Toggle water-door</desc>
+            <binding>
+                <command>property-toggle</command>
+                <property>fdm/jsbsim/fcs/water-door-cmd-norm</property>
+            </binding>
+        </key>
 
 
         <key n="102">
@@ -61,6 +70,16 @@
               <property>/sim/model/waterloading</property>
               <value>0</value>
             </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-door-cmd-norm</property>
+                <value>1</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-intake-cmd-norm</property>
+                <value>0</value>
+            </binding>
          </key>
 
          <key n="76">
@@ -80,6 +99,11 @@
                  <command>property-assign</command>
                  <property>/sim/model/bomb-signal</property>
                  <value>0</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-intake-cmd-norm</property>
+                <value>1</value>
             </binding>
          </key>
 
