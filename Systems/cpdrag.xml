@@ -2,7 +2,7 @@
 <!--
     Usable with FlightGear
     Copyright Gerard Robin  31-08-2009
-
+   
 -->
 
 
@@ -10,14 +10,8 @@
 
   <channel name="cpbelly">
 
-
-      <switch name="systems/crash/fire-on-crash">
-          <default value="0"/>
-          <test  value="0">
-              /environment/wildfire/fire-on-crash == 1
-          </test>
-          <output>/environment/wildfire/fire-on-crash</output>
-        </switch>
+      
+      
 <!--0.76 et 0.79 pour un air penché-->
         <switch name="systems/cpbelly/cp0-position">
             <default value="0"/>

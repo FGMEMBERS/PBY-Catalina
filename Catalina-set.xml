@@ -6,17 +6,19 @@
     Property of Gerard Robin
     Copyright License:  GPL
 -->
-<!--             Auteur :  was by   Gerard ROBIN.  Update:     grtux hangar team https://sites.google.com/site/grtuxhangar/       COPYRIGHT-->
+<!--       Was by   Gerard ROBIN.  Update:     grtux hangar team https://sites.google.com/site/grtuxhangar/       COPYRIGHT-->
 
 <PropertyList>
 <sim>
     <description>Catalina PBY</description>
     <author> was Gerard Robin , Ron Jensen (engine and propeller) update grtux hangar team https://sites.google.com/site/grtuxhangar/ </author>
     <status>alpha, "GPL V2 Copyright"</status>
-     <version>0.6.9_2011-06-026</version>
+     <version>0.6.10_2013-06-21</version>
 
         <model>
             <path>Aircraft/PBY-Catalina/Models/Catalina_pelican-J.xml</path>
+	    <fg-ver_min type="string">2.11</fg-ver_min>
+            <fg-ver_max type="string">2.12</fg-ver_max>
 	    <waterloading>0</waterloading>
 	    <bomb-signal>0</bomb-signal>
             <Aircraft>
@@ -28,15 +30,32 @@
                     <instrument-lights type="double">0.2</instrument-lights>
                 </lighting>
             </Aircraft>
+	    <shader>
+                <reflection-enabled type="int">1</reflection-enabled>
+                <reflection-fresnel type="float">0.0</reflection-fresnel>
+                <reflection-noise type="float">0.9</reflection-noise>
+                <reflection-rainbow type="float">0.2</reflection-rainbow>
+                <ambient-correction type="float">0.1</ambient-correction>
+                <reflection-correction type="float">0.15</reflection-correction>
+            </shader>
+	    <shader_1>
+		<reflection-correction type="float">0.55</reflection-correction>
+		<reflection-enabled type="int">1</reflection-enabled>
+		<reflection-fresnel type="float">0.1</reflection-fresnel>
+		<reflection-noise type="float">0.01</reflection-noise>
+		<ambient-correction type="float">0.1</ambient-correction>
+		<reflection-rainbow type="float">0.0</reflection-rainbow>
+	    </shader_1>
+	    <rendering><shader-effects>1</shader-effects></rendering>
         </model>
 
         <submodels>
             <serviceable type="bool">true</serviceable>
-            <path>Aircraft/PBY-Catalina/Models/submodels-osg.xml</path>
+            <path>Aircraft/PBY-Catalina/Models/submodels.xml</path>
         </submodels>
 
         <flight-model>jsb</flight-model>
-        <aero>PBY-6-devel</aero>
+        <aero>PBY-6-devel-1</aero>
 
         <virtual-cockpit archive="y">true</virtual-cockpit>
         <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
@@ -48,6 +67,12 @@
         <sound>
             <path>Aircraft/PBY-Catalina/Sounds/sound.xml</path>
         </sound>
+	
+	<hud>
+            <path n="1">Huds/default.xml</path>
+            <visibility n="1">false</visibility>
+            <enable3d n="1">false</enable3d>
+        </hud>
 
         <systems>
             <autopilot>
@@ -250,10 +275,20 @@
 
 
     <input include="Inputs/Catalina-input.xml"/>
+    
+    <fdm>
+            <jsbsim>
+		    <gear>
+			<NWS>
+			    <engaged type="bool">1</engaged>
+			</NWS>
+		    </gear>
+            </jsbsim>
+    </fdm>
 
     <nasal>
         <mooring>
-            <file>Aircraft/PBY-Catalina/Mooring/PBY.nas</file>
+            <file>Aircraft/PBY-Catalina/Mooring/Mooring-Seaplane_PBY.nas</file>
         </mooring>
         <terrain>
             <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>

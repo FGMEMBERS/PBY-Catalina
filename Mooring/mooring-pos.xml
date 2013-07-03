@@ -9,7 +9,7 @@
     <airport-id type="string">LLBG</airport-id>
     <latitude-deg type="double">32.157230</latitude-deg>
     <longitude-deg type="double">34.790150</longitude-deg>
-    <heading-deg type="double">45.0</heading-deg>
+    <heading-deg type="double">225.0</heading-deg>
    </seaplane>
    <!--Saint-Nazaire-->
    <seaplane n="39">
@@ -30,6 +30,13 @@
        <airport-id type="string">LFLM</airport-id>
        <latitude-deg type="double">46.290932</latitude-deg>
        <longitude-deg type="double">4.831000</longitude-deg>
+       <heading-deg type="double">45.0</heading-deg>
+   </seaplane>
+   <!--LILY on Como (Idroscalo - Water Ad) Hidroport -->
+   <seaplane n="42">
+       <airport-id type="string">LSZA</airport-id>
+       <latitude-deg type="double">45.814701</latitude-deg>
+       <longitude-deg type="double">9.069720</longitude-deg>
        <heading-deg type="double">45.0</heading-deg>
    </seaplane>
 

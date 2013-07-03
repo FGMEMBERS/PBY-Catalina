@@ -3,31 +3,21 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin
-    Copyright License:  GPL_V2
+    
 -->
    <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
 
 <PropertyList>
-    <path>water-fall.ac</path>
+    <path>water-fall-vx.ac</path>
     <texture-path>Textures</texture-path>
     <offsets>
         <pitch-deg>1</pitch-deg>
     </offsets>
 
-
-    <!--<animation>
-        <type>translate</type>
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
         <object-name>water-bomb</object-name>
-        <property>sim/time/elapsed-sec</property>
-        <offset>0</offset>
-        <factor>2</factor>
-        <max-m>100</max-m>
-        <axis>
-            <z>-1</z>
-            <x>0.3</x>
-        </axis>
-    </animation>-->
-
+     </effect>
 
     <animation>
         <type>scale</type>
@@ -49,7 +39,6 @@
         <enable-hot type="bool">false</enable-hot>
         <max-m>20000</max-m>
     </animation>
-
 
 
 </PropertyList>

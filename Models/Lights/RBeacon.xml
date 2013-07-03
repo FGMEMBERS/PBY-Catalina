@@ -2,7 +2,7 @@
 <!--
     Usable with FlightGear
     Copyright Gerard Robin  31-03-2009
-    Under License:  GPL_V2
+   
 -->
 
 <PropertyList>
@@ -11,6 +11,12 @@
     <animation>
         <type>noshadow</type>
     </animation>
+    
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>Lumiere</object-name>
+     </effect>
+
 
     
     <animation>

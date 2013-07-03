@@ -98,6 +98,8 @@
                 </tableData>
             </table>
         </scheduled_gain>
+
+
     </channel>
 
     <property>systems/boost-cmd/climb</property>

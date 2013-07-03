@@ -3,6 +3,10 @@
 
 <system name="Hull_Force">
 
+<property value="1">animation/wakes-coeff</property>
+<property value="0">/controls/gear/mooring</property>
+
+<!--<property value="200">systems/hull/mooring1_thrust</property>-->
 
     <channel name="hull_in_water">
 
@@ -108,6 +112,15 @@
             <input>propulsion/engine[0]/thrust-lbs</input>
             <input>propulsion/engine[1]/thrust-lbs</input>
         </summer>
+	
+	 <fcs_function name="systems/hull/mooring1_thrust">
+            <function>
+                <product>
+		    <property>aero/qbar-psf</property>
+                    <value>130</value>
+                </product>
+            </function>
+        </fcs_function>
 
         <switch name="systems/hull/mooring">
             <default value="0"/>
@@ -116,11 +129,32 @@
                 /controls/gear/brake-parking  == 1
             </test>
         </switch>
-
+	 <switch name="systems/hull/mooring1">
+            <default value="0"/>
+            <test  logic="AND" value="1">
+                systems/hull/c_wow == 1
+                /controls/gear/mooring  == 1
+		propulsion/engine/set-running == 0
+            </test>
+	    <test  logic="AND" value="1">
+                systems/hull/c_wow == 1
+                /controls/gear/mooring  == 1
+		propulsion/engine[1]/set-running == 0
+            </test>
+        </switch>
+	
+<!--Rear Center fake Anchor-->
         <pure_gain name="systems/hull/mooring_magnitude">
             <input>systems/hull/mooring_thrust</input>
             <gain>systems/hull/mooring</gain>
             <output>external_reactions/mooring/magnitude</output>
+        </pure_gain>
+	
+<!--Front Mooring-->
+	<pure_gain name="systems/hull/mooring1_magnitude">
+            <input>systems/hull/mooring1_thrust</input>
+            <gain>systems/hull/mooring1</gain>
+            <output>external_reactions/mooring1/magnitude</output>
         </pure_gain>
 
     </channel>
@@ -148,7 +182,7 @@
                 </setting>
                 <setting>
                     <position>1</position>
-                    <time>3</time>
+                    <time>1</time>
                 </setting>
             </traverse>
         </kinematic>
@@ -174,10 +208,21 @@
                 </setting>
                 <setting>
                     <position>1</position>
-                    <time>3</time>
+                    <time>1</time>
                 </setting>
             </traverse>
         </kinematic>
+
+        <scheduled_gain name="animation/sea-wake">
+            <input>animation/wakes-coeff</input>
+            <table>
+                <independentVar>/sim/time/sun-angle-rad</independentVar>
+                <tableData>
+                    0.00	1.00
+                    2.0	0.0
+                </tableData>
+            </table>
+        </scheduled_gain>
 
     </channel>
 

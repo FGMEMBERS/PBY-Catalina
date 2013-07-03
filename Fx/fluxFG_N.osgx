@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Scene>
+  <Version attribute="80" />
+  <Generator attribute="OpenSceneGraph 3.0.0" />
+  <osg--Group>
+    <UniqueID attribute="1" />
+    <Name attribute="mport group" />
+    <Children attribute="3">
+      <osg--MatrixTransform>
+        <UniqueID attribute="2" />
+        <Name attribute="transform0" />
+        <DataVariance attribute="DYNAMIC" />
+        <CullingActive attribute="FALSE" />
+        <Children attribute="1">
+          <osgParticle--ModularEmitter>
+            <UniqueID attribute="3" />
+            <Name attribute="ModularEmitter2" />
+            <DataVariance attribute="STATIC" />
+            <CullingActive attribute="FALSE" />
+            <ParticleSystem attribute="TRUE">
+              <osgParticle--ParticleSystem>
+                <UniqueID attribute="4" />
+                <DataVariance attribute="DYNAMIC" />
+                <StateSet attribute="TRUE">
+                  <osg--StateSet>
+                    <UniqueID attribute="5" />
+                    <DataVariance attribute="STATIC" />
+                    <ModeList attribute="2">
+                      <GL_LIGHTING attribute="ON" />
+                      <GL_BLEND attribute="ON" />
+                    </ModeList>
+                    <AttributeList attribute="2">
+                      <osg--Material>
+                        <UniqueID attribute="6" />
+                        <DataVariance attribute="STATIC" />
+                        <Ambient attribute="TRUE">
+                          <Front attribute="0.9 0.95 0.9 0.2" />
+                          <Back attribute="0.9 0.95 0.9 0.2" />
+                        </Ambient>
+                        <Diffuse attribute="TRUE">
+                          <Front attribute="1.0 1.0 1.0 0.2" />
+                          <Back attribute="0.95 0.95 0.95 0.2" />
+                        </Diffuse>
+                        <Specular attribute="TRUE">
+                            <Front attribute="0.95 0.95 0.95 0.2" />
+                            <Back attribute="0.95 0.95 0.95 0.2" />
+                        </Specular>
+                        <Emission attribute="TRUE">
+                          <Front attribute="0 0 0 0" />
+                          <Back attribute="0 0 0 0" />
+                        </Emission>
+                        <Shininess attribute="TRUE">
+                          <Front attribute="0.1" />
+                          <Back attribute="0.1" />
+                        </Shininess>
+                      </osg--Material>
+                      <Value attribute="ON" />
+                      <osg--BlendFunc>
+                        <UniqueID attribute="7" />
+                        <DataVariance attribute="STATIC" />
+                        <SourceRGB attribute="SRC_ALPHA" />
+                        <SourceAlpha attribute="SRC_ALPHA" />
+                        <DestinationRGB attribute="ONE_MINUS_SRC_ALPHA" />
+                        <DestinationAlpha attribute="ONE_MINUS_SRC_ALPHA" />
+                      </osg--BlendFunc>
+                      <Value attribute="OFF" />
+                    </AttributeList>
+                    <TextureModeList attribute="1">
+                      <Data attribute="1">
+                        <GL_TEXTURE_2D attribute="ON" />
+                      </Data>
+                    </TextureModeList>
+                    <TextureAttributeList attribute="1">
+                      <Data attribute="2">
+                        <osg--Texture2D>
+                          <UniqueID attribute="8" />
+                          <DataVariance attribute="STATIC" />
+                          <WRAP_S attribute="REPEAT" />
+                          <WRAP_T attribute="REPEAT" />
+                          <WRAP_R attribute="REPEAT" />
+                          <MIN_FILTER attribute="LINEAR" />
+                          <MAG_FILTER attribute="LINEAR" />
+                          <UnRefImageDataAfterApply attribute="TRUE" />
+                          <ResizeNonPowerOfTwoHint attribute="TRUE" />
+                          <Image attribute="TRUE">
+                            <UniqueID attribute="9" />
+                            <FileName attribute="particleG.rgb" />
+                            <WriteHint attribute="0 2" />
+                            <DataVariance attribute="STATIC" />
+                          </Image>
+                        </osg--Texture2D>
+                        <Value attribute="OFF" />
+                        <osg--TexEnv>
+                          <UniqueID attribute="10" />
+                          <DataVariance attribute="STATIC" />
+                        </osg--TexEnv>
+                        <Value attribute="OFF" />
+                      </Data>
+                    </TextureAttributeList>
+                    <RenderingHint attribute="2" />
+                    <RenderBinMode attribute="USE_RENDERBIN_DETAILS" />
+                    <BinNumber attribute="10" />
+                    <BinName attribute="RenderBin" />
+                  </osg--StateSet>
+                </StateSet>
+                <SupportsDisplayList attribute="FALSE" />
+                <UseDisplayList attribute="FALSE" />
+                <DefaultBoundingBox>
+                  <Minimum attribute="-100 -100 -0" />
+                  <Maximum attribute="100 100 0" />
+                </DefaultBoundingBox>
+                <AlignVectorX attribute="0 0 1" />
+                <AlignVectorY attribute="1 0 0" />
+                <DefaultParticleTemplate>
+                  <Shape attribute="QUAD" />
+                  <LifeTime attribute="4" />
+                  <SizeRange attribute="0.35 0.7" />
+                  <AlphaRange attribute="0.5 0" />
+                  <ColorRange attribute="0.8 0.9 0.87   0.7     0.9  0.9  0.9  0.3" />
+                  <SizeInterpolator attribute="TRUE">
+                    <osgParticle--LinearInterpolator>
+                      <UniqueID attribute="11" />
+                      <DataVariance attribute="DYNAMIC" />
+                    </osgParticle--LinearInterpolator>
+                  </SizeInterpolator>
+                  <AlphaInterpolator attribute="TRUE">
+                    <osgParticle--LinearInterpolator>
+                      <UniqueID attribute="12" />
+                      <DataVariance attribute="DYNAMIC" />
+                    </osgParticle--LinearInterpolator>
+                  </AlphaInterpolator>
+                  <ColorInterpolator attribute="TRUE">
+                    <osgParticle--LinearInterpolator>
+                      <UniqueID attribute="13" />
+                      <DataVariance attribute="DYNAMIC" />
+                    </osgParticle--LinearInterpolator>
+                  </ColorInterpolator>
+                  <Radius attribute="0.8" />
+                  <Mass attribute="0.8" />
+                  <Position attribute="0 0 0" />
+                  <Velocity attribute="0 0 0" />
+                  <Angle attribute="0 0 0" />
+                  <AngularVelocity attribute="0 0 0" />
+                  <TextureTile attribute="1 1 3" />
+                  <Drawable attribute="FALSE" />
+                </DefaultParticleTemplate>
+              </osgParticle--ParticleSystem>
+            </ParticleSystem>
+            <ResetTime attribute="2" />
+            <Counter attribute="TRUE">
+              <osgParticle--RandomRateCounter>
+                <UniqueID attribute="14" />
+                <DataVariance attribute="DYNAMIC" />
+                <RateRange attribute="80 80" />
+              </osgParticle--RandomRateCounter>
+            </Counter>
+            <Placer attribute="TRUE">
+              <osgParticle--SectorPlacer>
+                <UniqueID attribute="15" />
+                <DataVariance attribute="DYNAMIC" />
+                <RadiusRange attribute="0 0.35" />
+                <PhiRange attribute="0  6.28319" />
+              </osgParticle--SectorPlacer>
+            </Placer>
+            <Shooter attribute="TRUE">
+              <osgParticle--RadialShooter>
+                <UniqueID attribute="16" />
+                <DataVariance attribute="DYNAMIC" />
+                <ThetaRange attribute="0.0 0.0" />
+                <PhiRange attribute="-1.8 1.8" />
+                <InitialSpeedRange attribute="4 5" />
+                <InitialRotationalSpeedRange attribute="0 10 40  20 0 10" />
+              </osgParticle--RadialShooter>
+            </Shooter>
+          </osgParticle--ModularEmitter>
+        </Children>
+        <ReferenceFrame attribute="ABSOLUTE_RF" />
+
+      </osg--MatrixTransform>
+      <osgParticle--ParticleSystemUpdater>
+        <UniqueID attribute="17" />
+        <Name attribute="ParticleSystemUpdater3" />
+        <DataVariance attribute="DYNAMIC" />
+        <CullingActive attribute="FALSE" />
+        <ParticleSystems attribute="1">
+          <osgParticle--ParticleSystem>
+            <UniqueID attribute="4" />
+          </osgParticle--ParticleSystem>
+        </ParticleSystems>
+      </osgParticle--ParticleSystemUpdater>
+      <osg--Geode>
+        <UniqueID attribute="18" />
+        <Name attribute="fluxFG" />
+        <DataVariance attribute="DYNAMIC" />
+        <Drawables attribute="1">
+          <osgParticle--ParticleSystem>
+            <UniqueID attribute="4" />
+          </osgParticle--ParticleSystem>
+        </Drawables>
+      </osg--Geode>
+    </Children>
+  </osg--Group>
+</Scene>

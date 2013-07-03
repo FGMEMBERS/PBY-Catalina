@@ -25,9 +25,10 @@
     <!--==================================================-->
 
     <effect>
-        <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflect</inherits-from>
+        <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflect_rb</inherits-from>
         <object-name>AVCapot</object-name>
         <object-name>ARCapot</object-name>
+	 <object-name>AECapot</object-name>
         <object-name>Flap</object-name>
         <!--<object-name></object-name>
         <object-name></object-name>

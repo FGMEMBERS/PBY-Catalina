@@ -2,11 +2,39 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin
-    Copyright License:  GPL
+
 -->
 <PropertyList>
 
     <keyboard>
+
+
+
+        <key n="115">
+            <name>s</name>
+            <desc>Fire Starter on Selected Engine(s)</desc>
+            <binding>
+                <command>nasal</command>
+                <script>controls.startEngine(1)</script>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <value>1</value>
+                <property>/fdm/jsbsim/systems/animations/engine-start</property>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.startEngine(0)</script>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <value>0</value>
+                    <property>/fdm/jsbsim/systems/animations/engine-start</property>
+                </binding>
+            </mod-up>
+        </key>
+
         <key n="1">
         <name>Ctrl-A</name>
         <desc>Toggle autopilot altitude lock.</desc>
@@ -23,14 +51,13 @@
                         <property>/autopilot/switch-heading</property>
                 </binding>
         </key>-->
-
         <key n="100">
             <name>d</name>
             <desc>Toggle Blister</desc>
-            <binding>
-                <command>property-toggle</command>
-                <property>fdm/jsbsim/fcs/blister-cmd-norm</property>
-            </binding>
+                <binding>
+                        <command>property-toggle</command>
+                        <property>fdm/jsbsim/fcs/blister-cmd-norm</property>
+                </binding>
         </key>
 
         <key n="68">
@@ -43,12 +70,23 @@
         </key>
 
 
+
+
         <key n="102">
           <name>f</name>
           <desc>Flotteurs action</desc>
             <binding>
               <command>property-toggle</command>
               <property>/controls/gear/float-down</property>
+            </binding>
+         </key>
+	 
+	 <key n="70">
+          <name>F</name>
+          <desc>Mooring Anchor</desc>
+            <binding>
+              <command>property-toggle</command>
+              <property>/controls/gear/mooring</property>
             </binding>
          </key>
 
@@ -105,6 +143,15 @@
                 <property>fdm/jsbsim/fcs/water-intake-cmd-norm</property>
                 <value>1</value>
             </binding>
+         </key>
+	 <key n="126">
+                <name>~</name>
+                <desc>Nose Wheel Steering</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>fdm/jsbsim/gear/NWS/engaged</property>
+                    <value>0</value>
+                </binding>
          </key>
 
         </keyboard>

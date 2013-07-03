@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
-    <name>Aircraft/PBY-Catalina/Effects/reflect</name>
+    <name>Aircraft/PBY6_Catalina/Effects/reflect</name>
 	<inherits-from>Effects/reflect</inherits-from>
 
 	<parameters>
@@ -16,7 +16,7 @@
 			</images>
 		</texture>
                 <texture n="8">
-                    <image>Aircraft/PBY-Catalina/Models/Effects/pays.png</image>
+                    <image>Aircraft/PBY6_Catalina/Models/Effects/pays.png</image>
                     <filter>linear-mipmap-linear</filter>
                     <wrap-s>repeat</wrap-s>
                     <wrap-t>repeat</wrap-t>
@@ -29,7 +29,7 @@
 		<rainbowiness type="float">0.01</rainbowiness>
 		<refl_correction>-0.66</refl_correction>
 		<ambient_correction>0.15</ambient_correction>
-		<reflect_map>0.001</reflect_map>
+		<reflect_map>1</reflect_map>
 	</parameters>
 
 </PropertyList>

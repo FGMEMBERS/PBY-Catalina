@@ -2,7 +2,7 @@
 <!--
     Usable with FlightGear
     Gerard Robin  14-01-2009
-    Copyright License:  GPL
+
 -->
 <PropertyList>
     <default>
@@ -10,7 +10,33 @@
             <label>Catalina</label>
             <enabled type="bool">true</enabled>
             <item>
-                <label>Auto Control TakeOff Power</label>
+                <label>MIXTURE Auto rich: very rich</label>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/engines/engine[0]/mixture</property>
+                    <value>1</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/engines/engine[1]/mixture</property>
+                    <value>1</value>
+                </binding>
+            </item>
+            <item>
+                <label>MIXTURE Auto lean</label>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/engines/engine[0]/mixture</property>
+                    <value>0.99</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/engines/engine[1]/mixture</property>
+                    <value>0.99</value>
+                </binding>
+            </item>
+            <item>
+                <label>Auto Control Normal TakeOff Power</label>
                 <binding>
                     <command>property-assign</command>
                     <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
@@ -96,14 +122,19 @@
                     <command>property-assign</command>
                     <property>/sim/model/waterbombing</property>
                     <value>0</value>
-                </binding>
-                <binding>
-                    <command>nasal</command>
-                    <script>
-                        var water = gui.Dialog.new("/sim/gui/dialogs/Catalina/menu/dialog",
-                        "Aircraft/PBY-Catalina/Inputs/water_loading.xml");
-                        water.open();
-                    </script>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-intake-cmd-norm</property>
+                <value>1</value>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    var water = gui.Dialog.new("/sim/gui/dialogs/Catalina/menu/dialog",
+                    "Aircraft/PBY-Catalina/Inputs/water_loading.xml");
+                    water.open();
+                </script>
                 </binding>
             </item>
             <item>
@@ -112,7 +143,7 @@
                         <command>nasal</command>
                         <script>
                             var water = gui.Dialog.new("/sim/gui/dialogs/Catalina/menu/dialog",
-                            "Aircraft/PBY-Catalina/Inputs/water_loading.xml");
+                            "Aircraft/PBY6_Catalina/Inputs/water_loading.xml");
                             water.open();
                         </script>
                     </binding>

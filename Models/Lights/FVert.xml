@@ -2,16 +2,22 @@
 <!--
     Usable with FlightGear
     Copyright Gerard Robin  31-03-2009
-    Under License:  GPL_V2
+    
 -->
 
 <PropertyList>
     <path>fvert.ac</path>
-    
+
     <animation>
         <type>noshadow</type>
     </animation>
-    
+
+
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>Lumiere</object-name>
+     </effect>
+
     <animation>
         <type>select</type>
         <object-name>Lumiere</object-name>
@@ -19,19 +25,19 @@
             <property>fdm/jsbsim/systems/effets/lights/blinker-kinemat-in</property>
         </condition>
     </animation>
-    
+
     <animation>
         <type>alpha-test</type>
         <alpha-factor>0.01</alpha-factor>
     </animation>
-    
+
     <!--<animation>
         <type>billboard</type>
         <object-name>Lumiere</object-name>
-        <spherical type="bool">false</spherical>
-    </animation>
-    fout la merde grr -->
-    
+        <spherical type="bool">true</spherical>
+    </animation>-->
+    <!--billboard wants translate from origine -->
+
     <animation>
         <type>scale</type>
         <object-name>Lumiere</object-name>
@@ -64,5 +70,5 @@
             </entry>
         </interpolation>
     </animation>
-    
+
 </PropertyList>

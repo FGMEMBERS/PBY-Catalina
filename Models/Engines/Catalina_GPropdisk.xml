@@ -19,7 +19,10 @@
     </offsets>
 
 
-
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>GPropDisk</object-name>
+    </effect>
 
 
 

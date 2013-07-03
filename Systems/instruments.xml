@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+
+-->
+
+<system name="instrumentation">
+
+    <!--<property> /systems/electrical/outputs/adf</property>-->
+    <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
+
+    <channel name="ADF">
+
+        <switch name="instruments/adf_mh">
+            <default value="0"/>
+            <test  logic="AND" value="/instrumentation/magnetic-compass/indicated-heading-deg">
+                /systems/electrical/outputs/adf ge 27
+            </test>
+            <output>/instrumentation/kr-87/inputs/rotation-deg</output>
+        </switch>
+
+    </channel>
+
+    <channel name="ILS">
+
+        <summer name="instruments/ils/fromto_pointer_val1">
+            <input>/orientation/heading-magnetic-deg</input>
+            <input>-/instrumentation/nav[0]/heading-deg</input>
+        </summer>
+        <fcs_function name="instruments/ils/fromto_pointer_val2">
+            <function>
+                <sum>
+                    <property>instruments/ils/fromto_pointer_val1</property>
+                    <value>360</value>
+                </sum>
+            </function>
+        </fcs_function>
+        <switch name="instruments/ils/fromto_pointer">
+            <default value="instruments/ils/fromto_pointer_val1"/>
+            <test  value="instruments/ils/fromto_pointer_val2">
+                instruments/ils/fromto_pointer_val1 lt 0
+            </test>
+        </switch>
+
+
+        <switch name="instruments/ils/fromto_pointer_ils">
+            <default value="instruments/ils/fromto_pointer"/>
+            <test  logic="AND" value="30">
+                instruments/ils/fromto_pointer gt 30
+                instruments/ils/fromto_pointer lt 90
+            </test>
+            <test  logic="AND" value="150">
+                instruments/ils/fromto_pointer ge 90
+                instruments/ils/fromto_pointer lt 150
+            </test>
+            <test  logic="AND" value="210">
+                instruments/ils/fromto_pointer le 270
+                instruments/ils/fromto_pointer gt 210
+            </test>
+            <test  logic="AND" value="330">
+                instruments/ils/fromto_pointer gt 270
+                instruments/ils/fromto_pointer lt  330
+            </test>
+        </switch>
+
+        <summer name="instruments/heading-indicator/fromto-pointer">
+            <input>instruments/ils/fromto_pointer_ils</input>
+        </summer>
+
+    </channel>
+
+</system>
