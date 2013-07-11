@@ -11,9 +11,9 @@
 <PropertyList>
 <sim>
     <description>Catalina PBY</description>
-    <author> was Gerard Robin , Ron Jensen (engine and propeller) update grtux hangar team https://sites.google.com/site/grtuxhangar/ </author>
+    <author> was Gerard Robin , was Ron Jensen (engine and propeller) entire update grtux hangar team https://sites.google.com/site/grtuxhangar/ </author>
     <status>alpha, "GPL V2 Copyright"</status>
-     <version>0.6.10_2013-06-21</version>
+     <version>0.7_2013-07-11</version>
 
         <model>
             <path>Aircraft/PBY-Catalina/Models/Catalina_pelican-J.xml</path>

@@ -12,7 +12,7 @@
 <!--Sillage coque centre-->
     <model>
         <name>CFlux</name>
-        <path>Aircraft/PBY6_Catalina/Fx/Cflux.xml</path>
+        <path>Aircraft/PBY-Catalina/Fx/Cflux.xml</path>
         <offsets>
             <x-m>2.7</x-m>
             <y-m>0</y-m>
@@ -25,7 +25,7 @@
     <!--Sillage coque coté Gauche-->
     <model>
         <name>GFlux</name>
-        <path>Aircraft/PBY6_Catalina/Fx/Gflux.xml</path>
+        <path>Aircraft/PBY-Catalina/Fx/Gflux.xml</path>
         <offsets>
             <x-m>2</x-m>
             <y-m>-1</y-m>
@@ -38,7 +38,7 @@
     <!--Sillage coque coté Droit-->
     <model>
         <name>DFlux</name>
-        <path>Aircraft/PBY6_Catalina/Fx/Dflux.xml</path>
+        <path>Aircraft/PBY-Catalina/Fx/Dflux.xml</path>
         <offsets>
             <x-m>2</x-m>
             <y-m>1.1</y-m>
@@ -52,7 +52,7 @@
     <!--Rear Spray-->
     <model>
         <name>Effet</name>
-        <path>Aircraft/PBY6_Catalina/Fx/jetdo.xml</path>
+        <path>Aircraft/PBY-Catalina/Fx/jetdo.xml</path>
     </model>
 
 
@@ -181,7 +181,7 @@
     <!--Sillage Flotteur Gauche-->
     <model>
         <name>GFlux1</name>
-        <path>Aircraft/PBY6_Catalina/Fx/Gflux1.xml</path>
+        <path>Aircraft/PBY-Catalina/Fx/Gflux1.xml</path>
         <offsets>
             <x-m>1.7652</x-m>
             <y-m>-13.5694</y-m>
@@ -195,7 +195,7 @@
     <!--Sillage Flotteur Droite-->
     <model>
         <name>DFlux1</name>
-        <path>Aircraft/PBY6_Catalina/Fx/Dflux1.xml</path>
+        <path>Aircraft/PBY-Catalina/Fx/Dflux1.xml</path>
         <offsets>
             <x-m>1.7652</x-m>
             <y-m>13.5694</y-m>

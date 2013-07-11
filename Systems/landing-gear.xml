@@ -33,27 +33,12 @@
                 </test>
                 <test  logic="AND" value="0">
                     /environment/terrain-solid == 0
-                    /environment/terrain-hight   LT  1.5
                     /environment/terrain-undefined == 0
                     position/h-agl-ft  LT 40
                 </test>
                 <output>gear/gear-cp-cmd-norm</output>
             </switch>
-
-
-            <!--<switch name="Gear Switch">
-                <default value="/controls/gear/gear-down"/>
-                <test  logic="AND" value="0">
-                    systems/crash/switch  == 1
-                </test>
-                
-                <test  logic="AND" value="0">
-                    /environment/terrain-solid  == 0
-                    position/h-agl-ft lt 40
-                    fcs/agl-sl-difference lt 3
-                </test>
-                <output>gear/gear-cp-cmd-norm</output>
-            </switch>-->
+            
 
             <kinematic name="Cp Gear Control">
                 <input>gear/gear-cp-cmd-norm</input>

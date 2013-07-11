@@ -20,11 +20,11 @@
 		<pitch-deg>-0.6</pitch-deg>
 		<z-m>0.05</z-m>
 	</offsets>
-	
-	
-	
 
-  
+
+
+
+
 
     <effect>
 	<inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflect_rb-ailes</inherits-from>
@@ -55,13 +55,13 @@
 	<object-name>AVGPorte</object-name>
 	<object-name>Moustache</object-name>
     </effect>
-    
+
     <effect>
         <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflect_rb-hstab</inherits-from>
         <object-name>FHGouuv</object-name>
         <object-name>HGouv</object-name>
     </effect>
-    
+
 
 
 
@@ -85,13 +85,13 @@
                     <z>0.0</z>
             </axis>
     </animation>
-    
+
 	<effect>
 	    <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
 	    <object-name>Console-Manche</object-name>
              <object-name>GVolant</object-name>
              <object-name>DVolant</object-name>
-	 </effect>    
+	 </effect>
 
     <animation>
             <type>rotate</type>
@@ -194,14 +194,14 @@
             <z>0.0</z>
         </axis>
     </animation>
-    
+
     <effect>
 	<inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
 	<object-name>Throttle0</object-name>
 	<object-name>Throttle1</object-name>
 	<object-name>Helice0-Pas</object-name>
 	<object-name>Helice1-Pas</object-name>
-    </effect>    
+    </effect>
 
 
 
@@ -656,9 +656,9 @@
             <z>1</z>
         </axis>
     </animation>
-    
+
     <effect>
-        <inherits-from>Aircraft/PBY6_Catalina/Models/Effects/reflecttrain</inherits-from>
+        <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
 	<object-name>AVTrain-Fourche</object-name>
     </effect>
 
@@ -713,9 +713,9 @@
    <z>0.0</z>
   </axis>
  </animation>
- 
+
   <effect>
-        <inherits-from>Aircraft/PBY6_Catalina/Models/Effects/reflecttrain</inherits-from>
+        <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
         <object-name>GTrain</object-name>
 	 <object-name>GTrain-Roue</object-name>
         <object-name>GTrain-BielleB</object-name>
@@ -985,8 +985,8 @@
    <z>0.0</z>
   </axis>
  </animation>
- 
- 
+
+
 <animation>
   <type>rotate</type>
   <object-name>DTrain</object-name>
@@ -1017,9 +1017,9 @@
    <z>0.0</z>
   </axis>
  </animation>
- 
+
   <effect>
-        <inherits-from>Aircraft/PBY6_Catalina/Models/Effects/reflecttrain</inherits-from>
+        <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
         <object-name>DTrain</object-name>
 	<object-name>DTrain-BielleB</object-name>
         <object-name>DTrain-BielleH</object-name>
@@ -1227,7 +1227,7 @@
 
 
 	<effect>
-	    <inherits-from>Aircraft/PBY6_Catalina/Models/Effects/reflecttrain</inherits-from>
+	    <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
 	    <object-name>GDTrain-Verin</object-name>
 	    <object-name>GDTrain-VerinBase</object-name>
 	    <object-name>GDTrain-VerinBaseAxe</object-name>
@@ -1248,7 +1248,7 @@
 		</condition>
 	</animation>
 
- 
+
 
 
  <!--====================PBY-6======================-->
@@ -1621,16 +1621,16 @@
      <texture>Aircraft/PBY-Catalina/Models/Textures/shader.png</texture>
      <object-name>DBlister-Verriere</object-name>
   </animation>
-  
-  
-  
+
+
+
     <animation>
 	    <type>shader</type>
 	    <shader>chrome</shader>
 	    <texture>Aircraft/PBY-Catalina/Models/Textures/shader.png</texture>
 	    <object-name>Vitrage</object-name>
     </animation>
-       
+
 
         <model>
             <name>Effets</name>
@@ -1812,7 +1812,7 @@
 			<roll-deg></roll-deg>
 		</offsets>
 	</model>
-	
+
 	<model>
 	    <name>Phare</name>
 	    <path>Aircraft/PBY-Catalina/Models/Lights/Phare.xml</path>
@@ -1847,7 +1847,7 @@
 		</and>
 	    </condition>
 	</animation>
-    
+
 
 
 
@@ -1858,12 +1858,12 @@
 		<property>fdm/jsbsim/systems/hull/mooring1</property>
 	    </condition>
         </animation>
-	
-	
-	
+
+
+
 <animation>
             <type>rotate</type>
-            <object-name>amarre</object-name>           
+            <object-name>amarre</object-name>
 	     <property>orientation/roll-deg</property>
 	     <factor>1</factor>
             <center>
@@ -1877,8 +1877,8 @@
                 <z>0.0</z>
             </axis>
         </animation>
-	
-	
+
+
 	<animation>
             <type>rotate</type>
             <object-name>amarre</object-name>

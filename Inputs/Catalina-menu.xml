@@ -143,7 +143,7 @@
                         <command>nasal</command>
                         <script>
                             var water = gui.Dialog.new("/sim/gui/dialogs/Catalina/menu/dialog",
-                            "Aircraft/PBY6_Catalina/Inputs/water_loading.xml");
+                            "Aircraft/PBY-Catalina/Inputs/water_loading.xml");
                             water.open();
                         </script>
                     </binding>

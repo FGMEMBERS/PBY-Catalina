@@ -48,7 +48,7 @@
 <PropertyList>
         <submodel>
             <name>water-bomb</name>
-            <model>Aircraft/PBY6_Catalina/Models/water-bomb.xml</model>
+            <model>Aircraft/PBY-Catalina/Models/water-bomb.xml</model>
 	    <trigger>/fdm/jsbsim/fcs/water-trigger</trigger>
             <speed>0</speed>
             <repeat>true</repeat>
