@@ -68,7 +68,7 @@ you want that folder updated-->
     </animation>
     <model>
             <name>Bezel</name>
-            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Spe.xml</path>
             <offsets>
                     <x-m>0.0</x-m>
                     <y-m>-0.463595</y-m>
@@ -103,7 +103,7 @@ you want that folder updated-->
             <name>RPM</name>
             <path>Aircraft/PBY-Catalina/Instruments/RPM-Nord.xml</path>
             <offsets>
-                    <x-m>0.00435654</x-m>
+                   <!-- <x-m>0.00435654</x-m>--><x-m>0.0028908</x-m>
                     <y-m>-0.259828</y-m>
                     <z-m>0.179002</z-m>
                     <pitch-deg>0</pitch-deg>

@@ -44,28 +44,7 @@
 		<object-name>Cadran</object-name>
 	</animation>
 
-	<!--******************** Hotspots ******************************-->
-	<!--<panel>
-		<name>Cmd-HI</name>
-		<path>Aircraft/F4U7/Instruments/HI-Nord-hotspots.xml</path>
-		<bottom-left>
-			<x-m>0.014</x-m>
-			<y-m>-0.0361132</y-m>
-			<z-m>-0.0376666</z-m>
-		</bottom-left>
-		<bottom-right>
-			<x-m>0.014</x-m>
-			<y-m>0.0361132</y-m>
-			<z-m>-0.0376666</z-m>
-		</bottom-right>
-		<top-left>
-			<x-m>0.014</x-m>
-			<y-m>-0.0361132</y-m>
-			<z-m>0.0376666</z-m>
-		</top-left>
-	</panel>-->
-<!--*************************************************-->
-
+	
 
 
 	<animation>

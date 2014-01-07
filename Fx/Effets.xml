@@ -54,6 +54,19 @@
         <name>Effet</name>
         <path>Aircraft/PBY-Catalina/Fx/jetdo.xml</path>
     </model>
+    
+    
+    <!--<effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>Effet</object-name>
+    </effect>
+    
+    
+    <animation>
+		<type>noshadow</type>
+		<object-name>Effet</object-name>
+	</animation>-->
+    
 
 
 

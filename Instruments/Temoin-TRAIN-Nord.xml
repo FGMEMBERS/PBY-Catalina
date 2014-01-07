@@ -30,7 +30,7 @@
 		<object-name>Masque</object-name>
 		<condition>
 			<less-than>
-				<property>/systems/electrical/outputs/instr-ignition-switch</property>
+				<property>fdm/jsbsim/electrical/outputs/instr-ignition-switch</property>
 				<value>27</value>
 			</less-than>
 		</condition>
@@ -42,7 +42,7 @@
 		<object-name>TemoinMTrain</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/electrical/outputs/instr-ignition-switch</property>
+				<property>fdm/jsbsim/electrical/outputs/instr-ignition-switch</property>
 				<value>27</value>
 			</greater-than>
 		</condition>
@@ -87,43 +87,7 @@
 		</condition>
 	</animation>
 
-	<animation>
-		<type>rotate</type>
-		<object-name>Aiguille</object-name>
-		<property>surface-positions/flap-pos-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>0.20</ind>
-				<dep>-22.5</dep>
-			</entry>
-			<entry>
-				<ind>0.40</ind>
-				<dep>-45</dep>
-			</entry>
-			<entry>
-				<ind>0.60</ind>
-				<dep>-67.5</dep>
-			</entry>
-			<entry>
-				<ind>1</ind>
-				<dep>-90</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>0</x-m>
-			<y-m>-0.00781199</y-m>
-			<z-m>0.0299632</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
+	
 
 
 </PropertyList>

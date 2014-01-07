@@ -9,35 +9,42 @@
 <!--       Was by   Gerard ROBIN.  Update:     grtux hangar team https://sites.google.com/site/grtuxhangar/       COPYRIGHT-->
 
 <PropertyList>
-<sim>
-    <description>Catalina PBY</description>
-    <author> was Gerard Robin , was Ron Jensen (engine and propeller) entire update grtux hangar team https://sites.google.com/site/grtuxhangar/ </author>
-    <status>alpha, "GPL V2 Copyright"</status>
-     <version>0.7_2013-07-11</version>
+    <sim>
+	<description>Catalina PBY</description>
+	<author> was Gerard Robin , was Ron Jensen (engine and propeller) entire update grtux hangar team https://sites.google.com/site/grtuxhangar/ </author>
+	<status>alpha, "GPL V2 Copyright"</status>
+	<version>0.7.10  2013-10-29</version>
+	<rating>
+	<!--only  a generic wrong estimation since given by the author himself-->
+	    <FDM type="int">3</FDM>
+	    <systems type="int">3</systems>
+	    <model type="int">3</model>
+	    <cockpit type="int">3</cockpit>
+	</rating>
+	<flight-model>jsb</flight-model>
+	<aero>Aero/PBY-6-devel-1</aero>
+	
+	<startup>
+	    <splash-texture>Aircraft/PBY-Catalina/pby6.png</splash-texture>
+	</startup>
 
-        <model>
-            <path>Aircraft/PBY-Catalina/Models/Catalina_pelican-J.xml</path>
-	    <fg-ver_min type="string">2.11</fg-ver_min>
-            <fg-ver_max type="string">2.12</fg-ver_max>
+	<model>
+	    <path>Aircraft/PBY-Catalina/Models/Catalina_pelican-J.xml</path>
+	    <fg-ver_min type="string">2.12</fg-ver_min>
+	    <fg-ver_max type="string">3.00</fg-ver_max>
 	    <waterloading>0</waterloading>
 	    <bomb-signal>0</bomb-signal>
-            <Aircraft>
-                <navaid><input>
-                        <chan-XX type="double">0</chan-XX>
-                        <selector>0</selector>
-                    </input></navaid>
-                <lighting>
-                    <instrument-lights type="double">0.2</instrument-lights>
-                </lighting>
-            </Aircraft>
+	    <lighting>
+		    <instrument-lights type="double">0.95</instrument-lights>
+	    </lighting>
 	    <shader>
-                <reflection-enabled type="int">1</reflection-enabled>
-                <reflection-fresnel type="float">0.0</reflection-fresnel>
-                <reflection-noise type="float">0.9</reflection-noise>
-                <reflection-rainbow type="float">0.2</reflection-rainbow>
-                <ambient-correction type="float">0.1</ambient-correction>
-                <reflection-correction type="float">0.15</reflection-correction>
-            </shader>
+		<reflection-enabled type="int">1</reflection-enabled>
+		<reflection-fresnel type="float">0.0</reflection-fresnel>
+		<reflection-noise type="float">0.9</reflection-noise>
+		<reflection-rainbow type="float">0.2</reflection-rainbow>
+		<ambient-correction type="float">0.1</ambient-correction>
+		<reflection-correction type="float">0.15</reflection-correction>
+	    </shader>
 	    <shader_1>
 		<reflection-correction type="float">0.55</reflection-correction>
 		<reflection-enabled type="int">1</reflection-enabled>
@@ -47,25 +54,18 @@
 		<reflection-rainbow type="float">0.0</reflection-rainbow>
 	    </shader_1>
 	    <rendering><shader-effects>1</shader-effects></rendering>
-        </model>
+	</model>
 
         <submodels>
             <serviceable type="bool">true</serviceable>
             <path>Aircraft/PBY-Catalina/Models/submodels.xml</path>
         </submodels>
 
-        <flight-model>jsb</flight-model>
-        <aero>PBY-6-devel-1</aero>
-
         <virtual-cockpit archive="y">true</virtual-cockpit>
         <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
-
-        <startup>
-            <splash-texture>Aircraft/PBY-Catalina/pby6.png</splash-texture>
-        </startup>
-
+        
         <sound>
-            <path>Aircraft/PBY-Catalina/Sounds/sound.xml</path>
+            <path>Aircraft/PBY-Catalina/Fx/sound.xml</path>
         </sound>
 	
 	<hud>
@@ -178,19 +178,10 @@
         <hud>
             <enable3d>false</enable3d>
         </hud>
-        <multiplay>
-            <generic>
-                <float n="0" alias="/surface-positions/gear-pos-norm"/>
-                <float n="1" alias="/gear/gear[0]/steering-norm"/>
-                <float n="2" alias="/surface-positions/canopy-pos-norm"/>
-                <float n="3" alias="/engines/engine[0]/thruster/rpm"/>
-                <float n="4" alias="/engines/engine[1]/thruster/rpm"/>
-                <float n="5" alias="/fdm/jsbsim/fcs/propeller0-rotation"/>
-                <float n="6" alias="/fdm/jsbsim/fcs/propeller1-rotation"/>
-                <float n="7" alias="/surface-positions/floats-pos-norm"/>
-                <string n="0"></string>
-            </generic>
-        </multiplay>
+	
+	
+	<multiplay include="Outputs/PBY6-multiplay.xml"/>
+           
         <mooring type="bool">true</mooring>
 
         <menubar include="Inputs/Catalina-menu.xml"/>
@@ -205,11 +196,16 @@
 
     <controls>
         <switches>
-            <landing-light>true</landing-light>
-            <master-avionics>false</master-avionics>
+            <landing-light type="bool">true</landing-light>
+            <master-avionics type="bool">false</master-avionics>
+	    <position-light type="bool">false</position-light>
+	    <master-avionics type="double">0.0</master-avionics>
+	    <nan-switch type="bool">false</nan-switch>
         </switches>
         <lighting>
             <instruments-norm type="double">0</instruments-norm>
+	    <instruments type="bool">true</instruments>
+	    <cockpit-lights type="bool" >false</cockpit-lights>
         </lighting>
         <engines>
             <engine n="0">
@@ -230,9 +226,8 @@
             <automatic type="bool">true</automatic>
         </mooring>
         <gear>
-            <brake-parking type="double">1.0</brake-parking>
-            <gear-down>true</gear-down>
-            <float-down>false</float-down>
+	    <brake-parking type="bool">true</brake-parking>
+	    <gear-down alias="/fdm/jsbsim/systems/gear/gear-cmd-norm"/>	
         </gear>
     </controls>
     <engines>
@@ -246,23 +241,7 @@
         </engine>
     </engines>
 
-    <consumables>
-        <fuel>
-            <tank n="1">
-                <level-gal_us>400</level-gal_us>
-            </tank>
-            <tank n="2">
-                <level-gal_us>400</level-gal_us>
-            </tank>
-            <tank n="4">
-                <level-gal_us>350</level-gal_us>
-            </tank>
-            <tank n="5">
-                <level-gal_us>350</level-gal_us>
-            </tank>
-        </fuel>
-    </consumables>
-
+    
     <systems>
         <mooring>
             <boat-id></boat-id>
@@ -276,20 +255,15 @@
 
     <input include="Inputs/Catalina-input.xml"/>
     
-    <fdm>
-            <jsbsim>
-		    <gear>
-			<NWS>
-			    <engaged type="bool">1</engaged>
-			</NWS>
-		    </gear>
-            </jsbsim>
-    </fdm>
+    <fdm include="Systems/jsbsim_init.xml"/>
 
     <nasal>
         <mooring>
             <file>Aircraft/PBY-Catalina/Mooring/Mooring-Seaplane_PBY.nas</file>
         </mooring>
+	<init>
+	    <file>Aircraft/PBY-Catalina/Inputs/sys_controls.nas</file>
+	</init>
         <terrain>
             <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
         </terrain>

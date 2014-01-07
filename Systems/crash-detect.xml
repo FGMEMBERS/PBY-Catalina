@@ -3,7 +3,8 @@
 <!--ideas from the Dave Culp Hangar  models -->
 
 <system name="crash-detect">
-
+    
+ <property value="0">/fdm/simulation/wrg-ver</property>
 
   <channel name="Over-G">
      <switch name="systems/crash-detect/over-g">
@@ -22,25 +23,25 @@
               gear/unit[1]/WOW != 1
               gear/unit[2]/WOW != 1
               simulation/sim-time-sec gt 2.0
-              /environment/terrain-solid != 0
+              environment/terrain-solid != 0
               position/h-agl-ft lt 20
           </test>
           <test logic="AND" value="1">
               gear/unit[1]/compression-ft  gt 3
               simulation/sim-time-sec gt 2.0
-              /environment/terrain-solid != 0
+              environment/terrain-solid != 0
               position/h-agl-ft lt 20
           </test>
           <test logic="AND" value="1">
               gear/unit[2]/compression-ft  gt 3
               simulation/sim-time-sec gt 2.0
-              /environment/terrain-solid != 0
+              environment/terrain-solid != 0
               position/h-agl-ft lt 20
           </test>
           <test logic="AND" value="1">
               systems/crash-detect/over-g == 1
               simulation/sim-time-sec gt 2.0
-              /environment/terrain-solid == 0
+              environment/terrain-solid == 0
               position/h-agl-ft lt 20
               velocities/vc-fps gt 50
           </test>

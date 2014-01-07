@@ -13,7 +13,7 @@
         </key>
         <key>
             <name>D</name>
-            <desc>water tank doors,  open/close</desc>
+            <desc>water tank doors,  close</desc>
         </key>
         <key>
             <name>s </name>
@@ -64,19 +64,25 @@ For instance with a GPU Nvidia  GT 560 TI we are getting 40 frame per second at 
                 =========================================
                 Performance:
                 That model is tuned ( altitude, climb and speed ) according to a payload of 10000 lbs, which is the water tank capacity filled up.
-                Flying the Aircraft, without that payload, or equivalent, can  give you an unrealistic performance.
+               So that the fuel tanks capacity is automatically limited at load water process.
+	       
+	       The other usage without fire fighter scenario gives the full tanks capacity
+	       Don't forguet to fill UP on ground if required.
                 =========================================
             START and STOP ROUTINE
-            To start the engines
-            =>increase magneto switch  and electric master switch "on" ( key  name "}")
-            => start engines ( key   "space" or "s" of you have a recent FlightGear version)
-            then take off
+            To start the engines we suggest to use 
+	    the "Catalina Menu"  Easy Start
+           
 
             To take off
             =>Unlock Brake parking  (shift B)
             =>Push the throttle to maximum
             When speed 70 knots pull the stick
             The aircraft will take off
+	    OR 
+	    you may use
+	    the "Catalina Menu"  Propulsion Control Mode
+	    then Click  the TakeOff Power button
 
             To stop the engines
             =>decrease magneto switch  and electric master switch "off" ( key  name "{")

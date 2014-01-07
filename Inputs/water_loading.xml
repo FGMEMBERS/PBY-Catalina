@@ -10,6 +10,15 @@
 
   <text>
         <label>======Load Water======</label>
+	 <halign>center</halign>
+  </text>
+   <text>
+        <label>Be Aware: Fuel tanks capacity</label>
+	 <halign>center</halign>
+  </text>
+  <text>
+        <label>is reduced to 3000 lbs</label>
+	 <halign>center</halign>
   </text>
 
   <hrule/>

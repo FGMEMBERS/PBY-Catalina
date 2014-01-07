@@ -15,17 +15,17 @@
             <!-- AUTO LEAN: RICH BEST POWER -->
             <test logic="AND" value="0.95">
                 fcs/mixture-cmd-norm lt 1
-                /engines/engine[0]/rpm ge 2500
+                propulsion/engine[0]/engine-rpm ge 2500
             </test>
             <!-- AUTO LEAN: BEST POWER -->
             <test logic="AND" value="0.87">
                 fcs/mixture-cmd-norm lt 1
-                /engines/engine[0]/rpm ge 2200
+                propulsion/engine[0]/engine-rpm ge 2200
             </test>
             <!-- AUTO LEAN: LEANING-->
             <test logic="AND" value="0.68">
                 fcs/mixture-cmd-norm lt 1
-                /engines/engine[0]/rpm lt 2200
+                propulsion/engine[0]/engine-rpm lt 2200
             </test>
         </switch>
 
@@ -56,17 +56,17 @@
             <!-- AUTO LEAN: RICH BEST POWER -->
             <test logic="AND" value="0.95">
                 fcs/mixture-cmd-norm lt 1
-                /engines/engine[1]/rpm ge 2500
+                propulsion/engine[1]/engine-rpm ge 2500
             </test>
             <!-- AUTO LEAN: BEST POWER -->
             <test logic="AND" value="0.87">
                 fcs/mixture-cmd-norm lt 1
-                /engines/engine[1]/rpm ge 2200
+                propulsion/engine[1]/engine-rpm ge 2200
             </test>
             <!-- AUTO LEAN: LEANING-->
             <test logic="AND" value="0.68">
                 fcs/mixture-cmd-norm lt 1
-                /engines/engine[1]/rpm lt 2200
+                propulsion/engine[1]/engine-rpm lt 2200
             </test>
         </switch>
 
@@ -91,43 +91,7 @@
 
         </channel>
 
-        <!--<scheduled_gain name="propulsion/eng0_mixture-value">
-            <input>propulsion/ctl_mixture</input>
-            <table>
-                <independentVar>position/h-sl-ft</independentVar>
-                <tableData>
-                    0                   1
-                    5000              0.94
-                    10000           0.78
-                    15000           0.64
-                    20000           0.52
-                    25000           0.41
-                    30000           0.34
-                    35000           0.28
-                    40000           0.21
-                </tableData>
-            </table>
-            <output>/controls/engines/engine[0]/mixture</output>
-        </scheduled_gain>
-
-        <scheduled_gain name="propulsion/eng1_mixture-value">
-            <input>propulsion/ctl_mixture</input>
-            <table>
-                <independentVar>position/h-sl-ft</independentVar>
-                <tableData>
-                    0                   1
-                    5000              0.94
-                    10000           0.78
-                    15000           0.64
-                    20000           0.52
-                    25000           0.41
-                    30000           0.34
-                    35000           0.28
-                    40000           0.21
-                </tableData>
-            </table>
-            <output>/controls/engines/engine[1]/mixture</output>
-        </scheduled_gain>-->
+        
 
 
 

@@ -74,22 +74,11 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
-
-
-	<!--
-	<animation>
-		<type>material</type>
-		<object-name></object-name>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.5</red>
-			<green>0.25</green>
-			<blue>0.25</blue>
-		</emission>
-	</animation>
-	-->
-
+	
+	<effect>
+	    <inherits-from>Effects/model-transparent</inherits-from>
+	    <object-name>Bille-B</object-name>
+	</effect>
 
 </PropertyList>
 

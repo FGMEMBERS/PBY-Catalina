@@ -36,7 +36,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>GAiguille0</object-name>
-                <property>/consumables/fuel/tank[1]level-gal_us</property>
+		<property>fdm/jsbsim/systems/tanks/fuel/tank1-level-gal_us</property>
                 <interpolation>
                         <entry>
                         <ind>0</ind>
@@ -62,7 +62,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>GAiguille1</object-name>
-                <property>/consumables/fuel/tank[4]level-gal_us</property>
+                <property>fdm/jsbsim/systems/tanks/fuel/tank2-level-gal_us</property>
                 <interpolation>
                         <entry>
                         <ind>0</ind>
@@ -88,7 +88,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>DAiguille0</object-name>
-                <property>/consumables/fuel/tank[2]level-gal_us</property>
+                <property>fdm/jsbsim/systems/tanks/fuel/tank4-level-gal_us</property>
                 <interpolation>
                         <entry>
                         <ind>0</ind>
@@ -114,7 +114,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>DAiguille1</object-name>
-                <property>/consumables/fuel/tank[5]level-gal_us</property>
+                <property>fdm/jsbsim/systems/tanks/fuel/tank3-level-gal_us</property>
                 <interpolation>
                         <entry>
                         <ind>0</ind>

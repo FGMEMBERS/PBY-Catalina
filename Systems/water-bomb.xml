@@ -30,22 +30,23 @@
 	<!--loading the water under conditions-->
 
 
-            <switch name="Water Tank Reload">
+	    <switch name="fcs/water-tank-reload">
                 <default value="0"/>
                 <test logic="AND" value="1">
                     /sim/model/waterloading  == 1
                     fcs/water-switch == 0
                     position/h-agl-ft lt 8
                      gear/unit[9]/WOW   == 1
-                    gear/gear-cmd-norm == 0
+		    systems/gear/gear-pos-norm  == 0
                     velocities/vc-kts gt 45
+		    fcs/water-door-cmd-norm == 0
                 </test>
             </switch>
 
 	    <!--Pour gérer les interruptions , et reprendre en cours de remplissage jusqu'au maxi-->
 	    <!--Process the loading of the water tank, part by part if required-->
 
-            <switch name="Waterloading Cmd Norm">
+	    <switch name="fcs/waterloading-cmd-norm">
                 <default value="fcs/water-loaded-pos"/>
                 <test logic="OR" value="1">
                     fcs/water-tank-reload == 1
@@ -68,7 +69,7 @@
                     </setting>
                     <setting>
                         <position>1</position>
-                        <time>60</time>
+                        <time>30</time>
                     </setting>
                 </traverse>
                 <output>fcs/water-loaded-pos</output>

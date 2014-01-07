@@ -24,7 +24,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Flap-GC</object-name>
-        <property>surface-positions/cowl-flap-pos-norm</property>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -48,7 +48,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Flap-DC</object-name>
-        <property>surface-positions/cowl-flap-pos-norm</property>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -72,7 +72,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Flap-GH</object-name>
-        <property>surface-positions/cowl-flap-pos-norm</property>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -96,7 +96,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Flap-DH</object-name>
-        <property>surface-positions/cowl-flap-pos-norm</property>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -120,7 +120,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Flap-GB</object-name>
-        <property>surface-positions/cowl-flap-pos-norm</property>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -144,7 +144,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Flap-DB</object-name>
-        <property>surface-positions/cowl-flap-pos-norm</property>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -168,7 +168,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Flap-CB</object-name>
-        <property>surface-positions/cowl-flap-pos-norm</property>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>

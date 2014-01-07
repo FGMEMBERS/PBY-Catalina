@@ -12,7 +12,7 @@
                 <default value="/sim/model/onsea"/>
                 <test  logic="AND" value="0">
                     position/h-agl-ft gt 20
-                    fcs/gear-pos-norm == 0
+                    systems/gear/gear-pos-norm == 0
                 </test>
                 <output>/sim/model/onsea</output>
             </switch>
@@ -21,7 +21,7 @@
             <switch name="Wildfire">
                 <default value="0"/>
                 <test  logic="AND" value="0">
-                    /environment/terrain-solid == 0
+                    environment/terrain-solid == 0
                 </test>
                 <output>/environment/wildfire/fire-on-crash</output>
             </switch>

@@ -5,15 +5,15 @@
 
 
 
-    <property>/gear/gear[13]/compression-norm</property>
-    <property>/gear/gear[14]/compression-norm</property>
-    <property>/gear/gear[17]/compression-norm</property>
-    <property>/gear/gear[16]/compression-norm</property>
+    <!--<property>contact/unit[13]/compression-ft</property>--><!--st-->
+    <!--<property>contact/unit[14]/compression-ft</property>--><!--st-->
+    <!--<property>gear/unit[17]/compression-ft</property>--><!--bg-->
+    <!--<property>gear/unit[16]/compression-ft</property>--><!--bg-->
 
-    <property>/gear/gear[13]/wow</property>
-    <property>/gear/gear[14]/wow</property>
-    <property>/gear/gear[17]/wow</property>
-    <property>/gear/gear[16]/wow</property>
+    <property>contact/unit[13]/wow</property>
+    <property>contact/unit[14]/wow</property>
+    <property>gear/unit[17]/wow</property>
+    <property>gear/unit[16]/wow</property>
 
 
     <channel name="crash">
@@ -28,34 +28,34 @@
            <switch name="systems/crash/switch_b-right">
                <default value="0"/>
                <test  logic="AND" value="1">
-                   /gear/gear[16]/compression-norm gt 0.05
-                   /gear/gear[16]/wow == 1
-                   /environment/terrain-solid != 0
+                   gear/unit[16]/compression-ft gt 0.05
+                   gear/unit[16]/wow == 1
+                   environment/terrain-solid != 0
                </test>
                <output>systems/crash/cpw1</output>
             </switch>
             <switch name="systems/crash/switch_b-left">
                 <default value="0"/>
                 <test  logic="AND" value="1">
-                    /gear/gear[17]/compression-norm gt 0.05
-                    /gear/gear[17]/wow == 1
-                    /environment/terrain-solid != 0
+                    gear/unit[17]/compression-ft gt 0.05
+                    gear/unit[17]/wow == 1
+                    environment/terrain-solid != 0
                 </test>
                 <output>systems/crash/cpw2</output>
             </switch>
             <switch name="systems/crash/switch_w-right">
                 <default value="0"/>
                 <test  logic="AND" value="1">
-                    /gear/gear[13]/compression-norm gt 0.05
-                    /gear/gear[13]/wow == 1
+                    contact/unit[13]/compression-ft gt 0.05
+                    contact/unit[13]/wow == 1
                 </test>
                 <output>systems/crash/cpw3</output>
             </switch>
             <switch name="systems/crash/switch_w-left">
                 <default value="0"/>
                 <test  logic="AND" value="1">
-                    /gear/gear[14]/compression-norm gt 0.05
-                    /gear/gear[14]/wow == 1
+                    contact/unit[14]/compression-ft gt 0.05
+                    contact/unit[14]/wow == 1
                 </test>
                 <output>systems/crash/cpw4</output>
             </switch>
@@ -94,27 +94,27 @@
 
 
             <switch name="systems/crash/switch_electric">
-                <default value="/controls/electric/master-switch"/>
+                <default value="electrical/switch/master"/>
                 <test  logic="AND" value="0">
                     systems/crash/switch_timer  == 1
                 </test>
-                <output>/controls/electric/master-switch</output>
+		<output>electrical/switch/master</output>
             </switch>
 
 
             <switch name="systems/magneto1">
-                <default value="/controls/engines/engine[0]/magnetos"/>
+                <default value="propulsion/engine[0]/magnetos"/>
                 <test logic="OR" value="0">
                     systems/crash/switch_timer  == 1
                 </test>
-                <output>/controls/engines/engine[0]/magnetos</output>
+                <output>propulsion/engine[0]/magnetos</output>
             </switch>
             <switch name="systems/magneto2">
-                <default value="/controls/engines/engine[1]/magnetos"/>
+                <default value="propulsion/engine[1]/magnetos"/>
                 <test logic="OR" value="0">
                     systems/crash/switch_timer  == 1
                 </test>
-                <output>/controls/engines/engine[1]/magnetos</output>
+                <output>propulsion/engine[1]/magnetos</output>
             </switch>
 
 

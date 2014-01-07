@@ -9,9 +9,16 @@
 <!--interrupteur , marquages-->
 
 <PropertyList>
+     <condition>
+        <and>
+            <not>
+                 <property>sim/rendering/rembrandt/enabled</property>
+            </not>
+        </and>
+      </condition>
 		<type>material</type>
 		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<factor-prop>fdm/jsbsim/electrical/lighting/instruments-norm</factor-prop>
 			<red>0.60</red>
 			<green>0.30</green>
 			<blue>0.20</blue>

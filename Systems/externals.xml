@@ -10,7 +10,7 @@
 
     <property>fcs/canopy-control</property>
     <property>fcs/blister-cmd-norm</property>
-    <property>/controls/flight/cowl-flap</property>
+    <property>fcs/cowl-flap-cmd-norm</property>
     <property>systems/animations/start-smoke-out</property>
     <property>systems/animations/engine-start</property>
     <property>systems/gear/gear[1]/tyre-smoke</property>
@@ -18,13 +18,7 @@
 
 
     <channel name="Externals">
-       <!-- <switch name="Canopy Cmd Norm">
-                <default value="0"/>
-                <test  logic="AND" value="1">
-                    /controls/gear/brake-parking == 1
-                    fcs/canopy-control == 1
-                </test>
-        </switch>-->
+       
 
 
         <kinematic name="Blister Pos Norm">
@@ -44,23 +38,23 @@
         <pure_gain name="Blister Pos">
             <input>fcs/blister-pos-norm</input>
             <gain>1</gain>
-            <output>/surface-positions/blister-gauche-pos-norm</output>
-            <output>/surface-positions/blister-droite-pos-norm</output>
+            <output>animation/blister-gauche-pos-norm</output>
+            <output>animation/blister-droite-pos-norm</output>
         </pure_gain>
 
-        <switch name="Cowl Flap Cmd Norm">
+        <switch name="fcs/cowl-flap-pos-cmd-norm">
                 <default value="0"/>
                 <test  logic="OR" value="1">
                     propulsion/engine[0]/map-inhg gt 40
                     propulsion/engine[1]/map-inhg gt 40
                 </test>
                 <test  logic="AND" value="1">
-                    /controls/flight/cowl-flap == 1
+		    fcs/cowl-flap-cmd-norm == 1
                 </test>
         </switch>
 
-        <kinematic name="Cowl Flap Control">
-            <input>fcs/cowl-flap-cmd-norm</input>
+        <kinematic name="Cowl Flap Pos Norm">
+            <input>fcs/cowl-flap-pos-cmd-norm</input>
             <traverse>
                     <setting>
                             <position>0</position>
@@ -71,7 +65,7 @@
                             <time>2</time>
                     </setting>
             </traverse>
-            <output>/surface-positions/cowl-flap-pos-norm</output>
+            <output>animation/cowl-flap-pos-norm</output>
         </kinematic>
 
         <!--effets de  fumée sur le train-->
@@ -151,7 +145,7 @@
                 </test>
                 <test logic="AND" value="0">
                     systems/animations/start-smoke-out == 1
-                    /controls/engines/engine[0]/starter  == 0
+                    propulsion/engine[0]/starter  == 0
                 </test>
                 <output>systems/animations/start-smoke</output>
             </switch>

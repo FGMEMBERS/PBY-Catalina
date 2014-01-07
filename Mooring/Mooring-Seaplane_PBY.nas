@@ -108,7 +108,7 @@ print("PORT ",harbour,"    Index ",i);
 Mooring.prepareseaplane = func{
     controls.gearDown(-1);
     controls.applyParkingBrake(-1);
-    setprop("controls/gear/mooring",1);
+    setprop("fdm/jsbsim/fcs/mooring-cmd-norm",1);
     print ("Mooring Position with Gear Retracted");
 
 }

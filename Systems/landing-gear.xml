@@ -6,35 +6,22 @@
 
     <property value="1">systems/gear/gear-constant-value-coeff-rain</property>
     <property value="1">systems/gear/gear-constant-value-coeff-snow</property>
-    <property>/environment/terrain-hight</property>
-    <property>/environment/terrain-undefined</property>
+   
 
     <channel name="Gear">
 
         <!--process which include the terrain under: water or solid-->
         <!--the conatct point processing (can be up ) and the gear animation processing ( can be down) are not sync, which simulate the aircraft behaviour on water when gear down-->
 
-        <fcs_function name="Agl Sl Difference">
-            <function>
-                <difference>
-                    <difference>
-                        <property>position/h-sl-ft</property>
-                        <property>position/terrain-elevation-asl-ft</property>
-                    </difference>
-                    <property>position/h-agl-ft</property>
-                </difference>
-            </function>
-        </fcs_function>
-	
-	<switch name="Gear Switch">
-                <default value="/controls/gear/gear-down"/>
+       
+	    
+	    <switch name="Gear Switch">
+                <default value="systems/gear/gear-cmd-norm"/>
                 <test  logic="AND" value="0">
                     systems/crash-detect/crashed-sw  == 1
                 </test>
                 <test  logic="AND" value="0">
-                    /environment/terrain-solid == 0
-                    /environment/terrain-undefined == 0
-                    position/h-agl-ft  LT 40
+                    simulation/terrain_sw == 0
                 </test>
                 <output>gear/gear-cp-cmd-norm</output>
             </switch>
@@ -58,8 +45,8 @@
             </kinematic>
 
 
-            <kinematic name="Gear Surface Position">
-                <input>/controls/gear/gear-down</input>
+             <kinematic name="Gear Surface Position">
+                <input>systems/gear/gear-cmd-norm</input>
                 <traverse>
                     <setting>
                         <position>0</position>
@@ -70,15 +57,8 @@
                         <time>5</time>
                     </setting>
                 </traverse>
-                <output>fcs/gear-pos-norm</output>
+                <output>systems/gear/gear-pos-norm</output>
             </kinematic>
-
-            <pure_gain name="fcs/gear-pos-surface">
-                <input>fcs/gear-pos-norm</input>
-                <gain>1</gain>
-                <output>/surface-positions/gear-pos-norm</output>
-            </pure_gain>
-	    
 	    
 	    
 	    
@@ -90,9 +70,9 @@
                     systems/crash-detect/crashed == 1
                 </test>
                 <test  logic="AND" value="1">
-                    /environment/terrain-solid  == 1
+                    environment/terrain-solid  == 1
                     position/h-agl-ft lt 7
-                   fcs/gear-pos-norm == 0
+                   systems/gear/gear-pos-norm == 0
                 </test>
             </switch>
 
@@ -102,9 +82,9 @@
                     systems/crash-detect/crashed == 1
                 </test>
                 <test  logic="AND" value="1">
-                    /environment/terrain-solid  == 0
+                    environment/terrain-solid  == 0
                     position/h-agl-ft lt 8
-                   fcs/gear-pos-norm == 1
+                   systems/gear/gear-pos-norm == 1
                 </test>
             </switch>
 
@@ -113,7 +93,7 @@
                 <default value="0"/>
                 <test  logic="AND" value="1">
                     position/h-agl-ft lt 11
-                   fcs/gear-pos-norm == 1
+                   systems/gear/gear-pos-norm == 1
                 </test>
             </switch>
 
@@ -124,7 +104,7 @@
             </pure_gain>
 
             <pure_gain name="Center Anchor Control">
-                <input>/controls/gear/brake-parking</input>
+		<input>fcs/brake-parking-cmd-norm</input>
                 <gain>1</gain>
                 <output>fcs/center-brake-cmd-norm</output>
             </pure_gain>   
@@ -183,7 +163,7 @@
 
             <!--rain and snow static coeff are only a guess-->
             <scheduled_gain name="systems/gear/terrain-static-friction-coeff-rain">
-                <input>fcs/gear-pos-norm</input>
+                <input>systems/gear/gear-pos-norm</input>
                 <table>
                     <independentVar>/environment/metar/rain-norm</independentVar>
                     <tableData>
@@ -194,7 +174,7 @@
             </scheduled_gain>
 
             <scheduled_gain name="systems/gear/terrain-static-friction-coeff-snow">
-                <input>fcs/gear-pos-norm</input>
+                <input>systems/gear/gear-pos-norm</input>
                 <table>
                     <independentVar>/environment/metar/snow-norm</independentVar>
                     <tableData>
@@ -207,7 +187,7 @@
             <fcs_function name="fcs/gear-n-static_friction_coeff">
                 <function>
                     <product>
-                        <property>/environment/terrain-friction-factor</property>
+                        <property>environment/terrain-friction-factor</property>
                         <property>systems/gear/gear[0]/static-friction-coeff-base</property>
                         <property>systems/gear/terrain-static-friction-coeff-rain</property>
                         <property>systems/gear/terrain-static-friction-coeff-snow</property>
@@ -219,7 +199,7 @@
             <fcs_function name="fcs/gear-l-static_friction_coeff">
                 <function>
                     <product>
-                        <property>/environment/terrain-friction-factor</property>
+                        <property>environment/terrain-friction-factor</property>
                         <property>systems/gear/gear[1]/static-friction-coeff-base</property>
                         <property>systems/gear/terrain-static-friction-coeff-rain</property>
                         <property>systems/gear/terrain-static-friction-coeff-snow</property>
@@ -231,7 +211,7 @@
             <fcs_function name="fcs/gear-r-static_friction_coeff">
                 <function>
                     <product>
-                        <property>/environment/terrain-friction-factor</property>
+                        <property>environment/terrain-friction-factor</property>
                         <property>systems/gear/gear[2]/static-friction-coeff-base</property>
                         <property>systems/gear/terrain-static-friction-coeff-rain</property>
                         <property>systems/gear/terrain-static-friction-coeff-snow</property>
@@ -251,7 +231,7 @@
                 <function>
                     <product>
                         <property>systems/gear/gear[0]/dynamic-friction-coeff-base</property>
-                        <property>/environment/terrain-friction-factor</property>
+                        <property>environment/terrain-friction-factor</property>
                         <property>systems/gear/terrain-static-friction-coeff-rain</property>
                         <property>systems/gear/terrain-static-friction-coeff-snow</property>
                     </product>
@@ -263,7 +243,7 @@
                 <function>
                     <product>
                         <property>systems/gear/gear[1]/dynamic-friction-coeff-base</property>
-                        <property>/environment/terrain-friction-factor</property>
+                        <property>environment/terrain-friction-factor</property>
                         <property>systems/gear/terrain-static-friction-coeff-rain</property>
                         <property>systems/gear/terrain-static-friction-coeff-snow</property>
                     </product>
@@ -275,7 +255,7 @@
                 <function>
                     <product>
                         <property>systems/gear/gear[2]/dynamic-friction-coeff-base</property>
-                        <property>/environment/terrain-friction-factor</property>
+                        <property>environment/terrain-friction-factor</property>
                         <property>systems/gear/terrain-static-friction-coeff-rain</property>
                         <property>systems/gear/terrain-static-friction-coeff-snow</property>
                     </product>
@@ -290,7 +270,7 @@
 
         <channel name="Additionnal Rolling Friction duetoTerrain">
             <scheduled_gain name="systems/gear/terrain-rolling-friction-coeff-rain">
-                <input>fcs/gear-pos-norm</input>
+                <input>systems/gear/gear-pos-norm</input>
                 <table>
                     <independentVar>/environment/metar/rain-norm</independentVar>
                     <tableData>
@@ -301,7 +281,7 @@
             </scheduled_gain>
 
             <scheduled_gain name="systems/gear/terrain-rolling-friction-coeff-snow">
-                <input>fcs/gear-pos-norm</input>
+                <input>systems/gear/gear-pos-norm</input>
                 <table>
                     <independentVar>/environment/metar/snow-norm</independentVar>
                     <tableData>
@@ -315,7 +295,7 @@
                 <function>
                     <sum>
                         <product>
-                            <property>/environment/terrain-rolling-friction</property>
+                            <property>environment/terrain-rolling-friction</property>
                             <property>systems/gear/terrain-rolling-friction-coeff-rain</property>
                             <property>systems/gear/terrain-rolling-friction-coeff-snow</property>
                         </product>
@@ -329,7 +309,7 @@
                 <function>
                     <sum>
                         <product>
-                            <property>/environment/terrain-rolling-friction</property>
+                            <property>environment/terrain-rolling-friction</property>
                             <property>systems/gear/terrain-rolling-friction-coeff-rain</property>
                             <property>systems/gear/terrain-rolling-friction-coeff-snow</property>
                         </product>
@@ -343,7 +323,7 @@
                 <function>
                     <sum>
                         <product>
-                            <property>/environment/terrain-rolling-friction</property>
+                            <property>environment/terrain-rolling-friction</property>
                             <property>systems/gear/terrain-rolling-friction-coeff-rain</property>
                             <property>systems/gear/terrain-rolling-friction-coeff-snow</property>
                         </product>
@@ -362,7 +342,7 @@
             <!-- <scheduled_gain name="systems/gear/gear[0]/z-position-coeff">
                 <input>gear/unit[0]/pos-norm</input>
                 <table>
-                    <independentVar>/environment/terrain-load-resistance</independentVar>
+                    <independentVar>environment/terrain-load-resistance</independentVar>
                     <tableData>
                         100000	1.0000
                         100 	0.6
@@ -373,7 +353,7 @@
            <!-- <scheduled_gain name="systems/gear/gear[0]/bump-coeff">
                 <input>gear/unit[0]/pos-norm</input>
                 <table>
-                    <independentVar>/environment/terrain-bumpiness</independentVar>
+                    <independentVar>environment/terrain-bumpiness</independentVar>
                     <tableData>
                         0.1	0
                         1       0.2
@@ -384,7 +364,7 @@
             <scheduled_gain name="systems/gear/gear[1]/bump-coeff">
                 <input>gear/unit[1]/pos-norm</input>
                 <table>
-                    <independentVar>/environment/terrain-bumpiness</independentVar>
+                    <independentVar>environment/terrain-bumpiness</independentVar>
                     <tableData>
                         0.1	0
                         1       0.15
@@ -395,7 +375,7 @@
             <scheduled_gain name="systems/gear/gear[2]/bump-coeff">
                 <input>gear/unit[2]/pos-norm</input>
                 <table>
-                    <independentVar>/environment/terrain-bumpiness</independentVar>
+                    <independentVar>environment/terrain-bumpiness</independentVar>
                     <tableData>
                         0.1	0
                         1       0.15

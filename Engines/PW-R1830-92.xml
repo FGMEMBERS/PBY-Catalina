@@ -38,11 +38,12 @@ COMBAT 5 MIN        rpm 2700     boost ins. Hg abs  45    boost 7.40
     <turbodelay> 0.0 </turbodelay>
     <boostmanual> 1.0 </boostmanual>
     <boostoverride> 0 </boostoverride>
+    <boost-loss-factor> 1.8</boost-loss-factor>
     <numboostspeeds>   1</numboostspeeds>
     <supercharged> 1.0 </supercharged>
     <takeoffboost unit="INHG">18.68</takeoffboost>
     <ratedboost1 unit="INHG" >17.2</ratedboost1>
-    <ratedpower1 unit="HP">1200</ratedpower1>
+    <ratedpower1 unit="HP">1100</ratedpower1>
     <ratedrpm1>2700</ratedrpm1>
-    <ratedaltitude1 unit="FT">13500</ratedaltitude1>
+    <ratedaltitude1 unit="FT">12000</ratedaltitude1>
 </piston_engine>

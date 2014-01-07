@@ -62,10 +62,11 @@
 
         <key n="68">
             <name>D</name>
-            <desc>Toggle water-door</desc>
+            <desc>Close water-door</desc>
             <binding>
-                <command>property-toggle</command>
+                <command>property-assign</command>
                 <property>fdm/jsbsim/fcs/water-door-cmd-norm</property>
+		<value>0</value>
             </binding>
         </key>
 
@@ -77,7 +78,7 @@
           <desc>Flotteurs action</desc>
             <binding>
               <command>property-toggle</command>
-              <property>/controls/gear/float-down</property>
+	      <property>fdm/jsbsim/fcs/float-down-cmd-norm</property>
             </binding>
          </key>
 	 
@@ -86,7 +87,7 @@
           <desc>Mooring Anchor</desc>
             <binding>
               <command>property-toggle</command>
-              <property>/controls/gear/mooring</property>
+	      <property>fdm/jsbsim/fcs/mooring-cmd-norm</property>
             </binding>
          </key>
 

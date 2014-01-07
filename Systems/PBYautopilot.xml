@@ -117,7 +117,43 @@
 	<!-- =============================================================== -->
         
 	
-    
+    =============================================================== -->
+	<!-- Pitch Axis Modes                                                -->
+	<!-- =============================================================== -->
+
+	<!-- Simple pitch hold -->
+	<pid-controller>
+		<name>Pitch hold</name>
+		<debug>false</debug>
+		<enable>
+			<prop>/autopilot/locks/altitude</prop>
+			<value>pitch-hold</value>
+		</enable>
+		<input>
+			<prop>/orientation/pitch-deg</prop>
+		</input>
+		<reference>
+			<prop>/autopilot/settings/target-pitch-deg</prop>
+		</reference>
+		<output>
+			<prop>/controls/flight/elevator-trim</prop>
+		</output>
+		<config>
+			<Kp>-0.05</Kp>
+			<beta>1.0</beta>
+			<alpha>0.1</alpha>
+			<gamma>0.0</gamma>
+
+			<Ti>1.0</Ti>
+			<Td>0.00001</Td>
+			<u_min>-1.0</u_min>
+			<u_max>1.0</u_max>
+		</config>
+	</pid-controller>
+        <!-- =============================================================== -->
+        <!-- Pitch Axis Modes                                                -->
+	<!-- =============================================================== -->
+
 	
         
         <!-- ============================================================== -->

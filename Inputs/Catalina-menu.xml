@@ -2,109 +2,45 @@
 <!--
     Usable with FlightGear
     Gerard Robin  14-01-2009
-
+    Copyright GPL v2
 -->
 <PropertyList>
     <default>
         <menu n="10">
             <label>Catalina</label>
             <enabled type="bool">true</enabled>
-            <item>
-                <label>MIXTURE Auto rich: very rich</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/controls/engines/engine[0]/mixture</property>
-                    <value>1</value>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/controls/engines/engine[1]/mixture</property>
-                    <value>1</value>
+	     <item>
+		<label>Help to  Start</label>
+		<binding>
+		    <command>nasal</command>
+                    <script>
+		   var easystart = gui.Dialog.new("/sim/gui/dialogs/PBY-Catalina/menu/easystart/dialog",
+                        "Aircraft/PBY-Catalina/Inputs/easy_start.xml");                        
+                        easystart.open();               
+                    </script>		    
                 </binding>
             </item>
-            <item>
-                <label>MIXTURE Auto lean</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/controls/engines/engine[0]/mixture</property>
-                    <value>0.99</value>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/controls/engines/engine[1]/mixture</property>
-                    <value>0.99</value>
+	     <item>
+		<label>Refuel</label>
+		<binding>
+		    <command>nasal</command>
+                    <script>
+		   var refuel = gui.Dialog.new("/sim/gui/dialogs/PBY-Catalina/menu/refuel/dialog",
+                        "Aircraft/PBY-Catalina/Inputs/refuel.xml");                        
+                        refuel.open();               
+                    </script>		    
                 </binding>
             </item>
-            <item>
-                <label>Auto Control Normal TakeOff Power</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
-                    <value>0</value>
+	    <item>
+		<label>Propulsion Control Mode</label>
+	    <binding>
+		    <command>nasal</command>
+                    <script>
+		   var propulsion = gui.Dialog.new("/sim/gui/dialogs/PBY-Catalina/menu/propulsion/dialog",
+                        "Aircraft/PBY-Catalina/Inputs/propulsion.xml");                        
+                        propulsion.open();               
+                    </script>		    
                 </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/takeoff</property>
-                    <value>1</value>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/cruise</property>
-                    <value>0</value>
-             </binding>
-            </item>
-            <item>
-                <label>Auto Control Climb Power</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
-                    <value>1</value>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/takeoff</property>
-                    <value>0</value>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/cruise</property>
-                    <value>0</value>
-             </binding>
-            </item> <item>
-                <label>Auto Control Cruise Power</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
-                    <value>0</value>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/takeoff</property>
-                    <value>0</value>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/cruise</property>
-                    <value>1</value>
-             </binding>
-            </item>
-            <item>
-                <label>Manual Throttle and  Manual Pitch Contol</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/climb</property>
-                    <value>0</value>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/takeoff</property>
-                    <value>0</value>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/fdm/jsbsim/systems/boost-cmd/cruise</property>
-                    <value>0</value>
-             </binding>
             </item>
             <item>
                 <label>Reload Water</label>
@@ -136,17 +72,6 @@
                     water.open();
                 </script>
                 </binding>
-            </item>
-            <item>
-                <label>Display Water Filling Quantity</label>
-                    <binding>
-                        <command>nasal</command>
-                        <script>
-                            var water = gui.Dialog.new("/sim/gui/dialogs/Catalina/menu/dialog",
-                            "Aircraft/PBY-Catalina/Inputs/water_loading.xml");
-                            water.open();
-                        </script>
-                    </binding>
             </item>
         </menu>
     </default>

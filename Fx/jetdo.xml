@@ -46,12 +46,18 @@
             </or>
         </condition>
     </animation>
-
-
-
-
-
-
+    
+    
+    <!--<effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>jetspray</object-name>
+    </effect>
+    
+    
+    <animation>
+	<type>noshadow</type>
+	<object-name>jetspray</object-name>
+    </animation>-->
 
 
 </PropertyList>

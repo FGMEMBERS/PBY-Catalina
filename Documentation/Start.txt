@@ -5,7 +5,7 @@ To get it:
 PBY-Catalina/Mooring/mooring-pos_boeing314-based.xml)
  2/ run fgfs
 
-or instance
+for instance
 
  fgfs --airport=KSFO --aircraft=Catalina 
 the Aircraft will be floating at the original Seaplane Harbour place close to KSFO Airport

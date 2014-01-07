@@ -4,7 +4,7 @@
 <system name="Hull_Force">
 
 <property value="1">animation/wakes-coeff</property>
-<property value="0">/controls/gear/mooring</property>
+
 
 <!--<property value="200">systems/hull/mooring1_thrust</property>-->
 
@@ -126,19 +126,19 @@
             <default value="0"/>
             <test  logic="AND" value="1">
                 systems/hull/c_wow == 1
-                /controls/gear/brake-parking  == 1
+               fcs/brake-parking-cmd-norm   == 1
             </test>
         </switch>
 	 <switch name="systems/hull/mooring1">
             <default value="0"/>
             <test  logic="AND" value="1">
                 systems/hull/c_wow == 1
-                /controls/gear/mooring  == 1
-		propulsion/engine/set-running == 0
+		fcs/mooring-cmd-norm  == 1
+		propulsion/engine[0]/set-running == 0
             </test>
 	    <test  logic="AND" value="1">
                 systems/hull/c_wow == 1
-                /controls/gear/mooring  == 1
+		fcs/mooring-cmd-norm  == 1
 		propulsion/engine[1]/set-running == 0
             </test>
         </switch>
@@ -169,7 +169,7 @@
                gear/unit[11]/WOW   == 1
                 velocities/vc-kts gt 7
                 fcs/water-bombing-cmd-norm == 0
-                /environment/terrain-solid  == 0
+                environment/terrain-solid  == 0
             </test>
         </switch>
 
@@ -195,7 +195,7 @@
                gear/unit[10]/WOW   == 1
                 velocities/vc-kts gt 7
                 fcs/water-bombing-cmd-norm == 0
-                /environment/terrain-solid  == 0
+                environment/terrain-solid  == 0
             </test>
         </switch>
 

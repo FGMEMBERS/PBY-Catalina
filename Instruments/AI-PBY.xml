@@ -56,28 +56,7 @@
             <object-name>Fleche</object-name>
     </animation>
 
-<!--******************** Hotspots ******************************-->
-    <!--<panel>
-            <name>Cmd-AI</name>
-            <depth-test type="bool">true</depth-test>
-            <path>Aircraft/F4U7/Instruments/AI-Nord-hotspots.xml</path>
-            <bottom-left>
-                    <x-m>0.035</x-m>
-                    <y-m>-0.0361132</y-m>
-                    <z-m>-0.0376666</z-m>
-            </bottom-left>
-            <bottom-right>
-                    <x-m>0.035</x-m>
-                    <y-m>0.0361132</y-m>
-                    <z-m>-0.0376666</z-m>
-            </bottom-right>
-            <top-left>
-                    <x-m>0.035</x-m>
-                    <y-m>-0.0361132</y-m>
-                    <z-m>0.0376666</z-m>
-            </top-left>
-    </panel>-->
-<!--*************************************************-->
+
 
     <animation>
             <type>rotate</type>
@@ -100,7 +79,7 @@
             <object-name>Boule</object-name>
             <property>orientation/pitch-deg</property>
             <center>
-                    <x-m>-0.00112648</x-m>
+                    <x-m>-0.00213637</x-m>
                     <y-m>0</y-m>
                     <z-m>0</z-m>
             </center>

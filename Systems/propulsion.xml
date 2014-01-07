@@ -4,25 +4,25 @@
 <system name="Propulsion">
     <property>systems/engine/mp-inhg</property>
     <property>systems/engine/rpm</property>
+    <property value="0">systems/boost-cmd/manual</property>
 
         <channel name="Differential Throttle Cmd">
             <switch name="fcs/differential-throttle-pos-norm">
                 <default value="0"/>
-                <test  logic="AND" value="/controls/flight/rudder">
+                <test  logic="AND" value="-fcs/rudder-cmd-norm">
                     gear/unit[0]/WOW == 1
-                    fcs/gear-pos-norm == 1
+                    systems/gear/gear-pos-norm == 1
                     velocities/vc-kts lt 20
                     position/h-agl-ft lt 11
-                    /controls/engines/engine[0]/throttle lt 0.40
-                    /controls/engines/engine[1]/throttle lt 0.40
+                    propulsion/engine[0]/throttle lt 0.40
+                    propulsion/engine[1]/throttle lt 0.40
                 </test>
-                <default value="0"/>
-                <test  logic="AND" value="/controls/flight/rudder">
+                <test  logic="AND" value="-fcs/rudder-cmd-norm">
                     gear/unit[3]/WOW   == 1
-                    fcs/gear-pos-norm == 0
+                    systems/gear/gear-pos-norm == 0
                     position/h-agl-ft lt 7
-                    /controls/engines/engine[0]/throttle lt 0.40
-                    /controls/engines/engine[1]/throttle lt 0.40
+                    propulsion/engine[0]/throttle lt 0.40
+                    propulsion/engine[1]/throttle lt 0.40
                 </test>
             </switch>
             <pure_gain name="Differential Throttle Left Pos Norm">
@@ -34,7 +34,7 @@
                 <gain>-1</gain>
             </pure_gain>
             <summer name="Throttle0 Diferential">
-                <input>/controls/engines/engine[0]/throttle</input>
+                <input>propulsion/engine[0]/throttle</input>
                 <input>fcs/differential-throttle-left-pos-norm</input>
                 <clipto>
                     <min>0.1</min>
@@ -43,7 +43,7 @@
                 <output>fcs/throttle-pos-norm[0]</output>
             </summer>
             <summer name="Throttle1 Differential">
-                <input>/controls/engines/engine[1]/throttle</input>
+                <input>propulsion/engine[1]/throttle</input>
                 <input>fcs/differential-throttle-right-pos-norm</input>
                 <clipto>
                     <min>0.1</min>
@@ -53,34 +53,15 @@
             </summer>
         </channel>
 
-        <channel name="Throttle">
-            <!--<switch name="Throttle0 Starter">
-                <default value="/controls/engines/engine[0]/throttle"/>
-                <test  logic="AND" value="0.20">
-                    /engines/engine[0]/starter == 1
-                </test>
-                <output>/controls/engines/engine[0]/throttle</output>
-            </switch>
-            <switch name="Throttle1 Starter">
-                <default value="/controls/engines/engine[1]/throttle"/>
-                <test  logic="AND" value="0.20">
-                    /engines/engine[1]/starter == 1
-                </test>
-                <output>/controls/engines/engine[1]/throttle</output>
-            </switch>-->
-        </channel>
-
-
-
         <channel name="Propeller">
 
 
         <!--ONLY for animation-->
 
         <scheduled_gain name="Propeller0 Rotation">
-            <input>/engines/engine[0]/thruster/rpm</input>
+	    <input>propulsion/engine[0]/propeller-rpm</input>
             <table>
-                <independentVar>/engines/engine[0]/thruster/rpm</independentVar>
+		<independentVar>propulsion/engine[0]/propeller-rpm</independentVar>
                 <tableData>
                     0.00	1.00
                     1300	0.012
@@ -89,9 +70,9 @@
         </scheduled_gain>
 
         <scheduled_gain name="Propeller1 Rotation">
-            <input>/engines/engine[1]/thruster/rpm</input>
+	    <input>propulsion/engine[1]/propeller-rpm</input>
             <table>
-                <independentVar>/engines/engine[1]/thruster/rpm</independentVar>
+		<independentVar>propulsion/engine[1]/propeller-rpm</independentVar>
                 <tableData>
                     0.00	1.00
                     1300	0.012
@@ -106,9 +87,11 @@
     <property>systems/boost-cmd/cruise</property>
     <property>systems/boost-cmd/takeoff</property>
     <channel name="Boost">
+	
+<!--we refer to only one engine [0]  must be done for each one [0]  and [1]-->
 
         <summer name="engine rpm">
-           <input>/engines/engine/rpm</input>
+           <input>propulsion/engine[0]/engine-rpm</input>
             <output>systems/engine/rpm</output>
        </summer>
 
@@ -126,7 +109,7 @@
         </switch>
 
         <summer name="engine mp inhg">
-            <input>/engines/engine[0]/mp-inhg</input>
+            <input>propulsion/engine[0]/map-inhg</input>
             <output>systems/engine/mp-inhg</output>
         </summer>
 
@@ -212,46 +195,94 @@
 
 
         <summer name="systems/engine/pitch0">
-            <input>/controls/engines/engine[0]/propeller-pitch</input>
+            <input>propulsion/engine[0]/propeller-pitch</input>
             <input>systems/engine/pitch-corr-pid</input>
             <clipto>
                 <min> 0 </min>
                 <max> 1 </max>
             </clipto>
-            <output>/controls/engines/engine[0]/propeller-pitch</output>
+            <output>propulsion/engine[0]/propeller-pitch</output>
         </summer>
 
         <summer name="systems/engine/pitch1">
-            <input>/controls/engines/engine[1]/propeller-pitch</input>
+            <input>propulsion/engine[1]/propeller-pitch</input>
             <input>systems/engine/pitch-corr-pid</input>
             <clipto>
                 <min> 0 </min>
                 <max> 1 </max>
             </clipto>
-            <output>/controls/engines/engine[1]/propeller-pitch</output>
+            <output>propulsion/engine[1]/propeller-pitch</output>
         </summer>
 
         <summer name="systems/engine/throttle0">
-            <input>/controls/engines/engine[0]/throttle</input>
+            <input>propulsion/engine[0]/throttle</input>
             <input>systems/engine/throttle-corr-pid</input>
             <clipto>
                 <min> 0 </min>
                 <max> 1 </max>
             </clipto>
-            <output>/controls/engines/engine[0]/throttle</output>
+            <output>propulsion/engine[0]/throttle</output>
         </summer>
 
         <summer name="systems/engine/throttle1">
-            <input>/controls/engines/engine[1]/throttle</input>
+            <input>propulsion/engine[1]/throttle</input>
             <input>systems/engine/throttle-corr-pid</input>
             <clipto>
                 <min> 0 </min>
                 <max> 1 </max>
             </clipto>
-            <output>/controls/engines/engine[1]/throttle</output>
+            <output>propulsion/engine[1]/throttle</output>
         </summer>
 
     </channel>
+    
+    
+     <channel name="Take_off_boost_limit">
+	 
+	 
+	    <switch name="fcs/take-off-boost-limiter">
+                    <default value="0"/>
+                    <test  logic="AND" value="1">
+                    systems/boost-cmd/takeoff == 1
+		    fcs/water-tank-reload != 1
+                    </test>
+            </switch>
+<!--but water filling can be 2minutes we give 120 sec  -->
+            <kinematic name="fcs/take-off-boost-limited">
+                <input>fcs/take-off-boost-limiter</input>
+                <traverse>
+                <setting>
+                    <position>0 </position>
+                    <time>     0 </time>
+                </setting>
+                <setting>
+                    <position> 1</position>
+                    <time> 120  </time>
+                </setting>
+                </traverse>
+            </kinematic>
+
+	    <switch name="fcs/take-off-boost-zero">
+                    <default value="systems/boost-cmd/takeoff"/>
+                    <test  logic="AND" value="0">
+			fcs/take-off-boost-limited == 1
+			systems/boost-cmd/climb == 0
+			systems/boost-cmd/cruise == 0
+                    </test>
+		    <output>systems/boost-cmd/takeoff</output>
+            </switch>
+	    
+	    <switch name="fcs/take-off-to-climb">
+                    <default value="systems/boost-cmd/climb"/>
+                    <test  logic="AND" value="1">
+			fcs/take-off-boost-limited == 1
+			systems/boost-cmd/cruise == 0
+			systems/boost-cmd/manual == 0
+                    </test>
+		    <output>systems/boost-cmd/climb</output>
+            </switch>
+           
+        </channel>
 
 
 
