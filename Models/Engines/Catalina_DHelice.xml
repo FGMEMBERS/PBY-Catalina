@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL_V2
+-->
+   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<PropertyList>
+
+    <path>catalina-helice.ac</path>
+    <texture-path>Textures</texture-path>
+
+<offsets>
+<roll-deg>40</roll-deg>
+</offsets>
+
+
+</PropertyList>

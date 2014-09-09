@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+
+-->
+<PropertyList>
+
+    <keyboard>
+
+
+
+        <key n="115">
+            <name>s</name>
+            <desc>Fire Starter on Selected Engine(s)</desc>
+            <binding>
+                <command>nasal</command>
+                <script>controls.startEngine(1)</script>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <value>1</value>
+                <property>/fdm/jsbsim/systems/animations/engine-start</property>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.startEngine(0)</script>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <value>0</value>
+                    <property>/fdm/jsbsim/systems/animations/engine-start</property>
+                </binding>
+            </mod-up>
+        </key>
+
+        <key n="1">
+        <name>Ctrl-A</name>
+        <desc>Toggle autopilot altitude lock.</desc>
+                <binding>
+                        <command>property-toggle</command>
+                        <property>/autopilot/switch-altitude</property>
+                </binding>
+        </key>
+        <!--<key n="8">
+        <name>Ctrl-H</name>
+        <desc>Toggle autopilot heading lock.</desc>
+                <binding>
+                        <command>property-toggle</command>
+                        <property>/autopilot/switch-heading</property>
+                </binding>
+        </key>-->
+        <key n="100">
+            <name>d</name>
+            <desc>Toggle Blister</desc>
+                <binding>
+                        <command>property-toggle</command>
+                        <property>fdm/jsbsim/fcs/blister-cmd-norm</property>
+                </binding>
+        </key>
+
+        <key n="68">
+            <name>D</name>
+            <desc>Close water-door</desc>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-door-cmd-norm</property>
+		<value>0</value>
+            </binding>
+        </key>
+
+
+
+
+        <key n="102">
+          <name>f</name>
+          <desc>Flotteurs action</desc>
+            <binding>
+              <command>property-toggle</command>
+	      <property>fdm/jsbsim/fcs/float-down-cmd-norm</property>
+            </binding>
+         </key>
+	 
+	 <key n="70">
+          <name>F</name>
+          <desc>Mooring Anchor</desc>
+            <binding>
+              <command>property-toggle</command>
+	      <property>fdm/jsbsim/fcs/mooring-cmd-norm</property>
+            </binding>
+         </key>
+
+        <key n="108">
+          <name>l</name>
+          <desc>water bombing</desc>
+             <binding>
+                 <command>property-assign</command>
+                 <property>/sim/model/bomb-signal</property>
+                 <value>1</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/waterbombing</property>
+                <value>1</value>
+                </binding>
+	    <binding>
+              <command>property-assign</command>
+              <property>/sim/model/waterloading</property>
+              <value>0</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-door-cmd-norm</property>
+                <value>1</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-intake-cmd-norm</property>
+                <value>0</value>
+            </binding>
+         </key>
+
+         <key n="76">
+          <name>L</name>
+          <desc>water loading</desc>
+            <binding>
+              <command>property-assign</command>
+              <property>/sim/model/waterloading</property>
+              <value>1</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/waterbombing</property>
+                <value>1</value>
+                </binding>
+            <binding>
+                 <command>property-assign</command>
+                 <property>/sim/model/bomb-signal</property>
+                 <value>0</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>fdm/jsbsim/fcs/water-intake-cmd-norm</property>
+                <value>1</value>
+            </binding>
+         </key>
+	 <key n="126">
+                <name>~</name>
+                <desc>Nose Wheel Steering</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>fdm/jsbsim/gear/NWS/engaged</property>
+                    <value>0</value>
+                </binding>
+         </key>
+
+        </keyboard>
+
+
+</PropertyList>

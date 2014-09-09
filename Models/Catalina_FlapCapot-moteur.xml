@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL_V2
+-->
+<!--  PBY Catalina                     Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<PropertyList>
+
+    <!--===================GABARIT DE CENTRAGE====ne pas enlever========-->
+    <animation>
+        <type>select</type>
+        <object-name>gabarit-position-capot</object-name>
+        <condition>
+            <equals>
+                <property>sim/current-view/view-number</property>
+                <value>999</value>
+            </equals>
+        </condition>
+    </animation>
+    <!--==================================================-->
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>Flap-GC</object-name>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.00</ind>
+                <dep>20.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-0.977261</x1-m>
+            <y1-m>-0.67605</y1-m>
+            <z1-m>0.181803</z1-m>
+            <x2-m>-0.977261</x2-m>
+            <y2-m>-0.60613</y2-m>
+            <z2-m>-0.349293</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>Flap-DC</object-name>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.00</ind>
+                <dep>-20.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-0.977261</x1-m>
+            <y1-m>0.67605</y1-m>
+            <z1-m>0.181803</z1-m>
+            <x2-m>-0.977261</x2-m>
+            <y2-m>0.60613</y2-m>
+            <z2-m>-0.349293</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>Flap-GH</object-name>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.00</ind>
+                <dep>20.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-0.977261</x1-m>
+            <y1-m>-0.34995</y1-m>
+            <z1-m>0.606784</z1-m>
+            <x2-m>-0.977261</x2-m>
+            <y2-m>-0.67605</y2-m>
+            <z2-m>0.181803</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>Flap-DH</object-name>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.00</ind>
+                <dep>-20.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-0.977261</x1-m>
+            <y1-m>0.34995</y1-m>
+            <z1-m>0.606784</z1-m>
+            <x2-m>-0.977261</x2-m>
+            <y2-m>0.67605</y2-m>
+            <z2-m>0.181803</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>Flap-GB</object-name>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.00</ind>
+                <dep>20.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-0.977261</x1-m>
+            <y1-m>-0.60613</y1-m>
+            <z1-m>-0.34929</z1-m>
+            <x2-m>-0.977261</x2-m>
+            <y2-m>-0.18115</y2-m>
+            <z2-m>-0.675393</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>Flap-DB</object-name>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.00</ind>
+                <dep>-20.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-0.977261</x1-m>
+            <y1-m>0.60613</y1-m>
+            <z1-m>-0.349293</z1-m>
+            <x2-m>-0.977261</x2-m>
+            <y2-m>0.379622</y2-m>
+            <z2-m>-0.58276</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>Flap-CB</object-name>
+        <property>fdm/jsbsim/animation/cowl-flap-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.00</ind>
+                <dep>20.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-0.977261</x1-m>
+            <y1-m>-0.18115</y1-m>
+            <z1-m>-0.675393</z1-m>
+            <x2-m>-0.977261</x2-m>
+            <y2-m>0.132579</y2-m>
+            <z2-m>-0.68185</z2-m>
+        </axis>
+    </animation>
+    
+    
+    
+
+</PropertyList>

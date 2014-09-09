@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+
+-->
+<PropertyList>
+
+        <title>Catalina PBY6  Water bomber</title>
+        <key>
+            <name>d</name>
+            <desc>Blister open/close</desc>
+        </key>
+        <key>
+            <name>D</name>
+            <desc>water tank doors,  close</desc>
+        </key>
+        <key>
+            <name>s </name>
+            <desc>Starter</desc>
+        </key>
+        <key>
+            <name>f</name>
+            <desc>Toggle Floats Up/Down</desc>
+        </key>
+        <key>
+            <name>l (like "l"etter) </name>
+          <desc>release water over your target (water bombing)</desc>
+        </key>
+        <key>
+             <name>L</name>
+            <desc>ask for water loading  when ready </desc>
+        </key>
+        <key>
+            <name>B</name>
+            <desc>toggle ON/OFF Brake Parking on ground or ON/OFF Cables/Anchor on water</desc>
+        </key>
+        <key>
+            <name>o</name>
+            <desc>act auto control of the engine power for takeoff</desc>
+        </key>
+        <key>
+            <name>O</name>
+            <desc>act auto control of the engine power for climb</desc>
+        </key>
+        <key>
+            <name>m</name>
+            <desc>act auto control of the engine power for cruise</desc>
+        </key>
+        <key>
+            <name>M</name>
+            <desc>unact auto control of the engine power, only manual control</desc>
+        </key>
+        <text>
+			==============EYE CANDY ============
+			    If you want to get the best of that model, 
+we would recommand to use the Rembrandt features, it  gives real shadows and lights
+                              It should not slow your computer.
+For instance with a GPU Nvidia  GT 560 TI we are getting 40 frame per second at LFML
+==================================================================
+                =========================================
+                That Model is the Catalina  PBY6 converted to be a water bomber
+                It was in use in the south-east of France from 1964 to 1970
+                =========================================
+                Performance:
+                That model is tuned ( altitude, climb and speed ) according to a payload of 10000 lbs, which is the water tank capacity filled up.
+               So that the fuel tanks capacity is automatically limited at load water process.
+	       
+	       The other usage without fire fighter scenario gives the full tanks capacity
+	       Don't forguet to fill UP on ground if required.
+                =========================================
+            START and STOP ROUTINE
+            To start the engines we suggest to use 
+	    the "Catalina Menu"  Easy Start
+           
+
+            To take off
+            =>Unlock Brake parking  (shift B)
+            =>Push the throttle to maximum
+            When speed 70 knots pull the stick
+            The aircraft will take off
+	    OR 
+	    you may use
+	    the "Catalina Menu"  Propulsion Control Mode
+	    then Click  the TakeOff Power button
+
+            To stop the engines
+            =>decrease magneto switch  and electric master switch "off" ( key  name "{")
+
+            WATER BOMBER
+            You mays simulate  the filling of the water tank ( 4000 liters)
+            when
+                =>on the water, you want the floats DOWN  (key"f")
+                =>prepare the filling (command key  "L")
+                => a speed minimum of 45 kts
+                => push gently the elevator, just enough to keep the aircraft sliding in the water
+            The filling duration time is 100 sec.
+            Control your speed which must be more than 45 kts  (if less it does not fill)
+            More is better.
+            During the filling,  the aircraft is getting more and more heavy.
+            When loaded  the weight of the aircraft is heavier of 4500 kg , remember it at take off, you wants patience, and smooth piloting.
+            Before climb, you must get the maximum of speed with the help of the groundeffect, which is your friend.
+            After take off, don't forget, you want the floats UP (key"f")
+
+            Now you may simulate a water bombing
+                => At a low agl, (let's say 200 ft) and over the target which is supposed to be bombed,
+                => release the water (command key 'l" like "l"etter)
+            The water can be seen falling down.
+
+            The  aircraft is right now 4500 kg less , it will jump upper in the sky, be prepared for it.
+            When empty don't forget to close the water tank doors ( key"D")
+            You may again, go back on the sea  and fill again, that process is repeatable as long as you wish it.
+
+        </text>
+
+</PropertyList>

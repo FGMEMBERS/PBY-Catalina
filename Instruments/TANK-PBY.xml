@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Author Gerard Robin
+    Copyright License:  GPL_V2
+-->
+
+<PropertyList>
+
+ <path>Models/tank-pby.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+
+
+        <animation include="Instrument-Light4.xml">
+                <object-name>GAiguille0</object-name>
+        </animation>
+
+        <animation include="Instrument-Light4.xml">
+                <object-name>GAiguille1</object-name>
+        </animation>
+
+        <animation include="Instrument-Light4.xml">
+                <object-name>DAiguille0</object-name>
+        </animation>
+
+        <animation include="Instrument-Light4.xml">
+                <object-name>DAiguille1</object-name>
+        </animation>
+
+        <animation include="Instrument-Light3.xml">
+                <object-name>Cadran</object-name>
+        </animation>
+
+        <animation>
+                <type>rotate</type>
+                <object-name>GAiguille0</object-name>
+		<property>fdm/jsbsim/systems/tanks/fuel/tank1-level-gal_us</property>
+                <interpolation>
+                        <entry>
+                        <ind>0</ind>
+                        <dep>0</dep>
+                        </entry>
+                        <entry>
+                        <ind>500</ind>
+                        <dep>-75</dep>
+                        </entry>
+                </interpolation>
+                <center>
+                        <x-m>0</x-m>
+                        <y-m>-0.0404653</y-m>
+                        <z-m>0</z-m>
+                </center>
+                <axis>
+                        <x>-1</x>
+                        <y>0</y>
+                        <z>0</z>
+                </axis>
+        </animation>
+
+        <animation>
+                <type>rotate</type>
+                <object-name>GAiguille1</object-name>
+                <property>fdm/jsbsim/systems/tanks/fuel/tank2-level-gal_us</property>
+                <interpolation>
+                        <entry>
+                        <ind>0</ind>
+                        <dep>0</dep>
+                        </entry>
+                        <entry>
+                        <ind>500</ind>
+                        <dep>-75</dep>
+                        </entry>
+                </interpolation>
+                <center>
+                        <x-m>0</x-m>
+                        <y-m>-0.0404653</y-m>
+                        <z-m>0</z-m>
+                </center>
+                <axis>
+                        <x>-1</x>
+                        <y>0</y>
+                        <z>0</z>
+                </axis>
+        </animation>
+
+        <animation>
+                <type>rotate</type>
+                <object-name>DAiguille0</object-name>
+                <property>fdm/jsbsim/systems/tanks/fuel/tank4-level-gal_us</property>
+                <interpolation>
+                        <entry>
+                        <ind>0</ind>
+                        <dep>0</dep>
+                        </entry>
+                        <entry>
+                        <ind>500</ind>
+                        <dep>75</dep>
+                        </entry>
+                </interpolation>
+                <center>
+                        <x-m>0</x-m>
+                        <y-m>0.0404653</y-m>
+                        <z-m>0</z-m>
+                </center>
+                <axis>
+                        <x>-1</x>
+                        <y>0</y>
+                        <z>0</z>
+                </axis>
+        </animation>
+
+        <animation>
+                <type>rotate</type>
+                <object-name>DAiguille1</object-name>
+                <property>fdm/jsbsim/systems/tanks/fuel/tank3-level-gal_us</property>
+                <interpolation>
+                        <entry>
+                        <ind>0</ind>
+                        <dep>0</dep>
+                        </entry>
+                        <entry>
+                        <ind>500</ind>
+                        <dep>75</dep>
+                        </entry>
+                </interpolation>
+                <center>
+                        <x-m>0</x-m>
+                        <y-m>0.0404653</y-m>
+                        <z-m>0</z-m>
+                </center>
+                <axis>
+                        <x>-1</x>
+                        <y>0</y>
+                        <z>0</z>
+                </axis>
+        </animation>
+
+
+</PropertyList>

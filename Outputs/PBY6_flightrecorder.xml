@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<PropertyList>
+    <!--<name type="string"></name>
+    <signals include="environment.xml"/>
+    <signals include="position.xml"/>
+    <signals include="controls.xml"/>
+    <signals include="surfaces.xml"/>
+    <signals include="engine-jet.xml">
+        <count type="int">2</count>
+    </signals>
+    <signals include="gear-retractable.xml">
+        <count type="int">3</count>
+    </signals>-->
+</PropertyList>

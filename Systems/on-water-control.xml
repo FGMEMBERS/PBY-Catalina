@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+
+<system name="On Water Control">
+
+    <channel name="On Sea">
+
+
+
+
+            <switch name="On Sea Init">
+                <default value="/sim/model/onsea"/>
+                <test  logic="AND" value="0">
+                    position/h-agl-ft gt 20
+                    systems/gear/gear-pos-norm == 0
+                </test>
+                <output>/sim/model/onsea</output>
+            </switch>
+
+            <!--for a futher implementation of a realistic scenario-->
+            <switch name="Wildfire">
+                <default value="0"/>
+                <test  logic="AND" value="0">
+                    environment/terrain-solid == 0
+                </test>
+                <output>/environment/wildfire/fire-on-crash</output>
+            </switch>
+
+        </channel>
+
+
+
+
+</system>

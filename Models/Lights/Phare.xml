@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+   
+-->
+<PropertyList>
+
+ <path>phare-flash.ac</path>
+
+
+
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>GFlash</object-name>
+        <object-name>DFlash</object-name>
+    </effect>
+
+
+        <animation>
+            <type>flash</type>
+            <object-name>GFlash</object-name>
+            <center>
+                <x-m>-1.3701</x-m>
+                <y-m>-4.8085</y-m>
+                <z-m>2.00312</z-m>
+            </center>
+            <axis>
+                <x>-1</x>
+                <y>0</y>
+                <z>-0.15</z>
+            </axis>
+            <power>5</power>
+            <factor>1</factor>
+            <offset>0</offset>
+            <two-sides type="bool">false</two-sides>
+            <min>0</min>
+            <max>3</max>
+        </animation>
+
+        <animation>
+            <type>flash</type>
+            <object-name>DFlash</object-name>
+            <center>
+                <x-m>-1.3701</x-m>
+                <y-m>4.8085</y-m>
+                <z-m>2.00312</z-m>
+            </center>
+            <axis>
+                <x>-1</x>
+                <y>0</y>
+                <z>-0.15</z>
+            </axis>
+            <power>5</power>
+            <factor>1</factor>
+            <offset>0</offset>
+            <two-sides type="bool">false</two-sides>
+            <min>0</min>
+            <max>3</max>
+        </animation>
+
+        <model>
+            <name>GEnLightenment</name>
+            <path>Aircraft/PBY-Catalina/Models/Lights/Landing-Lights_rb.xml</path>
+            <offsets>
+                <pitch-deg>0</pitch-deg>
+                <x-m>-1.3701</x-m>
+                <y-m>-4.8085</y-m>
+                <z-m>2.00312</z-m>
+            </offsets>
+        </model>
+
+
+        <model>
+            <name>DEnLightenment</name>
+            <path>Aircraft/PBY-Catalina/Models/Lights/Landing-Lights_rb.xml</path>
+            <offsets>
+                <pitch-deg>0</pitch-deg>
+                <x-m>-1.3701</x-m>
+                <y-m>4.8085</y-m>
+                <z-m>2.00312</z-m>
+            </offsets>
+        </model>
+	
+	
+	<animation>
+            <type>select</type>
+            <object-name>GEnLightenment</object-name>
+	    <object-name>DEnLightenment</object-name>
+            <condition>
+                <and>
+                    <property>sim/rendering/rembrandt/enabled</property>
+                </and>
+            </condition>
+        </animation>
+
+
+
+</PropertyList>

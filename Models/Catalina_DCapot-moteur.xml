@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL_V2
+-->
+<!--  PBY Catalina                     Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<PropertyList include="Catalina_FlapCapot-moteur.xml">
+
+	<path>catalina-capot-moteurV2.ac</path>
+        <texture-path>Textures/texture-protcivil</texture-path>
+
+        <!--===================GABARIT DE CENTRAGE====ne pas enlever========-->
+        <animation>
+            <type>select</type>
+            <object-name>gabarit-position-capot</object-name>
+            <condition>
+                <equals>
+                    <property>sim/current-view/view-number</property>
+                    <value>999</value>
+                </equals>
+            </condition>
+        </animation>
+    <!--==================================================-->
+
+    <effect>
+        <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflect_rb</inherits-from>
+        <object-name>AVCapot</object-name>
+        <object-name>ARCapot</object-name>
+	 <object-name>AECapot</object-name>
+        <object-name>Flap</object-name>
+        <!--<object-name></object-name>
+        <object-name></object-name>
+        <object-name></object-name>
+        <object-name></object-name>-->
+    </effect>
+
+</PropertyList>

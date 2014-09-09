@@ -1,0 +1,578 @@
+<PropertyList>
+
+
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL_V2
+-->
+<!--                   Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
+<!--COM instruments are linked to Aircraft/instruments-3d folder
+you want that folder updated-->
+
+<path>pby-panel.ac</path>
+
+
+
+
+    <!--===Coté Pilote=========================-->
+
+    <!--L1=================================-->
+    <!--DUMMY-->
+
+
+
+    <model>
+            <name>ADF</name>
+            <path>Aircraft/Instruments-3d/kr87-adf/ki227-00.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.463595</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <animation>
+        <type>pick</type>
+        <object-name>KI227.knob</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/kr-87/inputs/rotation-deg</property>
+                <step>1</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>KI227.knob</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/kr-87/inputs/rotation-deg</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>360</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Spe.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.463595</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--was_ILS-->
+    <model>
+            <name>HI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/HI-PBY.xml</path>
+            <offsets>
+                    <x-m>0.00446975</x-m>
+                    <y-m>-0.361547</y-m>
+                    <z-m>0.179002</z-m>
+                    <roll-deg></roll-deg>
+            </offsets>
+    </model>
+
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.361547</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--RPM-->
+    <model>
+            <name>RPM</name>
+            <path>Aircraft/PBY-Catalina/Instruments/RPM-Nord.xml</path>
+            <offsets>
+                   <!-- <x-m>0.00435654</x-m>--><x-m>0.0028908</x-m>
+                    <y-m>-0.259828</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.259828</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--L2=================================-->
+    <!--ASI-->
+    <model>
+            <name>ASI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/ASI-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0028908</x-m>
+                    <y-m>-0.565641</y-m>
+                    <z-m>0.0887738</z-m>
+                    <roll-deg></roll-deg>
+            </offsets>
+    </model>
+
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.565641</y-m>
+                    <z-m>0.0887738</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--AI-->
+    <model>
+            <name>AI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/AI-PBY.xml</path>
+            <offsets>
+                    <x-m>-0.0336868</x-m>
+                    <y-m>-0.463595</y-m>
+                    <z-m>0.0887738</z-m>
+                    <roll-deg></roll-deg>
+            </offsets>
+    </model>
+
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.463595</y-m>
+                    <z-m>0.0887738</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--ALTITUDE-->
+    <model>
+            <name>Altitude</name>
+            <path>Aircraft/PBY-Catalina/Instruments/ALT-Nord.xml</path>
+            <offsets>
+                    <x-m>-0.0045323</x-m>
+                    <y-m>-0.361727</y-m>
+                    <z-m>0.0887738</z-m>
+                    <roll-deg>0</roll-deg>
+            </offsets>
+    </model>
+
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.361727</y-m>
+                    <z-m>0.0887738</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--MP-OSI-->
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/MP_OSI-PBY.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.260008</y-m>
+                    <z-m>0.0887738</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.260008</y-m>
+                    <z-m>0.0887738</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--L3=================================-->
+    <!--TURN-->
+    <model>
+            <name>TURN</name>
+            <path>Aircraft/PBY-Catalina/Instruments/TURN-Nord.xml</path>
+            <offsets>
+                    <x-m>0.00369317</x-m>
+                    <y-m>-0.565641</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <roll-deg></roll-deg>
+            </offsets>
+    </model>
+
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.565641</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+    <!--HI-->
+    <model>
+            <name>was_HI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Dummy-Nord.xml</path>
+            <offsets>
+                    <x-m>0.00</x-m>
+                    <y-m>-0.463595</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <roll-deg></roll-deg>
+            </offsets>
+    </model>
+
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.463595</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--IVSI-->
+     <model>
+            <name>IVSI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/IVSI-Nord.xml</path>
+            <offsets>
+                    <x-m>0.00435654</x-m>
+                    <y-m>-0.361727</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <roll-deg>0</roll-deg>
+            </offsets>
+    </model>
+
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.361727</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!-- DUMMY-->
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Dummy-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.260008</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>-0.260008</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+    <!--===Coté Co Pilote=========================-->
+
+    <!--L1=================================-->
+    <!--DUMMY-->
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Dummy-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.463595</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.463595</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+<!--Moteur1-->
+    <model>
+            <name>CTRL_OIL_FUEL-1</name>
+            <path>Aircraft/PBY-Catalina/Instruments/CTRL_OIL_FUEL_Eng1-Nord.xml</path>
+            <offsets>
+                    <x-m>0.00435654</x-m>
+                    <y-m>0.361547</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.361547</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+<!--Moteur 0-->
+    <model>
+            <name>CTRL_OIL_FUEL-0</name>
+            <path>Aircraft/PBY-Catalina/Instruments/CTRL_OIL_FUEL_Eng0-Nord.xml</path>
+            <offsets>
+                    <x-m>0.00435654</x-m>
+                    <y-m>0.259828</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.259828</y-m>
+                    <z-m>0.179002</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--L2=================================-->
+
+<!--ALTITUDE-->
+    <model>
+            <name>Altitude</name>
+            <path>Aircraft/PBY-Catalina/Instruments/ALT-Nord.xml</path>
+            <offsets>
+                    <x-m>-0.0045323</x-m>
+                    <y-m>0.565641</y-m>
+                    <z-m>0.0887738</z-m>
+                    <roll-deg>0</roll-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.565641</y-m>
+                    <z-m>0.0887738</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+<!--AI-->
+    <model>
+            <name>AI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/AI-PBY.xml</path>
+            <offsets>
+                    <x-m>-0.0336868</x-m>
+                    <y-m>0.463595</y-m>
+                    <z-m>0.0887738</z-m>
+                    <roll-deg></roll-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.463595</y-m>
+                    <z-m>0.0887738</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+    <model>
+            <name></name>
+            <path>Aircraft/PBY-Catalina/Instruments/Dummy-Nord.xml</path>
+            <offsets>
+                    <x-m>0.00446975</x-m>
+                    <y-m>0.361727</y-m>
+                    <z-m>0.0887738</z-m>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.361727</y-m>
+                    <z-m>0.0887738</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--ASI-->
+    <model>
+            <name>ASI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/ASI-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0028908</x-m>
+                    <y-m>0.260008</y-m>
+                    <z-m>0.0887738</z-m>
+                    <roll-deg></roll-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.260008</y-m>
+                    <z-m>0.0887738</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <!--L3=================================-->
+<!--IVSI-->
+    <model>
+            <name>IVSI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/IVSI-Nord.xml</path>
+            <offsets>
+                    <x-m>0.00435654</x-m>
+                    <y-m>0.565641</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <roll-deg>0</roll-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.565641</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+    <!--HI-->
+    <model>
+            <name>HI</name>
+            <path>Aircraft/PBY-Catalina/Instruments/HI-PBY.xml</path>
+            <offsets>
+                    <x-m>0.00446975</x-m>
+                    <y-m>0.463595</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <roll-deg></roll-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.463595</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+<!--TURN-->
+    <model>
+            <name>TURN</name>
+            <path>Aircraft/PBY-Catalina/Instruments/TURN-Nord.xml</path>
+            <offsets>
+                    <x-m>0.00369317</x-m>
+                    <y-m>0.361727</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <roll-deg></roll-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.361727</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+    <!-- TANK-->
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/TANK-PBY.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.260008</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+    <model>
+            <name>Bezel</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Bezel_pt-Nord.xml</path>
+            <offsets>
+                    <x-m>0.0</x-m>
+                    <y-m>0.260008</y-m>
+                    <z-m>-0.00184315</z-m>
+                    <pitch-deg>0</pitch-deg>
+            </offsets>
+    </model>
+
+   <!-- COM-->
+    <model>
+        <name>kx165-1</name>
+        <path>Aircraft/Instruments-3d/kx165/kx165-1.xml</path>
+        <offsets>
+            <x-m>0.0</x-m>
+            <y-m>-0.104084</y-m>
+            <z-m>0.187786</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>kx165-2</name>
+        <path>Aircraft/Instruments-3d/kx165/kx165-2.xml</path>
+        <offsets>
+            <x-m>0.0</x-m>
+            <y-m>-0.104084</y-m>
+            <z-m>0.114042</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ADF-462</name>
+        <path>Aircraft/Instruments-3d/kr87-adf/kr87.xml</path>
+        <offsets>
+            <x-m>0.005</x-m>
+            <y-m>-0.104084</y-m>
+            <z-m>0.0452739</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+ </PropertyList>
