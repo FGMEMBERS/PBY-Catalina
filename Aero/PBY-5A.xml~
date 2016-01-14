@@ -555,27 +555,29 @@
 
 </propulsion>
     
-<system file="init-at-start"/>
-<system file="steady-behaviour"/>
-<system file="crash-detect"/>
-<system file="crash"/>
-<system file="landing-gear"/>
-<system file="braking"/>    
-<system file="cpdrag"/>
+    <system file="init-at-start"/>
+    <system file="steady-behaviour"/>
+    <system file="crash-detect"/>
+    <system file="crash"/>
+    <system file="landing-gear"/>
+    <system file="braking"/>    
+    <system file="cpdrag"/>
 
-<system file="on-water-control"/>
-<system file="electrical-fdm-custom"/>
-<system file="electrical-fdm"/>
-<system file="electrical-lights"/>
 
-<system file="water-bomb"/>
-<system file="hull"/>
-<system file="floats"/>
-<!-- system file="fuel-refuel-pump"/ -->
-<!-- system file="mixture-control"/ -->
-<!-- system file="propulsion"/ -->
-<system file="externals"/>
-<system file="instruments"/>
+
+    <system file="on-water-control"/>
+    <system file="electrical-fdm-custom"/>
+    <system file="electrical-fdm"/>
+    <system file="electrical-lights"/>
+
+    <system file="water-bomb"/>
+    <system file="hull"/>
+    <system file="floats"/>
+    <!-- system file="fuel-refuel-pump"/ -->
+    <system file="mixture-control"/>
+    <system file="propulsion"/>
+    <system file="externals"/>
+    <system file="instruments"/>
 
 
     <flight_control name="FCS: PBY-6">

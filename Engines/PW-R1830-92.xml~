@@ -24,7 +24,7 @@ COMBAT 5 MIN        rpm 2700     boost ins. Hg abs  45    boost 7.40
     <minmp unit="INHG">          6.0 </minmp>
     <maxmp unit="INHG">         29.9 </maxmp>
     <displacement unit="IN3">1830</displacement>
-    <bsfc>0.36</bsfc>
+    <bsfc>0.52</bsfc>
     <volumetric-efficiency>0.8</volumetric-efficiency>
     <ram-air-factor> 0.0 </ram-air-factor>
     <maxhp>1200.0</maxhp>
