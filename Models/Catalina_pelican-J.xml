@@ -618,7 +618,8 @@ Copyright License:  GPL_V2
 
   <animation>
     <type>rotate</type>
-    <object-name>AVTrain</object-name>
+    <object-name>AVTrain-Fourche</object-name>
+    <object-name>AVTrain-Roue</object-name>
     <property>gear/gear[0]/steering-norm</property>
     <offset-deg>0</offset-deg>
     <factor>-45</factor>
@@ -645,7 +646,7 @@ Copyright License:  GPL_V2
     <property>fdm/jsbsim/fcs/wheel-rotation</property>
     <factor>-10.00</factor>
     <center>
-      <x-m>-4.59959</x-m>
+      <x-m>-4.59959</x-m>a
       <y-m>0</y-m>
       <z-m>-2.03754</z-m>
     </center>
@@ -925,8 +926,11 @@ Copyright License:  GPL_V2
     <type>rotate</type>
     <object-name>DTrain</object-name>
     <object-name>DTrain-Roue</object-name>
+    <object-name>D-Train-Frein</object-name>
     <object-name>DTrain-BielleB</object-name>
     <object-name>DTrain-BielleH</object-name>
+    <object-name>DTrain-BielleSup</object-name>
+    <object-name>DTrain-JambePrinf</object-name>
     <object-name>DTrain-BrasBase</object-name>
     <object-name>DTrain-VerinB</object-name>
     <object-name>DTrain-VerinH</object-name>
@@ -1169,6 +1173,7 @@ Copyright License:  GPL_V2
   <animation>
     <type>spin</type>
     <object-name>DTrain-Roue</object-name>
+    <object-name>DTrain-Frein</object-name>
     <property>fdm/jsbsim/fcs/wheel-rotation</property>
     <factor>-10.00</factor>
     <center>
