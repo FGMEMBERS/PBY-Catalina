@@ -585,10 +585,9 @@ Copyright License:  GPL_V2
 
   <animation>
     <type>rotate</type>
-    <object-name>AVTrain</object-name>
-
+    <object-name>AVTrain-Roue</object-name>
+    <object-name>AVTrain-Fourche</object-name>
     <property>sim/multiplay/generic/float[0]</property>
-
     <interpolation>
       <entry>
 	<ind>0</ind>
@@ -603,7 +602,6 @@ Copyright License:  GPL_V2
 	<dep>0</dep>
       </entry>
     </interpolation>
-
     <center>
       <x-m>-4.59559</x-m>
       <y-m>0</y-m>
@@ -611,7 +609,7 @@ Copyright License:  GPL_V2
     </center>
     <axis>
       <x>0</x>
-      <y>1.0</y>
+      <y>1</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -636,7 +634,7 @@ Copyright License:  GPL_V2
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/PBY-Catalina//Models/Effects/reflecttrain</inherits-from>
+    <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
     <object-name>AVTrain-Fourche</object-name>
   </effect>
 
@@ -662,11 +660,27 @@ Copyright License:  GPL_V2
     <type>rotate</type>
     <object-name>GTrain</object-name>
     <object-name>GTrain-Roue</object-name>
+    <object-name>GTrain-Frein</object-name>
     <object-name>GTrain-BielleB</object-name>
     <object-name>GTrain-BielleH</object-name>
     <object-name>GTrain-BrasBase</object-name>
     <object-name>GTrain-VerinB</object-name>
     <object-name>GTrain-VerinH</object-name>
+    <object-name>GTrain-JambePrInf</object-name>
+    <object-name>GTrain-BielleSup</object-name>
+    <object-name>GTrain-BielleSup.001</object-name>
+    <object-name>GTrain-BielleSup.002</object-name>
+    <object-name>GTrain-BielleSup.003</object-name>
+    <object-name>GTrain-JambePrInf.001</object-name>
+    <object-name>GTrain-JambePrInf.002</object-name>
+    <object-name>GTrain-JambePrInf.003</object-name>
+    <object-name>GTrain-JambePrInf.004</object-name>
+    <object-name>cylinder.073</object-name>
+    <object-name>cylinder.074</object-name>
+    <object-name>cylinder.075</object-name>
+    <object-name>cylinder.076</object-name>
+    <object-name>cylinder.077</object-name>
+    <object-name>cylinder.078</object-name>
     <property>sim/multiplay/generic/float[0]</property>
     <interpolation>
       <entry>
@@ -691,14 +705,30 @@ Copyright License:  GPL_V2
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/PBY-Catalina//Models/Effects/reflecttrain</inherits-from>
+    <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
     <object-name>GTrain</object-name>
     <object-name>GTrain-Roue</object-name>
+    <object-name>GTrain-Frein</object-name>
     <object-name>GTrain-BielleB</object-name>
     <object-name>GTrain-BielleH</object-name>
     <object-name>GTrain-BrasBase</object-name>
     <object-name>GTrain-VerinB</object-name>
     <object-name>GTrain-VerinH</object-name>
+    <object-name>GTrain-JambePrInf</object-name>
+    <object-name>GTrain-BielleSup</object-name>
+    <object-name>GTrain-BielleSup.001</object-name>
+    <object-name>GTrain-BielleSup.002</object-name>
+    <object-name>GTrain-BielleSup.003</object-name>
+    <object-name>GTrain-JambePrInf.001</object-name>
+    <object-name>GTrain-JambePrInf.002</object-name>
+    <object-name>GTrain-JambePrInf.003</object-name>
+    <object-name>GTrain-JambePrInf.004</object-name>
+    <object-name>cylinder.073</object-name>
+    <object-name>cylinder.074</object-name>
+    <object-name>cylinder.075</object-name>
+    <object-name>cylinder.076</object-name>
+    <object-name>cylinder.077</object-name>
+    <object-name>cylinder.078</object-name>
   </effect>
 
   <animation>
@@ -708,6 +738,29 @@ Copyright License:  GPL_V2
     <object-name>GTrain-BrasBase</object-name>
     <object-name>GTrain-VerinB</object-name>
     <object-name>GTrain-VerinH</object-name>
+    <object-name>GTrain</object-name>
+    <object-name>GTrain-Roue</object-name>
+    <object-name>GTrain-Frein</object-name>
+    <object-name>GTrain-BielleB</object-name>
+    <object-name>GTrain-BielleH</object-name>
+    <object-name>GTrain-BrasBase</object-name>
+    <object-name>GTrain-VerinB</object-name>
+    <object-name>GTrain-VerinH</object-name>
+    <object-name>GTrain-JambePrInf</object-name>
+    <object-name>GTrain-BielleSup</object-name>
+    <object-name>GTrain-BielleSup.001</object-name>
+    <object-name>GTrain-BielleSup.002</object-name>
+    <object-name>GTrain-BielleSup.003</object-name>
+    <object-name>GTrain-JambePrInf.001</object-name>
+    <object-name>GTrain-JambePrInf.002</object-name>
+    <object-name>GTrain-JambePrInf.003</object-name>
+    <object-name>GTrain-JambePrInf.004</object-name>
+    <object-name>cylinder.073</object-name>
+    <object-name>cylinder.074</object-name>
+    <object-name>cylinder.075</object-name>
+    <object-name>cylinder.076</object-name>
+    <object-name>cylinder.077</object-name>
+    <object-name>cylinder.078</object-name>
     <property>sim/multiplay/generic/float[0]</property>
     <interpolation>
       <entry>
@@ -926,11 +979,24 @@ Copyright License:  GPL_V2
     <type>rotate</type>
     <object-name>DTrain</object-name>
     <object-name>DTrain-Roue</object-name>
-    <object-name>D-Train-Frein</object-name>
+    <object-name>DTrain-Frein</object-name>
     <object-name>DTrain-BielleB</object-name>
     <object-name>DTrain-BielleH</object-name>
     <object-name>DTrain-BielleSup</object-name>
-    <object-name>DTrain-JambePrinf</object-name>
+    <object-name>DTrain-BielleSup.001</object-name>
+    <object-name>DTrain-BielleSup.002</object-name>
+    <object-name>DTrain-BielleSup.003</object-name>
+    <object-name>DTrain-JambePrInf</object-name>
+    <object-name>DTrain-JambePrInf.001</object-name>
+    <object-name>DTrain-JambePrInf.002</object-name>
+    <object-name>DTrain-JambePrInf.003</object-name>
+    <object-name>DTrain-JambePrInf.004</object-name>
+    <object-name>cylinder.067</object-name>
+    <object-name>cylinder.068</object-name>
+    <object-name>cylinder.069</object-name>
+    <object-name>cylinder.070</object-name>
+    <object-name>cylinder.071</object-name>
+    <object-name>cylinder.072</object-name>
     <object-name>DTrain-BrasBase</object-name>
     <object-name>DTrain-VerinB</object-name>
     <object-name>DTrain-VerinH</object-name>
@@ -961,7 +1027,24 @@ Copyright License:  GPL_V2
     <type>rotate</type>
     <object-name>DTrain</object-name>
     <object-name>DTrain-Roue</object-name>
+    <object-name>DTrain-Frein</object-name>
     <object-name>DTrain-BielleB</object-name>
+    <object-name>DTrain-BielleH</object-name>
+    <object-name>DTrain-BielleSup</object-name>
+    <object-name>DTrain-BielleSup.001</object-name>
+    <object-name>DTrain-BielleSup.002</object-name>
+    <object-name>DTrain-BielleSup.003</object-name>
+    <object-name>DTrain-JambePrInf</object-name>
+    <object-name>DTrain-JambePrInf.001</object-name>
+    <object-name>DTrain-JambePrInf.002</object-name>
+    <object-name>DTrain-JambePrInf.003</object-name>
+    <object-name>DTrain-JambePrInf.004</object-name>
+    <object-name>cylinder.067</object-name>
+    <object-name>cylinder.068</object-name>
+    <object-name>cylinder.069</object-name>
+    <object-name>cylinder.070</object-name>
+    <object-name>cylinder.071</object-name>
+    <object-name>cylinder.072</object-name>
     <object-name>DTrain-BrasBase</object-name>
     <object-name>DTrain-VerinB</object-name>
     <object-name>DTrain-VerinH</object-name>
@@ -989,10 +1072,27 @@ Copyright License:  GPL_V2
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/PBY-Catalina//Models/Effects/reflecttrain</inherits-from>
+    <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
     <object-name>DTrain</object-name>
+    <object-name>DTrain-Roue</object-name>
+    <object-name>DTrain-Frein</object-name>
     <object-name>DTrain-BielleB</object-name>
     <object-name>DTrain-BielleH</object-name>
+    <object-name>DTrain-BielleSup</object-name>
+    <object-name>DTrain-BielleSup.001</object-name>
+    <object-name>DTrain-BielleSup.002</object-name>
+    <object-name>DTrain-BielleSup.003</object-name>
+    <object-name>DTrain-JambePrInf</object-name>
+    <object-name>DTrain-JambePrInf.001</object-name>
+    <object-name>DTrain-JambePrInf.002</object-name>
+    <object-name>DTrain-JambePrInf.003</object-name>
+    <object-name>DTrain-JambePrInf.004</object-name>
+    <object-name>cylinder.067</object-name>
+    <object-name>cylinder.068</object-name>
+    <object-name>cylinder.069</object-name>
+    <object-name>cylinder.070</object-name>
+    <object-name>cylinder.071</object-name>
+    <object-name>cylinder.072</object-name>
     <object-name>DTrain-BrasBase</object-name>
     <object-name>DTrain-VerinB</object-name>
     <object-name>DTrain-VerinH</object-name>
@@ -1190,7 +1290,7 @@ Copyright License:  GPL_V2
 
   <!--====================TRAIN GAUCHE/DROITE==========================-->
   <effect>
-    <inherits-from>Aircraft/PBY-Catalina//Models/Effects/reflecttrain</inherits-from>
+    <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
     <object-name>GDTrain-Verin</object-name>
     <object-name>GDTrain-VerinBase</object-name>
     <object-name>GDTrain-VerinBaseAxe</object-name>
