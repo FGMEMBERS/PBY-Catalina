@@ -644,7 +644,7 @@ Copyright License:  GPL_V2
     <property>fdm/jsbsim/fcs/wheel-rotation</property>
     <factor>-10.00</factor>
     <center>
-      <x-m>-4.59959</x-m>a
+      <x-m>-4.59959</x-m>
       <y-m>0</y-m>
       <z-m>-2.03754</z-m>
     </center>
