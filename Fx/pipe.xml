@@ -1,52 +1,47 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-<!--
-    Usable with FlightGear
--->
-   <!--    Auteur :      Gerard ROBIN            COPYRIGHT  2007 -->
+  <!--
+      Usable with FlightGear
+  -->
+  <!--    Auteur :      Gerard ROBIN            COPYRIGHT  2007 -->
 
- <path>heat3.osgt</path>
- <offsets>
-    <x-m> 0 </x-m>
- </offsets>
+  <path>heat3.osgt</path>
+  <offsets>
+    <x-m>0</x-m>
+  </offsets>
 
- <!--
-geode name
-<object-name>fumee2-pneu</object-name>-->
-<!--nuage idle-->
- <animation>
-     <type>select</type>
-     <object-name>fumee2-start</object-name>
-     <condition>
-         <and>
-             <not-equals>
-                 <property>/fdm/jsbsim/systems/animations/start-smoke-out</property>
-                 <value>0</value>
-            </not-equals>
-            <property>sim/rendering/particles</property>
-         </and>
-     </condition>
-</animation>
+  <!--
+      geode name
+      <object-name>fumee2-pneu</object-name>-->
+  <!--nuage idle-->
+  <animation>
+    <type>select</type>
+    <object-name>fumee2-start</object-name>
+    <condition>
+      <and>
+	<not-equals>
+	  <property>/fdm/jsbsim/systems/animations/start-smoke-out</property>
+	  <value>0</value>
+	</not-equals>
+	<property>sim/rendering/particles</property>
+      </and>
+    </condition>
+  </animation>
 
-
-
-
-
-
-<animation>
+  <animation>
     <type>material</type>
     <object-name>fumee2-start</object-name>
     <emission>
-        <red>0.08</red>
-        <green>0.08</green>
-        <blue>0.08</blue>
+      <red>0.08</red>
+      <green>0.08</green>
+      <blue>0.08</blue>
     </emission>
     <transparency>
-        <alpha-prop>/fdm/jsbsim/systems/animations/start-smoke-alpha</alpha-prop>
-        <min>0.0000</min>
-        <max>0.6</max>
+      <alpha-prop>/fdm/jsbsim/systems/animations/start-smoke-alpha</alpha-prop>
+      <min>0.0000</min>
+      <max>0.6</max>
     </transparency>
-</animation>
+  </animation>
 
 </PropertyList>

@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <!--
-    Usable with FlightGear
-    property Gerard Robin
-    Copyright License:  GPL_V2
+Usable with FlightGear
+property Gerard Robin
+Copyright License:  GPL_V2
 -->
+
 <PropertyList>
 
-	<path>Models/bezel_pt-nord.ac</path>
-	<texture-path>Models/Textures</texture-path>
+  <path>Models/bezel_pt-nord.ac</path>
+  <texture-path>Models/Textures</texture-path>
 
-	<!--<animation>
-		<type>noshadow</type>
-		<object-name>Bezel-pt</object-name>
-	</animation>-->
+  <!--<animation>
+      <type>noshadow</type>
+      <object-name>Bezel-pt</object-name>
+      </animation>-->
 
-	<!--<animation include="Instrument-Light5.xml">
-		<object-name>Couronne</object-name>
-	</animation>-->
-	
-	
-
+  <!--<animation include="Instrument-Light5.xml">
+      <object-name>Couronne</object-name>
+      </animation>-->
+  
+  
 </PropertyList>

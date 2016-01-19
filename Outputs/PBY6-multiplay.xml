@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <PropertyList>
-    
-	    <generic>
-                <float n="0" alias="/fdm/jsbsim/systems/gear/gear-pos-norm"/>
-                <float n="1" alias="/gear/gear[0]/steering-norm"/>
-                <float n="2" alias="/surface-positions/canopy-pos-norm"/>
-		<float n="3" alias="/fdm/jsbsim/propulsion/engine[0]/propeller-rpm"/>
-                <float n="4" alias="/fdm/jsbsim/propulsion/engine[1]/propeller-rpm"/>
-                <float n="5" alias="/fdm/jsbsim/fcs/propeller0-rotation"/>
-                <float n="6" alias="/fdm/jsbsim/fcs/propeller1-rotation"/>
-		<float n="7" alias="/fdm/jsbsim/animation/floats-pos-norm"/>
-                <string n="0"></string>
-            </generic>
-           
+  
+  <generic>
+    <float n="0" alias="/fdm/jsbsim/systems/gear/gear-pos-norm"/>
+    <float n="1" alias="/gear/gear[0]/steering-norm"/>
+    <float n="2" alias="/surface-positions/canopy-pos-norm"/>
+    <float n="3" alias="/fdm/jsbsim/propulsion/engine[0]/propeller-rpm"/>
+    <float n="4" alias="/fdm/jsbsim/propulsion/engine[1]/propeller-rpm"/>
+    <float n="5" alias="/fdm/jsbsim/fcs/propeller0-rotation"/>
+    <float n="6" alias="/fdm/jsbsim/fcs/propeller1-rotation"/>
+    <float n="7" alias="/fdm/jsbsim/animation/floats-pos-norm"/>
+    <string n="0"></string>
+  </generic>
+  
 </PropertyList>
