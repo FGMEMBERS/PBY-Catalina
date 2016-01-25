@@ -1961,7 +1961,12 @@ Copyright License:  GPL_V2
     </condition>
   </animation>
 
-  <animation>
+  <!--Todo: IH-COL Jan 2016::
+      Object amarre could not be restored by blender
+      from the ac file pby6Ssnmp.ac
+      This object was first introduced in commit:  5ece32
+      by S. Buchanan in 2013
+   <animation>
     <type>select</type>
     <object-name>amarre</object-name>
     <condition>
@@ -2003,5 +2008,6 @@ Copyright License:  GPL_V2
       <z>0.0</z>
     </axis>
   </animation>
-
+  -->
+  
 </PropertyList>
