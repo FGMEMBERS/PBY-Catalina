@@ -468,15 +468,18 @@ License GPL 2.0 or later
  </autopilot>
 
  <nasal>
- <mooring>
-   <file>Aircraft/PBY-Catalina/Mooring/Mooring-Seaplane_PBY.nas</file>
- </mooring>
- <!-- init>
- <file>Aircraft/PBY-Catalina/Inputs/sys_controls.nas</file>
- </init -->
- <terrain>
-   <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
- </terrain>
+   <PBY-5A>
+     <file>Aircraft/PBY-Catalina/Nasal/liveries.nas</file>
+   </PBY-5A>
+   <mooring>
+     <file>Aircraft/PBY-Catalina/Mooring/Mooring-Seaplane_PBY.nas</file>
+   </mooring>
+   <!-- init>
+	<file>Aircraft/PBY-Catalina/Inputs/sys_controls.nas</file>
+	</init -->
+   <terrain>
+     <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
+   </terrain>
  </nasal>
 
 </PropertyList>

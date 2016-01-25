@@ -10,8 +10,7 @@ Copyright License:  GPL_V2
 <PropertyList include="Catalina_FlapCapot-moteur.xml">
 
   <path>catalina-capot-moteurV2.ac</path>
-  <texture-path>Textures/texture-protcivil</texture-path>
-
+  
   <!--===================GABARIT DE CENTRAGE====ne pas enlever========-->
   <animation>
     <type>select</type>
@@ -26,12 +25,19 @@ Copyright License:  GPL_V2
   <!--==================================================-->
   <effect>
     <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflect_rb</inherits-from>
-    <object-name>AVCapot</object-name>
-    <object-name>ARCapot</object-name>
     <object-name>AECapot</object-name>
-    <object-name>Flap</object-name>
-    <!--
-	<object-name></object-name>-->
+    <object-name>AVCapot</object-name>
+    <object-name>cylinder.045</object-name>
+    <object-name>cylinder.046</object-name>
+    <object-name>cylinder.047</object-name>
+    <object-name>Flap-CB</object-name>
+    <object-name>Flap-DB</object-name>
+    <object-name>Flap-DC</object-name>
+    <object-name>Flap-DH</object-name>
+    <object-name>Flap-GB</object-name>
+    <object-name>Flap-GC</object-name>
+    <object-name>Flap-GH</object-name>
+    <object-name>ARCapot</object-name>
   </effect>
 
 </PropertyList>

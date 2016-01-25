@@ -17694,7 +17694,7 @@ OBJECT poly
 name "block"
 loc -4.3866901 -0.1476460 0.1696260
 crease 45.0
-texture "cde-train-pby.png"
+texture "Textures/texture-protcivil/cde-train-pby.png"
 texrep 1 1
 numvert 42
 0.05426 -0.04984 -0.06259
@@ -17980,7 +17980,7 @@ OBJECT poly
 name "Cde-Verrou-Flotteur"
 loc -2.1319802 0.0829775 0.2300730
 crease 45.0
-texture "ondul.png"
+texture "Textures/texture-protcivil/ondul.png"
 texrep 1 1
 numvert 34
 -0.01030 0.01297 -0.01021
@@ -18717,7 +18717,7 @@ OBJECT poly
 name "box.007"
 loc -0.3796030 1.0248300 -0.0003255
 crease 45.0
-texture "cat-bezel-fond.png"
+texture "Textures/texture-protcivil/cat-bezel-fond.png"
 texrep 1 1
 numvert 8
 -0.03198 0.03880 -0.13081
@@ -18769,7 +18769,7 @@ OBJECT poly
 name "box.008"
 loc -0.3796030 1.1109600 -0.0003255
 crease 45.0
-texture "cat-bezel-fond.png"
+texture "Textures/texture-protcivil/cat-bezel-fond.png"
 texrep 1 1
 numvert 8
 -0.03198 -0.03880 -0.13081
@@ -18821,7 +18821,7 @@ OBJECT poly
 name "Cde-Train"
 loc -4.3683901 -0.2164990 0.1696260
 crease 45.0
-texture "ondul.png"
+texture "Textures/texture-protcivil/ondul.png"
 texrep 1 1
 numvert 266
 0.07732 0.04339 0.00000
@@ -20908,7 +20908,7 @@ OBJECT poly
 name "CloisonAR"
 loc 3.2932501 -0.0534433 0.0000000
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 86
 -0.01862 -0.42110 1.47530
@@ -21721,7 +21721,7 @@ OBJECT poly
 name "Cde-HStab"
 loc -0.0064311 -0.0201360 0.1847130
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 306
 0.00000 -0.06155 -0.70204
@@ -24244,7 +24244,7 @@ OBJECT poly
 name "cylinder.020"
 loc -0.0556512 0.0204000 0.4150060
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 75
 0.01069 0.00286 -0.23029
@@ -25096,7 +25096,7 @@ OBJECT poly
 name "cylinder.021"
 loc 0.0310416 -0.0001320 -0.2998600
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 98
 -0.10245 0.00000 0.96915
@@ -25955,7 +25955,7 @@ OBJECT poly
 name "cylinder.022"
 loc 0.0310416 -0.0001320 -0.2998600
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 98
 -0.02688 0.00933 0.02252
@@ -32582,7 +32582,7 @@ OBJECT poly
 name "cylinder"
 loc 3.9373701 0.0947087 0.7621770
 crease 45.0
-texture "QueueDG.png"
+texture "Textures/texture-protcivil/QueueDG.png"
 texrep 1 1
 numvert 1056
 -2.51617 0.49831 -0.36385
@@ -49505,7 +49505,7 @@ OBJECT poly
 name "cylinder.009"
 loc 0.9783740 -1.0370700 0.0000006
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 0.05377 0.01626 1.15539
@@ -50190,7 +50190,7 @@ OBJECT poly
 name "cylinder.010"
 loc 0.9997500 -0.7887730 0.0000014
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 0.05026 0.01689 1.01872
@@ -50875,7 +50875,7 @@ OBJECT poly
 name "cylinder.011"
 loc 0.2174160 -1.0370700 0.0000006
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 -0.05377 0.00000 1.11613
@@ -51560,7 +51560,7 @@ OBJECT poly
 name "cylinder.012"
 loc 0.2107720 -0.7887730 0.0000014
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 -0.05026 0.00000 0.97795
@@ -52245,7 +52245,7 @@ OBJECT poly
 name "cylinder.023"
 loc -4.5781498 0.1211440 0.0000001
 crease 45.0
-texture "F4U7-PanelFond.png"
+texture "Textures/texture-protcivil/F4U7-PanelFond.png"
 texrep 1 1
 numvert 32
 -0.16430 0.23395 -0.09614
@@ -52406,7 +52406,7 @@ OBJECT poly
 name "cylinder.030"
 loc -3.4814899 0.6501860 -0.0000002
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 109
 -0.27755 -0.03558 -0.66682
@@ -61717,7 +61717,7 @@ OBJECT poly
 name "DBlister-Struct-Dbl"
 loc 4.6742401 0.4900310 1.1414500
 crease 45.0
-texture "QueueDG.png"
+texture "Textures/texture-protcivil/QueueDG.png"
 texrep 1 1
 numvert 343
 -0.66773 0.36076 -2.00845
@@ -67242,7 +67242,7 @@ OBJECT poly
 name "DTrain-BielleB"
 loc 0.6269810 -1.1477300 -1.4954200
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 -0.14304 -0.13850 -0.51496
@@ -67927,7 +67927,7 @@ OBJECT poly
 name "DTrain-BielleH"
 loc 0.6217190 -0.8681870 -1.4042500
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 -0.13778 -0.09415 -0.51720
@@ -70276,7 +70276,7 @@ OBJECT poly
 name "DTrain-BrasBase"
 loc 0.4424270 -0.9108660 -1.8879300
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 64
 -0.01238 0.07290 0.01788
@@ -78097,7 +78097,7 @@ OBJECT poly
 name "DTrain-VerinB"
 loc 0.4423540 -0.6371340 -1.6036299
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 88
 0.03879 0.25768 0.22256
@@ -78865,7 +78865,7 @@ OBJECT poly
 name "DTrain-VerinH"
 loc 0.4405330 -0.0270345 -0.9250650
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 89
 0.03880 -0.35242 -0.45601
@@ -79561,7 +79561,7 @@ OBJECT poly
 name "cylinder.017"
 loc -1.0294402 -0.0284908 -0.0432915
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 34
 -0.01135 0.07894 0.00220
@@ -79908,7 +79908,7 @@ OBJECT poly
 name "cylinder.018"
 loc -1.0294402 0.1084650 -0.1154420
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 34
 0.01655 0.03892 -0.06741
@@ -80255,7 +80255,7 @@ OBJECT poly
 name "cylinder.019"
 loc -1.0294402 0.1084100 0.0301815
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 34
 0.01655 0.03892 0.06741
@@ -80602,7 +80602,7 @@ OBJECT poly
 name "object.015"
 loc 3.0883200 -0.1883850 0.1285520
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 1191
 -4.09433 0.07830 -0.17184
@@ -101241,7 +101241,7 @@ OBJECT poly
 name "GDTrain-Verin"
 loc 0.1756350 -0.6846360 -0.0000011
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 0.01096 0.23387 1.02558
@@ -101926,7 +101926,7 @@ OBJECT poly
 name "GDTrain-VerinBase"
 loc 0.2316350 -0.8939910 0.0000025
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 0.03442 0.04232 1.25864
@@ -102611,7 +102611,7 @@ OBJECT poly
 name "GDTRain-VerinBaseAxe"
 loc 0.1906240 -0.9067700 -0.0000046
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 0.02718 0.01040 1.22449
@@ -103296,7 +103296,7 @@ OBJECT poly
 name "GDTrain-Verincylinder"
 loc 0.1756350 -0.1269940 0.0000005
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 0.00000 -0.33564 1.02531
@@ -106391,7 +106391,7 @@ OBJECT poly
 name "Couronne"
 loc -0.3497580 1.3586100 -0.7886890
 crease 45.0
-texture "cat-bezel-fond.png"
+texture "Textures/texture-protcivil/cat-bezel-fond.png"
 texrep 1 1
 numvert 72
 0.00101 0.03424 0.19530
@@ -106772,7 +106772,7 @@ OBJECT poly
 name "Couronne.001"
 loc -0.3497580 1.3586100 -0.7886890
 crease 45.0
-texture "cat-bezel-fond.png"
+texture "Textures/texture-protcivil/cat-bezel-fond.png"
 texrep 1 1
 numvert 72
 -0.00101 -0.04214 0.12986
@@ -107153,7 +107153,7 @@ OBJECT poly
 name "Couronne.002"
 loc -0.3497580 1.3586100 -0.7886890
 crease 45.0
-texture "cat-bezel-fond.png"
+texture "Textures/texture-protcivil/cat-bezel-fond.png"
 texrep 1 1
 numvert 72
 0.00101 0.03424 0.02397
@@ -107534,7 +107534,7 @@ OBJECT poly
 name "Couronne.003"
 loc -0.3497580 1.4601700 -0.7886890
 crease 45.0
-texture "cat-bezel-fond.png"
+texture "Textures/texture-protcivil/cat-bezel-fond.png"
 texrep 1 1
 numvert 72
 -0.00101 -0.04214 -0.04385
@@ -107915,7 +107915,7 @@ OBJECT poly
 name "Couronne.004"
 loc -0.3497580 1.4601700 -0.7886890
 crease 45.0
-texture "cat-bezel-fond.png"
+texture "Textures/texture-protcivil/cat-bezel-fond.png"
 texrep 1 1
 numvert 72
 0.00101 0.03424 -0.10998
@@ -108296,7 +108296,7 @@ OBJECT poly
 name "Couronne.005"
 loc -0.3497580 1.4601700 -0.7886890
 crease 45.0
-texture "cat-bezel-fond.png"
+texture "Textures/texture-protcivil/cat-bezel-fond.png"
 texrep 1 1
 numvert 72
 -0.00101 -0.04214 -0.21518
@@ -112535,7 +112535,7 @@ OBJECT poly
 name "cylinder.013"
 loc 0.0153894 0.2369140 0.0428875
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 16
 0.29531 0.12406 0.65301
@@ -112638,7 +112638,7 @@ OBJECT poly
 name "GTrain-BielleB"
 loc 0.6269810 -1.1477300 1.4954200
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 -0.22309 -0.13967 0.51538
@@ -113323,7 +113323,7 @@ OBJECT poly
 name "GTrain-BielleH"
 loc 0.6217190 -0.8681870 1.4042500
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 68
 -0.21904 -0.09324 0.51080
@@ -115672,7 +115672,7 @@ OBJECT poly
 name "GTrain-BrasBase"
 loc 0.4424270 -0.9108660 1.8879300
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 64
 -0.03726 0.04886 -0.01358
@@ -123158,7 +123158,7 @@ OBJECT poly
 name "GTrain-VerinB"
 loc 0.4423540 -0.6371340 1.6036400
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 88
 0.01854 -0.28009 0.24198
@@ -123926,7 +123926,7 @@ OBJECT poly
 name "GTrain-VerinH"
 loc 0.4405330 -0.0270345 0.9250710
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 89
 0.03948 -0.38968 0.39923
@@ -124622,7 +124622,7 @@ OBJECT poly
 name "cylinder.014"
 loc -1.0294402 -0.0284908 -0.0432915
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 34
 -0.01135 0.07894 0.96671
@@ -124969,7 +124969,7 @@ OBJECT poly
 name "cylinder.015"
 loc -1.0294402 0.1084650 -0.1154420
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 34
 0.01655 0.03892 1.18062
@@ -125316,7 +125316,7 @@ OBJECT poly
 name "cylinder.016"
 loc -1.0294402 0.1084100 0.0301815
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 34
 0.01655 0.03892 0.75455
@@ -125663,7 +125663,7 @@ OBJECT poly
 name "object.014"
 loc 3.0883200 -0.1883850 0.1285520
 crease 45.0
-texture "alu.png"
+texture "Textures/texture-protcivil/alu.png"
 texrep 1 1
 numvert 1191
 -4.09403 0.37293 0.79706
@@ -143468,7 +143468,7 @@ OBJECT poly
 name "object"
 loc 3.9342000 -0.5125670 0.0297084
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 25
 0.41149 0.17088 -1.45552
@@ -144522,7 +144522,7 @@ OBJECT poly
 name "object.002"
 loc 1.2139800 -0.3305630 0.0000000
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 102
 -0.01764 -0.71164 -0.69968
@@ -145754,7 +145754,7 @@ OBJECT poly
 name "object.004"
 loc 0.0404868 -0.1772860 0.0000000
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 12
 -5.42133 -0.35477 -0.84838
@@ -145817,7 +145817,7 @@ OBJECT poly
 name "object.005"
 loc -3.5128500 -0.1934040 0.0000036
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 95
 0.62955 0.25990 1.08288
@@ -146553,7 +146553,7 @@ OBJECT poly
 name "object.006"
 loc -3.5128500 -0.1934040 0.0000036
 crease 45.0
-texture "btextu99.png"
+texture "Textures/texture-protcivil/btextu99.png"
 texrep 1 1
 numvert 56
 0.12424 -0.87882 0.00195
@@ -147014,7 +147014,7 @@ OBJECT poly
 name "object.008"
 loc 0.0000801 -0.1707040 -0.6475690
 crease 45.0
-texture "btextu99.png"
+texture "Textures/texture-protcivil/btextu99.png"
 texrep 1 1
 numvert 221
 -4.36043 0.38871 -0.02952
@@ -152665,7 +152665,7 @@ OBJECT poly
 name "object.017"
 loc -0.3593000 0.9128290 -0.0000005
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 4
 0.00000 -0.30103 0.38739
@@ -152685,7 +152685,7 @@ OBJECT poly
 name "object.018"
 loc 0.1788740 0.2305830 0.0000000
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 82
 1.01292 0.33395 -0.12723
@@ -153180,7 +153180,7 @@ OBJECT poly
 name "object.019"
 loc -1.2151800 -0.2152030 0.0000000
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 91
 0.01757 0.47069 0.15120
@@ -153922,7 +153922,7 @@ OBJECT poly
 name "object.020"
 loc 0.4199660 1.2134000 0.0000000
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 48
 -0.80594 0.37422 0.00000
@@ -161270,7 +161270,7 @@ OBJECT poly
 name "Poutre-Vitre"
 loc 0.4199660 1.2134000 0.0000000
 crease 45.0
-texture "cat-poutre-rivets.png"
+texture "Textures/texture-protcivil/cat-poutre-rivets.png"
 texrep 1 1
 numvert 24
 -0.23137 -0.10873 0.29902
@@ -173589,7 +173589,7 @@ OBJECT poly
 name "sphere.010"
 loc -4.3702302 -0.1417670 0.1696260
 crease 45.0
-texture "ondul.png"
+texture "Textures/texture-protcivil/ondul.png"
 texrep 1 1
 numvert 97
 0.02617 -0.01177 0.00000
@@ -188342,7 +188342,7 @@ OBJECT poly
 name "Vitre-Phare"
 loc 0.8488120 1.8789099 7.6536899
 crease 45.0
-texture "cat-aile-rivetsv2.png"
+texture "Textures/texture-protcivil/cat-aile-rivetsv2.png"
 texrep 1 1
 numvert 72
 -2.20652 0.03562 -12.66508

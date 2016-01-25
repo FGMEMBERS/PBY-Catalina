@@ -29,6 +29,14 @@ Copyright GPL v2
       <enabled type="bool">true</enabled>
 
       <item>
+        <label>Select livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      
+      <item>
 	<label>Help to  Start</label>
 	<binding>
 	  <command>nasal</command>

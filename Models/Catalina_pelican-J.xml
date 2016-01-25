@@ -9,10 +9,95 @@ Copyright License:  GPL_V2
 
 <PropertyList>
 
-  <!--<path>pby6S.ac</path>-->
   <path>pby6Ssnmp.ac</path>
-  <texture-path>Textures/texture-protcivil</texture-path>
 
+  <!-- Livery System : Updated IH-COL JAN 2016 -->
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/PBY-Catalina/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+  
+  <animation>
+    <name>bodyWork</name>
+    <object-name>AR-Verriere-Struct</object-name>
+    <object-name>ARFuselage</object-name>
+    <object-name>AVFuselage</object-name>
+    <object-name>AVTrain-DPorte</object-name>
+    <object-name>AVTrain-DPorteDoublage</object-name>
+    <object-name>AVTrain-GPorte</object-name>
+    <object-name>AVTrain-GPorteDoublage</object-name>
+    <object-name>Blister-Struct-Fix</object-name>
+    <object-name>CTFuselage</object-name>
+    <object-name>cylinder.035</object-name>
+    <object-name>cylinder.040</object-name>
+    <object-name>AVGPorte</object-name>
+    <object-name>DAile</object-name>
+    <object-name>DAileron</object-name>
+    <object-name>DBlister-Struct</object-name>
+    <object-name>DEau-Porte</object-name>
+    <object-name>DEau-Porte-Dbl</object-name>
+    <object-name>DFlot</object-name>
+    <object-name>DFlotJambe</object-name>
+    <object-name>FHGouuv</object-name>
+    <object-name>FVGouv</object-name>
+    <object-name>GAile</object-name>
+    <object-name>GAileron</object-name>
+    <object-name>GBlister-Struct</object-name>
+    <object-name>GEau-Porte</object-name>
+    <object-name>GEau-Porte-Dbl</object-name>
+    <object-name>GFlot</object-name>
+    <object-name>GFlotJambe</object-name>
+    <object-name>box.005</object-name>
+    <object-name>sphere.008</object-name>
+    <object-name>box.003</object-name>
+    <object-name>sphere.006</object-name>
+    <object-name>HGouv</object-name>
+    <object-name>object.001</object-name>
+    <object-name>object.011</object-name>
+    <object-name>object.012</object-name>
+    <object-name>object.041</object-name>
+    <object-name>object.042</object-name>
+    <object-name>Poutre</object-name>
+    <object-name>box.002</object-name>
+    <object-name>cylinder.025</object-name>
+    <object-name>cylinder.026</object-name>
+    <object-name>box.004</object-name>
+    <object-name>cylinder.028</object-name>
+    <object-name>cylinder.029</object-name>
+    <object-name>Verriere-Struct</object-name>
+    <object-name>VGouv</object-name>
+  </animation>
+
+  <animation>
+    <name>Moteur-bodyWork</name>
+    <object-name>AECapot</object-name>
+    <object-name>AVCapot</object-name>
+    <object-name>cylinder.045</object-name>
+    <object-name>cylinder.046</object-name>
+    <object-name>cylinder.047</object-name>
+    <object-name>Flap-CB</object-name>
+    <object-name>Flap-DB</object-name>
+    <object-name>Flap-DC</object-name>
+    <object-name>Flap-DH</object-name>
+    <object-name>Flap-GB</object-name>
+    <object-name>Flap-GC</object-name>
+    <object-name>Flap-GH</object-name>
+    <object-name>ARCapot</object-name>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>bodyWork</object-name>
+    <object-name>Moteur-bodyWork</object-name>
+    <property-base>sim/model/livery/bodyWork</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>PBY-texture.png</texture>
+  </animation>
+  
   <offsets>
     <pitch-deg>-0.6</pitch-deg>
     <z-m>0.05</z-m>
@@ -1757,7 +1842,9 @@ Copyright License:  GPL_V2
       <pitch-deg>3</pitch-deg>
     </offsets>
   </model>
+  
 
+  
   <model>
     <name>Panel3D</name>
     <path>Aircraft/PBY-Catalina/Panels/PBY-Panel3D.xml</path>
