@@ -213,7 +213,7 @@ osg::Group {
                     UnRefImageDataAfterApply TRUE
                     Image TRUE {
                       UniqueID 23
-                      FileName "black-particle.rgb"
+                      FileName "black-particle.png"
                       WriteHint 0 2
                       DataVariance STATIC
                     }
