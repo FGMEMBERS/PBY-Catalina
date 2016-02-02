@@ -38,7 +38,7 @@ License GPL 2.0 or later
 
  <!-- Splash screen while loading -->
  <startup>
-   <splash-texture>Aircraft/PBY-Catalina/pby6.png</splash-texture>
+   <splash-texture>Aircraft/PBY-Catalina/USATour-PBY-5A.png</splash-texture>
  </startup>
 
  <model>
