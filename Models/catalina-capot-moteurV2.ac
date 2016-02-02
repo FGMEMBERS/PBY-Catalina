@@ -9046,7 +9046,7 @@ kids 0
 OBJECT poly
 name "gabarit-position-capot"
 crease 45.0
-texture "PBY-texture"
+texture "PBY-texture.png"
 texrep 1 1
 numvert 8
 -2.71446 -2.46976 -2.52706
