@@ -782,7 +782,8 @@ Copyright License:  GPL_V2
     <object-name>cylinder.076</object-name>
     <object-name>cylinder.077</object-name>
     <object-name>cylinder.078</object-name>
-    <property>sim/multiplay/generic/float[0]</property>
+    <object-name>Poutre.000</object-name>
+  <property>sim/multiplay/generic/float[0]</property>
     <interpolation>
       <entry>
 	<ind>0</ind>
@@ -830,6 +831,7 @@ Copyright License:  GPL_V2
     <object-name>cylinder.076</object-name>
     <object-name>cylinder.077</object-name>
     <object-name>cylinder.078</object-name>
+    <object-name>Poutre.000</object-name>
   </effect>
 
   <animation>
@@ -862,6 +864,7 @@ Copyright License:  GPL_V2
     <object-name>cylinder.076</object-name>
     <object-name>cylinder.077</object-name>
     <object-name>cylinder.078</object-name>
+    <object-name>Poutre.000</object-name>
     <property>sim/multiplay/generic/float[0]</property>
     <interpolation>
       <entry>
