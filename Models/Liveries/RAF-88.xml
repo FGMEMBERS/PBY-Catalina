@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">RAF-88</name>
+        <index type="int">3</index>
+        <bodyWork>
+  	  <texture>Liveries/RAF-88.png</texture>
+        </bodyWork>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>
