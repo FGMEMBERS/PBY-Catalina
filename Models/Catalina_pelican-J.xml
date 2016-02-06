@@ -809,7 +809,6 @@ Copyright License:  GPL_V2
   <effect>
     <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
     <object-name>GTrain</object-name>
-    <object-name>GTrain-Roue</object-name>
     <object-name>GTrain-Frein</object-name>
     <object-name>GTrain-BielleB</object-name>
     <object-name>GTrain-BielleH</object-name>
@@ -1178,7 +1177,6 @@ Copyright License:  GPL_V2
   <effect>
     <inherits-from>Aircraft/PBY-Catalina/Models/Effects/reflecttrain</inherits-from>
     <object-name>DTrain</object-name>
-    <object-name>DTrain-Roue</object-name>
     <object-name>DTrain-Frein</object-name>
     <object-name>DTrain-BielleB</object-name>
     <object-name>DTrain-BielleH</object-name>
@@ -1980,11 +1978,6 @@ Copyright License:  GPL_V2
     </condition>
   </animation>
 
-  <!--Todo: IH-COL Jan 2016::
-      Object amarre could not be restored by blender
-      from the ac file pby6Ssnmp.ac
-      This object was first introduced in commit:  5ece32
-      by S. Buchanan in 2013
    <animation>
     <type>select</type>
     <object-name>amarre</object-name>
@@ -2027,6 +2020,6 @@ Copyright License:  GPL_V2
       <z>0.0</z>
     </axis>
   </animation>
-  -->
+  
   
 </PropertyList>
