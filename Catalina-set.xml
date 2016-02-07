@@ -177,7 +177,7 @@ Copyright License:  GPL
 
     <multiplay include="Outputs/PBY6-multiplay.xml"/>
 
-    <mooring type="bool">true</mooring>
+    <mooring type="bool">false</mooring>
 
     <menubar include="Inputs/Catalina-menu.xml"/>
 

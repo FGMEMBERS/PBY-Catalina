@@ -221,7 +221,7 @@ License GPL 2.0 or later
    </autopilot>
  </systems>
     
- <mooring type="bool">true</mooring>
+ <mooring type="bool">false</mooring>
  </sim>
 
  <consumables>
