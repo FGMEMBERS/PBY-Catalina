@@ -5,15 +5,11 @@
     Property of Gerard Robin
     Copyright License:  GPL_V2
 -->
-   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
 <PropertyList>
 
-    <path>catalina-helice.ac</path>
-    <texture-path>Textures</texture-path>
-
-
-
-
-
+  <path>catalina-helice.ac</path>
+  <texture-path>Textures</texture-path>
 
 </PropertyList>

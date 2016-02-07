@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+
+<!-- 
+************************************************************************
+Catalina PBY-5A
+Peter Brendt (Jabberwocky)
+
+based on:
+Catalina PBY-6A by Gerard Robin
+updated by GRTux Hangar
+
+License GPL 2.0 or later
+************************************************************************
+-->
+
+<PropertyList include="Aircraft/JPack/Interface.xml">
+
+ <sim>
+ <description>Catalina PBY-5A</description>
+ <author>Gerard Robin</author>
+ <author>Ron Jensen (engine and propeller)</author>
+ <author>entire update grtux hangar team https://sites.google.com/site/grtuxhangar/</author>
+ <author>Peter Brendt (Jabberwocky), making her usable again after years of no maintenace</author>
+
+ <aircraft-version>V03.00.00</aircraft-version>
+ <status>Alpha</status>
+
+ <rating>
+   <!--only  a generic wrong estimation since given by the author (Gerard Robin) himself-->
+   <FDM type="int">3</FDM>
+   <systems type="int">3</systems>
+   <model type="int">3</model>
+   <cockpit type="int">3</cockpit>
+ </rating>
+
+ <flight-model>jsb</flight-model>
+ <aero>Aero/PBY-5A</aero>
+
+ <!-- Splash screen while loading -->
+ <startup>
+   <splash-texture>Aircraft/PBY-Catalina/USATour-PBY-5A.png</splash-texture>
+ </startup>
+
+ <model>
+   <path>Aircraft/PBY-Catalina/Models/Catalina_pelican-J.xml</path>
+   <waterloading>0</waterloading>
+   <bomb-signal>0</bomb-signal>
+   <lighting>
+	<instrument-lights type="double">0.95</instrument-lights>
+   </lighting>
+   <shader>
+	<reflection-enabled type="int">1</reflection-enabled>
+	<reflection-fresnel type="float">0.0</reflection-fresnel>
+	<reflection-noise type="float">0.9</reflection-noise>
+	<reflection-rainbow type="float">0.2</reflection-rainbow>
+	<ambient-correction type="float">0.1</ambient-correction>
+	<reflection-correction type="float">0.15</reflection-correction>
+   </shader>
+   <shader_1>
+	<reflection-correction type="float">0.55</reflection-correction>
+	<reflection-enabled type="int">1</reflection-enabled>
+	<reflection-fresnel type="float">0.1</reflection-fresnel>
+	<reflection-noise type="float">0.01</reflection-noise>
+	<ambient-correction type="float">0.1</ambient-correction>
+	<reflection-rainbow type="float">0.0</reflection-rainbow>
+   </shader_1>
+   <rendering><shader-effects>1</shader-effects></rendering>
+ </model>
+
+ <submodels>
+   <serviceable type="bool">true</serviceable>
+   <path>Aircraft/PBY-Catalina/Models/submodels.xml</path>
+ </submodels>
+
+ <!-- basic startup settings for sim -->
+ <freeze>
+   <fuel>false</fuel>	<!-- false is default -->
+ </freeze>
+
+ <gui>
+   <dialogs>
+	<autopilot>
+	 <kts-select type="bool">true</kts-select>
+	 <mach-select tpye="bool">false</mach-select>
+	</autopilot>
+   </dialogs>
+ </gui>
+
+ <fuel-fraction>0.8</fuel-fraction>
+
+ <chase-distance-m type="double" archive="y">-50.0</chase-distance-m>
+    
+ <sound>
+   <path>Aircraft/PBY-Catalina/Fx/sound.xml</path>
+ </sound>
+
+ <autostart>
+   <started>0</started>
+ </autostart>
+
+ <!-- Flaps group would normally be here -->
+ <!-- only that a Catalina has no flaps -->
+
+ <virtual-cockpit archive="y">true</virtual-cockpit>
+ <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+ <instrumentation>
+   <path>Aircraft/PBY-Catalina/Systems/instrumentation.xml</path>
+ </instrumentation>
+    
+ <!-- MP section if exists -->
+ <multiplay include="Outputs/PBY6-multiplay.xml"/>
+    
+ <hud>
+   <path n="1">Huds/default.xml</path>
+   <visibility n="1">false</visibility>
+   <enable3d n="1">false</enable3d>
+ </hud>
+    
+ <!-- Blackout rendering due to G-forces -->
+ <rendering>
+   <redout>
+	<parameters>
+	 <blackout-complete-g>9.1</blackout-complete-g>
+	 <blackout-onset-g>7.5</blackout-onset-g>
+	</parameters>
+   </redout>
+ </rendering>
+
+ <!-- All the views (crew stations + 1 more to allow moving around + extras liek Tail Camera) -->
+
+ <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+	<!-- x/y/z == right/up/back -->
+	<x-offset-m archive="y">-0.48</x-offset-m>
+	<y-offset-m archive="y">0.51</y-offset-m>
+	<z-offset-m archive="y">-3.78</z-offset-m>
+	<pitch-offset-deg archive="y">-18.0</pitch-offset-deg>
+	<default-field-of-view-deg type="double">88.0</default-field-of-view-deg>
+   </config>
+ </view>
+
+ <current-view>
+   <field-of-view type="double">65.0</field-of-view>
+ </current-view>
+
+ <view n="100">
+   <name>Cockpit View</name>
+   <type>lookfrom</type>
+   <internal archive="y">true</internal>
+   <config>
+	<from-model type="bool">true</from-model>
+	<from-model-idx type="int">0</from-model-idx>
+	<ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+	<default-field-of-view-deg type="double">75.0</default-field-of-view-deg>
+	<default-pitch-deg type="double">0</default-pitch-deg>
+	<default-heading-deg type="double">0</default-heading-deg>
+	<front-direction-deg type="double">0</front-direction-deg>
+	<front-left-direction-deg type="double">45</front-left-direction-deg>
+	<left-direction-deg type="double">90</left-direction-deg>
+	<back-left-direction-deg type="double">135</back-left-direction-deg>
+	<back-direction-deg type="double">180</back-direction-deg>
+	<back-right-direction-deg type="double">225</back-right-direction-deg>
+	<right-direction-deg type="double">270</right-direction-deg>
+	<front-right-direction-deg type="double">315</front-right-direction-deg>
+	<x-offset-m archive="y">0.0</x-offset-m>
+	<y-offset-m archive="y">1.100</y-offset-m>
+	<z-offset-m archive="y">0.036</z-offset-m>
+	<pitch-offset-deg>0</pitch-offset-deg>
+   </config>
+ </view>
+
+ <view n="101">
+   <name>Cockpit View</name>
+   <type>lookfrom</type>
+   <internal archive="y">true</internal>
+   <config>
+	<from-model type="bool">true</from-model>
+	<from-model-idx type="int">0</from-model-idx>
+	<ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+	<default-field-of-view-deg type="double">75.0</default-field-of-view-deg>
+	<default-pitch-deg type="double">0</default-pitch-deg>
+	<default-heading-deg type="double">270</default-heading-deg>
+	<front-direction-deg type="double">0</front-direction-deg>
+	<front-left-direction-deg type="double">45</front-left-direction-deg>
+	<left-direction-deg type="double">90</left-direction-deg>
+	<back-left-direction-deg type="double">135</back-left-direction-deg>
+	<back-direction-deg type="double">180</back-direction-deg>
+	<back-right-direction-deg type="double">225</back-right-direction-deg>
+	<right-direction-deg type="double">270</right-direction-deg>
+	<front-right-direction-deg type="double">315</front-right-direction-deg>
+	<x-offset-m archive="y">-1.0</x-offset-m>
+	<y-offset-m archive="y">0.60</y-offset-m>
+	<z-offset-m archive="y">4.9</z-offset-m>
+	<pitch-offset-deg>0</pitch-offset-deg>
+   </config>
+ </view>
+
+ <airport>
+   <runways>
+	<start-offset-m>10</start-offset-m>
+   </runways>
+ </airport>
+
+ <help include="Help/Catalina-help.xml"/>
+
+ <menubar include="Inputs/PBY5A_menu.xml"/>
+
+ <!-- Systems -->
+ <systems>
+   <!-- path>Aircraft/767/Systems/767.xml</path -->
+   <electrical>
+	<!-- path>Aircraft/Generic/generic-electrical.xml</path -->
+	<path>Aircraft/PBY-Catalina/Systems/dummy-electrical.xml</path>
+   </electrical>
+   <autopilot>
+	<path>Aircraft/JPack/Voodoomaster/Systems/SYS8_0_autopilot.xml</path>
+	<!-- path>Aircraft/PBY-Catalina/Systems/PBYautopilot.xml</path -->
+	<!-- path>Aircraft/PBY-Catalina/Systems/autopilot.xml</path -->
+   </autopilot>
+ </systems>
+    
+ <mooring type="bool">false</mooring>
+ </sim>
+
+ <consumables>
+ <fuel>
+   <tank n="0">
+	<name>Center Left</name>
+   </tank>
+   <tank n="1">
+	<name>Center Right</name>
+   </tank>
+   <tank n="2">
+	<name>Wheel Well Left</name>
+   </tank>
+   <tank n="3">
+	<name>Wheel Well Right</name>
+   </tank>
+ </fuel>
+ </consumables>
+
+ <!-- Payload -->
+ <payload>
+
+ <weight n="0">
+   <name>Cockpit Crew</name>
+   <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
+   <min-lb type="double">120</min-lb>
+   <max-lb type="double">400</max-lb>
+ </weight>
+
+ <!-- weight n="1">
+ <name>Radio and Nav</name>
+ <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
+ <min-lb type="double">20</min-lb>
+ <max-lb type="double">00</max-lb>
+ </weight>
+
+ <weight n="2">
+ <name>Mechanic</name>
+ <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
+ <min-lb type="double">20</min-lb>
+ <max-lb type="double">00</max-lb>
+ </weight>
+
+ <weight n="3">
+ <name>Mechanic</name>
+ <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
+ <min-lb type="double">20</min-lb>
+ <max-lb type="double">00</max-lb>
+ </weight>
+
+ <weight n="4">
+ <name>Bow Gunner</name>
+ <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
+ <min-lb type="double">20</min-lb>
+ <max-lb type="double">00</max-lb>
+ </weight>
+
+ <weight n="5">
+ <name>Waist Gunners</name>
+ <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]" />
+ <min-lb type="double">20</min-lb>
+ <max-lb type="double">00</max-lb>
+ </weight>
+
+ <weight n="6">
+ <name>Ventral Gunner</name>
+ <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]" />
+ <min-lb type="double">20</min-lb>
+ <max-lb type="double">00</max-lb>
+ </weight>
+
+ <weight n="7">
+ <name>Armament</name>
+ <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]" />
+ <weight-lb type="int">0</weight-lb>
+ <selected>none</selected>
+ <opt>
+   <name>none</name>
+   <lbs>0</lbs>
+ </opt>
+ <opt>
+   <name>Anti-Ship (4 bombs + 2 Torp.)</name>
+   <lbs>2000</lbs>
+ </opt>
+ <opt>
+   <name>Anti-Sub (4 Depth Charges)</name>
+   <lbs>1300</lbs>
+ </opt>
+ </weight -->
+
+ </payload>
+
+ <controls>
+ <switches>
+   <landing-light type="bool">true</landing-light>
+   <master-avionics type="bool">false</master-avionics>
+   <position-light type="bool">false</position-light>
+   <master-avionics type="double">0.0</master-avionics>
+   <nan-switch type="bool">false</nan-switch>
+ </switches>
+ <lighting>
+   <instruments-norm type="double">0</instruments-norm>
+   <instruments type="bool">true</instruments>
+   <cockpit-lights type="bool">false</cockpit-lights>
+ </lighting>
+ <engines>
+   <engine n="0">
+	<magnetos>0</magnetos>
+	<master-bat>false</master-bat>
+   </engine>
+   <engine n="1">
+	<magnetos>0</magnetos>
+	<master-bat>false</master-bat>
+   </engine>
+ </engines>
+ <electric>
+   <master-switch>false</master-switch>
+   <battery-switch>false</battery-switch>
+   <external-power>false</external-power>
+ </electric>
+ <mooring>
+   <automatic type="bool">true</automatic>
+ </mooring>
+ <gear>
+   <brake-parking type="bool">true</brake-parking>
+   <gear-down alias="/fdm/jsbsim/systems/gear/gear-cmd-norm"/>	
+ </gear>
+ </controls>
+
+ <engines>
+ <engine n="0">
+   <mp-inhg>0</mp-inhg>
+   <rpm>0</rpm>
+ </engine>
+ <engine n="1">
+   <mp-inhg>0</mp-inhg>
+   <rpm>0</rpm>
+ </engine>
+ </engines>
+
+ <systems>
+ <mooring>
+   <boat-id></boat-id>
+   <dialog></dialog>
+   <moorage-id></moorage-id>
+   <route include="Mooring/mooring-pos.xml"/>
+   <state></state>
+ </mooring>
+ </systems>
+
+ <ai>
+ <submodels>
+   <trigger type="bool">false</trigger>
+ </submodels>
+ </ai>
+
+ <input include="Inputs/Catalina-input.xml"/>
+
+ <fdm include="Systems/jsbsim_init.xml"/>
+
+ <!-- Voodoomaster plane specific initializations -->
+ <voodoomaster>
+ <steering-wheel type="int">0</steering-wheel>
+ <steering-type type="string">TriCycle</steering-type><!-- Alternativ: Taildragger-lock or TriCycle -->
+ <pushback>
+   <activated type="bool">false</activated>
+ </pushback>
+ </voodoomaster>
+
+ <instrumentation>
+ <!-- path>Aircraft/767/Systems/instrumentation.xml</path -->
+ </instrumentation>
+
+ <tanker type="bool">false</tanker>
+
+ <!-- limits>
+ <vne>380</vne>
+
+ <max-positive-g>4.4</max-positive-g>
+ <max-negative-g>-1.76</max-negative-g>
+
+ <max-flap-extension-speed n="0">
+ <flaps>0.167</flaps>
+ <speed>255</speed>
+ </max-flap-extension-speed>
+ <max-flap-extension-speed n="1">
+ <flaps>0.333</flaps>
+ <speed>235</speed>
+ </max-flap-extension-speed>
+ <max-flap-extension-speed n="2">
+ <flaps>0.667</flaps>
+ <speed>215</speed>
+ </max-flap-extension-speed>
+ <max-flap-extension-speed n="3">
+ <flaps>0.833</flaps>
+ <speed>205</speed>
+ </max-flap-extension-speed>
+ <max-flap-extension-speed n="4">
+ <flaps>1.000</flaps>
+ <speed>195</speed>
+ </max-flap-extension-speed>
+ <max-flap-extension-speed n="5">
+ <flaps>1.000</flaps>
+ <speed>185</speed>
+ </max-flap-extension-speed>
+ <max-flap-extension-speed n="6">
+ <flaps>1.000</flaps>
+ <speed>175</speed>
+ </max-flap-extension-speed>
+ <max-flap-extension-speed n="7">
+ <flaps>1.000</flaps>
+ <speed>165</speed>
+ </max-flap-extension-speed>
+ <max-flap-extension-speed n="8">
+ <flaps>1.000</flaps>
+ <speed>160</speed>
+ </max-flap-extension-speed>
+
+ <max-gear-extension-speed>220</max-gear-extension-speed>
+
+ <mass-and-balance>
+ <maximum-ramp-mass-lbs>435000</maximum-ramp-mass-lbs>
+ <maximum-takeoff-mass-lbs>415000</maximum-takeoff-mass-lbs>
+ <maximum-landing-mass-lbs>320000</maximum-landing-mass-lbs>
+ <maximum-zero-fuel-mass-lbs>295000</maximum-zero-fuel-mass-lbs>
+ </mass-and-balance>
+ </limits -->
+
+ <autopilot>
+
+ <settings>
+   <kts-mach-select type="string">kts</kts-mach-select>
+   <max-pitch type="float">4.0</max-pitch>
+   <min-pitch type="float">-3.0</min-pitch>
+   <bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
+ </settings>
+
+ <internal>
+   <target-pitch-deg type="float">0.00</target-pitch-deg>
+   <max-pitch type="float">4.0</max-pitch>
+   <min-pitch type="float">-3.0</min-pitch>
+ </internal>
+
+ </autopilot>
+
+ <nasal>
+   <PBY-5A>
+     <file>Aircraft/PBY-Catalina/Nasal/liveries.nas</file>
+   </PBY-5A>
+   <mooring>
+     <file>Aircraft/PBY-Catalina/Mooring/Mooring-Seaplane_PBY.nas</file>
+   </mooring>
+   <!-- init>
+	<file>Aircraft/PBY-Catalina/Inputs/sys_controls.nas</file>
+	</init -->
+   <terrain>
+     <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
+   </terrain>
+ </nasal>
+
+</PropertyList>
+
+

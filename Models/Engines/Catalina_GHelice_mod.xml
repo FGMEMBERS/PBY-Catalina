@@ -5,105 +5,100 @@
     Property of Gerard Robin
     Copyright License:  GPL_V2
 -->
-   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
 <PropertyList>
 
+  <model>
+    <name>GHelice</name>
+    <path>Aircraft/PBY-Catalina/Models/Engines/Catalina_GHelice.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
 
-    <model>
-            <name>GHelice</name>
-            <path>Aircraft/PBY-Catalina/Models/Engines/Catalina_GHelice.xml</path>
-            <offsets>
-                    <x-m>0</x-m>
-                    <y-m>0</y-m>
-                    <z-m>0</z-m>
-            </offsets>
-    </model>
+  <model>
+    <name>GSpin</name>
+    <path>Aircraft/PBY-Catalina/Models/Engines/Catalina_GSpin.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
 
-    <model>
-            <name>GSpin</name>
-            <path>Aircraft/PBY-Catalina/Models/Engines/Catalina_GSpin.xml</path>
-            <offsets>
-                    <x-m>0</x-m>
-                    <y-m>0</y-m>
-                    <z-m>0</z-m>
-            </offsets>
-    </model>
+  <animation>
+    <type>spin</type>
+    <object-name>GHelice</object-name>
+    <property>sim/multiplay/generic/float[3]</property>
+    <factor>-0.5</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
 
+  <model>
+    <name>GPropDisk</name>
+    <path>Aircraft/PBY-Catalina/Models/Engines/Catalina_GPropdisk.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
 
+  <animation>
+    <type>spin</type>
+    <object-name>GPropDisk</object-name>
+    <property>sim/multiplay/generic/float[5]</property>
+    <factor>-1.0</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
 
-
-    <animation>
-            <type>spin</type>
-            <object-name>GHelice</object-name>
-           <property>sim/multiplay/generic/float[3]</property>
-            <factor>-0.5</factor>
-            <center>
-                    <x-m>0</x-m>
-                    <y-m>0.0</y-m>
-                    <z-m>0.0</z-m>
-            </center>
-            <axis>
-                    <x>1.0</x>
-                    <y>0.0</y>
-                    <z>0.0</z>
-            </axis>
-    </animation>
-
-    <model>
-            <name>GPropDisk</name>
-            <path>Aircraft/PBY-Catalina/Models/Engines/Catalina_GPropdisk.xml</path>
-            <offsets>
-                    <x-m>0</x-m>
-                    <y-m>0</y-m>
-                    <z-m>0</z-m>
-            </offsets>
-    </model>
-
-    <animation>
-        <type>spin</type>
-        <object-name>GPropDisk</object-name>
-        <property>sim/multiplay/generic/float[5]</property>
-        <factor>-1.0</factor>
-                <center>
-                        <x-m>0</x-m>
-                        <y-m>0.0</y-m>
-                        <z-m>0.0</z-m>
-                </center>
-                <axis>
-                        <x>1.0</x>
-                        <y>0.0</y>
-                        <z>0.0</z>
-                </axis>
-    </animation>
-
-    <animation>
-            <type>noshadow</type>
-            <object-name>GPropDisk</object-name>
-    </animation>
+  <animation>
+    <type>noshadow</type>
+    <object-name>GPropDisk</object-name>
+  </animation>
 
 
-    <animation>
-            <type>select</type>
-            <object-name>GHelice</object-name>
-            <condition>
-                    <less-than>
-                   <property>sim/multiplay/generic/float[3]</property>
-                    <value>1200</value>
-                    </less-than>
-            </condition>
-    </animation>
+  <animation>
+    <type>select</type>
+    <object-name>GHelice</object-name>
+    <condition>
+      <less-than>
+	<property>sim/multiplay/generic/float[3]</property>
+	<value>1200</value>
+      </less-than>
+    </condition>
+  </animation>
 
-    <animation>
-            <type>select</type>
-            <object-name>GPropDisk</object-name>
-            <condition>
-                    <greater-than>
-                   <property>sim/multiplay/generic/float[3]</property>
-                    <value>1100</value>
-                    </greater-than>
-            </condition>
-    </animation>
-
-
+  <animation>
+    <type>select</type>
+    <object-name>GPropDisk</object-name>
+    <condition>
+      <greater-than>
+	<property>sim/multiplay/generic/float[3]</property>
+	<value>1100</value>
+      </greater-than>
+    </condition>
+  </animation>
 
 </PropertyList>

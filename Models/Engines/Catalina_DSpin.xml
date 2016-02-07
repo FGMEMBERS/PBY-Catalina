@@ -6,23 +6,17 @@
     Copyright License:  GPL_V2
 -->
 <!--                      Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
 <PropertyList>
 
-    <path>catalina-spin.ac</path>
-    <texture-path>Textures</texture-path>
+  <path>catalina-spin.ac</path>
+  <texture-path>Textures</texture-path>
 
-    <offsets>
-            <x-m>0</x-m>
-            <y-m>0</y-m>
-            <z-m>0</z-m>
-            <pitch-deg>0</pitch-deg>
-    </offsets>
-
-
-
-
-
-
-
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <pitch-deg>0</pitch-deg>
+  </offsets>
 
 </PropertyList>

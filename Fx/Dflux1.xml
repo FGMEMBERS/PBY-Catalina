@@ -1,90 +1,76 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-<!--
-    Usable with FlightGear
-   
--->
-   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT  2007-->
+  <!--
+      Usable with FlightGear
+      
+  -->
+  <!--Auteur :Gerard ROBIN,  COPYRIGHT  2007-->
+  <path>fluxFD_N.osgx</path>
 
 
+  <!--offsets>
+      <x-m>1.75098</x-m>
+      <y-m>15.5773</y-m>
+      <z-m>2.10195</z-m>
+      <pitch-deg>90</pitch-deg>
+      <heading-deg>0</heading-deg>
+      <roll-deg>0</roll-deg>
+      </offsets>-->
 
+  <!--<offsets>
+      <x-m>1.7652</x-m>
+      <y-m>13.5694</y-m>
+      <z-m>-0.52483</z-m>
+      <pitch-deg>90</pitch-deg>
+      <heading-deg>0</heading-deg>
+      <roll-deg>0</roll-deg>
+      </offsets>-->
 
-
-
- <path>fluxFD_N.osgx</path>
-
-
-    <!--offsets>
-            <x-m>1.75098</x-m>
-            <y-m>15.5773</y-m>
-            <z-m>2.10195</z-m>
-            <pitch-deg>90</pitch-deg>
-            <heading-deg>0</heading-deg>
-            <roll-deg>0</roll-deg>
-    </offsets>-->
-
-
-    <!--<offsets>
-        <x-m>1.7652</x-m>
-        <y-m>13.5694</y-m>
-        <z-m>-0.52483</z-m>
-        <pitch-deg>90</pitch-deg>
-        <heading-deg>0</heading-deg>
-        <roll-deg>0</roll-deg>
-    </offsets>-->
-
-    <offsets>
-        <x-m>0</x-m>
-        <y-m>0</y-m>
-        <z-m>-0</z-m>
-        <pitch-deg>0</pitch-deg>
-        <heading-deg>0</heading-deg>
-        <roll-deg>0</roll-deg>
-    </offsets>
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>-0</z-m>
+    <pitch-deg>0</pitch-deg>
+    <heading-deg>0</heading-deg>
+    <roll-deg>0</roll-deg>
+  </offsets>
 
   <!-- x= 1.7652
-   y= -13.5694
-   z= -0.52483-->
+       y= -13.5694
+       z= -0.52483-->
+  <animation>
+    <type>select</type>
+    <object-name>fluxFD</object-name>
+    <condition>
+      <and>
+	<equals>
+	  <property>surface-positions/floats-pos-norm</property>
+	  <value>1.0</value>
+	</equals>
+	<equals>
+	  <property>/fdm/jsbsim/fcs/right-float-wake-control</property>
+	  <value>1</value>
+	</equals>
+      </and>
+    </condition>
+  </animation>
 
-
-    <animation>
-        <type>select</type>
-        <object-name>fluxFD</object-name>
-        <condition>
-            <and>
-                <equals>
-                    <property>surface-positions/floats-pos-norm</property>
-                    <value>1.0</value>
-                </equals>
-                <equals>
-                    <property>/fdm/jsbsim/fcs/right-float-wake-control</property>
-                    <value>1</value>
-                </equals>
-            </and>
-        </condition>
-    </animation>
-
-
-    <animation>
-        <type>rotate</type>
-        <object-name>fluxFD</object-name>
-        <property>orientation/pitch-deg</property>
-        <factor>-1.0</factor>
-        <center>
-            <x-m>0</x-m>
-            <y-m>0</y-m>
-            <z-m>0</z-m>
-        </center>
-        <axis>
-            <x>0</x>
-            <y>1</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-
-
-
+  <animation>
+    <type>rotate</type>
+    <object-name>fluxFD</object-name>
+    <property>orientation/pitch-deg</property>
+    <factor>-1.0</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
 </PropertyList>

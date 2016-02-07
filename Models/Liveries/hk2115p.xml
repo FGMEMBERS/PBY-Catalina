@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">HK-2115-P</name>
+        <index type="int">1</index>
+        <bodyWork>
+  	  <texture>Liveries/hk2115p.png</texture>
+        </bodyWork>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

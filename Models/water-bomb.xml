@@ -1,44 +1,43 @@
 <?xml version="1.0"?>
 
 <!--
-    Usable with FlightGear
-    Property of Gerard Robin
-    
+Usable with FlightGear
+Property of Gerard Robin
+
 -->
-   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<!-- Auteur : Gerard ROBIN, COPYRIGHT-->
 
 <PropertyList>
-    <path>water-fall-vx.ac</path>
-    <texture-path>Textures</texture-path>
-    <offsets>
-        <pitch-deg>1</pitch-deg>
-    </offsets>
+  <path>water-fall-vx.ac</path>
+  <texture-path>Textures</texture-path>
+  <offsets>
+    <pitch-deg>1</pitch-deg>
+  </offsets>
 
-    <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
-        <object-name>water-bomb</object-name>
-     </effect>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>water-bomb</object-name>
+  </effect>
 
-    <animation>
-        <type>scale</type>
-        <object-name>water-bomb</object-name>
-        <property>sim/time/elapsed-sec</property>
-        <offset>0</offset>
-        <x-min>0.5</x-min>
-        <y-min>0.3</y-min>
-        <z-min>0.5</z-min>
-        <x-max>10</x-max>
-        <y-max>30</y-max>
-        <z-max>10</z-max>
-        <x-factor>1.2</x-factor>
-        <y-factor>1.5</y-factor>
-        <z-factor>1.2</z-factor>
-    </animation>
-    <animation>
-        <type>range</type>
-        <enable-hot type="bool">false</enable-hot>
-        <max-m>20000</max-m>
-    </animation>
-
+  <animation>
+    <type>scale</type>
+    <object-name>water-bomb</object-name>
+    <property>sim/time/elapsed-sec</property>
+    <offset>0</offset>
+    <x-min>0.5</x-min>
+    <y-min>0.3</y-min>
+    <z-min>0.5</z-min>
+    <x-max>10</x-max>
+    <y-max>30</y-max>
+    <z-max>10</z-max>
+    <x-factor>1.2</x-factor>
+    <y-factor>1.5</y-factor>
+    <z-factor>1.2</z-factor>
+  </animation>
+  <animation>
+    <type>range</type>
+    <enable-hot type="bool">false</enable-hot>
+    <max-m>20000</max-m>
+  </animation>
 
 </PropertyList>

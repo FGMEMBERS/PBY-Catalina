@@ -1,14 +1,13 @@
 <?xml version="1.0"?>
 <!--
-    Usable with FlightGear
-    property Gerard Robin
-    Copyright License:  GPL_V2
+Usable with FlightGear
+property Gerard Robin
+Copyright License:  GPL_V2
 -->
+
 <PropertyList>
 
-    <path>Models/dummy-nord.ac</path>
-    <texture-path>Models/Textures</texture-path>
-
-
+  <path>Models/dummy-nord.ac</path>
+  <texture-path>Models/Textures</texture-path>
 
 </PropertyList>

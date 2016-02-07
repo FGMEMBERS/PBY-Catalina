@@ -84,7 +84,7 @@
                           <ResizeNonPowerOfTwoHint attribute="TRUE" />
                           <Image attribute="TRUE">
                             <UniqueID attribute="9" />
-                            <FileName attribute="particleG.rgb" />
+                            <FileName attribute="particleG.png" />
                             <WriteHint attribute="0 2" />
                             <DataVariance attribute="STATIC" />
                           </Image>

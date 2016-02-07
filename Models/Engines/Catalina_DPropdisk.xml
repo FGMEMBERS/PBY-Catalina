@@ -1,32 +1,28 @@
 <?xml version="1.0"?>
 
 <!--
-    Usable with FlightGear
-    Property of Gerard Robin
-    Copyright License:  GPL_V2
+Usable with FlightGear
+Property of Gerard Robin
+Copyright License:  GPL_V2
 -->
 <!--                      Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
 <PropertyList>
 
-    <path>catalina-propdisk.ac</path>
-    <texture-path>Textures</texture-path>
+  <path>catalina-propdisk.ac</path>
+  <texture-path>Textures</texture-path>
 
-    <offsets>
-            <x-m>0</x-m>
-            <y-m>0</y-m>
-            <z-m>0</z-m>
-            <pitch-deg>0</pitch-deg>
-            <roll-deg>40</roll-deg>
-    </offsets>
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <pitch-deg>0</pitch-deg>
+    <roll-deg>40</roll-deg>
+  </offsets>
 
-    <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
-        <object-name>GPropDisk</object-name>
-    </effect>
-
-
-
-
-
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>GPropDisk</object-name>
+  </effect>
 
 </PropertyList>
