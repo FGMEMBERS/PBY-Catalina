@@ -48,7 +48,7 @@
 			<binormal type="int">7</binormal>
 		</generate>
 		
-		<!--<technique n="4">
+		<technique n="4">
 			<pass>
 				<program>
 					<attribute>
@@ -62,7 +62,7 @@
 				</program>
 			</pass>			
 		</technique>
-		-->
+		
 
                     <technique n="7">
                         <pass>
