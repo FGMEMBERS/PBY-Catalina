@@ -42,7 +42,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>AiguilleOilTemp</object-name>
-                <property>/engines/engine[1]/oil-temperature-degf</property>
+                <property>engines/engine[1]/oil-temperature-degf</property>
                 <min>-70</min>
                 <max>150</max>
                 <interpolation>
@@ -70,7 +70,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>AiguilleOilPress</object-name>
-                <property>/engines/engine[1]/oil-pressure-psi</property>
+                <property>engines/engine[1]/oil-pressure-psi</property>
                 <min>0</min>
                 <max>200</max>
                 <interpolation>
@@ -98,7 +98,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>AiguilleFuel</object-name>
-                <property>/engines/engine[1]/fuel-flow-gph</property><!--fake  ONLY to animate the needle should be /engines/engine/fuel-pump-psi-->
+                <property>engines/engine[1]/fuel-flow-gph</property><!--fake  ONLY to animate the needle should be /engines/engine/fuel-pump-psi-->
                 <interpolation>
                         <entry>
                         <ind>0</ind>

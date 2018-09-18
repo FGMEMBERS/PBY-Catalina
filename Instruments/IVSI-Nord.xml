@@ -29,7 +29,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Aiguille</object-name>
-		<property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+		<property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
 		<interpolation>
 			<entry>
 				<ind>-6000</ind>

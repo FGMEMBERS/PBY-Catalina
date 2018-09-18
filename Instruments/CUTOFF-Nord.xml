@@ -35,7 +35,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Interrupteur</object-name>
-		<property>/controls/engines/engine[2]/cutoff</property>
+		<property>controls/engines/engine[2]/cutoff</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -71,7 +71,7 @@
                 <repeatable>false</repeatable>
                 <binding>
                     <command>property-toggle</command>
-                    <property>/fdm/jsbsim/fcs/cutoff-switch</property>
+                    <property>fdm/jsbsim/fcs/cutoff-switch</property>
                 </binding>
             </action>
         </animation>

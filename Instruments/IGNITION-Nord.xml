@@ -27,7 +27,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Inter</object-name>
-		<property>/controls/engines/engine[0]/magnetos</property>
+		<property>controls/engines/engine[0]/magnetos</property>
 		<interpolation>
 			<entry>
 			<ind>0</ind>
@@ -61,7 +61,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Inter</object-name>
-		<property>/controls/engines/engine[0]/starter</property>
+		<property>controls/engines/engine[0]/starter</property>
 		<factor>40</factor>
 		<center>
 			<x-m>0</x-m>

@@ -188,7 +188,7 @@
 	<!--<animation>
 		<type>rotate</type>
 		<object-name>IndicTOFROM</object-name>
-		<property>/orientation/heading-magnetic-deg</property>
+		<property>orientation/heading-magnetic-deg</property>
 		<factor>1</factor>
 		<center>
 			<x-m>0</x-m>
@@ -205,7 +205,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>IndicTOFROM</object-name>
-		<property>/instrumentation/heading-indicator/fromto-pointer</property>
+		<property>instrumentation/heading-indicator/fromto-pointer</property>
 		<center>
 			<x-m>0</x-m>
 			<y-m>0</y-m>
@@ -221,7 +221,7 @@
 	<!--<animation>
 		<type>rotate</type>
 		<object-name>Bouton-D</object-name>
-		<property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+		<property>instrumentation/heading-indicator/setting-manual-hdg</property>
 		<factor>2</factor>
 		<center>
 			<x-m>0</x-m>
@@ -240,7 +240,7 @@
 	<!--<animation>
 		<type>rotate</type>
 		<object-name>Bouton</object-name>
-		<property>/instrumentation/heading-indicator/nav-switch</property>
+		<property>instrumentation/heading-indicator/nav-switch</property>
 		<factor>60</factor>
 		<center>
 			<x-m>0</x-m>

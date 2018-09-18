@@ -23,7 +23,7 @@
         <object-name>Lumiere</object-name>
         <condition>
             <not>
-            <property>/fdm/jsbsim/systems/effets/lights/beacon2-on</property>
+            <property>fdm/jsbsim/systems/effets/lights/beacon2-on</property>
             </not>
         </condition>
     </animation>

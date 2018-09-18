@@ -21,7 +21,7 @@ geode name
      <condition>
          <and>
              <not-equals>
-                 <property>/fdm/jsbsim/systems/animations/start-smoke-out</property>
+                 <property>fdm/jsbsim/systems/animations/start-smoke-out</property>
                  <value>0</value>
             </not-equals>
             <property>sim/rendering/particles</property>
@@ -43,7 +43,7 @@ geode name
         <blue>0.08</blue>
     </emission>
     <transparency>
-        <alpha-prop>/fdm/jsbsim/systems/animations/start-smoke-alpha</alpha-prop>
+        <alpha-prop>fdm/jsbsim/systems/animations/start-smoke-alpha</alpha-prop>
         <min>0.0000</min>
         <max>0.6</max>
     </transparency>

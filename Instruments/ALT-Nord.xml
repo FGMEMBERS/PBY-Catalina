@@ -50,7 +50,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>Aiguille</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
                 <factor>-0.36</factor>
                 <axis>
                         <x>1</x>
@@ -62,7 +62,7 @@
         <animation>
                 <type>textranslate</type>
                 <object-name>Ft-m</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
                 <factor>0.0001</factor>
                 <step>1000</step>
                 <scroll>1</scroll>
@@ -77,32 +77,32 @@
                 <condition>
                         <not>
                                 <less-than>
-                                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                                        <property>instrumentation/altimeter/indicated-altitude-ft</property>
                                         <value>0</value>
                                 </less-than>
                         </not>
                 </condition>
                 <type>select</type>
                 <object-name>Ft-dm</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
         </animation>
 
         <animation>
                 <condition>
                                 <less-than>
-                                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                                        <property>instrumentation/altimeter/indicated-altitude-ft</property>
                                         <value>0</value>
                                 </less-than>
                 </condition>
                 <type>select</type>
                 <object-name>Ft-minus</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
         </animation>
 
         <animation>
                 <type>textranslate</type>
                 <object-name>Ft-dm</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
                 <factor>0.00001</factor>
                 <step>10000</step>
                 <scroll>1</scroll>
@@ -116,7 +116,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>Bouton</object-name>
-                <property>/instrumentation/altimeter/setting-inhg</property>
+                <property>instrumentation/altimeter/setting-inhg</property>
                 <factor>1000</factor>
                 <center>
                         <x-m>0</x-m>
@@ -135,7 +135,7 @@
         <animation>
                 <type>textranslate</type>
                 <object-name>PA-cc</object-name>
-                <property>/instrumentation/altimeter/setting-inhg</property>
+                <property>instrumentation/altimeter/setting-inhg</property>
                 <factor>10</factor>
                 <step>0.01</step>
                 <scroll>0.000001</scroll>
@@ -149,7 +149,7 @@
         <animation>
                 <type>textranslate</type>
                 <object-name>PA-dc</object-name>
-                <property>/instrumentation/altimeter/setting-inhg</property>
+                <property>instrumentation/altimeter/setting-inhg</property>
                 <factor>1</factor>
                 <step>0.1</step>
                 <scroll>0.00001</scroll>
@@ -163,7 +163,7 @@
         <animation>
                 <type>textranslate</type>
                 <object-name>PA-un</object-name>
-                <property>/instrumentation/altimeter/setting-inhg</property>
+                <property>instrumentation/altimeter/setting-inhg</property>
                 <factor>0.1</factor>
                 <step>1</step>
                 <scroll>0.0001</scroll>
@@ -177,7 +177,7 @@
         <animation>
                 <type>textranslate</type>
                 <object-name>PA-di</object-name>
-                <property>/instrumentation/altimeter/setting-inhg</property>
+                <property>instrumentation/altimeter/setting-inhg</property>
                 <factor>0.01</factor>
                 <step>10</step>
                 <scroll>0.001</scroll>
@@ -191,7 +191,7 @@
         <animation>
                 <type>rotate</type>
                 <object-name>Tambour</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
                 <factor>0.36</factor>
                 <center>
                         <x-m>-0.000722533</x-m>

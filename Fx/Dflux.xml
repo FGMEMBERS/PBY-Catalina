@@ -22,11 +22,11 @@
             <and>
                 <or>
                     <greater-than>
-                        <property>/fdm/jsbsim/fcs/right-wake-control</property>
+                        <property>fdm/jsbsim/fcs/right-wake-control</property>
                         <value>0</value>
                     </greater-than>
                     <greater-than>
-                        <property>/fdm/jsbsim/fcs/left-wake-control</property>
+                        <property>fdm/jsbsim/fcs/left-wake-control</property>
                         <value>0</value>
                     </greater-than>
                 </or>

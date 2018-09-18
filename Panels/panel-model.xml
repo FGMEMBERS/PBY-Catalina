@@ -26,7 +26,7 @@
     <object-name>Flot-Lamp</object-name>
     <condition>
       <equals>
-        <property>/surface-positions/speedbrake-pos-norm</property>
+        <property>surface-positions/speedbrake-pos-norm</property>
         <value type="double">1.0</value>       
       </equals>    
      </condition>  

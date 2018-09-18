@@ -23,7 +23,7 @@
         <type>select</type>
         <object-name>Lumiere</object-name>
         <condition>
-            <property>/fdm/jsbsim/systems/effets/lights/beacon1-on</property>
+            <property>fdm/jsbsim/systems/effets/lights/beacon1-on</property>
         </condition>
     </animation>
     
