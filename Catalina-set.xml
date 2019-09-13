@@ -261,9 +261,6 @@
         <mooring>
             <file>Aircraft/PBY-Catalina/Mooring/Mooring-Seaplane_PBY.nas</file>
         </mooring>
-	<init>
-	    <file>Aircraft/PBY-Catalina/Inputs/sys_controls.nas</file>
-	</init>
         <terrain>
             <file>Aircraft/PBY-Catalina/Systems/terrain.nas</file>
         </terrain>

@@ -4,7 +4,7 @@ var min_carrier_alt = 2;
 # Do terrain modelling ourselves.
 setprop("sim/fdm/surface/override-level", 1);
 
-terrain_survol = func {
+terrain_survol = maketimer (0.1, func () {
 
 var lat = getprop("/position/latitude-deg");
 var lon = getprop("/position/longitude-deg");
@@ -62,11 +62,39 @@ setprop("fdm/jsbsim/environment/terrain-undefined",1);
     setprop("fdm/jsbsim/environment/terrain-rolling-friction",0.02);
     setprop("fdm/jsbsim/environment/terrain-names","unknown");
     }
+});
 
-settimer (terrain_survol, 0.1);
-}
+terrain_survol.start ();
 
+# Ctrl+Shift+Click starts a wildfire if enabled, see /usr/share/games/flightgear/Docs/README.wildfire
 
-terrain_survol();
+start_wildfire = func () {
+  if (__kbd.shift.getBoolValue() and __kbd.ctrl.getBoolValue()) {
+    wildfire.ignite (geo.click_position());
+    if (wildfire.CAFire.cells_burning > 0) {
+      if (wildfire.CAFire.cells_burning > 1) {
+        setprop ("/sim/messages/copilot", wildfire.CAFire.cells_burning ~ " fires are burning!");
+      }
+      else {
+        setprop ("/sim/messages/copilot", "A fire is burning!");
+      }
+    }
+    else {
+      setprop ("/sim/messages/copilot", "No fire is burning!");
+    }
+  }
+};
 
+wildfire_listener = nil;
 
+setlistener ("/environment/wildfire/enabled", func (node) {
+  if (node.getBoolValue ()) {
+    wildfire_listener = setlistener ("/sim/signals/click", start_wildfire);
+    # wildfire.trace = print; # uncomment to obtain traces from wildfire.nas
+    setprop ("/sim/messages/copilot", "Ctrl+Shift+Click on the ground to start a wildfire!");
+  }
+  else if (wildfire_listener != nil) {
+    removelistener (wildfire_listener);
+    setprop ("/sim/messages/copilot", "Wildfires disabled.");
+  }
+}, init=1, type=0);
