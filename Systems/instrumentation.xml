@@ -1,77 +1,82 @@
 <?xml version="1.0"?>
-<!--according to that  panel Catalina PBY-->
+ <!--according to that  panel Catalina PBY-->
 
 <PropertyList>
 
-  <airspeed-indicator>
-    <name>airspeed-indicator</name>
-    <number>0</number>
-    <total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
-  </airspeed-indicator>
 
-  <altimeter>
-    <name>altimeter</name>
-    <number>0</number>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
-  </altimeter>
+    <airspeed-indicator>
+        <name>airspeed-indicator</name>
+        <number>0</number>
+        <total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+        <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    </airspeed-indicator>
 
-  <attitude-indicator>
-    <name>attitude-indicator</name>
-    <number>0</number>
-    <suction>/systems/vacuum/suction-inhg</suction>
-  </attitude-indicator>
+    <altimeter>
+        <name>altimeter</name>
+        <number>0</number>
+        <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    </altimeter>
 
-  <clock>
-    <name>clock</name>
-    <number>0</number>
-  </clock>
+    <attitude-indicator>
+        <name>attitude-indicator</name>
+        <number>0</number>
+        <suction>/systems/vacuum/suction-inhg</suction>
+    </attitude-indicator>
 
-  <heading-indicator>
-    <name>heading-indicator</name>
-    <number>0</number>
-    <suction>/systems/vacuum/suction-inhg</suction>
-  </heading-indicator>
+    <clock>
+        <name>clock</name>
+        <number>0</number>
+    </clock>
 
-  <heading-indicator-dg>
-    <name>heading-indicator-dg</name>
-    <number>0</number>
-  </heading-indicator-dg>
+    <heading-indicator>
+        <name>heading-indicator</name>
+        <number>0</number>
+        <suction>/systems/vacuum/suction-inhg</suction>
+    </heading-indicator>
 
-  <magnetic-compass>
-    <name>magnetic-compass</name>
-    <number>0</number>
-  </magnetic-compass>
+    <heading-indicator-dg>
+        <name>heading-indicator-dg</name>
+        <number>0</number>
+    </heading-indicator-dg>
 
-  <nav-radio>
-    <name>nav</name>
-    <number>0</number>
-  </nav-radio>
+    <magnetic-compass>
+        <name>magnetic-compass</name>
+        <number>0</number>
+    </magnetic-compass>
 
-  <slip-skid-ball>
-    <name>slip-skid-ball</name>
-    <number>0</number>
-  </slip-skid-ball>
+    <nav-radio>
+        <name>nav</name>
+        <number>0</number>
+    </nav-radio>
 
-  <turn-indicator>
-    <name>turn-indicator</name>
-    <number>0</number>
-  </turn-indicator>
+    <slip-skid-ball>
+        <name>slip-skid-ball</name>
+        <number>0</number>
+    </slip-skid-ball>
 
-  <vertical-speed-indicator>
-    <name>vertical-speed-indicator</name>
-    <number>0</number>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
-  </vertical-speed-indicator>
+    <turn-indicator>
+        <name>turn-indicator</name>
+        <number>0</number>
+    </turn-indicator>
 
-  <KR-87>
-    <name>kr-87</name>
-    <number>0</number>
-  </KR-87>
+    <vertical-speed-indicator>
+        <name>vertical-speed-indicator</name>
+        <number>0</number>
+        <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    </vertical-speed-indicator>
 
-  <master-reference-gyro>
-    <name>master-reference-gyro</name>
-    <number>0</number>
-  </master-reference-gyro>
+
+
+    <KR-87>
+        <name>kr-87</name>
+        <number>0</number>
+    </KR-87>
+
+
+
+    <master-reference-gyro>
+        <name>master-reference-gyro</name>
+        <number>0</number>
+    </master-reference-gyro>
 
 </PropertyList>

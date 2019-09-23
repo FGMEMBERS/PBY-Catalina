@@ -1,76 +1,90 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-  <!--
-      Usable with FlightGear
-      
-  -->
-  <!-- Auteur :Gerard ROBIN,  COPYRIGHT  2007-->
-  <path>fluxCD_N.osgx</path>
 
-  <animation>
-    <type>select</type>
-    <object-name>fluxCD</object-name>
-    <condition>
-      <and>
-	<or>
-	  <greater-than>
-	    <property>/fdm/jsbsim/fcs/right-wake-control</property>
-	    <value>0</value>
-	  </greater-than>
-	  <greater-than>
-	    <property>/fdm/jsbsim/fcs/left-wake-control</property>
-	    <value>0</value>
-	  </greater-than>
-	</or>
-      </and>
-    </condition>
-  </animation>
+<!--
+    Usable with FlightGear
+    
+-->
+   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT  2007-->
 
-  <animation>
-    <type>rotate</type>
-    <object-name>fluxCD</object-name>
-    <property>velocities/groundspeed-kt</property>
-    <interpolation>
-      <entry>
-	<ind>0</ind>
-	<dep>-90</dep>
-      </entry>
-      <entry>
-	<ind>10</ind>
-	<dep>-3</dep>
-      </entry>
-      <entry>
-	<ind>25</ind>
-	<dep>-1</dep>
-      </entry>
-      <entry>
-	<ind>40</ind>
-	<dep>0</dep>
-      </entry>
-    </interpolation>
-    <axis>
-      <x>0</x>
-      <y>-1.0</y>
-      <z>0</z>
-    </axis>
-  </animation>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>fluxCD</object-name>
-    <property>orientation/pitch-deg</property>
-    <factor>-1.0</factor>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>-1.66</z-m>
-    </center>
-    <axis>
-      <x>0</x>
-      <y>1</y>
-      <z>0</z>
-    </axis>
-  </animation>
+
+
+
+ <path>fluxCD_N.osgx</path>
+
+
+    <animation>
+        <type>select</type>
+        <object-name>fluxCD</object-name>
+        <condition>
+            <and>
+                <or>
+                    <greater-than>
+                        <property>fdm/jsbsim/fcs/right-wake-control</property>
+                        <value>0</value>
+                    </greater-than>
+                    <greater-than>
+                        <property>fdm/jsbsim/fcs/left-wake-control</property>
+                        <value>0</value>
+                    </greater-than>
+                </or>
+            </and>
+        </condition>
+    </animation>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>fluxCD</object-name>
+        <property>velocities/groundspeed-kt</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-90</dep>
+            </entry>
+            <entry>
+                <ind>10</ind>
+                <dep>-3</dep>
+            </entry>
+            <entry>
+                <ind>25</ind>
+                <dep>-1</dep>
+            </entry>
+            <entry>
+                <ind>40</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0</x>
+            <y>-1.0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>fluxCD</object-name>
+        <property>orientation/pitch-deg</property>
+        <factor>-1.0</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>-1.66</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+
+
+
+
 
 </PropertyList>

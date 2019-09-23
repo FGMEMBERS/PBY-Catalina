@@ -5,7 +5,7 @@ kids 1
 OBJECT poly
 name "GPropDisk"
 loc 3.35267e-08 0 2.14559e-10
-texture "p38-prop1.png"
+texture "p38-prop1.rgb"
 crease 45.000000
 numvert 50
 0.0102903 0.466479 1.73521

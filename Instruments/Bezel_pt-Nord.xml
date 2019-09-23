@@ -1,43 +1,45 @@
 <?xml version="1.0"?>
 <!--
-Usable with FlightGear
-property Gerard Robin
-Copyright License:  GPL_V2
+    Usable with FlightGear
+    property Gerard Robin
+    Copyright License:  GPL_V2
 -->
 <PropertyList>
 
-  <path>Models/bezel_pt-nord.ac</path>
-  <texture-path>Models/Textures</texture-path>
+	<path>Models/bezel_pt-nord.ac</path>
+	<texture-path>Models/Textures</texture-path>
 
-  <!--<animation>
-      <type>noshadow</type>
-      <object-name>Bezel-pt</object-name>
-      </animation>-->
+	<!--<animation>
+		<type>noshadow</type>
+		<object-name>Bezel-pt</object-name>
+	</animation>-->
 
-  <!--<animation include="Instrument-Light5.xml">
-      <object-name>Couronne</object-name>
-      </animation>-->
-  
-  <model>
-    <name>Light</name>
-    <path>Aircraft/PBY-Catalina/Instruments/Light-Bezel_pt-Nord.xml</path>
-    <offsets>
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-      <pitch-deg>0</pitch-deg>
-    </offsets>
-  </model>
+	<!--<animation include="Instrument-Light5.xml">
+		<object-name>Couronne</object-name>
+	</animation>-->
+	
+	 <model>
+            <name>Light</name>
+            <path>Aircraft/PBY-Catalina/Instruments/Light-Bezel_pt-Nord.xml</path>
+            <offsets>
+                <x-m>0</x-m>
+                <y-m>0</y-m>
+                <z-m>0</z-m>
+                <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
 
-  <animation>
-    <type>select</type>
-    <object-name>Light</object-name>
-    <condition>
-      <and>
-	<property>fdm/jsbsim/electrical/lighting/instruments</property>
-	<property>sim/rendering/rembrandt/enabled</property>
-      </and>
-    </condition>
-  </animation>
+        <animation>
+            <type>select</type>
+            <object-name>Light</object-name>
+            <condition>
+                <and>
+		    <property>fdm/jsbsim/electrical/lighting/instruments</property>
+                    <property>sim/rendering/rembrandt/enabled</property>
+                </and>
+            </condition>
+        </animation>
+
+
 
 </PropertyList>

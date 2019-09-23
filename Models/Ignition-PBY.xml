@@ -1,188 +1,192 @@
 <?xml version="1.0"?>
 
 <!--
-Usable with FlightGear
-Property of Gerard Robin
-Copyright License:  GPL_V2
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPL_V2
 -->
 
 <PropertyList>
 
-  <path>cde-ignition-pby.ac</path>
-  <texture-path>Textures</texture-path>
+    <path>cde-ignition-pby.ac</path>
+    <texture-path>Textures</texture-path>
 
-  <animation>
-    <type>noshadow</type>
-    <object-name>IGNITION</object-name>
-  </animation>
+    <animation>
+            <type>noshadow</type>
+            <object-name>IGNITION</object-name>
+    </animation>
 
 
-  <!--<animation include="Instrument-Light3.xml">
-      <object-name>Cadran</object-name>
-      </animation>
+   <!-- <animation include="Instrument-Light3.xml">
+            <object-name>Cadran</object-name>
+    </animation>
 
-<animation include="Instrument-Light3.xml">
-<object-name>Inter</object-name>
-</animation>-->
+    <animation include="Instrument-Light3.xml">
+            <object-name>Inter</object-name>
+    </animation>-->
 
-  <animation>
-    <type>rotate</type>
-    <object-name>Moteur0-Inter</object-name>
-    <property>/controls/engines/engine[0]/magnetos</property>
-    <interpolation>
-      <entry>
-	<ind>0</ind>
-	<dep>0</dep>
-      </entry>
-      <entry>
-	<ind>1</ind>
-	<dep>40</dep>
-      </entry>
-      <entry>
-	<ind>2</ind>
-	<dep>80</dep>
-      </entry>
-      <entry>
-	<ind>3</ind>
-	<dep>120</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>0</x-m>
-      <y-m>-0.0182625</y-m>
-      <z-m>-0.0291261</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
-  
-  <animation>
-    <type>rotate</type>
-    <object-name>Moteur1-Inter</object-name>
-    <property>/controls/engines/engine[1]/magnetos</property>
-    <interpolation>
-      <entry>
-	<ind>0</ind>
-	<dep>0</dep>
-      </entry>
-      <entry>
-	<ind>1</ind>
-	<dep>40</dep>
-      </entry>
-      <entry>
-	<ind>2</ind>
-	<dep>80</dep>
-      </entry>
-      <entry>
-	<ind>3</ind>
-	<dep>120</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0.0182625</y-m>
-      <z-m>-0.0291261</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>Moteur0-Inter</object-name>
+        <property>controls/engines/engine[0]/magnetos</property>
+        <interpolation>
+                <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+                </entry>
+                <entry>
+                <ind>1</ind>
+                <dep>40</dep>
+                </entry>
+                <entry>
+                <ind>2</ind>
+                <dep>80</dep>
+                </entry>
+                <entry>
+                <ind>3</ind>
+                <dep>120</dep>
+                </entry>
+        </interpolation>
+        <center>
+                <x-m>0</x-m>
+                <y-m>-0.0182625</y-m>
+                <z-m>-0.0291261</z-m>
+        </center>
+        <axis>
+                <x>-1</x>
+                <y>0</y>
+                <z>0</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>Moteur1-Inter</object-name>
+        <property>controls/engines/engine[1]/magnetos</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>40</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>80</dep>
+            </entry>
+            <entry>
+                <ind>3</ind>
+                <dep>120</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0.0182625</y-m>
+            <z-m>-0.0291261</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
 
-  <animation>
-    <type>translate</type>
-    <object-name>Btn-Starter</object-name>
-    <property>/controls/engines/engine[0]/starter</property>
-    <factor>0.01</factor>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
-  
-  <animation>
-    <type>pick</type>
-    <object-name>Moteur0-Cadran</object-name>
-    <action>
-      <button>0</button>
-      <binding>
-	<command>property-adjust</command>
-	<property>controls/engines/engine[0]/magnetos</property>
-	<step>1</step>
-	<min>0</min>
-	<max>3</max>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <binding>
-	<command>property-adjust</command>
-	<property>controls/engines/engine[0]/magnetos</property>
-	<step>-1</step>
-	<min>0</min>
-	<max>3</max>
-      </binding>
-    </action>
-  </animation>
-  
-  <animation>
-    <type>pick</type>
-    <object-name>Moteur1-Cadran</object-name>
-    <action>
-      <button>0</button>
-      <binding>
-	<command>property-adjust</command>
-	<property>controls/engines/engine[1]/magnetos</property>
-	<step>1</step>
-	<min>0</min>
-	<max>3</max>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <binding>
-	<command>property-adjust</command>
-	<property>controls/engines/engine[1]/magnetos</property>
-	<step>-1</step>
-	<min>0</min>
-	<max>3</max>
-      </binding>
-    </action>
-  </animation>
-  
-  <animation>
-    <type>pick</type>
-    <object-name>Btn-Starter</object-name>
-    <action>
-      <button>0</button>
-      <binding>
-	<command>property-assign</command>
-	<property>controls/engines/engine[0]/starter</property>
-	<value>1</value>
-      </binding>
-      <binding>
-	<command>property-assign</command>
-	<property>controls/engines/engine[1]/starter</property>
-	<value>1</value>
-      </binding>
-      <mod-up>
-	<binding>
-	  <command>property-assign</command>
-	  <property>controls/engines/engine[0]/starter</property>
-	  <value>0</value>
-	</binding>
-	<binding>
-	  <command>property-assign</command>
-	  <property>controls/engines/engine[1]/starter</property>
-	  <value>0</value>
-	</binding>
-      </mod-up>
-    </action>
-  </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>Btn-Starter</object-name>
+        <property>controls/engines/engine[0]/starter</property>
+        <factor>0.01</factor>
+        <axis>
+                <x>-1</x>
+                <y>0</y>
+                <z>0</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>pick</type>
+        <object-name>Moteur0-Cadran</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[0]/magnetos</property>
+                <step>1</step>
+                <min>0</min>
+                <max>3</max>
+            </binding>
+        </action>
+        <action>
+            <button>1</button>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[0]/magnetos</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>3</max>
+            </binding>
+        </action>
+    </animation>
+    
+    <animation>
+        <type>pick</type>
+        <object-name>Moteur1-Cadran</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[1]/magnetos</property>
+                <step>1</step>
+                <min>0</min>
+                <max>3</max>
+            </binding>
+        </action>
+        <action>
+            <button>1</button>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[1]/magnetos</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>3</max>
+            </binding>
+        </action>
+    </animation>
+    
+    <animation>
+        <type>pick</type>
+        <object-name>Btn-Starter</object-name>
+        <action>
+                <button>0</button>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[0]/starter</property>
+                    <value>1</value>
+                </binding>
+                <binding>
+                <command>property-assign</command>
+                <property>controls/engines/engine[1]/starter</property>
+                <value>1</value>
+                </binding>
+                <mod-up>
+                <binding>
+                        <command>property-assign</command>
+                        <property>controls/engines/engine[0]/starter</property>
+                        <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[1]/starter</property>
+                    <value>0</value>
+                </binding>
+                </mod-up>
+            </action>
+    </animation>  
+    
+        
+        
+
 
 </PropertyList>

@@ -2,96 +2,118 @@
 
 
 <!--
-Usable with FlightGear
-property Gerard Robin
-Copyright License:  GPL_V2
+    Usable with FlightGear
+    property Gerard Robin
+    Copyright License:  GPL_V2
 -->
-
 <PropertyList>
-  
-  <path>Models/hi-pby.ac</path>
-  <texture-path>Models/Textures</texture-path>
 
-  <animation>
-    <type>noshadow</type>
-    <object-name>HI</object-name>
-  </animation>
+	<path>Models/hi-pby.ac</path>
+	<texture-path>Models/Textures</texture-path>
 
-  <model>
-    <name>BoutonG</name>
-    <path>Aircraft/PBY-Catalina/Instruments/Bouton_pt-Nord.xml</path>
-    <offsets>
-      <x-m>0.016</x-m>
-      <y-m>-0.030431</y-m>
-      <z-m>-0.030431</z-m>
-      <pitch-deg>0</pitch-deg>
-    </offsets>
-  </model>
+	<animation>
+		<type>noshadow</type>
+		<object-name>HI</object-name>
+	</animation>
 
-  <animation include="Instrument-Light1.xml">
-    <object-name>Rose-I</object-name>
-  </animation>
+	<model>
+		<name>BoutonG</name>
+		<path>Aircraft/PBY-Catalina/Instruments/Bouton_pt-Nord.xml</path>
+		<offsets>
+                    <x-m>0.016</x-m>
+                    <y-m>-0.030431</y-m>
+                    <z-m>-0.030431</z-m>
+                    <pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-  <animation include="Instrument-Light4.xml">
-    <object-name>Bug</object-name>
-    <object-name>Avion</object-name>
-  </animation>
 
-  <animation include="Instrument-Light1.xml">
-    <object-name>Cadran</object-name>
-  </animation>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>Cadran</object-name>
-    <property>/orientation/heading-magnetic-deg</property>
-    <factor>1</factor>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
 
-  <!--*******************************************************Heading***********************************************************-->
 
-  <!--*******************************************************Heading-Bug***********************************************************	-->
-  <animation>
-    <type>rotate</type>
-    <object-name>Bug</object-name>
-    <property>/orientation/heading-magnetic-deg</property>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+	<animation include="Instrument-Light1.xml">
+		<object-name>Rose-I</object-name>
+	</animation>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>Bug</object-name>
-    <property>/instrumentation/heading-indicator/heading-marker</property>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+	<animation include="Instrument-Light4.xml">
+		<object-name>Bug</object-name>
+		<object-name>Avion</object-name>
+	</animation>
+
+	<animation include="Instrument-Light1.xml">
+		<object-name>Cadran</object-name>
+	</animation>
+
+	
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Cadran</object-name>
+		<property>orientation/heading-magnetic-deg</property>
+		<factor>1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+
+
+
+<!--*******************************************************Heading***********************************************************-->
+
+
+
+
+
+<!--*******************************************************Heading-Bug***********************************************************	-->
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Bug</object-name>
+		<property>orientation/heading-magnetic-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Bug</object-name>
+		<property>instrumentation/heading-indicator/heading-marker</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+
+
 
 </PropertyList>
 

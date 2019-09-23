@@ -11,7 +11,7 @@ kids 1
 OBJECT poly
 name "Moteur0-Inter"
 loc 0.00129986 -0.017062 0.0182544
-texture "Textures/texture-protcivil/ondul.png"
+texture "ondul.png"
 texoff -0.02 0
 crease 45.000000
 numvert 38
@@ -421,7 +421,7 @@ kids 0
 OBJECT poly
 name "Btn-Starter"
 loc 0.000751999 -0.00371332 -4.67774e-10
-texture "Textures/texture-protcivil/ondul.png"
+texture "ondul.png"
 crease 45.000000
 numvert 66
 0.0137405 8.34956e-05 1.97907e-07
@@ -1915,7 +1915,7 @@ kids 2
 OBJECT poly
 name "Moteur1-Inter"
 loc 0.00129986 -0.0176336 -0.0176217
-texture "Textures/texture-protcivil/ondul.png"
+texture "ondul.png"
 texoff -0.02 0
 crease 45.000000
 numvert 38

@@ -1148,7 +1148,7 @@ kids 28
 OBJECT poly
 name "cylinder"
 loc 0.945654 -0.341568 -2.0846
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.0729795 0.116212 2.12016
@@ -1625,7 +1625,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.947086 -0.186304 -2.0846
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.000497103 -0.0657024 2.51947
@@ -2102,7 +2102,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.947498 0.0705337 -2.0846
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.0711348 -0.0710154 2.31195
@@ -2579,7 +2579,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.948705 0.282758 -2.0846
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 -0.00112152 0.105378 2.40754
@@ -3056,7 +3056,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.949796 0.365118 -2.0846
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.0688369 -0.137675 2.1238
@@ -3533,7 +3533,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.948705 0.283681 -2.0846
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 -0.001122 0.105379 1.75768
@@ -4010,7 +4010,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.947498 0.0719473 -2.0846
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.0711348 0.00977969 1.86666
@@ -4487,7 +4487,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.947086 -0.185061 -2.0846
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.000497103 -0.0657024 1.64392
@@ -7691,7 +7691,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.945654 -0.341077 -2.0846
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.0729795 0.144272 1.96551
@@ -17167,7 +17167,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.02607 -0.362462 -2.08389
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.00221276 -0.141743 2.08082
@@ -17644,7 +17644,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.02716 -0.280101 -2.08389
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.0721722 0.135037 1.90424
@@ -18121,7 +18121,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.02837 -0.0678761 -2.08389
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 -8.51154e-05 -0.017902 1.58359
@@ -18598,7 +18598,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.02878 0.188962 -2.08389
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.0705531 -0.038482 1.90662
@@ -19075,7 +19075,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.03021 0.344225 -2.08389
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 -0.00192952 0.132326 1.90932
@@ -19552,7 +19552,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.03021 0.343735 -2.08389
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.0691209 -0.144272 2.19808
@@ -20029,7 +20029,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.02878 0.187719 -2.08389
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 -0.000496864 0.0657024 2.51967
@@ -20506,7 +20506,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.02837 -0.0692893 -2.08389
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.0709653 -0.00977921 2.29693
@@ -20983,7 +20983,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.02716 -0.281024 -2.08389
-texture "F4U7-Moteur.png"
+texture "F4U7-Moteur.rgb"
 crease 45.000000
 numvert 61
 0.00112224 -0.105378 2.40592

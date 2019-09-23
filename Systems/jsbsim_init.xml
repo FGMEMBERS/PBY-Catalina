@@ -1,84 +1,80 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!--
-Usable with FlightGear
-Copyright Gerard Robin  31-03-2009
-Under License:  GPLv2
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+    Under License:  GPLv2
 -->
-
 <PropertyList>
-  
-  <jsbsim>
-    <gear>
-      <NWS>
-	<engaged type="bool">1</engaged>
-      </NWS>
-    </gear>
 
-    <systems>
-      <gear>
-	<gear-cmd-norm type="bool">true</gear-cmd-norm>
-	<left-brake-cmd-norm alias="/controls/gear/brake-left"/>
-	<right-brake-cmd-norm alias="/controls/gear/brake-right"/>
-      </gear>
-    </systems>
+            <jsbsim>
+		<gear>
+		    <NWS>
+			<engaged type="bool">1</engaged>
+		    </NWS>
+		</gear>
+		<systems>
+		    <gear>
+			<gear-cmd-norm type="bool">true</gear-cmd-norm>
+			<left-brake-cmd-norm alias="/controls/gear/brake-left"/>
+			<right-brake-cmd-norm alias="/controls/gear/brake-right"/>
+		     </gear>
+                </systems>
+		<fcs>
+		    <!--<brake-parking-cmd-norm type='bool'>true</brake-parking-cmd-norm>-->
+		    <brake-parking-cmd-norm alias="/controls/gear/brake-parking"/>
+		</fcs>
+		<propulsion>
+		    <engine n='0'>
+			<starter alias="/controls/engines/engine[0]/starter"/>
+			<magnetos alias="/controls/engines/engine[0]/magnetos"/>
+			<throttle  alias="/controls/engines/engine[0]/throttle"/>
+			<propeller-pitch-ctl  alias="/controls/engines/engine[0]/propeller-pitch"/>
+		    </engine>
+		     <engine n='1'>
+			<starter alias="/controls/engines/engine[1]/starter"/>
+			<magnetos alias="/controls/engines/engine[1]/magnetos"/>
+			<throttle  alias="/controls/engines/engine[1]/throttle"/>
+			<propeller-pitch-ctl  alias="/controls/engines/engine[1]/propeller-pitch"/>
+		    </engine>
+		</propulsion>
+		<electrical>
+		    <outputs>
+			<adf alias="/systems/electrical/outputs/adf"/>
+			<radar alias="/systems/electrical/outputs/radar"/>
+			<hsi alias="/systems/electrical/outputs/hsi"/>
+			<nav n='0' alias="/systems/electrical/outputs/nav[0]"/>
+			<nav n='1' alias="/systems/electrical/outputs/nav[1]"/>
+			<dme alias="/systems/electrical/outputs/dme"/>
+			<tacan alias="/systems/electrical/outputs/tacan"/>
+			<transponder alias="/systems/electrical/outputs/transponder"/>
+			<comm n='0' alias="/systems/electrical/outputs/comm[0]"/>
+			<comm n='1' alias="/systems/electrical/outputs/comm[1]"/>
+			<gps alias="/systems/electrical/outputs/gps"/>
+			<turn-coordinator alias="/systems/electrical/outputs/turn-coordinator"/>
+			<fuel-pump alias="/systems/electrical/outputs/fuel-pump"/>
+			<instrument-lights alias="/systems/electrical/outputs/instrument-lights"/>
+		    </outputs>
+		</electrical>
+            </jsbsim>
+	    
+	    <!-- electrical/outputs/radar
+	    electrical/outputs/hsi
+	    electrical/outputs/nav[0]
+	    electrical/outputs/dme
+	    electrical/outputs/nav[1]
+	    electrical/outputs/adf
+	    electrical/outputs/tacan
+	    electrical/outputs/transponder
+	    electrical/outputs/comm
+	    electrical/outputs/comm[1]
+	    electrical/outputs/gps
+	    electrical/outputs/instrument-lights
+	    electrical/outputs/turn-coordinator
+	    electrical/outputs/beacon
+	    electrical/outputs/landing-light
+	    electrical/outputs/fuel-pump
+	    electrical/outputs/cabin-lights
+	    -->
 
-    <fcs>
-      <!--<brake-parking-cmd-norm type='bool'>true</brake-parking-cmd-norm>-->
-      <brake-parking-cmd-norm alias="/controls/gear/brake-parking"/>
-    </fcs>
 
-    <propulsion>
-      <engine n='0'>
-	<starter alias="/controls/engines/engine[0]/starter"/>
-	<magnetos alias="/controls/engines/engine[0]/magnetos"/>
-	<throttle  alias="/controls/engines/engine[0]/throttle"/>
-	<propeller-pitch-ctl  alias="/controls/engines/engine[0]/propeller-pitch"/>
-      </engine>
-      <engine n='1'>
-	<starter alias="/controls/engines/engine[1]/starter"/>
-	<magnetos alias="/controls/engines/engine[1]/magnetos"/>
-	<throttle  alias="/controls/engines/engine[1]/throttle"/>
-	<propeller-pitch-ctl  alias="/controls/engines/engine[1]/propeller-pitch"/>
-      </engine>
-    </propulsion>
-
-    <electrical>
-      <outputs>
-	<adf alias="/systems/electrical/outputs/adf"/>
-	<radar alias="/systems/electrical/outputs/radar"/>
-	<hsi alias="/systems/electrical/outputs/hsi"/>
-	<nav n='0' alias="/systems/electrical/outputs/nav[0]"/>
-	<nav n='1' alias="/systems/electrical/outputs/nav[1]"/>
-	<dme alias="/systems/electrical/outputs/dme"/>
-	<tacan alias="/systems/electrical/outputs/tacan"/>
-	<transponder alias="/systems/electrical/outputs/transponder"/>
-	<comm n='0' alias="/systems/electrical/outputs/comm[0]"/>
-	<comm n='1' alias="/systems/electrical/outputs/comm[1]"/>
-	<gps alias="/systems/electrical/outputs/gps"/>
-	<turn-coordinator alias="/systems/electrical/outputs/turn-coordinator"/>
-	<fuel-pump alias="/systems/electrical/outputs/fuel-pump"/>
-	<instrument-lights alias="/systems/electrical/outputs/instrument-lights"/>
-      </outputs>
-    </electrical>
-  </jsbsim>
-
-  <!-- 
-       electrical/outputs/radar
-       electrical/outputs/hsi
-       electrical/outputs/nav[0]
-       electrical/outputs/dme
-       electrical/outputs/nav[1]
-       electrical/outputs/adf
-       electrical/outputs/tacan
-       electrical/outputs/transponder
-       electrical/outputs/comm
-       electrical/outputs/comm[1]
-       electrical/outputs/gps
-       electrical/outputs/instrument-lights
-       electrical/outputs/turn-coordinator
-       electrical/outputs/beacon
-       electrical/outputs/landing-light
-       electrical/outputs/fuel-pump
-       electrical/outputs/cabin-lights
-  -->
 </PropertyList>

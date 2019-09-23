@@ -1,46 +1,63 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-  <!--
-  Usable with FlightGear
-  -->
-  <!--             Auteur :      Gerard ROBIN                       COPYRIGHT  2007-->
-  <path>jetdo.osgx</path>
 
-  <offsets>
-    <x-m>50</x-m>
-    <y-m>0</y-m>
-    <z-m>-10</z-m>
-    <pitch-deg>-88</pitch-deg>
-    <heading-deg>180</heading-deg>
-    <roll-deg>0</roll-deg>
-  </offsets>
+<!--
+    Usable with FlightGear
+-->
+   <!--             Auteur :      Gerard ROBIN                       COPYRIGHT  2007-->
 
-  <animation>
-    <type>select</type>
-    <object-name>jetspray</object-name>
-    <condition>
-      <or>
-	<greater-than>
-	  <property>/fdm/jsbsim/fcs/right-wake-control</property>
-	  <value>0</value>
-	</greater-than>
-	<greater-than>
-	  <property>/fdm/jsbsim/fcs/left-wake-control</property>
-	  <value>0</value>
-	</greater-than>
-      </or>
-    </condition>
-  </animation>
-  
-  <!--<effect>
-  <inherits-from>Effects/model-transparent</inherits-from>
-  <object-name>jetspray</object-name>
-</effect>
 
-<animation>
-  <type>noshadow</type>
-  <object-name>jetspray</object-name>
-  </animation>-->
+
+
+
+
+ <path>jetdo.osgx</path>
+
+
+
+
+
+
+
+    <offsets>
+            <x-m>50</x-m>
+            <y-m>0</y-m>
+            <z-m>-10</z-m>
+            <pitch-deg>-88</pitch-deg>
+            <heading-deg>180</heading-deg>
+            <roll-deg>0</roll-deg>
+    </offsets>
+
+
+    <animation>
+        <type>select</type>
+        <object-name>jetspray</object-name>
+        <condition>
+            <or>
+                <greater-than>
+                    <property>fdm/jsbsim/fcs/right-wake-control</property>
+                    <value>0</value>
+                </greater-than>
+                <greater-than>
+                    <property>fdm/jsbsim/fcs/left-wake-control</property>
+                    <value>0</value>
+                </greater-than>
+            </or>
+        </condition>
+    </animation>
+    
+    
+    <!--<effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>jetspray</object-name>
+    </effect>
+    
+    
+    <animation>
+	<type>noshadow</type>
+	<object-name>jetspray</object-name>
+    </animation>-->
+
 
 </PropertyList>

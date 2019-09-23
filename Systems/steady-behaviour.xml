@@ -1,89 +1,91 @@
 <?xml version="1.0"?>
 <!--
-Usable with FlightGear
-Copyright Gerard Robin  31-09-2009
+    Usable with FlightGear
+    Copyright Gerard Robin  31-09-2009
 
 -->
-
 <system name="behaviour">
-  
-  <!--init by nasal-->
-  <property value="9">environment/terrain-solid</property>
-  <property value="9">environment/terrain-bumpiness</property>
-  <property value="9">environment/terrain-rolling-friction</property>
-  <property value="9">environment/terrain-friction-factor</property>
-  <property value="99999">environment/terrain-hight</property>
-  <property  value="9">environment/terrain-undefined</property>
 
-  <channel name="ground-under">
-    <switch name="simulation/terrain_sw">
-      <default value="1"/>
-      <test  logic="AND" value="0">
-	environment/terrain-solid == 0
-	environment/terrain-hight   LT  1.5
-	environment/terrain-undefined == 0
-	position/h-agl-ft  LT 8
-      </test>
-    </switch>
-  </channel>
+    <!--init by nasal-->
+    <property value="9">environment/terrain-solid</property>
+    <property value="9">environment/terrain-bumpiness</property>
+    <property value="9">environment/terrain-rolling-friction</property>
+    <property value="9">environment/terrain-friction-factor</property>
+    <property value="99999">environment/terrain-hight</property>
+    <property  value="9">environment/terrain-undefined</property>
 
-  <channel name="on-ground">
-    <switch name="systems/behaviour/steady-onground">
-      <default value="9"/>
-      <test  logic="AND" value="1">
-	gear/unit[1]/pos-norm == 1
-	gear/unit[1]/wheel-speed-fps lt 1
-	gear/unit[1]/compression-ft != 0
-	gear/unit[1]/WOW == 1
-      </test>
-      <test  logic="OR" value="0">
-	gear/unit[1]/pos-norm == 0
-	gear/unit[1]/wheel-speed-fps ge 1
-	gear/unit[1]/compression-ft == 0
-	gear/unit[1]/WOW == 0
-      </test>
-    </switch>
-  </channel>
+    <channel name="ground-under">
+	<switch name="simulation/terrain_sw">
+                <default value="1"/>
+                <test  logic="AND" value="0">
+                    environment/terrain-solid == 0
+                    environment/terrain-hight   LT  1.5
+                    environment/terrain-undefined == 0
+                    position/h-agl-ft  LT 8
+                </test>
+	</switch>
+    </channel>
 
-  <channel name="on-water">
-    <switch name="systems/behaviour/steady-onwater">
-      <default value="9"/>
-      <test  logic="AND" value="1">
-	gear/unit[1]/pos-norm == 1
-	gear/unit[1]/wheel-speed-fps lt 1
-	gear/unit[1]/compression-ft != 0
-	gear/unit[1]/WOW == 1
-      </test>
-      <test  logic="OR" value="0">
-	gear/unit[1]/pos-norm == 0
-	gear/unit[1]/wheel-speed-fps ge 1
-	gear/unit[1]/compression-ft == 0
-	gear/unit[1]/WOW == 0
-      </test>
-    </switch>
-  </channel>
+    <channel name="on-ground">
+        <switch name="systems/behaviour/steady-onground">
+            <default value="9"/>
+            <test  logic="AND" value="1">
+               gear/unit[1]/pos-norm == 1
+               gear/unit[1]/wheel-speed-fps lt 1
+               gear/unit[1]/compression-ft != 0
+               gear/unit[1]/WOW == 1
+            </test>
+            <test  logic="OR" value="0">
+                gear/unit[1]/pos-norm == 0
+                gear/unit[1]/wheel-speed-fps ge 1
+                gear/unit[1]/compression-ft == 0
+               gear/unit[1]/WOW == 0
+            </test>
+        </switch>
+    </channel>
+    
+    <channel name="on-water">
+        <switch name="systems/behaviour/steady-onwater">
+            <default value="9"/>
+            <test  logic="AND" value="1">
+               gear/unit[1]/pos-norm == 1
+               gear/unit[1]/wheel-speed-fps lt 1
+               gear/unit[1]/compression-ft != 0
+               gear/unit[1]/WOW == 1
+            </test>
+            <test  logic="OR" value="0">
+                gear/unit[1]/pos-norm == 0
+                gear/unit[1]/wheel-speed-fps ge 1
+                gear/unit[1]/compression-ft == 0
+               gear/unit[1]/WOW == 0
+            </test>
+        </switch>
+    </channel>
+    
 
-  <channel name="taxiing">
-    <switch name="systems/behaviour/steady-taxi">
-      <default value="0"/>
-      <test  logic="AND" value="1">
-	gear/unit[1]/pos-norm == 1
-	gear/unit[1]/wheel-speed-fps lt 60
-	gear/unit[1]/compression-ft != 0
-	gear/unit[1]/WOW == 1
-      </test>
-    </switch>
-  </channel>
+    <channel name="taxiing">
+        <switch name="systems/behaviour/steady-taxi">
+            <default value="0"/>
+            <test  logic="AND" value="1">
+                gear/unit[1]/pos-norm == 1
+                gear/unit[1]/wheel-speed-fps lt 60
+                gear/unit[1]/compression-ft != 0
+                gear/unit[1]/WOW == 1
+            </test>
+        </switch>
+    </channel>
 
-  <channel name="in-air">
-    <switch name="systems/behaviour/steady-inair">
-      <default value="0"/>
-      <test  logic="OR" value="1">
-	gear/unit[1]/compression-ft == 0
-	gear/unit[1]/WOW == 0
-	position/h-agl-ft  gt  9
-      </test>
-    </switch>
-  </channel>
+    <channel name="in-air">
+        <switch name="systems/behaviour/steady-inair">
+            <default value="0"/>
+            <test  logic="OR" value="1">
+                gear/unit[1]/compression-ft == 0
+                gear/unit[1]/WOW == 0
+                position/h-agl-ft  gt  9
+            </test>
+        </switch>
+    </channel>
+
+
 
 </system>

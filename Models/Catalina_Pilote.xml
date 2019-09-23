@@ -1,19 +1,25 @@
 <PropertyList>
 
-  <path>catalina-pilote-et-co.ac</path>
-  <texture-path>Textures/texture-pilote</texture-path>
 
-  <animation>
-    <type>select</type>
-    <object-name>Pilote</object-name>
-    <condition>
-      <not>
-	<equals>
-	  <property>sim/current-view/view-number</property>
-	  <value>0</value>
-	</equals>
-      </not>
-    </condition>
-  </animation>
+
+
+<path>catalina-pilote-et-co.ac</path>
+<texture-path>Textures/texture-pilote</texture-path>
+
+
+    <animation>
+        <type>select</type>
+        <object-name>Pilote</object-name>
+        <condition>
+        <not>
+        <equals>
+            <property>sim/current-view/view-number</property>
+            <value>0</value>
+        </equals>
+        </not>
+        </condition>
+    </animation>
+
+
 
 </PropertyList>

@@ -1,35 +1,24 @@
 Hello,
-------
-
 You may want to start on sea.
-
 To get it:
- 1 Choose a specific predifined Airport which has an equivalent Moorage place (look at the PBY-Catalina/Mooring/mooring-pos_boeing314-based.xml)
- 2 run fgfs
- 3 Set the property /sim/mooring to true, that is, add the property to your launcher as
-
-       --prop:/sim/mooring=true
+ 1/ choose a specific predifined Airport which has an equivalent Moorage place (look at the
+PBY-Catalina/Mooring/mooring-pos_boeing314-based.xml)
+ 2/ run fgfs
 
 for instance
 
-       fgfs --airport=KSFO --aircraft=PBY-5A --prop:/sim/mooring=true
- 
+ fgfs --airport=KSFO --aircraft=Catalina 
 the Aircraft will be floating at the original Seaplane Harbour place close to KSFO Airport
 
-<b>Without the property, the aircraft will be started, properly set in the runway</b>
+OR
+You may want to disable that automatic moorage
+run  fgfs --airport=[the airport choosen] --aircraft=Catalina --prop:/sim/mooring=false
 
-       fgfs --airport=KSFO --aircraft=PBY-5A
+for instance
 
-Or, If you want to disable that moorage explicitly, run per example,
+ fgfs --airport=KSFO --aircraft=Catalina --prop:/sim/mooring=false
 
-      fgfs --airport=KSFO --aircraft=PBY-5A --prop:/sim/mooring=false
+the Aircraft will be sitting on the runway.
 
-Enjoy!
+Enjoy
 
-***
-
-<b>The behavior for the start up was modified by the USA Tour consortium, February 2016, to enable the usage of lat, lon, heading keypairs, and mooring, example</b>
-
-     fgfs --aircraft=PBY-5A --lat=0 --lon=0 --heading=0 --prop:/sim/mooring=true
-
-Will now behave as expect.

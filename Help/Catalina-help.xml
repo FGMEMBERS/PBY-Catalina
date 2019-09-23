@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
 <!--
-Usable with FlightGear
-Property of Gerard Robin
+    Usable with FlightGear
+    Property of Gerard Robin
 
 -->
-
 <PropertyList>
-  
 
   <title>Catalina PBY6  Water bomber</title>
   <key>
@@ -15,7 +13,7 @@ Property of Gerard Robin
   </key>
   <key>
     <name>D</name>
-    <desc>water tank doors,  close</desc>
+    <desc>water tank doors, close</desc>
   </key>
   <key>
     <name>s</name>
@@ -26,93 +24,89 @@ Property of Gerard Robin
     <desc>Toggle Floats Up/Down</desc>
   </key>
   <key>
-    <name>l (like "l"etter)</name>
+    <name>F</name>
+    <desc>Toggle Mooring Anchor</desc>
+  </key>
+  <key>
+    <name>l (like "l"etter) </name>
     <desc>release water over your target (water bombing)</desc>
   </key>
   <key>
     <name>L</name>
-    <desc>ask for water loading  when ready</desc>
+    <desc>Enable water scooping</desc>
   </key>
   <key>
     <name>B</name>
     <desc>toggle ON/OFF Brake Parking on ground or ON/OFF Cables/Anchor on water</desc>
   </key>
   <key>
-    <name>o</name>
-    <desc>act auto control of the engine power for takeoff</desc>
-  </key>
-  <key>
-    <name>O</name>
-    <desc>act auto control of the engine power for climb</desc>
-  </key>
-  <key>
     <name>m</name>
-    <desc>act auto control of the engine power for cruise</desc>
+    <desc>Mixture auto rich</desc>
   </key>
   <key>
     <name>M</name>
-    <desc>unact auto control of the engine power, only manual control</desc>
+    <desc>Mixture auto lean</desc>
   </key>
-  <text>
-    ==============EYE CANDY ============
-    If you want to get the best of that model, 
-    we would recommand to use the Rembrandt features, it  gives real shadows and lights
-    It should not slow your computer.
-    For instance with a GPU Nvidia  GT 560 TI we are getting 40 frame per second at LFML
-    ==================================================================
-    =========================================
-    That Model is the Catalina  PBY6 converted to be a water bomber
-    It was in use in the south-east of France from 1964 to 1970
-    =========================================
-    Performance:
-    That model is tuned ( altitude, climb and speed ) according to a payload of 10000 lbs, which is the water tank capacity filled up.
-    So that the fuel tanks capacity is automatically limited at load water process.
-    
-    The other usage without fire fighter scenario gives the full tanks capacity
-    Don't forguet to fill UP on ground if required.
-    =========================================
-    START and STOP ROUTINE
-    To start the engines we suggest to use 
-    the "Catalina Menu"  Easy Start
-    
+  <text><![CDATA[
+This is a PBY-6 Catalina converted to a water-bomber, used in South-Eastern France from
+1964 to 1970.  It is tuned (altitude, climb and speed) according to a payload of 10000
+lbs, which is the water tank capacity filled up.
 
-    To take off
-    =>Unlock Brake parking  (shift B)
-    =>Push the throttle to maximum
-    When speed 70 knots pull the stick
-    The aircraft will take off
-    OR 
-    you may use
-    the "Catalina Menu"  Propulsion Control Mode
-    then Click  the TakeOff Power button
+The fuel capacity is automatically limited for water-bombing when you press L.  You can
+refuel only on ground, using the Catalina | Refuel dialog.
 
-    To stop the engines
-    =>decrease magneto switch  and electric master switch "off" ( key  name "{")
+______________________ Procedures ______________________
 
-    WATER BOMBER
-    You mays simulate  the filling of the water tank ( 4000 liters)
-    when
-    =>on the water, you want the floats DOWN  (key"f")
-    =>prepare the filling (command key  "L")
-    =>a speed minimum of 45 kts
-    =>push gently the elevator, just enough to keep the aircraft sliding in the water
-    The filling duration time is 100 sec.
-    Control your speed which must be more than 45 kts  (if less it does not fill)
-    More is better.
-    During the filling,  the aircraft is getting more and more heavy.
-    When loaded  the weight of the aircraft is heavier of 4500 kg , remember it at take off, you wants patience, and smooth piloting.
-    Before climb, you must get the maximum of speed with the help of the groundeffect, which is your friend.
-    After take off, don't forget, you want the floats UP (key"f")
+Starting: use the Catalina | Easy Start menu.
 
-    Now you may simulate a water bombing
-    =>At a low agl, (let's say 200 ft) and over the target which is supposed to be bombed,
-    =>release the water (command key 'l" like "l"etter)
-    The water can be seen falling down.
+Take off:
+- release parking brakes (B)
+- maximum throttle
+- rotate at 70 knots
 
-    The  aircraft is right now 4500 kg less , it will jump upper in the sky, be prepared for it.
-    When empty don't forget to close the water tank doors ( key"D")
-    You may again, go back on the sea  and fill again, that process is repeatable as long as you wish it.
+Stopping engines:
+- magneto switches OFF.
 
+Scooping water into the tanks:
+- Floats down (f)
+- Open the filling dialog (Catalina | Reload Water)
+- Press L to initiate scooping
+- Skim the water at 100 knots with half throttle, pushing the elevator gently
+- Increase throttle slowly as your plane gets heavier.
+- When the load is complete (4530 l), full throttle and lift off.
+- Use ground effect as long as possible to gain speed before climbing.
+- Floats up (f).
+
+Igniting a fire:
+- In the menu Environment | Wildfire Settings, tick Enabled.
+- Shift+Ctrl+left click on the ground to ignite a fire.
+- Warning: too many fires will slow your computer down, even after you
+  extinguish them.
+
+Dropping water:
+- fly at 200 ft above ground.
+- press l (lowercase L) or in the Reload Water menu, press the Launch button.
+- your aircraft will become 4500 kg lighter and soar up; prepare for it.
+- close water bomb doors (D).
+
+______________________ Mooring ______________________
+
+It is a Seaplane, so i have included the mooring feature which is part of the
+wonderful model seaplane Boeing314
+ 
+To start from an airport which has a close mooring place, situate the seaplane
+automatically on that place, with Floats DOWN.
+ 
+For example KSFO which has a mooring place on the San Fransisco Bay near Bay
+Bridge or LFML (Marseilles Marignane) has a mooring place on the Etang de Berre.
+ 
+The cables which hold the aircraft in place, are simulated, with the
+"Brake Parking" feature
+
+______________________ Eye Candy ______________________
+If you want to get the best of this model, we recommend Rembrandt rendering
+giving real shadows and lights.  It should not slow your computer. For instance
+with a GPU Nvidia  GT 560 TI we get 40 frames per second at LFML.
+]]>
   </text>
-
 </PropertyList>

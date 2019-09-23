@@ -1,216 +1,226 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-  <!--
-  Usable with FlightGear
-  Gerard Robin
-  Copyright   2007
-  -->
-  <!-- DEBUT==========Animation OSGViewer=  with OSGX Format=====-->
+<!--
+    Usable with FlightGear
+    Gerard Robin
+    Copyright   2007
+-->
+<!-- DEBUT==========Animation OSGViewer=  with OSGX Format=====-->
 
-  <!--Sillage coque centre-->
-  <model>
-    <name>CFlux</name>
-    <path>Aircraft/PBY-Catalina/Fx/Cflux.xml</path>
-    <offsets>
-      <x-m>2.7</x-m>
-      <y-m>0</y-m>
-      <z-m>-1.1</z-m>
-      <pitch-deg>91.5</pitch-deg>
-      <heading-deg>0</heading-deg>
-      <roll-deg>0</roll-deg>
-    </offsets>
-  </model>
-  <!--Sillage coque coté Gauche-->
-  <model>
-    <name>GFlux</name>
-    <path>Aircraft/PBY-Catalina/Fx/Gflux.xml</path>
-    <offsets>
-      <x-m>2</x-m>
-      <y-m>-1</y-m>
-      <z-m>-1</z-m>
-      <pitch-deg>91</pitch-deg>
-      <heading-deg>-0.3</heading-deg>
-      <roll-deg>0</roll-deg>
-    </offsets>
-  </model>
-  <!--Sillage coque coté Droit-->
-  <model>
-    <name>DFlux</name>
-    <path>Aircraft/PBY-Catalina/Fx/Dflux.xml</path>
-    <offsets>
-      <x-m>2</x-m>
-      <y-m>1.1</y-m>
-      <z-m>-1</z-m>
-      <pitch-deg>91</pitch-deg>
-      <heading-deg>0.3</heading-deg>
-      <roll-deg>0</roll-deg>
-    </offsets>
-  </model>
 
-  <!--Rear Spray-->
-  <model>
-    <name>Effet</name>
-    <path>Aircraft/PBY-Catalina/Fx/jetdo.xml</path>
-  </model>
-  
-  <!--<effect>
-  <inherits-from>Effects/model-transparent</inherits-from>
-  <object-name>Effet</object-name>
-</effect>
+<!--Sillage coque centre-->
+    <model>
+        <name>CFlux</name>
+        <path>Aircraft/PBY-Catalina/Fx/Cflux.xml</path>
+        <offsets>
+            <x-m>2.7</x-m>
+            <y-m>0</y-m>
+            <z-m>-1.1</z-m>
+            <pitch-deg>91.5</pitch-deg>
+            <heading-deg>0</heading-deg>
+            <roll-deg>0</roll-deg>
+        </offsets>
+    </model>
+    <!--Sillage coque coté Gauche-->
+    <model>
+        <name>GFlux</name>
+        <path>Aircraft/PBY-Catalina/Fx/Gflux.xml</path>
+        <offsets>
+            <x-m>2</x-m>
+            <y-m>-1</y-m>
+            <z-m>-1</z-m>
+            <pitch-deg>91</pitch-deg>
+            <heading-deg>-0.3</heading-deg>
+            <roll-deg>0</roll-deg>
+        </offsets>
+    </model>
+    <!--Sillage coque coté Droit-->
+    <model>
+        <name>DFlux</name>
+        <path>Aircraft/PBY-Catalina/Fx/Dflux.xml</path>
+        <offsets>
+            <x-m>2</x-m>
+            <y-m>1.1</y-m>
+            <z-m>-1</z-m>
+            <pitch-deg>91</pitch-deg>
+            <heading-deg>0.3</heading-deg>
+            <roll-deg>0</roll-deg>
+        </offsets>
+    </model>
 
-<animation>
-  <type>noshadow</type>
-  <object-name>Effet</object-name>
-  </animation>-->
-  
-  <animation>
-    <type>translate</type>
-    <object-name>Effet</object-name>
-    <property>velocities/groundspeed-kt</property>
-    <interpolation>
-      <entry>
-	<ind>0</ind>
-	<dep>0</dep>
-      </entry>
-      <entry>
-	<ind>10</ind>
-	<dep>0</dep>
-      </entry>
-      <entry>
-	<ind>15</ind>
-	<dep>5</dep>
-      </entry>
-      <entry>
-	<ind>20</ind>
-	<dep>7.5</dep>
-      </entry>
-      <entry>
-	<ind>60</ind>
-	<dep>10</dep>
-      </entry>
-    </interpolation>
-    <axis>
-      <x>-1.0</x>
-      <y>0.0</y>
-      <z>0.30</z>
-    </axis>
-  </animation>
+    <!--Rear Spray-->
+    <model>
+        <name>Effet</name>
+        <path>Aircraft/PBY-Catalina/Fx/jetdo.xml</path>
+    </model>
+    
+    
+    <!--<effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>Effet</object-name>
+    </effect>
+    
+    
+    <animation>
+		<type>noshadow</type>
+		<object-name>Effet</object-name>
+	</animation>-->
+    
 
-  <animation>
-    <type>translate</type>
-    <object-name>Effet</object-name>
-    <property>velocities/groundspeed-kt</property>
-    <interpolation>
-      <entry>
-	<ind>0</ind>
-	<dep>-20</dep>
-      </entry>
-      <entry>
-	<ind>10</ind>
-	<dep>-20</dep>
-      </entry>
-      <entry>
-	<ind>15</ind>
-	<dep>0</dep>
-      </entry>
-    </interpolation>
-    <axis>
-      <x>0</x>
-      <y>0.0</y>
-      <z>1</z>
-    </axis>
-  </animation>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>Effet</object-name>
-    <property>velocities/groundspeed-kt</property>
-    <interpolation>
-      <entry>
-	<ind>0</ind>
-	<dep>-60</dep>
-      </entry>
-      <entry>
-	<ind>10</ind>
-	<dep>-40</dep>
-      </entry>
-      <entry>
-	<ind>15</ind>
-	<dep>-20</dep>
-      </entry>
-      <entry>
-	<ind>20</ind>
-	<dep>0</dep>
-      </entry>
-      <entry>
-	<ind>60</ind>
-	<dep>0</dep>
-      </entry>
-    </interpolation>
-    <axis>
-      <x>0</x>
-      <y>-1.0</y>
-      <z>0</z>
-    </axis>
-  </animation>
 
-  <animation>
-    <type>scale</type>
-    <object-name>Effet</object-name>
-    <property>velocities/groundspeed-kt</property>
-    <interpolation>
-      <entry>
-	<ind>0</ind>
-	<dep>0.01</dep>
-      </entry>
-      <entry>
-	<ind>10</ind>
-	<dep>0.01</dep>
-      </entry>
-      <entry>
-	<ind>15</ind>
-	<dep>0.2</dep>
-      </entry>
-      <entry>
-	<ind>20</ind>
-	<dep>0.3</dep>
-      </entry>
-      <entry>
-	<ind>60</ind>
-	<dep>0.4</dep>
-      </entry>
-    </interpolation>
-  </animation>
+    <animation>
+        <type>translate</type>
+        <object-name>Effet</object-name>
+        <property>velocities/groundspeed-kt</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>10</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>15</ind>
+                <dep>5</dep>
+            </entry>
+            <entry>
+                <ind>20</ind>
+                <dep>7.5</dep>
+            </entry>
+            <entry>
+                <ind>60</ind>
+                <dep>10</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.30</z>
+        </axis>
+    </animation>
 
-  <!--Sillage Flotteur Gauche-->
-  <model>
-    <name>GFlux1</name>
-    <path>Aircraft/PBY-Catalina/Fx/Gflux1.xml</path>
-    <offsets>
-      <x-m>1.7652</x-m>
-      <y-m>-13.5694</y-m>
-      <z-m>-0.52483</z-m>
-      <pitch-deg>90</pitch-deg>
-      <heading-deg>0</heading-deg>
-      <roll-deg>0</roll-deg>
-    </offsets>
-  </model>
+    <animation>
+        <type>translate</type>
+        <object-name>Effet</object-name>
+        <property>velocities/groundspeed-kt</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-20</dep>
+            </entry>
+            <entry>
+                <ind>10</ind>
+                <dep>-20</dep>
+            </entry>
+            <entry>
+                <ind>15</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0</x>
+            <y>0.0</y>
+            <z>1</z>
+        </axis>
+    </animation>
 
-  <!--Sillage Flotteur Droite-->
-  <model>
-    <name>DFlux1</name>
-    <path>Aircraft/PBY-Catalina/Fx/Dflux1.xml</path>
-    <offsets>
-      <x-m>1.7652</x-m>
-      <y-m>13.5694</y-m>
-      <z-m>-0.52483</z-m>
-      <pitch-deg>90</pitch-deg>
-      <heading-deg>0</heading-deg>
-      <roll-deg>0</roll-deg>
-    </offsets>
-  </model>
+    <animation>
+        <type>rotate</type>
+        <object-name>Effet</object-name>
+        <property>velocities/groundspeed-kt</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-60</dep>
+            </entry>
+            <entry>
+                <ind>10</ind>
+                <dep>-40</dep>
+            </entry>
+            <entry>
+                <ind>15</ind>
+                <dep>-20</dep>
+            </entry>
+            <entry>
+                <ind>20</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>60</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0</x>
+            <y>-1.0</y>
+            <z>0</z>
+        </axis>
+    </animation>
 
-  <!-- FIN FIN FIN=================Animation OSGViewer=====================-->
+
+    <animation>
+        <type>scale</type>
+        <object-name>Effet</object-name>
+        <property>velocities/groundspeed-kt</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0.01</dep>
+            </entry>
+            <entry>
+                <ind>10</ind>
+                <dep>0.01</dep>
+            </entry>
+            <entry>
+                <ind>15</ind>
+                <dep>0.2</dep>
+            </entry>
+            <entry>
+                <ind>20</ind>
+                <dep>0.3</dep>
+            </entry>
+            <entry>
+                <ind>60</ind>
+                <dep>0.4</dep>
+            </entry>
+        </interpolation>
+    </animation>
+
+
+    <!--Sillage Flotteur Gauche-->
+    <model>
+        <name>GFlux1</name>
+        <path>Aircraft/PBY-Catalina/Fx/Gflux1.xml</path>
+        <offsets>
+            <x-m>1.7652</x-m>
+            <y-m>-13.5694</y-m>
+            <z-m>-0.52483</z-m>
+            <pitch-deg>90</pitch-deg>
+            <heading-deg>0</heading-deg>
+            <roll-deg>0</roll-deg>
+        </offsets>
+    </model>
+
+    <!--Sillage Flotteur Droite-->
+    <model>
+        <name>DFlux1</name>
+        <path>Aircraft/PBY-Catalina/Fx/Dflux1.xml</path>
+        <offsets>
+            <x-m>1.7652</x-m>
+            <y-m>13.5694</y-m>
+            <z-m>-0.52483</z-m>
+            <pitch-deg>90</pitch-deg>
+            <heading-deg>0</heading-deg>
+            <roll-deg>0</roll-deg>
+        </offsets>
+    </model>
+
+
+     <!-- FIN FIN FIN=================Animation OSGViewer=====================-->
+
 
 </PropertyList>

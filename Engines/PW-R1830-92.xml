@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 
+
 <!--Powerplant  2 - Pratt  Whitney R-1830-92 Twin Wasp turbosupercharged radials, rated at 1200 hp (894.59 kW) each-->
 <!--
 TAKE-OFF to 1000 ft rpm 2700     boost ins. Hg abs  48    boost 8.88
@@ -20,29 +21,29 @@ COMBAT 5 MIN        rpm 2700     boost ins. Hg abs  45    boost 7.40
 <!--recalculated by Youcef ( grthteam) according to Spec above and template  from F4U-7-->
 
 <piston_engine name="Pratt  Whitney R-1830-92">
-  <minmp unit="INHG">6.0</minmp>
-  <maxmp unit="INHG">29.9</maxmp>
-  <displacement unit="IN3">1830</displacement>
-  <bsfc>0.36</bsfc>
-  <volumetric-efficiency>0.8</volumetric-efficiency>
-  <ram-air-factor>0.0</ram-air-factor>
-  <maxhp>1200.0</maxhp>
-  <cycles>4.0</cycles>
-  <idlerpm>300.0</idlerpm>
-  <maxrpm>2700</maxrpm>
-  <maxthrottle>1.0</maxthrottle>
-  <minthrottle>0.03</minthrottle>
-  <sparkfaildrop>0.9</sparkfaildrop>
-  <turbocharged>0.0</turbocharged>
-  <turbodelay>0.0</turbodelay>
-  <boostmanual>1.0</boostmanual>
-  <boostoverride>0</boostoverride>
-  <boost-loss-factor>1.8</boost-loss-factor>
-  <numboostspeeds>1</numboostspeeds>
-  <supercharged>1.0</supercharged>
-  <takeoffboost unit="INHG">18.68</takeoffboost>
-  <ratedboost1 unit="INHG" >17.2</ratedboost1>
-  <ratedpower1 unit="HP">1100</ratedpower1>
-  <ratedrpm1>2700</ratedrpm1>
-  <ratedaltitude1 unit="FT">12000</ratedaltitude1>
+    <minmp unit="INHG">          6.0 </minmp>
+    <maxmp unit="INHG">         29.9 </maxmp>
+    <displacement unit="IN3">1830</displacement>
+    <bsfc>0.52</bsfc>
+    <volumetric-efficiency>0.8</volumetric-efficiency>
+    <ram-air-factor> 0.0 </ram-air-factor>
+    <maxhp>1200.0</maxhp>
+    <cycles>4.0</cycles>
+    <idlerpm> 300.0 </idlerpm>
+    <maxrpm> 2700   </maxrpm>
+    <maxthrottle>    1.0 </maxthrottle>
+    <minthrottle>    0.03 </minthrottle>
+    <sparkfaildrop>  0.9 </sparkfaildrop>
+    <turbocharged> 0.0 </turbocharged>
+    <turbodelay> 0.0 </turbodelay>
+    <boostmanual> 1.0 </boostmanual>
+    <boostoverride> 0 </boostoverride>
+    <boost-loss-factor> 1.8</boost-loss-factor>
+    <numboostspeeds>   1</numboostspeeds>
+    <supercharged> 1.0 </supercharged>
+    <takeoffboost unit="INHG">18.68</takeoffboost>
+    <ratedboost1 unit="INHG" >17.2</ratedboost1>
+    <ratedpower1 unit="HP">1100</ratedpower1>
+    <ratedrpm1>2700</ratedrpm1>
+    <ratedaltitude1 unit="FT">12000</ratedaltitude1>
 </piston_engine>

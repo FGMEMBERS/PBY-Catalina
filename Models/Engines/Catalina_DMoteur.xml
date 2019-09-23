@@ -8,7 +8,9 @@
 <!--  VOUGHT   F4U-7   Corsair                      Auteur :      Gerard ROBIN                       COPYRIGHT-->
 <PropertyList>
 
-  <path>catalina-moteur.ac</path>
-  <texture-path>Textures</texture-path>
+	<path>catalina-moteur.ac</path>
+	<texture-path>Textures</texture-path>
+
+
 
 </PropertyList>
